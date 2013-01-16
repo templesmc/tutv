@@ -15,9 +15,18 @@ Thematic is © Ian Stewart http://themeshaper.com/
 
 Surprise!
 
-All of the styles are actually located in /library/css/style.css ,
+All of the styles are actually located in /style-active.css ,
 registered and enqueued by the function tutv_styles() in /library/init.php .
-This is mainly for the sake of compression.
+
+This is mainly for the sake of compression and due to CodeKit's
+output style restrictions. I may consider revising
+in later versions, but for now it will do.
+
+The main stylesheet is complied using SASS/SCSS and CodeKit.
+If that doesn't make sense, please look into SASS - it's a great
+expansion on the capabilities of CSS. CodeKit isn't necessary,
+as there are command-line tools and some other GUI tools that can
+compile SASS/SCSS, but CodeKit is by far the simplest way of doing it.
 
 
 */
