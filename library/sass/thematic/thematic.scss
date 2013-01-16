@@ -1,0 +1,29 @@
+/**
+ * All of these are copied directly from Thematic's sample child theme.
+ *
+ * Formerly included at the top of style.css
+ */
+
+/* Reset browser defaults */
+
+@import "thematic-reset";
+
+/* Apply basic typography styles */
+
+@import "thematic-typography";
+
+/* Apply a basic layout */
+
+@import "thematic-2c-r-fixed";
+
+/* Apply basic image styles */
+
+@import "thematic-images";
+
+/* Apply default theme styles and colors */
+
+@import "thematic-default";
+
+/* Prepare theme for plugins */
+
+@import "thematic-plugins";

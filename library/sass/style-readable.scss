@@ -1,0 +1,2407 @@
+/*************
+** THEMATIC **
+**************/
+
+@import "thematic/thematic";
+
+/*************************
+** FEATURED VIDEO SECTION 
+**************************/
+
+#featured-video-block {
+width: 960px;
+height: 200px;
+margin: 72px 0px 72px 0px;
+/*background: #f6f6f6;
+-webkit-box-shadow: 4px 4px 4px #ccc;
+-moz-box-shadow: 4px 4px 4px #ccc;
+box-shadow: 4px 4px 4px #ccc;*/
+}
+
+.featured-videos {
+float: left;
+margin-top: 4px;
+margin-right: 24px;
+margin-left: 24px;
+width: 140px;
+}
+
+.featured-video-show {
+font-size: 12px;
+font-weight: bold;
+line-height: 16px;
+font-family: lucida grande, helvetica, arial, verdana, sans-serif;
+text-align: left;
+color: #444;
+}
+
+.featured-video-episode-title {
+font-size: 12px;
+line-height: 16px;
+font-family: lucida grande, helvetica, arial, verdana, sans-serif;
+text-align: left;
+color: #444;
+}
+
+.featured-video-trt {
+font-size: 11px;
+line-height: 16px;
+font-family: lucida grande, helvetica, arial, verdana, sans-serif;
+text-align: left;
+color: #4c4c4c;
+}
+
+.featured-video-thumbnail {
+margin-bottom: 8px;
+-webkit-box-shadow: 5px 5px 5px #ccc;
+-moz-box-shadow: 5px 5px 5px #ccc;
+box-shadow: 5px 5px 5px #ccc;
+}
+
+
+/* WIDGET SPECIFIC AREA 06/01/2011 PWinnick */ 
+#subsidiary .aside ul {list-style-type: none;}
+
+#subsidiary #first ul li {margin: -10px 0px 10px 0px;}
+#subsidiary #first ul li ul {width: 100%; }
+#subsidiary #first ul li ul li {float: left; display: inline; width: 25%;}
+
+#subsidiary #third ul li {float: right; display: inline;}
+#subsidiary #third ul li ul {width: 100%;}
+#subsidiary #third ul li ul li{float: left; display: inline; width: 33.3%}
+
+/*
+
+Theme Styles
+
+*/
+
+/* General */
+
+.wf-loading a, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading p {visibility: hidden;}
+
+.wf-loading #blog-title a {visibility: visible;}
+
+body {
+background: url('images/background.jpg') 50% 0 no-repeat;
+}
+
+#container { width: 940px; }
+
+.entry-content h1 {
+font-family: arial, helvetica, sans-serif;
+font-size:28px;
+font-weight: 500;
+padding:28px 0 14px 0;
+}
+
+.entry-content h2 {
+font-family: arial, helvetica, sans-serif;
+font-size: 22px;
+font-weight: 600;
+padding:28px 0 14px 0;
+}
+
+.entry-content h3 {
+font-size:18px;
+font-style:italic;
+padding:14px 0 14px 0;
+}
+
+.entry-content h4 {
+font-family: arial, helvetica, sans-serif;
+font-weight: 300;
+text-transform:uppercase;
+letter-spacing:.02em;
+font-size:14px;
+}
+
+.wf-active .entry-content h4 {
+font-size:14px;
+}
+
+.entry-title a, .entry-title, .page-title, 
+.page-title a {
+text-shadow:1px 1px #FFFFFF;
+}
+
+a {
+-webkit-transition: color .3s ease, background .3s ease;
+   -moz-transition: color .3s ease, background .3s ease;
+     -o-transition: color .3s ease, background .3s ease;
+        transition: color .3s ease, background .3s ease;
+}
+
+a:active, a:link, a:visited, a:hover, #blog-title a:active, #blog-title a:hover, .sf-menu ul a:hover,  .page-link a:active, .page-link a:hover, .navigation a:active, .navigation a:hover, #comments-list .comment-meta a:active, #comments-list .comment-meta a:hover, .comment-reply-link a:active, .comment-navigation a:active  {
+color:#0088cc;				/* #5b6d7b Defines color of all links originally #25BADB */
+text-decoration: none;
+}
+
+#first a:active, #first a:link, #first a:visited, #first a:hover { /* Sitemap link color in footer added 06/08/2011 Pwinnick */
+color: #5b6d7b;
+text-decoration: none;
+}
+
+.aside .current_page_item a, .aside .current_page_item .page_item a:hover, .aside .current_page_item .page_item a:active, .aside a:active, .aside a:hover, #siteinfo a:active, #siteinfo a:hover {
+color: #787779;
+}
+
+a:hover,
+.page-title a:active, .page-title a:hover, .entry-title a:active, .entry-title a:hover, .comment-reply-link a:hover, .comment-navigation a:hover, .entry-meta a:active, .entry-meta a:hover, .entry-utility a:active, .entry-utility a:hover {
+color: #787779;
+text-decoration: none;
+}
+
+p, ul, ol, dd, .entry-content {
+font-family: arial, helvetica, sans-serif;
+}
+
+
+/* Header */
+
+#header,
+#main {
+width: 940px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+#branding {
+padding: 20px 0;
+height:150px;
+}
+
+#blog-title {
+background:url("images/logo-backdrop.png") no-repeat 0 0;
+height:100px;
+margin-left:-770px;
+padding:10px 0 275px 715px;
+position:absolute;
+width:335px;
+}
+
+/* for amazing animation of the tutv logo flying in on page load: */
+@-webkit-keyframes thrust {
+	from {
+		left: -980px;
+		bottom: -630px;
+		opacity:0;
+	}
+	to {
+		left: 10px;
+		bottom: -215px;
+		opacity:1;
+	}
+}
+
+@keyframes thrust {
+	from {
+		left: -980px;
+		bottom: -630px;
+		opacity:0;
+	}
+	to {
+		left: 10px;
+		bottom: -215px;
+		opacity:1;
+	}
+}
+
+.home #blog-title {
+margin-left:-760px;
+padding:10px 0 275px 715px;
+left: 10px;
+bottom: -215px;
+-webkit-animation: thrust 1.2s normal ease-out;
+animation: thrust 1.2s normal ease-out;
+}
+
+#blog-title a {
+text-indent: -9999em;
+background: url('images/logo.png') no-repeat;
+height: 80px;
+width: 254px;
+display: block;
+height:72px;
+margin-left:56px;
+}
+
+#blog-title a:hover {
+opacity: .7;
+}
+
+#blog-description {
+display: none;
+}
+
+#access {
+font:500 20px arial, helvetica, sans-serif; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
+font-weight: bold; /* Added 06/08/2011 Pwinnick */
+padding-bottom: 34px;
+border-bottom: none;
+position: absolute;
+right: 20px;
+top:0;
+padding:60px 0px 0;
+}
+
+#access .menu {
+width: auto;
+/*z-index: 2200;*/
+position: relative;
+float: right;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
+-moz-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
+box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
+}
+
+.sf-menu li,.sf-menu li li, .sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+background: transparent;
+/*z-index: 2400; */
+}
+
+#access .sf-menu a {
+background: #FFE5E9;
+border: none;
+border-right: none;
+-webkit-transition-duration: .2s;
+-moz-transition-duration: .2s;
+-o-transition-duration: .2s;
+transition-duration: .2s;
+}
+
+#access .sf-menu > li:first-child > a {
+-webkit-border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+#access .sf-menu > li:last-child > a {
+-webkit-border-top-right-radius: 4px;
+-webkit-border-bottom-right-radius: 4px;
+-moz-border-radius-topright: 4px;
+-moz-border-radius-bottomright: 4px;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+/* remove border-radius for last menu item on hover (only if it has a sub-menu)
+#access .sf-menu > li:last-child:hover > a {
+-webkit-border-bottom-right-radius: 0;
+-moz-border-radius-bottomright: 0;
+border-bottom-right-radius: 0;
+}*/
+
+.categories-menu .sf-menu a {border-left: none;}
+.sf-menu {border-right:none;}
+#access .sf-menu a:hover {background: #dfb4b8;}
+#access a {color:#5f0a03; /* #662222 alt, original #221F1F 06/08/2011 Pwinnick */
+text-shadow: 0px 0px 1px #ccc; /* Added 06/08/2011 Pwinnick */ 
+} 
+
+#access .sub-menu a,
+#access .sf-menu li:hover a,
+#access .sf-menu li.sfHover a {
+background: #f0c2c6;
+}
+
+/* Added 07-21-2011 Pwinnick */
+#access .sf-menu li:hover a:hover,
+#access .sf-menu li.sfHover a:hover {
+background: #dfb4b8; 
+}
+
+#access .sub-menu li {
+font:13px arial, helvetica, sans-serif; /* Added 06/08/2011 Pwinnick */
+font-weight: normal;
+margin-bottom: -4px;
+}
+
+/*#access .sub-menu li:first-child a {
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topright: 4px;
+border-top-right-radius: 4px;
+}
+
+#access .sub-menu li:last-child  a{
+-webkit-border-bottom-right-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-moz-border-radius-bottomleft: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+}*/
+
+#access .sub-menu a:hover {
+color: #fff;
+}
+
+#access .sf-menu ul {
+background: #f0c2c6; /* Added 07-21-2011 Pwinnick */
+border:none;
+padding-bottom: 8px; /* Added 07-21-2011 Pwinnick */
+margin-top: 6px; /* Added 07-21-2011 Pwinnick */
+}
+
+#access .sf-menu #menu-item-269 ul {
+background: #f0c2c6; 
+border:none;
+width: 580px !important; 
+padding-bottom: 8px;
+margin-top: 6px; 
+}
+
+#access .sf-menu #menu-item-269 li {
+font:13px arial, helvetica, sans-serif; 
+font-weight: normal;
+margin-bottom: -4px;
+float: left;
+width: 33.3% !important; 
+}
+
+.categories-menu .sf-menu a:first-child {border-left:none;}
+
+.sf-menu a:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+}
+
+/* Content */
+
+#main { 
+padding-top: 0;
+position: relative;
+z-index: 4;
+}
+
+#footer {
+margin-top: 20px;
+}
+
+#content  {
+padding:22px 0 0 10px;
+margin:0;
+width: auto;
+}
+
+#content .hentry {
+width: 540px;
+}
+
+.entry-meta {
+font-family: arial, helvetica, sans-serif;
+color: #888;
+font-size:14px;
+margin: 2px 0 4px;
+}
+
+.entry-utility {
+font-family: arial, helvetica, sans-serif;
+clear: both;
+}
+
+.main-aside { width: 230px;border:1px solid #ccc;padding:18px 0 0;}
+#primary {border: none;margin-bottom: 0;}
+
+#s {
+color:#999;
+font-family: arial, helvetica, sans-serif;
+width: 180px;
+}
+
+.notice {
+background: #ffffb9;
+border: 1px solid #fee000;
+padding: 10px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+margin:20px 0;
+float: left;
+}
+
+.blog .entry-utility {
+margin-bottom: 10px;
+}
+
+.blog .hentry {
+float: left;
+}
+
+.blog .hentry img.wp-post-image {
+display: block;
+padding-bottom: 22px;
+float: left;
+}
+
+.meta-prep-author, .entry-meta .author, .meta-sep-entry-date {display:none;}
+
+/* Added 10-14-2011 PWinnick*/
+.entry-meta .entry-date {display: none;}
+
+.single .show_notes .meta-prep-author,
+.single .show_notes .entry-meta .author,
+.single .show_notes .entry-meta .author a,
+.single .show_notes .entry-meta abbr, 
+.single .show_notes .meta-sep-entry-date,
+
+.single .post .meta-prep-author,
+.single .post .entry-meta .author,
+.single .post .entry-meta .author a,
+.single .post .entry-meta abbr, 
+.single .post .meta-sep-entry-date {
+display: inline;
+font-size: inherit;
+text-transform: none;
+}
+
+
+#blog-description {
+color: #A8D344;
+font-size:14px;
+font-style:normal;
+position:absolute;
+}
+
+h1.entry-title, .page-title {
+font-family: arial, helvetica, sans-serif;
+font-weight: 400;
+padding-bottom: 22px;
+font-size: 35px;
+line-height: 39px;
+}
+
+.wf-active h1.entry-title, .wf-active .page-title {
+font-size: 42px;
+line-height: 38px;
+}
+
+h1 span, .page-title span {
+font-style: normal;
+}
+
+h2.entry-title {
+font-family: arial, helvetica, sans-serif;
+font-weight: 600;
+font-size: 22px;
+padding-bottom: 4px;
+}
+
+.wf-active h2.entry-title {
+font-size: 26px;
+padding-bottom: 0;
+}
+
+.meta-prep-entry-date {
+display: none;
+}
+
+.episodes .entry-utility,
+.clip .entry-utility,
+.events .entry-utility,
+.show_page .entry-utility {
+display: none;
+}
+
+.entry-meta abbr {
+font-size: 12px;
+}
+
+.episodes .published, 
+.clip .published,
+.episodes .meta-sep-edit,
+.clip .meta-sep-edit {
+display: none;
+}
+
+
+/* Home */
+
+.home-info .hentry {
+width:738px;
+margin-left: 0;
+margin-bottom: 10px
+}
+
+.home #content {
+width: auto;
+}
+
+.home #main {
+padding: 0 10px;
+width: 960px;
+}
+
+.home #container {
+width: 960px;
+} 
+
+#content {padding: 0;}
+
+.front-block h3 {
+border-bottom: 1px solid #F0F0F9;
+padding-bottom: 5px;
+margin-bottom: 10px;
+}
+
+.front-block {
+    float:left;
+    width:300px;
+}
+
+#front-block-1 {
+    margin-right:20px;
+    margin-left: 10px;
+    clear: left;
+}
+
+#front-block-3 {
+margin-right: 0;
+clear: left;
+}
+
+#last-front-block {
+width: 960px;
+margin: 72px 0px 72px 0px;
+}
+
+#schedule-block {
+position: relative;
+margin-left: 40px; /* 20px original 07-07-2011 PWinnick*/
+width: 620px; /* 640px original 07-07-2011 Pwinnick*/
+background: #F4F7FC;
+}
+
+#schedule-block .section-header {
+/* background: #000; image left, image repeat, image right 06-06-2011 PWinnick */
+background-image: url('images/mid-menu.png');
+background-repeat: repeat-x;
+height: 28px;
+margin-bottom: -8px; /* 0px original 06-06-2011 PWinnick */
+/*border-bottom-color: #ccc;*/
+border: 0px;
+}
+
+#schedule-block .hentry {
+width: 290px;  /* 280px original 06-06-2011 PWinnick */
+padding: 4px 4px 0px 10px; /*4px 10px 0px 10px; original 09-08-2011 PWinnick*/ 
+background: #fff;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;
+}
+
+#schedule-block .entry-content {display: none;}
+
+#schedule-block .active { 
+background: #F4F7FC; 
+border-right-color: #F4F7FC;
+border-bottom: 1px solid #ccc;
+background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
+background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
+}
+
+#schedule-block .active .entry-content {
+display: block;
+position: absolute;
+overflow: hidden;
+top: 26px; /* 28px original 06-06-2011 PWinnick */
+right: 0;
+bottom: 0;
+width: 300px; /* 240px original 09-08-2011 PWinnick */
+padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
+border-bottom: 1px solid #CCC;
+border-right: 1px solid #CCC;
+/*border-top: 1px solid #ccc;*/
+min-height: 220px;
+background: #F4F7FC;
+font-size: 13px; /*modified 09-15-2011 PWinnick */
+}
+
+#schedule-block .scheduled-time {
+color: #666;
+text-shadow: -1px 1px #fff;
+margin-top: -4px;
+/*margin-bottom: 5px;*/
+font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+font-family: arial, helvetica, sans-serif;
+}
+
+#schedule-block .entry-title {
+font-size: 14px;
+margin-bottom: -2px;
+border-bottom: none;
+}
+
+#schedule-block .thumbnail {
+margin-bottom: 4px; /* 8px original 06-06-2011 PWinnick */
+}
+
+#schedule-block .active .thumbnail {
+opacity: 1;
+}
+
+.front-block .avatar {
+float:left;
+margin:.25em 10px 0 0;
+}
+
+.front-block ul {
+border-top:1px solid #eee;
+list-style:none;
+margin:0;
+}
+
+.front-block ul li {
+display:inline;
+}
+
+.front-block ul li a,
+.front-block ul li a:visited  {
+border-bottom:1px solid #eee;
+color:#666;
+display:block;
+padding:6px 0;
+text-decoration:none;
+}
+
+.front-block ul li a:hover,
+.front-block ul li a:active {
+color: #000;
+}
+
+.news-block h3 {
+border-bottom: none;
+margin-bottom: 0;
+}
+
+.shows-block {
+margin-top: 20px;
+}
+
+.video-block .clip-item {
+clear: both;
+float: left;
+margin: 5px 0px;
+}
+
+.video-block .video-title {
+clear: both;
+float: right;
+width: 140px;
+font-family: arial, helvetica, sans-serif;
+font-weight: 400;
+font-size: 14px;
+margin-bottom: 10px;
+}
+
+.wf-active .video-block .video-title {
+font-size: 16px;
+}
+
+.video-block .thumbnail {
+float: left;
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+.home .shows-item {
+float:left;
+margin-right: 10px;
+width: 140px;
+margin-bottom: 10px;
+}
+
+.home .shows-item:nth-child(2n+1) {
+margin-right: 0;
+} 
+
+.home .shows-item:nth-child(2n+2) {
+margin-right: 20px;
+}
+
+
+/* Homepage Slideshow */
+
+#front-featured {
+width: 960px;
+height: 290px !important;
+padding: 0px;
+position: realtive;
+z-index: 0 !important;
+/*float: right;
+background: #E3EFF6;*/
+-moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+background: -webkit-gradient(
+    linear,
+    right bottom,
+    right top,
+    color-stop(0, rgb(191,210,235)),
+    color-stop(0.75, rgb(237,243,247))
+);
+-moz-box-shadow:0 2px 6px #999;
+-webkit-box-shadow:0 2px 6px #999;
+box-shadow:0 2px 6px #999;
+margin: 0 0 30px 0; /* margin: 0 0 30px 0; orginal 06-13-2011 Pwinnick*/
+}
+
+#front-featured .attachment-banner {
+float: right;
+-moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+}
+
+#front-featured .attachment-banner img {
+/*z-index: 1;*/
+}
+
+#front-featured ul {
+list-style: none;
+margin:0;
+overflow: hidden;
+height: 330px;
+}
+
+#front-featured li {
+height: 330px;
+float: none;
+position: relative;
+margin-bottom: 20px;
+}
+
+#front-featured .description {
+position: absolute;
+left: 0;
+padding: 10px 10px 0px 10px;
+background: black;
+background: rgba(0,0,0,.8);
+color: #fff;
+z-index: 3;
+float: left;
+height:280px;
+width:300px;
+margin-left: 16px; 
+}
+
+#front-featured .description blockquote {
+margin: 0px; /* margin: 0 1em; orginial 06-06-2011 Pwinnick */
+}
+
+#front-featured .description .more-link {
+display: block;
+}
+
+#front-featured .description img,
+#front-featured .wp-caption {
+display: none;
+}
+
+#front-featured h2 {
+line-height: 38px;
+font-size: 32px;
+font-weight: 300;
+font-family: arial, helvetica, sans-serif;
+margin-bottom: 8px;
+word-wrap: break-word;
+/*text-shadow: 0 0 6px #666; 06-13-2011 Pwinnick */
+}
+
+/*Added 06-07-2011 PWinnick*/
+#headline {
+font-size: 20px;
+font-weight: 200;
+font-family: arial, helvetica, sans-serif;
+margin-bottom: 6px;
+word-wrap: break-word;
+color: #d0632d;
+}
+
+/*Added 07-06-2011 PWinnick*/
+#subheadline {
+background-image: url('images/subheadline.png');
+background-repeat: no-repeat;
+height: 25px;
+width: 100%; /*192px*/
+margin-bottom: 8px;
+margin-top: -10px;
+padding-top: 2px;
+}
+
+/*Added 07-06-2011 PWinnick*/
+#subheadline a {
+font-size: 13px;
+font-family: arial, helvetica, sans-serif;
+font-weight: bold;
+color: #2F3E51;
+padding: 0px 80px 0px 24px;
+}
+
+/*Added 07-06-2011 PWinnick*/
+#subheadline a:hover {
+color: #005588;
+}
+
+/* Begin Added 10-01-2011 PWinnick */
+#subheadline2 {
+background-image: url('images/watchheadline.png');
+background-repeat: no-repeat;
+height: 25px;
+width: 232px;
+margin-bottom: 8px;
+margin-top: 4px;
+padding-top: 2px;
+border-top-color: #EFEFEF;
+border-top-width: 1px;
+border-top-style: solid;
+}
+
+#subheadline2 a {
+font-size: 12px;
+font-family: arial, helvetica, sans-serif;
+font-weight: 200;
+/*color: #EFEFEF;*/
+padding: 0px 0px 0px 26px;
+}
+
+#subheadline2 a:hover {
+color: #005588;
+}
+
+#subheadline3 {
+background-image: url('images/watchheadline.png');
+background-repeat: no-repeat;
+height: 25px;
+width: 232px;
+margin-bottom: 8px;
+margin-top: 4px;
+padding-top: 2px;
+/*border-top-color: #EFEFEF;
+border-top-width: 1px;
+border-top-style: solid;*/
+}
+
+#subheadline3 a {
+font-size: 12px;
+font-family: arial, helvetica, sans-serif;
+font-weight: 200;
+/*color: #EFEFEF;*/
+padding: 0px 0px 0px 26px;
+}
+
+#subheadline3 a:hover {
+color: #005588;
+}
+/* End */
+
+.wf-loading #front-featured h2 {
+visibility: hidden;
+}
+
+.wf-active #front-featured h2 {
+line-height: 42px;
+font-size: 36px;
+}
+
+#front-featured h2 a {
+color:#5b6d7b;  /* 06-11-2011 PWinnick */
+text-decoration: none;
+}
+
+#front-featured h2 a:hover {
+color: #4ad5f4;
+}
+
+/*#front-featured .no-thumbnail h2 {
+font-size:18px;
+line-height:22px;
+width: 600px;
+float: left;
+margin-bottom: -20px;
+position: relative;
+margin-left: 340px;
+top: -40px;
+z-index: 0;
+padding: 10px;
+}*/
+
+#front-navigation {
+font-size:18px;
+line-height:22px;
+width: 600px;
+float: left;
+/*margin-bottom: -20px; /* -40px orginal 06-13-2011 Pwinnick*/
+position: relative;
+margin-left: 340px; /* 10px original 06-06-2011 Pwinnick*/
+top: -20px; /* -70px orginal 06-06-2011 Pwinnick*/
+z-index: 100;
+padding: 10px;
+/*background: #8fafc5; /* 06-06-2011 Pwinnick*/;
+}
+
+#front-navigation .nav {
+float:left;
+width: 75px;
+height: 50px;
+margin: 0px 10px 0px 10px;
+border: 1px solid #888; /* 2px solid #8fafc5 orginial 06-06-2011 Pwinnick*/
+cursor: pointer;
+background: #eee;
+-webkit-box-shadow: rgba(153, 153, 153, 1) -1px 1px 2px;
+-moz-box-shadow: rgba(153, 153, 153, 1) -1px 1px 2px;
+box-shadow: rgba(153, 153, 153, 1) -1px 1px 2px;
+-webkit-transition: top .3s linear .2s, -webkit-box-shadow .3s linear;
+-moz-transition: top .3s linear .2s, -moz-box-shadow .3s linear;
+-o-transition: top .3s linear .2s, -o-box-shadow .3s linear;
+transition: top .3s linear .2s, box-shadow .3s linear;
+top:0;
+position: relative;
+}
+
+#front-navigation .nav:hover {
+position: relative;
+-webkit-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+-moz-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+/*-webkit-transform: rotate(0deg) scale(1.05) translate(0,-5px);
+-moz-transform: rotate(0deg) scale(1.05) translate(0,-5px);	
+transform: rotate(0deg) scale(1.05) translate(0,-5px); */
+}
+
+#front-navigation .nav.active {
+top: -2px; /* -16px orginal 06-13-2011 Pwinnick*/
+-webkit-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+-moz-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+/*-webkit-transform: rotate(0deg) scale(1.05) translate(0,-5px);
+-moz-transform: rotate(0deg) scale(1.05) translate(0,-5px);	
+transform: rotate(0deg) scale(1.05) translate(0,-5px); 
+-webkit-transition: top .3s ease-in, -webkit-box-shadow .3s linear;
+-moz-transition: top .3s ease-in, -moz-box-shadow .3s linear;
+-o-transition: top .3s ease-in, -o-box-shadow .3s linear;
+transition: top .3s ease-in, box-shadow .3s linear;*/
+}
+
+/*#front-navigation .nav .no-thumbnail {
+line-height: 11px;
+font-size: 12px;
+font-weight: 300;
+word-wrap: break-word;
+color: #222;
+overflow: hidden;
+height: 45px;
+margin:2px 4px;
+font-family: arial, helvetica, sans-serif;
+}*/
+
+.wf-loading #front-navigation .nav .no-thumbnail {
+visibility: hidden;
+}
+
+.wf-active #front-navigation .nav .no-thumbnail {
+line-height: 14px;
+font-size: 14px;
+}
+
+#front-navigation .nav img,
+#front-navigation .nav .no-thumbnail {
+opacity: .8;
+display: block;
+-webkit-transition: opacity .3s ease;
+-moz-transition: opacity .3s ease;
+-o-transition: opacity .3s ease;
+transition: opacity .3s ease;
+}
+
+#front-navigation .nav:hover img,
+#front-navigation .nav.active img{
+opacity: 1;
+}
+
+/*#front-navigation .item-1,
+#front-navigation .item-5 {
+-webkit-transform: rotate(1deg); 
+-moz-transform: rotate(1deg);	
+transform: rotate(1deg);
+margin-top: 3px;
+}
+
+#front-navigation .item-2,
+#front-navigation .item-4 {
+-webkit-transform: rotate(-1deg); 
+-moz-transform: rotate(-1deg);	
+transform: rotate(-1deg);
+border-color: #b0d7f6;
+}
+
+#front-navigation .item-3 {
+-webkit-transform: rotate(.75deg); 
+-moz-transform: rotate(.75deg);	
+transform: rotate(.75deg);
+margin-top: -2px;
+}*/
+
+
+/* Mailchimp */
+
+#mc_signup_container {
+float: left;
+clear: both;
+width: 100%;
+margin-bottom: 22px;
+}
+
+#mc_signup_form .mc_var_label {
+width: 120px !important;
+font-weight:bold;
+float: left;
+}
+
+.home #mc_signup_form .mc_var_label {
+float:none;
+}
+
+#mc_signup_form #mc_mv_EMAIL {
+float: left;
+width: 200px !important;
+}
+
+.mc_merge_var br {display:none;}
+
+.mc_signup_submit {
+width: auto !important;
+clear: none !important;
+float:left !important;
+padding: 0 !important;
+margin-left: 10px;
+}
+
+div#mc_message {
+margin: 10px !important;
+text-shadow: none !important;
+}
+
+.mc_error_msg, .mc_success_msg { 
+margin: 10px 0 !important;
+display: block; 
+padding: 10px;
+background: #ffffee !important;
+}
+
+#content #index-top ul {
+padding-bottom: 30px;
+}
+
+.blog #index-top {display: none;}
+
+
+/* Shows Page */
+
+.entry-title.show-type {
+font-weight: 400;
+padding-top: 14px;
+font-size: 20px;  /* 24px orginal 06-06-2011 Pwinnick */
+}
+
+
+/* Page Template  */
+#page-list {
+list-style: none;
+margin-left: 0;
+}
+
+#page-list h1 {
+font-size: 18px;
+padding-bottom: 18px;
+}
+
+#page-list h1 a{
+color: #000;
+text-decoration: none;
+}
+
+#page-list .wp-post-image {
+float:left;
+margin-right: 10px;
+}
+
+#subpage-menu {
+margin: -20px 0px 20px;
+width: 940px;
+height: 24px;
+}
+
+#subpage-menu li {
+display:inline;
+list-style: none;
+}
+
+#subpage-menu .children {
+float:left;
+margin: 0;
+border-left: 1px solid #666;
+margin-left: 5px;
+padding-left: 5px;
+}
+
+#subpage-menu a {
+color: #666;
+float: left;
+font-size: 18px;
+line-height: 24px;
+text-shadow: #fff 1px 1px;
+}
+
+#subpage-menu li {
+padding-right: 5px;
+margin-right: 5px;
+float: left;
+}
+
+#subpage-menu .children li {
+border-right: 1px solid #aaa;
+}
+
+#subpage-menu .children a {
+color: #888;
+}
+
+#subpage-menu a:hover {
+color: #000;
+}
+
+#subpage-menu .children .current_page_item > a {
+border-bottom: 1px dotted #888;
+}
+
+/* schedule */
+/*
+#schedule h1 {
+font-size: 24px;
+border-bottom: 1px dotted #ccc;
+padding-bottom: 6px;
+margin-bottom: 6px;
+}
+*/
+
+.page-template-page-schedule-php #main {
+padding: 0 10px;
+width: 960px;
+}
+
+.page-template-page-schedule-php #container,
+#schedule {
+width: 960px;
+}
+
+#schedule {
+padding-bottom: 120px;
+float: left;
+}
+
+#schedule  .today {
+font-weight: bold;
+}
+
+#schedule h1.entry-title {
+margin:0 10px;
+}
+
+#schedule h2.schedule-date {
+margin-bottom: 0;
+width: 540px;
+font-size: 20px;
+font-weight: normal;
+line-height: 24px;
+padding:15px 10px;
+color: #333;
+font-family: arial, helvetica, sans-serif;
+}
+
+#schedule h2.schedule-date:first-child {
+border-top: none;
+padding-top: 0;
+}
+
+#schedule h3.entry-title{
+font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+font-weight: normal;
+font-family: arial, helvetica, sans-serif;
+padding: 0;
+color: #aaa;
+}
+
+#schedule_nav {
+list-style: none;
+font-family: arial, helvetica, sans-serif;
+margin: 0;
+padding-left: 10px;
+width: 100%;
+float: left;
+border-bottom: 1px solid #444;
+}
+
+#schedule_nav li {
+float: left;
+margin: 0 5px;
+}
+
+#schedule_nav a {
+font-size: 16px;
+font-weight: 300;
+float: left;
+padding: 7px 10px;
+border: 1px solid #999;
+background: #fafafa;
+background: rgba(250, 250, 250, .6);
+border-bottom: none;
+border-radius: 6px 6px 0 0;
+}
+
+#schedule_nav .active a{
+color: #000;
+z-index: 100;
+font-weight: 500;
+position: relative;
+background: none;
+padding: 10px 13px;
+margin-top: -6px;
+font-size: 18px;
+margin-bottom: -1px;
+border-color: #444;
+border-bottom: 1px solid white;
+}
+
+#schedule_nav .active a:hover {
+	color: #787779;
+}
+
+#schedule_nav h2 {
+font-family: arial, helvetica, sans-serif; /* 06-06-2011 PWinnick */
+font-size: 16px; 
+}
+
+#schedule .entry-content{
+color: #555;
+padding-top: 0;
+}
+
+#schedule .entry-content p{
+margin-bottom: 0;
+}
+
+#schedule .scheduled-time {
+color: #777;
+text-shadow: -1px 1px #fff;
+margin-bottom: 5px;
+font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+float:left;
+width:80px;
+position: absolute;
+left: 10px;
+}
+
+.scheduled-time .start {
+
+}
+
+#schedule .hentry {
+width: 540px;
+clear: both;
+float: left;
+padding:10px;
+margin-right: 10px;
+position: relative;
+min-height: 26px;
+font-family: arial, helvetica, sans-serif;
+-webkit-transition: background .5s ease;
+   -moz-transition: background .5s ease;
+     -o-transition: background .5s ease;
+        transition: background .5s ease;
+}
+
+#schedule h3.entry-title {
+margin-left: 140px;
+width: 400px;
+}
+
+#schedule .entry-content {
+position: absolute;
+/* display: none; */
+z-index: 10;
+top:0;
+right: -400px;
+width: 370px;
+padding: 10px;
+margin-right: 10px;
+background: #f0f0f9;
+-webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+        border-radius: 2px;
+-webkit-border-top-left-radius: 0;
+   -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+visibility: hidden;
+opacity:0;
+-webkit-transition: opacity .3s ease-out;
+   -moz-transition: opacity .3s ease-out;
+     -o-transition: opacity .3s ease-out;
+        transition: opacity .3s ease-out;
+}
+
+#schedule .hentry:hover .entry-content {
+display: block;
+visibility: visible;
+opacity: 1;
+-webkit-box-shadow: #E6E6E6 5px 5px 5px;
+   -moz-box-shadow: #E6E6E6 5px 5px 5px;
+        box-shadow: #E6E6E6 5px 5px 5px;
+}
+
+#schedule .hentry:hover {
+background: #f0f0f9 !important;
+}
+
+#schedule .thumbnail {
+opacity: 1;
+margin-bottom: 8px;
+}
+
+#schedule .show-title {
+width: 140px;
+}
+
+#schedule .hentry.item-even {
+background: #f3f3f3;
+}
+
+#schedule .hentry.item-odd {
+background: #fefefe;
+}
+
+.taxonomy-page-item {
+float: left;
+clear: both;
+padding: 0;
+}
+
+.taxonomy-page-item .entry-title {
+clear: none;
+padding-top: 0;
+}
+
+.taxonomy-page-item.genre-item .thumbnail {
+display: none; /* hide thumbnail for genre taxonomy page */
+}
+
+
+/* Shows Page */
+
+#content.shows-page .hentry {
+width: 140px;
+margin: 20px 0;
+margin-right: 180px;
+float: left;
+clear: none;
+position: relative;
+overflow: visible;
+}
+
+#content.shows-page .entry-content {
+padding: 0;
+}
+
+#content.shows-page .hentry:nth-child(3n+3) {
+margin-right: 160px;
+}
+
+#content.shows-page .hentry .entry-title {
+font-size: 14px;
+line-height: 14px; /* 06-06-2011 PWinnick */
+}
+
+#content.shows-page .hentry:hover .description {
+/* opacity: 1; */
+}
+
+#content.shows-page .description .entry-title {
+font-size: inherit;
+}
+
+#content.shows-page .description {
+opacity: 0;
+position: absolute;
+display: none;
+z-index: 5;
+padding: 10px;
+width: 300px;
+min-height: 110px;
+background: #fff;
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+        border-radius: 4px;
+-webkit-box-shadow: #E6E6E6 5px 5px 5px;
+   -moz-box-shadow: #E6E6E6 5px 5px 5px;
+        box-shadow: #E6E6E6 5px 5px 5px;
+-webkit-transition: .6s opacity ease;
+   -moz-transition: .6s opacity ease;
+     -o-transition: .6s opacity ease;
+        transition: .6s opacity ease;
+}
+
+#content.shows-page .description.visible {
+visibility: visible;
+opacity: 1;
+-webkit-transition: .6s opacity ease;
+   -moz-transition: .6s opacity ease;
+     -o-transition: .6s opacity ease;
+        transition: .6s opacity ease;
+}
+
+#content.shows-page .thumbnail {
+-webkit-transition: .6s  opacity ease;
+margin-bottom: 0;
+}
+
+#content.shows-page .thumbnail a {
+display: block;
+width: 100%;
+height: 100%;
+}
+
+#content.shows-page .hentry:hover .thumbnail {
+position: relative;
+z-index: 7;
+opacity: 1;
+}
+
+
+/* Shows Page Grid */
+
+#content.shows-page-grid .hentry {
+width: 160px; /* 150px original 06-08-2011 Pwinnick */
+margin: 20px 11px; /* margin: 20px 11px; original 06-08-2011 Pwinnick */
+padding: 8px; /* 8px original 06-08-2011 Pwinnick */
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+        border-radius: 4px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+}
+
+#content.shows-page-grid .hentry.col2 {
+width: 347px; /* 337px original 06-08-2011 Pwinnick */
+}
+
+#content.shows-page-grid .hentry.col3 {
+width: 544px; /* 534px original 06-08-2011 Pwinnick */
+}
+
+#filtering-nav {
+
+}
+
+#filtering-nav h2 {
+font-family: arial, helvetica, sans-serif;
+font-weight: bold;
+margin-left: 6px;
+}
+
+#filtering-nav ul {
+list-style: none;
+margin: 0 0 10px 0;
+}
+
+#filtering-nav li{
+list-style: none;
+display: inline;
+}
+
+#filtering-nav a {
+color: #333;
+padding: 3px;
+margin: 0 12px 0 3px;
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+        border-radius: 4px;
+}
+
+#filtering-nav a:hover {
+-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+}
+
+#filtering-nav a.active, 
+#filtering-nav a.all {
+border: 1px dotted #ccc;
+}
+
+/* production type border colors */
+.type-tutv-original {
+}
+
+.type-university-events {
+}
+
+.type-syndicated {
+}
+
+#content.shows-page-grid .hentry {
+float: left;
+clear: none;
+}
+
+#content.shows-page-grid .hentry .entry-title {
+font-size: 18px; /*originially 22px. Updated 05/26/2011 PWinnick*/
+line-height: 26px;
+margin-bottom: 11px;
+}
+
+#content.shows-page-grid .entry-title a {
+color: #333;
+}
+
+#content.shows-page-grid .entry-title a:hover {
+color: #999;
+}
+
+#content.shows-page-grid .entry-content {
+padding: 0 0 10px;
+}
+
+#content.shows-page-grid .description {
+display: inline;
+font-size: 14px;
+}
+
+/* genre box colors */
+.genre-documentary {background: #F9EFE2;}
+.genre-interviews {background: #E9E4D3;}
+.genre-news {background: #E3E4E3;}
+.genre-sports {background: #F0955F;}
+.genre-educational {background: #FDF3DE;}
+.genre-entertainment {background: #DCE9EA;}
+.genre-music {background: #99CC99;}
+.genre-fitness {background: #CC9999;}
+
+#content.shows-page-grid .genre-specials {
+background: #018DBB;
+color: #fff;
+}
+
+
+/* Show and Episode Page */
+
+.has-taxonomy-show #main {
+padding: 0 10px;
+width: 960px;
+}
+
+.has-taxonomy-show #content {
+width: 960px;
+}
+
+.has-taxonomy-show .navigation,
+.has-taxonomy-show .hentry {
+margin: 0 10px;
+}
+
+.has-taxonomy-show.single #content .hentry {
+margin: 0 20px 0 10px;
+float: left;
+width: 600px;
+}
+
+.has-taxonomy-show.single .entry-title {
+padding-bottom: 0;
+font-weight: bold;
+font-size: 28px; /* 32px orginal 06-06-2011 PWinnick */
+line-height: 38px;
+}
+
+.wf-active .has-taxonomy-show.single .entry-title {
+font-size: 28px; /* 36px orginal 06-06-2011 PWinnick */
+line-height: 42px;
+}
+
+.has-taxonomy-show #content {
+padding-top: 5px;
+}
+
+.has-taxonomy-show #nav-below {
+display: none;
+}
+
+.video-sidebar {
+float: right;
+width: 320px;
+margin-left: -10px;
+margin-top: 64px;
+background: #f3f3f3;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+
+}
+.video-sidebar > div {
+padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.video-sidebar h3 {
+padding-bottom: 5px;
+margin-bottom: 5px;
+border-bottom: 1px dotted #999;
+color: #555;
+-moz-text-shadow: -1px 1px #fff;
+text-shadow: -1px 1px #fff;
+}
+
+.upcoming-showtimes ul{
+margin-left: 0;
+}
+
+.upcoming-showtimes li {
+list-style: none;
+}
+
+.upcoming-showtimes .scheduled-date {
+display: block;
+font-weight: bold;
+}
+
+.upcoming-showtimes .scheduled-time {
+display: block;
+}
+
+.video-block {
+margin-bottom: 10px;
+float: left;
+}
+
+.thumbnail {
+background: #d7d7d7 url(images/thumbnail-placeholder.png);
+height: 100px;
+width: 140px;
+opacity: .85;
+-webkit-transition: opacity .3s ease;
+-moz-transition: opacity .3s ease;
+-o-transition: opacity .3s ease;
+transition: opacity .3s ease;
+}
+
+.thumbnail:hover,
+a:hover .thumbnail {
+opacity: 1;
+}
+
+.entry-content .thumbnail {
+margin-bottom: 6px; /* 14px original 07-26-2011 Pwinnick */
+} 
+/* This is where you will want to display desription text. */
+
+.entry-content:hover .thumbnail {
+opacity: 1;
+}
+
+#show-header {
+margin-bottom: 10px;
+float: left;
+background: #fff url(images/show-page-shadow.png) no-repeat bottom center;
+background-color: rgba(255,255,255,.8);
+padding: 10px;
+margin:0;
+width: 940px;
+min-height: 106px;
+position: relative;
+}
+
+#show-name {
+font-size: 32px;
+font-weight: 300;
+line-height: 32px;
+margin-bottom: 10px;
+margin-right: 20px;
+font-family: arial, helvetica, sans-serif;
+float: left;
+}
+
+.wf-active #show-name {
+font-size: 36px;
+}
+
+#show-name a {
+color: #666;
+}
+
+#show-name a:hover {
+color: #B20637;
+}
+
+#show-header .thumbnail {
+
+}
+
+#show-description {
+float: left;
+margin-bottom: 22px;
+width: 860px;
+font-family: arial, helvetica, sans-serif;
+color: #666;
+font-size: 14px;
+}
+
+.wf-active #show-description {
+font-size: 16px;
+}
+
+#show-header .menu-container {
+font: normal normal 300 16px/normal arial, helvetica, sans-serif;
+border-bottom: none;
+float: left;
+margin-bottom: 10px;
+}
+
+.wf-active #show-header .menu-container{
+font-size: 18px;
+}
+
+#show-header .menu-container a {
+color: #000;
+}
+
+#show-header .sf-menu > li > a,
+#show-header .sf-menu > li > a:visited {
+border: none;
+border-bottom: 1px dotted #ccc;
+padding:0;
+margin-right: 20px;
+margin-top: 9px;
+}
+
+#show-header .sf-menu > li > a:hover {
+border-bottom: 1px solid #000;
+}
+
+#show-header .sf-menu .sub-menu {
+background: #efefef;
+width: 10em;
+max-width: 10em;
+}
+
+#show-header .sf-menu .sub-menu .sub-menu {
+left: 10em !important;
+}
+
+#show-header .sf-menu .sub-menu li a {
+border-top: none;
+}
+
+.section-header {
+font-family: arial, helvetica, sans-serif;
+font-size: 14px;
+border-bottom: 1px solid #eee;
+line-height: 24px;
+padding-bottom: 5px;
+margin-bottom: 10px;
+color: #666;
+}
+
+.taxonomy-shows .entry-content {
+padding-top: 10px;
+}
+
+.taxonomy-shows .entry-content p {
+font-size: 14px;
+color: #444;
+}
+.wf-active .taxonomy-shows .entry-content p {
+font-size: 15px; /* 15px orginial 06-06-2011 Pwinnick */
+}
+
+#show-episodes {
+width:620px;
+margin: 10px 10px 0;
+float: left;
+}
+
+#show-episodes .hentry, 
+.taxonomy-genre #content .hentry {
+float: left;
+width: 290px;
+position: relative;
+min-height: 210px;	/* orginal 122px Updated 08-18-2011 Pwinnick */
+max-height: 210px; /* Added 07/26/2011 Pwinnick */
+}
+
+#show-episodes h2.entry-title,
+#show-episodes .entry-meta,
+#show-episodes .entry-content,
+.taxonomy-genre h2.entry-title,
+.taxonomy-genre .entry-meta,
+.taxonomy-genre .entry-content {
+
+}
+
+#show-episodes h2.entry-title,
+.taxonomy-genre  h2.entry-title {
+font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */
+font-weight: 500;
+}
+
+#show-episodes .entry-content,
+.taxonomy-genre .entry-content {
+padding-top: 0;
+font-size: 13px;
+}
+
+#show-episodes .thumbnail,
+.taxonomy-genre  .thumbnail {
+top: 0;
+left:0;
+}
+
+#show-notes,
+.taxonomy-shows .upcoming-showtimes {
+float:left;
+width: 300px;
+padding: 10px 10px 20px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+background: #fafafa;
+margin-bottom: 20px;
+}
+
+#show-notes .hentry {
+width: 300px;
+margin: 0;
+float: left;
+}
+
+#show-notes .entry-title {
+font-size: 14px; /* 16px original 06-06-2011 Pwinnick */
+}
+
+#show-notes .entry-utility { 
+display: none;
+}
+
+#show-clips {
+float: left;
+margin-top: 20px;
+padding: 0 10px;
+width: 940px;
+background: #fdfdfd;
+border-bottom: 1px solid #eee;
+}
+
+#show-clips h2.page-title {
+margin-right: 10px;
+margin-bottom: 15px;
+border-bottom: none;
+padding-top: 20px;
+}
+
+#show-clips h2.entry-title {
+font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/
+line-height: 24px;
+float: right;
+width: 140px
+}
+
+#show-clips  .entry-content {
+padding-top: 0;
+}
+
+#show-clips .entry-meta {
+display: none;
+}
+
+#show-clips .clip {
+float: left;
+width: 300px;
+margin-left: 0;
+margin-right: 10px;
+float: left;
+}
+
+#show-clips .clip:nth-child(n) {
+margin-right: 20px;
+}
+
+#show-clips .clip:nth-child(3n+3) {
+margin-right: 0;
+}
+
+#show-episodes .meta-prep-entry-date,
+.clip .entry-utility {
+display: none;
+}
+
+.shows_nav {
+float: left;
+width: 100%;
+padding: 10px 0;
+}
+
+.shows_nav .nav-next {
+float:left;
+width: 50%;
+text-align: left;
+}
+
+.shows_nav .nav-previous {
+float: right;
+width: 50%;
+text-align: right;
+}
+
+.embed {
+margin-bottom: 22px;
+}
+
+
+/* Show Slideshow */
+
+#show-featured {
+float:left;
+width: 800px; /* 620px original 06-06-2011 Pwinnick*/
+padding: 10px 0 0;
+position: relative;
+z-index: 0 !important;
+margin:0 0 30px;
+}
+
+#show-featured .attachment-banner {
+float: left;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border-radius: 4px;
+}
+
+#show-featured li {
+height: 330px;
+position: relative;
+margin-bottom: 20px;
+padding-top: 40px;
+}
+
+#show-featured .description {
+height:330px;
+position: absolute;
+left: 0px;
+top: 0;
+}
+
+#show-featured .description blockquote {
+margin: 0 1em;
+}
+
+#show-featured .description .more-link {
+display: block;
+}
+
+#show-featured .description img,
+#show-featured .wp-caption {
+display: none;
+}
+
+#show-featured h2 {
+line-height: 32px;
+font-size: 28px;
+font-family: arial, helvetica, sans-serif;
+margin-bottom: 8px;
+}
+
+#show-featured h2 a{
+color:#000;
+text-decoration: none;
+}
+
+#show-featured p {
+display: block;
+height: 310px;
+background: rgba(0,0,0,.3);
+color: white;
+width: 220px;
+padding:10px 20px;
+}
+
+#show-navigation {
+font-size:18px;
+line-height:22px;
+width: 620px;
+float: left;
+margin-bottom: 20px;
+position: relative;
+margin-left: 10px;
+top: -70px;
+z-index: 2;
+}
+
+#show-navigation .nav {
+float:left;
+width: 75px;
+margin-right: 10px;
+border: 5px solid #8fafc5;
+cursor: pointer;
+background: #eee;
+-webkit-box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+-moz-box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+}
+
+#show-navigation .nav:hover {
+position: relative;
+top: -10px;
+-webkit-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+-moz-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+}
+
+#show-navigation .nav.active {
+position: relative;
+top: -21px;
+-webkit-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+-moz-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+}
+
+#show-navigation .nav img {
+opacity: .8;
+}
+#show-navigation .nav:hover img,
+#show-navigation .nav.active img {
+opacity: 1;
+}
+
+#show-navigation .item-1,
+#show-navigation .item-5 {
+-webkit-transform: rotate(.65deg); 
+-moz-transform: rotate(.65deg);	
+transform: rotate(.65deg);
+margin-top: 3px;
+}
+
+#show-navigation .item-2,
+#show-navigation .item-4 { 
+-webkit-transform: rotate(-.5deg); 
+-moz-transform: rotate(-.5deg);	
+transform: rotate(-.5deg);
+border-color: #b0d7f6;
+}
+
+#show-navigation .item-3 {
+-webkit-transform: rotate(.75deg); 
+-moz-transform: rotate(.75deg);	
+transform: rotate(.75deg);
+margin-top: -2px;
+}
+
+/* hide new features from homepage */
+#front-block-1, #front-block-2, .shows-block {
+display: none;
+}
+
+.share {
+width: 100%;
+float: left;
+margin: 10px 0;
+}
+
+.share ul {
+list-style: none;
+margin:0;
+}
+
+.share img {
+float: left;
+margin-right: 5px;
+}
+
+.share li {
+margin-right: 20px;
+float: left;
+font:16px/32px arial, helvetica, sans-serif;
+}
+
+.post-metadata {
+background: #ffe;
+padding: 10px;
+clear:both;
+margin: 0 0 10px;
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+        border-radius: 4px;
+}
+
+.post-metadata .section-header {
+border-bottom: 1px dotted #999;
+}
+
+.post-metadata .post-meta-key {
+font-weight: 600;
+}
+
+/*Updated 07-07-2011 PWinnick*/
+#siteinfo {
+font:11px arial, helvetica, sans-serif;
+/* hide footer text until we can change it */
+/*visibility: hidden;*/
+}
+
+.galleria-container {
+background: transparent;
+} /* galleria black flash fix */
+
+/* iPad */
+@media only screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+
+	body {
+	min-width: 1024px;
+	}
+
+}
+
+
+/* Special Video Slideshow  */
+
+#video-slideshow {
+float: left;
+}
+
+#video-slideshow iframe {
+width: 540px;
+height: 320px;
+}
+
+#video-slideshow ul {
+list-style: none;
+margin: 0;
+}
+
+#video-slideshow li {
+list-style: none;
+float: left;
+width: 115px;
+margin-right: 20px;
+height: 146px;
+}
+
+#video-slideshow-nav img {
+float:left;
+width: 75px;
+height: 50px;
+margin-left: 10px;
+border: 5px solid #8fafc5;
+cursor: pointer;
+background: #eee;
+-webkit-box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+-moz-box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+box-shadow: rgba(153, 153, 153, 1) -2px 1px 2px;
+-webkit-transition: top .3s linear .2s, -webkit-box-shadow .3s linear;
+-moz-transition: top .3s linear .2s, -moz-box-shadow .3s linear;
+-o-transition: top .3s linear .2s, -o-box-shadow .3s linear;
+transition: top .3s linear .2s, box-shadow .3s linear;
+top:0;
+position: relative;
+}
+
+#video-slideshow-nav img:hover {
+position: relative;
+-webkit-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+-moz-box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+box-shadow: rgba(153, 153, 153, .5) -5px 11px 6px;
+-webkit-transform: rotate(0deg) scale(1.05) translate(0,-5px);
+-moz-transform: rotate(0deg) scale(1.05) translate(0,-5px);	
+transform: rotate(0deg) scale(1.05) translate(0,-5px); 
+}
+
+#video-slideshow-nav li.active img {
+top: -5px;
+-webkit-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+-moz-box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+box-shadow: rgba(153, 153, 153, .45) -7px 16px 8px;
+-webkit-transform: rotate(0deg) scale(1.05) translate(0,-5px);
+-moz-transform: rotate(0deg) scale(1.05) translate(0,-5px);	
+transform: rotate(0deg) scale(1.05) translate(0,-5px); 
+-webkit-transition: top .3s ease-in, -webkit-box-shadow .3s linear;
+-moz-transition: top .3s ease-in, -moz-box-shadow .3s linear;
+-o-transition: top .3s ease-in, -o-box-shadow .3s linear;
+transition: top .3s ease-in, box-shadow .3s linear;
+}
+
+/* flash embed placeholder and object */
+#live-stream {
+text-align: center;
+width: 600px;
+height: 440; /* 338px (16:9) or 450px (4:3), 654x480 square pixel center cut equivalent of 720x480 => 440px ( Updated 07-27-2011 Pwinnick */
+}
+
+/* if flash is not supported */
+div#live-stream {
+border: 3px dashed #ccc;
+background: #fafafa;
+width: 520px;
+height: 240px;
+padding: 80px 40px;
+font-size: 16px;
+border-radius: 4px;
+}
+
+
+/* Speical Classes  */
+
+.top-space {
+height: 24px;
+}
+
+table.facts {
+margin: 0;
+padding: 0;
+border: none;
+}
+
+tr.facts {
+margin: 0;
+padding: 0;
+border: none;
+}
+
+/* Removes the "This entry was posted in <tag>. Bookmark the <permalink>. Both comments and trackbacks are currently closed" addition on posts. PWinnick */
+.post .entry-utility, .post .entry-meta {
+display:none;
+}
+
+.entry-utility {
+display:none;
+}
+
+/* Class for Schedule Section Header Link on Front Page. PWinnick*/
+a.header {
+color: #fff;
+/*color: #5b6d7b;*/
+margin-left: 8px;
+}
+
+/* Hide unnecessary Widget titles */
+.widgettitle {
+display:none;
+}
+
+
+/* TUTV Online Text */
+
+.tutv-online {
+margin-top: -6px;
+}
+
+.tutv-online-text {
+font-size: 13px;
+margin: 0px 8px 0px 18px;
+color: #5b6d7b;
+}
+
+
+/* Search Menu Navigation Added 06-15-2011 Pwinnick */
+
+#searchbox {
+float: right;
+margin: 14px -10px 0px 0px;
+font-family: arial, helvetica, sans-serif;
+}
+
+#searchbutton {
+margin: 4px -10px 0px 200px;
+}
+
+/* Added 08-26-2011 Pwinnick */
+#tualert {
+width: 960px;
+margin: auto;
+}
+
+#tualert-text {
+float: right;
+position: relative;
+font-size: 14px;
+font-family: arial, helvetica, sans-serif;
+font-weight: bold;
+background-color: yellow;
+padding: 4px;
+z-index: 1000;
+}
+
+#tualert-text a {
+color: red;
+}
+
+
+/* Staff Table Added 08-31-2011 PWinnick */
+
+table.staff {
+padding: 0px;
+margin-bottom: 32px;
+border: 0px solid #ccc;
+font-size: 13.5px;
+font-family: arial, helvetica, sans-serif;
+table-layout: fixed;
+/*background: url('images/staff-menu.png') #fcfcfc repeat-x top;
+-webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+        border-radius: 4px;
+-webkit-box-shadow: rgba(0, 0, 0, 0.2) 3px 7px 7px;
+   -moz-box-shadow: rgba(0, 0, 0, 0.2) 3px 7px 7px;
+        box-shadow: rgba(0, 0, 0, 0.2) 3px 7px 7px;*/
+}
+
+table.staff tr {
+border: 0px;
+padding: 0px;
+margin: 0px;
+}
+
+table.staff tr#section-title {
+/*font-size: 14px;*/
+font-family: arial, helvetica, sans-serif;
+font-weight: bold;
+/*color: #565656;*/
+}
+
+table.staff tr td {
+vertical-align: top;
+border: 0px;
+padding: 4px 8px 8px 8px;
+margin: 0px;
+}
+
+table.staff tr td#section {
+margin-bottom: 4px 0px 0px 0px;
+}
+
+table.staff tr td#title {
+/*text-align: right;*/
+width: 250px; /* original 180px; Updated 09-07-2011 PWinnick */
+}
+
+table.staff tr td#name {
+width: 160px; /* original 140px; Updated 09-07-2011 PWinnick */
+}
+
+table.staff tr td#status {
+font-family: arial, helvetica, sans-serif;
+font-style: italic;
+color: #aaa;
+width: 100px;
+}

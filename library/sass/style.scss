@@ -5,19 +5,12 @@ Description:
 Author: Sam Margulies, Chris Montgomery
 Author URI: 
 Template: thematic
-Version: 2.0.0
+Version: 1.9
 Tags: Thematic
 .
 Thematic is © Ian Stewart http://themeshaper.com/
 .
 */
-/*
 
-Surprise!
+@import "style-readable";
 
-All of the styles are actually located in /library/css/style.css ,
-registered and enqueued by the function tutv_styles() in /library/init.php .
-This is mainly for the sake of compression.
-
-
-*/

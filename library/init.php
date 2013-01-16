@@ -3,6 +3,31 @@
 // Set timezone to wordpress timezone
 date_default_timezone_set( get_option('timezone_string') );
 
+/**
+ * Enqueue/register main stylesheet.
+ *
+ * Derived from Bones.
+ * 
+ * This is necessary in order to keep the necessary theme registration info
+ * in /style.css and keep the actual stylesheets in /library/css.
+ *
+ * @author Chris Montgomery
+ * @see http://themble.com/bones/ Bones website
+ *
+ * @since 2.0.0
+ * @version 1.0.0
+ */
+add_action('wp_enqueue_scripts', 'tutv_styles', 999);
+function tutv_styles() {
+  if (!is_admin()) {
+
+    // register main stylesheet
+    wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_enqueue_style( 'tutv-stylesheet' );
+
+  }
+}
+
 // Define custom thumbnail sizes
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'banner', 960, 330, true ); // Slideshow image size
