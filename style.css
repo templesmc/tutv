@@ -2,7 +2,7 @@
 Theme Name: TUTV
 Theme URI: http://github.com/tutv/tutv/
 Description:
-Author: Sam Margulies, Chris Montgomery
+Author: Chris Montgomery, Sam Margulies
 Author URI: 
 Template: thematic
 Version: 2.0.0
@@ -15,12 +15,13 @@ Thematic is © Ian Stewart http://themeshaper.com/
 
 Surprise!
 
-All of the styles are actually located in /style-active.css ,
+All of the styles are actually located in style-active.css ,
 registered and enqueued by the function tutv_styles() in /library/init.php .
 
 This is mainly for the sake of compression and due to CodeKit's
-output style restrictions. I may consider revising
-in later versions, but for now it will do.
+output style restrictions. In order to leave the above Wordpress
+child theme comment intact, CodeKit's business must be taken elsewhere.
+I may consider revising in later versions, but for now it will do.
 
 The main stylesheet is complied using SASS/SCSS and CodeKit.
 If that doesn't make sense, please look into SASS - it's a great
