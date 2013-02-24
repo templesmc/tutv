@@ -3,7 +3,8 @@
 	//add_action('wp_print_scripts', 'childtheme_shows_scripts');
 	 
 	function childtheme_shows_scripts() {
-	
+
+		// make sure that scripts are enqueuing properly after changing the location of the default stylesheet - montchr
 	 	wp_enqueue_script('bbq', get_bloginfo('stylesheet_directory') . '/js/jquery.ba-bbq.min.js', array('jquery'), '1.2.1', false);
 	 	wp_enqueue_script('show-scripts.js', get_bloginfo('stylesheet_directory') . '/js/show-scripts.js', array('jquery', 'bbq'), '1.0', false);
 	 

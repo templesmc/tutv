@@ -157,7 +157,7 @@ Template Name: Front Page
 				<?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 				
               </div><!-- .front-block .block-->
-		    </div> <!--.front-block .shows-block-->
+		    </div> <!--.front-block.news-block-->
           
 		  <div id="schedule-block" class="front-block">
 			<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>

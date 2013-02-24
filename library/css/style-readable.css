@@ -1612,14 +1612,8 @@ style a page via class
   /*
   a lot of this block stuff is badly structured in the template files and uses badly named classes. also, it looks like template comments are also misleading. take a closer look. - montchr
   */
-  /* 
-  // i don't think this appears anywhere, and if it does, it should be renamed - montchr
-  #front-block-1 {
-      margin-right:20px;
-      margin-left: 10px;
-      clear: left;
-  }
-  */
+  /* end #front-block-3 */
+  /* end #schedule-block */
 }
 .home #main #container #content #front-featured {
   width: 960px;
@@ -1778,6 +1772,10 @@ style a page via class
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
+.home #main #container #content .front-block .avatar {
+  float: left;
+  margin: 0.25em 10px 0 0;
+}
 .home #main #container #content #last-front-block {
   width: 960px;
   margin: 72px 0px 72px 0px;
@@ -1786,6 +1784,10 @@ style a page via class
   margin-right: 0;
   clear: left;
 }
+.home #main #container #content #front-block-3 .news-block h3 {
+  border-bottom: none;
+  margin-bottom: 0;
+}
 .home #main #container #content #schedule-block {
   position: relative;
   margin-left: 40px;
@@ -1793,38 +1795,63 @@ style a page via class
   width: 620px;
   /* 640px original 07-07-2011 Pwinnick*/
   background: #F4F7FC;
+  /* end .hentry */
 }
 .home #main #container #content #schedule-block .section-header {
-  /* background: #000; image left, image repeat, image right 06-06-2011 PWinnick */
   background-image: url("images/mid-menu.png");
   background-repeat: repeat-x;
   height: 28px;
   margin-bottom: -8px;
-  /* 0px original 06-06-2011 PWinnick */
-  /*border-bottom-color: #ccc;*/
   border: 0px;
 }
 .home #main #container #content #schedule-block .hentry {
   width: 290px;
-  /* 280px original 06-06-2011 PWinnick */
   padding: 4px 4px 0px 10px;
-  /*4px 10px 0px 10px; original 09-08-2011 PWinnick*/
   background: #fff;
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
+  /* end ul */
+  /* end &.active */
 }
-.home #main #container #content #schedule-block .entry-content {
+.home #main #container #content #schedule-block .hentry ul {
+  border-top: 1px solid #eeeeee;
+  list-style: none;
+  margin: 0;
+  /* end li */
+}
+.home #main #container #content #schedule-block .hentry ul li {
+  display: inline;
+  /* end a */
+}
+.home #main #container #content #schedule-block .hentry ul li a {
+  border-bottom: 1px solid #eeeeee;
+  color: #666;
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.home #main #container #content #schedule-block .hentry ul li a:visited {
+  border-bottom: 1px solid #eeeeee;
+  color: #666;
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.home #main #container #content #schedule-block .hentry ul li a:hover, .home #main #container #content #schedule-block .hentry ul li a:active {
+  color: #000;
+}
+.home #main #container #content #schedule-block .hentry .entry-content {
   display: none;
 }
-.home #main #container #content #schedule-block .active {
+.home #main #container #content #schedule-block .hentry.active {
   background: #F4F7FC;
   border-right-color: #F4F7FC;
   border-bottom: 1px solid #cccccc;
   background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#e3ebfd), to(#f4f7fc));
   background-image: -moz-linear-gradient(left center, #e3ebfd 0%, #f4f7fc 100%);
 }
-.home #main #container #content #schedule-block .active .entry-content {
+.home #main #container #content #schedule-block .hentry.active .entry-content {
   display: block;
   position: absolute;
   overflow: hidden;
@@ -1844,79 +1871,22 @@ style a page via class
   font-size: 13px;
   /*modified 09-15-2011 PWinnick */
 }
-.home #main #container #content #schedule-block .scheduled-time {
+.home #main #container #content #schedule-block .hentry.active .entry-content .thumbnail {
+  margin-bottom: 4px;
+  opacity: 1;
+}
+.home #main #container #content #schedule-block .hentry .scheduled-time {
   color: #666;
   text-shadow: -1px 1px white;
   margin-top: -4px;
-  /*margin-bottom: 5px;*/
   font-size: 14px;
   /* 16px original 06-06-2011 PWinnick */
   font-family: arial, helvetica, sans-serif;
 }
-.home #main #container #content #schedule-block .entry-title {
+.home #main #container #content #schedule-block .hentry .entry-title {
   font-size: 14px;
   margin-bottom: -2px;
   border-bottom: none;
-}
-.home #main #container #content #schedule-block .thumbnail {
-  margin-bottom: 4px;
-  /* 8px original 06-06-2011 PWinnick */
-}
-.home #main #container #content #schedule-block .active .thumbnail {
-  opacity: 1;
-}
-.home #main #container #content .front-block .avatar {
-  float: left;
-  margin: 0.25em 10px 0 0;
-}
-.home #main #container #content .front-block ul {
-  border-top: 1px solid #eeeeee;
-  list-style: none;
-  margin: 0;
-}
-.home #main #container #content .front-block ul li {
-  display: inline;
-}
-.home #main #container #content .front-block ul li a,
-.home #main #container #content .front-block ul li a:visited {
-  border-bottom: 1px solid #eeeeee;
-  color: #666;
-  display: block;
-  padding: 6px 0;
-  text-decoration: none;
-}
-.home #main #container #content .front-block ul li a:hover,
-.home #main #container #content .front-block ul li a:active {
-  color: #000;
-}
-.home #main #container #content .news-block h3 {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-.home #main #container #content .shows-block {
-  margin-top: 20px;
-}
-.home #main #container #content .video-block .clip-item {
-  clear: both;
-  float: left;
-  margin: 5px 0px;
-}
-.home #main #container #content .video-block .video-title {
-  clear: both;
-  float: right;
-  width: 140px;
-  font-family: arial, helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.home #main #container #content .wf-active .video-block .video-title {
-  font-size: 16px;
-}
-.home #main #container #content .video-block .thumbnail {
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
 }
 .home #main #container #content .home .shows-item {
   float: left;
@@ -1980,9 +1950,76 @@ style a page via class
 }
 
 /* END .home */
-.blog .entry-utility {
-  margin-bottom: 10px;
+/*
+
+========================
+==FAST FACTS
+========================
+
+*/
+.slug-fast-facts-on-tutv table.facts {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
+.slug-fast-facts-on-tutv tr.facts {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* end .slug-fast-facts-on-tutv */
+/*
+
+========================
+==STAFF PAGE
+========================
+
+*/
+table.staff {
+  padding: 0px;
+  margin-bottom: 32px;
+  border: 0px solid #cccccc;
+  font-size: 13.5px;
+  font-family: arial, helvetica, sans-serif;
+  table-layout: fixed;
+  /* end tr */
+}
+table.staff tr {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  /* end td */
+}
+table.staff tr td {
+  vertical-align: top;
+  border: 0px;
+  padding: 4px 8px 8px 8px;
+  margin: 0px;
+}
+table.staff tr td#section {
+  margin-bottom: 4px 0px 0px 0px;
+}
+table.staff tr td#title {
+  width: 250px;
+}
+table.staff tr td#name {
+  width: 160px;
+}
+table.staff tr td#status {
+  font-style: italic;
+  color: #aaa;
+  width: 100px;
+}
+
+/* end table.staff */
+/*
+
+========================
+==BLOG
+========================
+
+*/
 .blog .hentry {
   float: left;
 }
@@ -1993,14 +2030,6 @@ style a page via class
 }
 
 /* END .blog */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
 /*
 
 ========================
@@ -2008,6 +2037,9 @@ style a page via class
 ========================
 
 */
+.single {
+  /* end .post */
+}
 .single .show-notes .meta-prep-author,
 .single .show-notes .entry-meta .author,
 .single .show-notes .entry-meta .author a,
@@ -2025,6 +2057,9 @@ style a page via class
   display: inline;
   font-size: inherit;
   text-transform: none;
+}
+.single .post .entry-meta {
+  display: none;
 }
 
 /* END .single */
@@ -2104,10 +2139,109 @@ style a page via class
 ========================
 
 */
-.page-template-page-shows-grid-php .entry-title.show-type {
-  font-weight: 400;
-  padding-top: 14px;
-  font-size: 20px;
+/*
+the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
+
+the .shows-page-grid class can be safely changed to .shows-page, despite .shows-page being used in the old stylesheet. .shows-page doesn't appear anywhere in this template, and from looking at the code it seems pretty clear that it's not useful.
+
+*/
+.page-template-page-shows-grid-php {
+  /* end .shows-page-grid */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid {
+  /* end #filtering-nav */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav {
+  /* genre box colors */
+  /* end .filtering-nav-list */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-documentary {
+  background: #F9EFE2;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-interviews {
+  background: #E9E4D3;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-news {
+  background: #E3E4E3;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-sports {
+  background: #F0955F;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-educational {
+  background: #FDF3DE;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-entertainment {
+  background: #DCE9EA;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-music {
+  background: #99CC99;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-fitness {
+  background: #CC9999;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-specials {
+  background: #018DBB;
+  color: #fff;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-left: 6px;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul {
+  list-style: none;
+  margin: 0 0 10px 0;
+  /* end .filtering-nav-list-item */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li {
+  list-style: none;
+  display: inline;
+  /* end .filtering-nav-list-item a */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li a {
+  color: #333;
+  padding: 3px;
+  margin: 0 12px 0 3px;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li a:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry {
+  width: 160px;
+  margin: 20px 11px;
+  padding: 8px;
+  float: left;
+  clear: none;
+  /* end .shows-page-show */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry.col2 {
+  width: 347px;
+  /* 337px original 06-08-2011 Pwinnick */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry.col3 {
+  width: 544px;
+  /* 534px original 06-08-2011 Pwinnick */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry .entry-content {
+  padding: 0 0 10px;
+  /* end .entry-title */
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry .entry-content .entry-title {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 11px;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry .entry-content .entry-title a {
+  color: #333;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry .entry-content .entry-title a:hover {
+  color: #999;
+}
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry .entry-content .description {
+  display: inline;
+  font-size: 14px;
 }
 
 /* end .page.slug-shows */
@@ -2249,7 +2383,6 @@ style a page via class
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
 #schedule .hentry .entry-content p {
@@ -2278,29 +2411,305 @@ style a page via class
 }
 
 /* end #schedule */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
+/*********************
+SHOW, CLIP, AND EPISODE PAGES
+**********************/
+/* Show, Clips, and Episode Pages (All) */
+.has-taxonomy-show {
+  /* end #main */
+}
+.has-taxonomy-show #main {
+  padding: 0 10px;
+  width: 960px;
+  /* end #content */
+}
+.has-taxonomy-show #main #content {
+  width: 960px;
+  padding-top: 5px;
+  /* end #show-header */
+  /* i'm pretty certain we've abandoned this stuff,
+  but just in case, here it is. either way, it's
+  only visible to logged-in users with at least
+  the editor capability. - montchr */
+  /* end .post-metadata */
+}
+.has-taxonomy-show #main #content .navigation,
+.has-taxonomy-show #main #content .hentry {
+  margin: 0 10px;
+}
+.has-taxonomy-show #main #content #nav-below {
+  display: none;
+}
+.has-taxonomy-show #main #content #show-header {
+  margin-bottom: 10px;
+  float: left;
+  background: white url(images/show-page-shadow.png) no-repeat bottom center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin: 0;
+  width: 940px;
+  min-height: 106px;
+  position: relative;
+  /* end #show-name */
+}
+.has-taxonomy-show #main #content #show-header #show-name {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  float: left;
+}
+.has-taxonomy-show #main #content #show-header #show-name a {
+  color: #666;
+}
+.has-taxonomy-show #main #content #show-header #show-name a:hover {
+  color: #B20637;
+}
+.has-taxonomy-show #main #content #show-header .menu-container {
+  font: normal normal 300 16px/normal arial, helvetica, sans-serif;
+  border-bottom: none;
+  float: left;
+  margin-bottom: 10px;
+}
+.has-taxonomy-show #main #content #show-header .menu-container a {
+  color: #000;
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu {
+  /* end > li */
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a,
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a:visited {
+  border: none;
+  border-bottom: 1px dotted #cccccc;
+  padding: 0;
+  margin-right: 20px;
+  margin-top: 9px;
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a:hover {
+  border-bottom: 1px solid black;
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu {
+  background: #efefef;
+  width: 10em;
+  max-width: 10em;
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu .sub-menu {
+  left: 10em !important;
+}
+.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu li a {
+  border-top: none;
+}
+.has-taxonomy-show #main #content #show-header #show-description {
+  float: left;
+  margin-bottom: 22px;
+  width: 860px;
+  color: #666;
+  font-size: 14px;
+}
+.has-taxonomy-show #main #content .section-header {
+  font-size: 14px;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 24px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.has-taxonomy-show #main #content .post-metadata {
+  background: #ffe;
+  padding: 10px;
+  clear: both;
+  margin: 0 0 10px;
+}
+.has-taxonomy-show #main #content .post-metadata .section-header {
+  border-bottom: 1px dotted #999999;
+}
+.has-taxonomy-show #main #content .post-metadata .post-meta-key {
+  font-weight: 600;
+}
+
+/* end .has-taxonomy-show (show and episodes pages) */
+	/*
+
+	========================
+	==SHOW PAGE
+	========================
+
+	*/
+.has-taxonomy-show.not-singular {
+  /* this also has the badly-named class of .taxonomy-shows -
+  the body element has the same class. not good.
+  but here, scss' nesting capabilities makes everyone happy -
+  i'm just going to use #content nested within .has-taxonomy-show.not-singular
+  - montchr */
+  /* end #content */
+}
+.has-taxonomy-show.not-singular #content {
+  /* end #show-episodes */
+  /* end #show-clips */
+}
+.has-taxonomy-show.not-singular #content .entry-meta,
+.has-taxonomy-show.not-singular #content .meta-prep-entry-date {
+  display: none;
+}
+.has-taxonomy-show.not-singular #content #show-episodes {
+  width: 620px;
+  margin: 10px 10px 0;
+  float: left;
+  /* end .hentry */
+}
+.has-taxonomy-show.not-singular #content #show-episodes .hentry {
+  float: left;
+  width: 290px;
+  position: relative;
+  min-height: 210px;
+  /* orginal 122px Updated 08-18-2011 Pwinnick */
+  max-height: 210px;
+  /* Added 07/26/2011 Pwinnick */
+}
+.has-taxonomy-show.not-singular #content #show-episodes .hentry h2.entry-title {
+  font-size: 15px;
+  /* 20px orginial 06-06-2011 Pwinnick */
+  font-weight: 500;
+}
+.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content {
+  padding-top: 0;
+  font-size: 13px;
+}
+.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content .thumbnail {
+  top: 0;
+  left: 0;
+}
+.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content p {
+  font-size: 14px;
+  color: #444;
+}
+.has-taxonomy-show.not-singular #content #show-clips {
+  float: left;
+  margin-top: 20px;
+  padding: 0 10px;
+  width: 940px;
+  background: #fdfdfd;
+  border-bottom: 1px solid #eeeeee;
+}
+.has-taxonomy-show.not-singular #content #show-clips h2.page-title {
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border-bottom: none;
+  padding-top: 20px;
+}
+.has-taxonomy-show.not-singular #content #show-clips h2.entry-title {
+  font-size: 14px;
+  /* 18px original 06-06-2011 Pwinnick*/
+  line-height: 24px;
+  float: right;
+  width: 140px;
+}
+.has-taxonomy-show.not-singular #content #show-clips .clip {
+  float: left;
+  width: 300px;
+  margin-left: 0;
+  margin-right: 10px;
+  float: left;
+}
+.has-taxonomy-show.not-singular #content #show-clips .entry-content {
+  padding-top: 0;
+}
+.has-taxonomy-show.not-singular #content .shows_nav {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+}
+.has-taxonomy-show.not-singular #content .shows_nav .nav-next {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.has-taxonomy-show.not-singular #content .shows_nav .nav-previous {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+/* end .has-taxonomy-show.not-singular (show page) */
+	/*
+
+	========================
+	==EPISODE & OTHER PAGES
+	========================
+
+	*/
+.has-taxonomy-show.singular {
+  /* end #content */
+}
+.has-taxonomy-show.singular #content {
+  /* end .video-sidebar */
+}
+.has-taxonomy-show.singular #content .hentry {
+  margin: 0 20px 0 10px;
+  float: left;
+  width: 600px;
+}
+.has-taxonomy-show.singular #content .hentry .entry-title {
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+}
+.has-taxonomy-show.singular #content .video-sidebar {
+  float: right;
+  width: 320px;
+  margin-left: -10px;
+  margin-top: 64px;
+  background: #f3f3f3;
+}
+.has-taxonomy-show.singular #content .video-sidebar .video-block
+.video-block {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.has-taxonomy-show.singular #content .video-sidebar .video-block
+.video-block h3.section-header {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #999999;
+  color: #555;
+  -moz-text-shadow: -1px 1px white;
+  text-shadow: -1px 1px white;
+}
+.has-taxonomy-show.singular #content .video-sidebar .video-block
+.video-block .clip-item {
+  clear: both;
+  float: left;
+  margin: 5px 0px;
+}
+.has-taxonomy-show.singular #content .video-sidebar .video-block
+.video-block .video-title {
+  clear: both;
+  float: right;
+  width: 140px;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.has-taxonomy-show.singular #content .video-sidebar .video-block
+.video-block .thumbnail {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* end .has-taxonomy-show.singular (episode & other pages)
+
+
+
+
+
+
 /*********************
 LINK STYLES
 *********************/
@@ -2322,6 +2731,9 @@ a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #d10e3c;
   text-decoration: none;
 }
+a:hover .thumbnail, a:focus .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail {
+  opacity: 1;
+}
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -2335,13 +2747,13 @@ a:link, a:visited:link {
 H1, H2, H3, H4 STYLES
 **********************/
 .entry-content h1, .entry-content .h1 {
-  font-family: arial, helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
   padding: 28px 0 14px 0;
 }
 .entry-content h2, .entry-content .h2 {
-  font-family: arial, helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 600;
   padding: 28px 0 14px 0;
@@ -2352,7 +2764,7 @@ H1, H2, H3, H4 STYLES
   padding: 14px 0 14px 0;
 }
 .entry-content h4, .entry-content .h4 {
-  font-family: arial, helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: .02em;
@@ -2545,21 +2957,15 @@ POST & CONTENT STYLES
   padding: 22px 0 0 10px;
   margin: 0;
   width: auto;
-  			/*
-  			// this stuff will likely change when working on new typography
-  			.wf-active h1.entry-title, .wf-active .page-title {
-  			font-size: 42px;
-  			line-height: 38px;
-  			}
-  
-  			.wf-active h2.entry-title {
-  			font-size: 26px;
-  			padding-bottom: 0;
-  			}
-  			*/
 }
 #main #container #content .hentry {
   width: 540px;
+}
+#main #container #content .entry-content {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#main #container #content .entry-content:hover .thumbnail {
+  opacity: 1;
 }
 #main #container #content .entry-meta {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2578,8 +2984,7 @@ POST & CONTENT STYLES
   font-size: 12px;
 }
 #main #container #content .entry-utility {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  clear: both;
+  display: none;
 }
 #main #container #content h1.entry-title,
 #main #container #content .page-title {
@@ -2598,24 +3003,24 @@ POST & CONTENT STYLES
 #main #container #content h1 span, #main #container #content .page-title span {
   font-style: normal;
 }
-
-/* end #main */
-.entry-content {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+#main #container #content .thumbnail {
+  background: #d7d7d7 url(images/thumbnail-placeholder.png);
+  height: 100px;
+  width: 140px;
+  opacity: .85;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+#main #container #content .thumbnail:hover {
+  opacity: 1;
+}
+#main #container #content a:hover .thumbnail {
+  opacity: 1;
 }
 
-/*****************************
-EPISODES PAGE
-******************************/
-/*****************************
-CLIP PAGE
-******************************/
-/*****************************
-EVENTS PAGE
-******************************/
-/*****************************
-SHOW PAGE
-******************************/
+/* end #main */
 .episodes .published,
 .clip .published,
 .episodes .meta-sep-edit,
@@ -2643,6 +3048,10 @@ SIDEBARS & ASIDES & WIDGETS
   width: 180px;
 }
 
+.widgettitle {
+  display: none;
+}
+
 /*******************
 FOOTER STYLES 
 ********************/
@@ -2650,6 +3059,10 @@ FOOTER STYLES
   margin-top: 20px;
   /* end #first */
   /* end #third */
+  /* end #customizable-search */
+}
+#footer #siteinfo {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #footer .aside ul {
   list-style-type: none;
@@ -2680,6 +3093,14 @@ FOOTER STYLES
   float: left;
   display: inline;
   width: 33.3%;
+}
+#footer #customizable-search #searchbox {
+  float: right;
+  margin: 14px -10px 0px 0px;
+  font-family: arial, helvetica, sans-serif;
+}
+#footer #customizable-search #searchbutton {
+  margin: 4px -10px 0px 200px;
 }
 
 /* end #footer */

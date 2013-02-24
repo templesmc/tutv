@@ -144,7 +144,7 @@ USAGE: @include transition(all 0.2s ease-in-out);
 
 @mixin transition($transition...) {
 	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+	$prefixes:      ("-webkit", "-moz", "-ms",  "");
   @each $prefix in $prefixes {
     #{$prefix}-transition: $transition;
   }
@@ -165,7 +165,6 @@ really slow down your CSS. Don't overdue it.
 	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 	background-image: -webkit-linear-gradient(top, $from, $to);
 	background-image: -moz-linear-gradient(top, $from, $to);
-	background-image: -o-linear-gradient(top, $from, $to);
 	background-image: linear-gradient(to bottom, $from, $to);
 }
 

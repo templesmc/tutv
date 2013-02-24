@@ -242,168 +242,136 @@ style a page via class
 					padding-bottom: 5px;
 					margin-bottom: 10px;
 					}
+
+					.avatar {
+					float:left;
+					margin:.25em 10px 0 0;
+					}
 				}
 
-				// rename this
+				// rename this - it doesn't make sense with the other classes/ids
 				#last-front-block {
 				width: 960px;
 				margin: 72px 0px 72px 0px;
 				}
 
-				// rename this
+				// rename this - stupid
 				#front-block-3 {
 				margin-right: 0;
 				clear: left;
-				}
 
-				/* 
-				// i don't think this appears anywhere, and if it does, it should be renamed - montchr
-				#front-block-1 {
-				    margin-right:20px;
-				    margin-left: 10px;
-				    clear: left;
-				}
-				*/
+					.news-block {
+						h3 {
+						border-bottom: none;
+						margin-bottom: 0;
+						}
+					}
+				} /* end #front-block-3 */
 
 				#schedule-block {
 				position: relative;
 				margin-left: 40px; /* 20px original 07-07-2011 PWinnick*/
 				width: 620px; /* 640px original 07-07-2011 Pwinnick*/
 				background: #F4F7FC;
-				}
 
-				#schedule-block .section-header {
-				/* background: #000; image left, image repeat, image right 06-06-2011 PWinnick */
-				background-image: url('images/mid-menu.png');
-				background-repeat: repeat-x;
-				height: 28px;
-				margin-bottom: -8px; /* 0px original 06-06-2011 PWinnick */
-				/*border-bottom-color: #ccc;*/
-				border: 0px;
-				}
+					.section-header {
+					background-image: url('images/mid-menu.png');
+					background-repeat: repeat-x;
+					height: 28px;
+					margin-bottom: -8px;
+					border: 0px;
+					}
 
-				#schedule-block .hentry {
-				width: 290px;  /* 280px original 06-06-2011 PWinnick */
-				padding: 4px 4px 0px 10px; /*4px 10px 0px 10px; original 09-08-2011 PWinnick*/ 
-				background: #fff;
-				border-bottom: 1px solid #ccc;
-				border-right: 1px solid #ccc;
-				border-left: 1px solid #ccc;
-				}
+					.hentry {
+					width: 290px;
+					padding: 4px 4px 0px 10px;
+					background: #fff;
+					border-bottom: 1px solid #ccc;
+					border-right: 1px solid #ccc;
+					border-left: 1px solid #ccc;
 
-				#schedule-block .entry-content {display: none;}
+						ul {
+						border-top:1px solid #eee;
+						list-style:none;
+						margin:0;
 
-				#schedule-block .active { 
-				background: #F4F7FC; 
-				border-right-color: #F4F7FC;
-				border-bottom: 1px solid #ccc;
-				background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
-				background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
-				}
+							li {
+							display:inline;
 
-				#schedule-block .active .entry-content {
-				display: block;
-				position: absolute;
-				overflow: hidden;
-				top: 26px; /* 28px original 06-06-2011 PWinnick */
-				right: 0;
-				bottom: 0;
-				width: 300px; /* 240px original 09-08-2011 PWinnick */
-				padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
-				border-bottom: 1px solid #CCC;
-				border-right: 1px solid #CCC;
-				/*border-top: 1px solid #ccc;*/
-				min-height: 220px;
-				background: #F4F7FC;
-				font-size: 13px; /*modified 09-15-2011 PWinnick */
-				}
+								a {
+								border-bottom:1px solid #eee;
+								color:#666;
+								display:block;
+								padding:6px 0;
+								text-decoration:none;
 
-				#schedule-block .scheduled-time {
-				color: #666;
-				text-shadow: -1px 1px #fff;
-				margin-top: -4px;
-				/*margin-bottom: 5px;*/
-				font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-				font-family: arial, helvetica, sans-serif;
-				}
+									&:visited {
+									border-bottom:1px solid #eee;
+									color:#666;
+									display:block;
+									padding:6px 0;
+									text-decoration:none;
+									}
 
-				#schedule-block .entry-title {
-				font-size: 14px;
-				margin-bottom: -2px;
-				border-bottom: none;
-				}
+									&:hover,
+									&:active {
+									color: #000;
+									}
+								} /* end a */
+							} /* end li */
+						} /* end ul */
 
-				#schedule-block .thumbnail {
-				margin-bottom: 4px; /* 8px original 06-06-2011 PWinnick */
-				}
+						.entry-content {
+						display: none;
+						}
 
-				#schedule-block .active .thumbnail {
-				opacity: 1;
-				}
+						&.active {
+						background: #F4F7FC; 
+						border-right-color: #F4F7FC;
+						border-bottom: 1px solid #ccc;
+						background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
+						background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
 
-				.front-block .avatar {
-				float:left;
-				margin:.25em 10px 0 0;
-				}
+							.entry-content {
+							display: block;
+							position: absolute;
+							overflow: hidden;
+							top: 26px; /* 28px original 06-06-2011 PWinnick */
+							right: 0;
+							bottom: 0;
+							width: 300px; /* 240px original 09-08-2011 PWinnick */
+							padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
+							border-bottom: 1px solid #CCC;
+							border-right: 1px solid #CCC;
+							/*border-top: 1px solid #ccc;*/
+							min-height: 220px;
+							background: #F4F7FC;
+							font-size: 13px; /*modified 09-15-2011 PWinnick */
 
-				.front-block ul {
-				border-top:1px solid #eee;
-				list-style:none;
-				margin:0;
-				}
+								.thumbnail {
+								margin-bottom: 4px;
+								opacity: 1;
+								}
+							}
+						} /* end &.active */
 
-				.front-block ul li {
-				display:inline;
-				}
+						.scheduled-time {
+						color: #666;
+						text-shadow: -1px 1px #fff;
+						margin-top: -4px;
+						font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+						font-family: arial, helvetica, sans-serif;
+						}
 
-				.front-block ul li a,
-				.front-block ul li a:visited  {
-				border-bottom:1px solid #eee;
-				color:#666;
-				display:block;
-				padding:6px 0;
-				text-decoration:none;
-				}
+						.entry-title {
+						font-size: 14px;
+						margin-bottom: -2px;
+						border-bottom: none;
+						}
+					} /* end .hentry */
+				} /* end #schedule-block */
 
-				.front-block ul li a:hover,
-				.front-block ul li a:active {
-				color: #000;
-				}
-
-				.news-block h3 {
-				border-bottom: none;
-				margin-bottom: 0;
-				}
-
-				.shows-block {
-				margin-top: 20px;
-				}
-
-				.video-block .clip-item {
-				clear: both;
-				float: left;
-				margin: 5px 0px;
-				}
-
-				.video-block .video-title {
-				clear: both;
-				float: right;
-				width: 140px;
-				font-family: arial, helvetica, sans-serif;
-				font-weight: 400;
-				font-size: 14px;
-				margin-bottom: 10px;
-				}
-
-				.wf-active .video-block .video-title {
-				font-size: 16px;
-				}
-
-				.video-block .thumbnail {
-				float: left;
-				margin-right: 10px;
-				margin-bottom: 10px;
-				}
+				
 
 				.home .shows-item {
 				float:left;
@@ -475,26 +443,97 @@ style a page via class
 			}
 		} /* END .featured-videos */
 	} /* END #featured-video-block */
-
-
 } /* END .home */
+
+
 
 
 /*
 
 ========================
-==BLOG PAGES
+==FAST FACTS
 ========================
 
-// THESE WILL PROBABLY BE TRASHED!
+*/
+
+.slug-fast-facts-on-tutv {
+	table.facts {
+	margin: 0;
+	padding: 0;
+	border: none;
+	}
+
+	tr.facts {
+	margin: 0;
+	padding: 0;
+	border: none;
+	}
+} /* end .slug-fast-facts-on-tutv */
+
+
+
+
+/*
+
+========================
+==STAFF PAGE
+========================
+
+*/
+
+table.staff {
+padding: 0px;
+margin-bottom: 32px;
+border: 0px solid #ccc;
+font-size: 13.5px;
+font-family: arial, helvetica, sans-serif;
+table-layout: fixed;
+
+	tr {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+
+		td {
+		vertical-align: top;
+		border: 0px;
+		padding: 4px 8px 8px 8px;
+		margin: 0px;
+
+			&#section {
+			margin-bottom: 4px 0px 0px 0px;
+			}
+
+			&#title {
+			width: 250px;
+			}
+
+			&#name {
+			width: 160px;
+			}
+
+			&#status {
+			font-style: italic;
+			color: #aaa;
+			width: 100px;
+			}
+		} /* end td */
+	} /* end tr */
+} /* end table.staff */
+
+
+
+
+
+/*
+
+========================
+==BLOG
+========================
 
 */
 
 .blog {
-
-	.entry-utility {
-	margin-bottom: 10px;
-	}
 
 	.hentry {
 	float: left;
@@ -511,14 +550,6 @@ style a page via class
 
 
 
-.archive {}                       /* archive page */
-.date {}                          /* date archive page */
-	.date-paged-1 {}                /* replace the number to the corresponding page number */
-.search {}                        /* search page */
-	.search-results {}              /* search result page */
-	.search-no-results {}           /* no results search page */
-	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
-.error404 {}                      /* 404 page */
 
 
 
@@ -554,8 +585,11 @@ style a page via class
 		font-size: inherit;
 		text-transform: none;
 		}
-	}
 
+		.entry-meta {
+		display: none;
+		}
+	} /* end .post */
 } /* END .single */                        /* single post page */
 
 
@@ -651,12 +685,115 @@ style a page via class
 
 */
 
+/*
+the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
+
+the .shows-page-grid class can be safely changed to .shows-page, despite .shows-page being used in the old stylesheet. .shows-page doesn't appear anywhere in this template, and from looking at the code it seems pretty clear that it's not useful.
+
+*/
 .page-template-page-shows-grid-php {
-	.entry-title.show-type {
-	font-weight: 400;
-	padding-top: 14px;
-	font-size: 20px;
-	}
+
+	#content.shows-page-grid {
+
+		#filtering-nav {
+
+			/* genre box colors */
+			.genre-documentary {background: #F9EFE2;}
+			.genre-interviews {background: #E9E4D3;}
+			.genre-news {background: #E3E4E3;}
+			.genre-sports {background: #F0955F;}
+			.genre-educational {background: #FDF3DE;}
+			.genre-entertainment {background: #DCE9EA;}
+			.genre-music {background: #99CC99;}
+			.genre-fitness {background: #CC9999;}
+			.genre-specials {
+				background: #018DBB;
+				color: #fff;
+			}
+
+			// let's give this a class name like ".filtering-nav-head"
+			h2 {
+			font-family: $sans-serif;
+			font-weight: bold;
+			margin-left: 6px;
+			}
+
+			// give this a class ".filtering-nav-list"
+			ul {
+			list-style: none;
+			margin: 0 0 10px 0;
+
+				// give this a class ".filtering-nav-list-item"
+				li {
+				list-style: none;
+				display: inline;
+
+
+					a {
+					color: #333;
+					padding: 3px;
+					margin: 0 12px 0 3px;
+
+						&:hover {
+						-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						}
+
+						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.
+						&.active {
+						// border: 1px dotted #ccc;
+						}
+					} /* end .filtering-nav-list-item a */
+				} /* end .filtering-nav-list-item */
+			} /* end .filtering-nav-list */
+		} /* end #filtering-nav */
+
+		// more unique name? .shows-page-show-container
+		.hentry {
+		width: 160px;
+		margin: 20px 11px;
+		padding: 8px; 
+		float: left;
+		clear: none; // .taxonomy-page-item (which selects the same element) has clear: both; for what reason?
+
+			// .col2 and .col3 widths are probably just making things look ugly, but .col2 is closest to 50% column.
+			&.col2 {
+			width: 347px; /* 337px original 06-08-2011 Pwinnick */
+			}
+
+			&.col3 {
+			width: 544px; /* 534px original 06-08-2011 Pwinnick */
+			}
+
+			// more unique name plz... .shows-page-show
+			.entry-content {
+			padding: 0 0 10px;
+
+				// consider a more unique name like .shows-page-show-title
+				.entry-title {
+				// this typography sucks... 11px margin? 26px line-height? use a formal rhythm.
+				font-size: 18px; 
+				line-height: 26px;
+				margin-bottom: 11px;
+
+					a {
+					color: #333;
+
+						&:hover {
+						color: #999;
+						}
+					}
+				} /* end .entry-title */
+
+				// more unique name like .shows-page-show-description
+				.description {
+				display: inline;
+				font-size: 14px;
+				}
+			} /* end .shows-page-show */
+		}
+	} /* end .shows-page-grid */
 } /* end .page.slug-shows */
 
 
@@ -819,7 +956,6 @@ float: left;
 		opacity:0;
 		-webkit-transition: opacity .3s ease-out;
 		   -moz-transition: opacity .3s ease-out;
-		     -o-transition: opacity .3s ease-out;
 		        transition: opacity .3s ease-out;
 
 			p {
@@ -860,29 +996,352 @@ float: left;
 
 
 
-	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
-	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
-.attachment {}                    /* attatchment page */
-	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
-	.attachment-mime-type {}        /* style mime type pages */
-.author {}                        /* author page */
-	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
-	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
-.category {}                      /* category page */
-	.category-1 {}                  /* individual category page (i.e. body.category-6) */
-	.category-paged-1 {}            /* replace the number to the corresponding page number */
-.tag {}                           /* tag page */
-	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
-	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
-.page-template {}                 /* custom page template page */
-	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
-	.page-paged-1 {}                /* replace the number to the corresponding page number */
-	.page-parent {}                 /* parent page template */
-	.page-child {}                  /* child page template */
-	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
-.logged-in {}                     /* if user is logged in */
-.paged {}                         /* paged items like search results or archives */
-	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+
+
+
+
+/*********************
+SHOW, CLIP, AND EPISODE PAGES
+**********************/
+
+/* Show, Clips, and Episode Pages (All) */
+.has-taxonomy-show {
+
+	#main {
+	padding: 0 10px;
+	width: 960px;
+
+		#content {
+		width: 960px;
+		padding-top: 5px;
+
+			.navigation,
+			.hentry {
+			margin: 0 10px;
+			}
+
+			#nav-below {
+			display: none;
+			}
+
+			#show-header {
+			margin-bottom: 10px;
+			float: left;
+			background: #fff url(images/show-page-shadow.png) no-repeat bottom center;
+			background-color: rgba(255,255,255,.8);
+			padding: 10px;
+			margin:0;
+			width: 940px;
+			min-height: 106px;
+			position: relative;
+
+				#show-name {
+				font-size: 32px;
+				font-weight: 300;
+				line-height: 32px;
+				margin-bottom: 10px;
+				margin-right: 20px;
+				float: left;
+
+					a {
+					color: #666;
+
+						&:hover {
+						color: #B20637;
+						}
+					}
+				} /* end #show-name */
+
+				.menu-container {
+				font: normal normal 300 16px/normal arial, helvetica, sans-serif;
+				border-bottom: none;
+				float: left;
+				margin-bottom: 10px;
+
+					a {
+					color: #000;
+					}
+
+					.sf-menu {
+						
+						> li {
+							> a,
+							> a:visited {
+							border: none;
+							border-bottom: 1px dotted #ccc;
+							padding:0;
+							margin-right: 20px;
+							margin-top: 9px;
+							}
+
+							> a:hover {
+							border-bottom: 1px solid #000;
+							}
+						} /* end > li */
+
+						.sub-menu {
+						background: #efefef;
+						width: 10em;
+						max-width: 10em;
+
+							.sub-menu {
+							left: 10em !important;
+							}
+
+							li a {
+							border-top: none;
+							}
+						}
+					}
+				}
+
+				#show-description {
+				float: left;
+				margin-bottom: 22px;
+				width: 860px;
+				color: #666;
+				font-size: 14px;
+				}
+			} /* end #show-header */
+
+			// this is woefully non-descriptive. i have no idea where it's going to turn up, but it looks like it's only within "blocks"
+			.section-header {
+			font-size: 14px;
+			border-bottom: 1px solid #eee;
+			line-height: 24px;
+			padding-bottom: 5px;
+			margin-bottom: 10px;
+			color: #666;
+			}
+
+			/* i'm pretty certain we've abandoned this stuff,
+			but just in case, here it is. either way, it's
+			only visible to logged-in users with at least
+			the editor capability. - montchr */
+			.post-metadata {
+			background: #ffe;
+			padding: 10px;
+			clear:both;
+			margin: 0 0 10px;
+
+				.section-header {
+				border-bottom: 1px dotted #999;
+				}
+
+				.post-meta-key {
+				font-weight: 600;
+				}
+			} /* end .post-metadata */
+		} /* end #content */
+	} /* end #main */
+} /* end .has-taxonomy-show (show and episodes pages) */
+
+
+
+
+	/*
+
+	========================
+	==SHOW PAGE
+	========================
+
+	*/
+
+	.has-taxonomy-show.not-singular {
+
+		/* this also has the badly-named class of .taxonomy-shows -
+		the body element has the same class. not good.
+		but here, scss' nesting capabilities makes everyone happy -
+		i'm just going to use #content nested within .has-taxonomy-show.not-singular
+		- montchr */
+		#content {
+
+			.entry-meta,
+			.meta-prep-entry-date {
+			display: none;
+			}
+
+			#show-episodes {
+			width:620px;
+			margin: 10px 10px 0;
+			float: left;
+
+				.hentry {
+				float: left;
+				width: 290px;
+				position: relative;
+				min-height: 210px;	/* orginal 122px Updated 08-18-2011 Pwinnick */
+				max-height: 210px; /* Added 07/26/2011 Pwinnick */
+
+					h2.entry-title {
+					font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */
+					font-weight: 500;
+					}
+
+					.entry-content {
+					padding-top: 0;
+					font-size: 13px;
+
+						.thumbnail {
+						top: 0;
+						left:0;
+						}
+
+						p {
+						font-size: 14px;
+						color: #444;
+						}
+					}
+				} /* end .hentry */
+			} /* end #show-episodes */
+
+			#show-clips {
+			float: left;
+			margin-top: 20px;
+			padding: 0 10px;
+			width: 940px;
+			background: #fdfdfd;
+			border-bottom: 1px solid #eee;
+
+				h2.page-title {
+				margin-right: 10px;
+				margin-bottom: 15px;
+				border-bottom: none;
+				padding-top: 20px;
+				}
+
+				h2.entry-title {
+				font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/
+				line-height: 24px;
+				float: right;
+				width: 140px;
+				}
+
+				.clip {
+				float: left;
+				width: 300px;
+				margin-left: 0;
+				margin-right: 10px;
+				float: left;
+				}
+
+				.entry-content {
+				padding-top: 0;
+				}
+
+			} /* end #show-clips */
+
+			.shows_nav {
+			float: left;
+			width: 100%;
+			padding: 10px 0;
+			
+				.nav-next {
+				float:left;
+				width: 50%;
+				text-align: left;
+				}
+
+				.nav-previous {
+				float: right;
+				width: 50%;
+				text-align: right;
+				}
+			}
+		} /* end #content */
+	} /* end .has-taxonomy-show.not-singular (show page) */
+
+
+
+
+	/*
+
+	========================
+	==EPISODE & OTHER PAGES
+	========================
+
+	*/
+
+	.has-taxonomy-show.singular {
+
+		#content {
+
+			.hentry {
+			margin: 0 20px 0 10px;
+			float: left;
+			width: 600px;
+
+				.entry-title {
+				padding-bottom: 0;
+				font-weight: bold;
+				font-size: 28px;
+				line-height: 38px;
+				}
+			}
+
+			// move this below the .hentry for semantics
+			.video-sidebar {
+			float: right;
+			width: 320px;
+			margin-left: -10px;
+			margin-top: 64px;
+			background: #f3f3f3;
+
+			.video-block .clip-item {
+				
+				}
+
+				.video-block .video-title {
+
+				}
+
+				.video-block 
+
+				.video-block {
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 10px;
+				float: left;
+
+					h3.section-header {
+					padding-bottom: 5px;
+					margin-bottom: 5px;
+					border-bottom: 1px dotted #999;
+					color: #555;
+					-moz-text-shadow: -1px 1px #fff;
+					text-shadow: -1px 1px #fff;
+					}
+
+					.clip-item {
+					clear: both;
+					float: left;
+					margin: 5px 0px;
+					}
+
+					.video-title {
+					clear: both;
+					float: right;
+					width: 140px;
+					font-family: arial, helvetica, sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					margin-bottom: 10px;
+					}
+
+					.thumbnail {
+					float: left;
+					margin-right: 10px;
+					margin-bottom: 10px;
+					}
+				}
+			} /* end .video-sidebar */
+		} /* end #content */
+	} /* end .has-taxonomy-show.singular (episode & other pages)
+
+
+
 
 
 
@@ -909,6 +1368,10 @@ a, a:visited {
 	&:hover, &:focus {
 	color: $link-hover;
 	text-decoration: none;
+
+		.thumbnail {
+		opacity: 1;
+		}
 	}
 
 	/* mobile tap color */
@@ -931,14 +1394,14 @@ H1, H2, H3, H4 STYLES
 .entry-content {
 
 	h1, .h1 {
-	font-family: arial, helvetica, sans-serif;
+	font-family: $sans-serif;
 	font-size:28px;
 	font-weight: 500;
 	padding:28px 0 14px 0;
 	}
 
 	h2, .h2 {
-	font-family: arial, helvetica, sans-serif;
+	font-family: $sans-serif;
 	font-size: 22px;
 	font-weight: 600;
 	padding:28px 0 14px 0;
@@ -951,7 +1414,7 @@ H1, H2, H3, H4 STYLES
 	}
 
 	h4, .h4 {
-	font-family: arial, helvetica, sans-serif;
+	font-family: $sans-serif;
 	font-weight: 300;
 	text-transform:uppercase;
 	letter-spacing:.02em;
@@ -1169,6 +1632,16 @@ z-index: 4;
 			width: 540px;
 			}
 
+			.entry-content {
+			font-family: $sans-serif;
+
+				&:hover {
+					.thumbnail {
+					opacity: 1;
+					}
+				}
+			}
+
 			.entry-meta {
 			font-family: $sans-serif;
 			color: #888;
@@ -1187,8 +1660,7 @@ z-index: 4;
 			}
 
 			.entry-utility {
-			font-family: $sans-serif;
-			clear: both;
+			display: none;
 			}
 
 			h1.entry-title,
@@ -1211,18 +1683,26 @@ z-index: 4;
 			font-style: normal;
 			}
 
-			/*
-			// this stuff will likely change when working on new typography
-			.wf-active h1.entry-title, .wf-active .page-title {
-			font-size: 42px;
-			line-height: 38px;
+			.thumbnail {
+			background: #d7d7d7 url(images/thumbnail-placeholder.png);
+			height: 100px;
+			width: 140px;
+			opacity: .85;
+			-webkit-transition: opacity .3s ease;
+			-moz-transition: opacity .3s ease;
+			-o-transition: opacity .3s ease;
+			transition: opacity .3s ease;
+
+				&:hover {
+				opacity: 1;
+				}
 			}
 
-			.wf-active h2.entry-title {
-			font-size: 26px;
-			padding-bottom: 0;
+			a:hover {
+				.thumbnail {
+				opacity: 1;
+				}
 			}
-			*/
 
 		} /* end #content */
 	} /* end #container */
@@ -1233,42 +1713,8 @@ z-index: 4;
 
 
 
-.entry-content {
-	font-family: $sans-serif;
-}
 
 
-
-/*****************************
-EPISODES PAGE
-******************************/
-
-
-/*****************************
-CLIP PAGE
-******************************/
-
-
-/*****************************
-EVENTS PAGE
-******************************/
-
-
-/*****************************
-SHOW PAGE
-******************************/
-
-
-
-/*
-// this whole entry-utility stuff is probably going the way of the dodo
-.episodes .entry-utility,
-.clip .entry-utility,
-.events .entry-utility,
-.show_page .entry-utility {
-display: none;
-}
-*/
 
 
 
@@ -1279,6 +1725,15 @@ display: none;
 .clip .meta-sep-edit {
 display: none;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1295,12 +1750,12 @@ font-family: arial, helvetica, sans-serif;
 width: 180px;
 }
 
-/*
+
 // from bones
 
 .sidebar {}
 
-	.widgettitle {}
+	.widgettitle {display: none;}
 
 	.widget {
 
@@ -1321,7 +1776,6 @@ width: 180px;
 		}
 
 	}
-*/
 
 
 /*******************
@@ -1330,6 +1784,11 @@ FOOTER STYLES
 
 #footer {
 margin-top: 20px;
+
+	// copyright info
+	#siteinfo {
+	font: 11px $sans-serif;
+	}
 
 	.aside {
 		ul { list-style-type: none; }
@@ -1382,5 +1841,17 @@ margin-top: 20px;
 			}
 		}
 	} /* end #third */
+
+	#customizable-search {
+		#searchbox {
+		float: right;
+		margin: 14px -10px 0px 0px;
+		font-family: arial, helvetica, sans-serif;
+		}
+
+		#searchbutton {
+		margin: 4px -10px 0px 200px;
+		}
+	} /* end #customizable-search */
 } /* end #footer */
 
