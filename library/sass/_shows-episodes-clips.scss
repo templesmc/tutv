@@ -1,0 +1,331 @@
+/* Show, Clips, and Episode Pages (All) */
+.has-taxonomy-show {
+
+	#main {
+	padding: 0 10px;
+	width: 960px;
+
+		#content {
+		width: 960px;
+		padding-top: 5px;
+
+			.navigation,
+			.hentry {
+			margin: 0 10px;
+			}
+
+			#nav-below {
+			display: none;
+			}
+
+			#show-header {
+			margin-bottom: 10px;
+			float: left;
+			background: #fff url(images/show-page-shadow.png) no-repeat bottom center;
+			background-color: rgba(255,255,255,.8);
+			padding: 10px;
+			margin:0;
+			width: 940px;
+			min-height: 106px;
+			position: relative;
+
+				#show-name {
+				font-size: 32px;
+				font-weight: 300;
+				line-height: 32px;
+				margin-bottom: 10px;
+				margin-right: 20px;
+				float: left;
+
+					a {
+					color: #666;
+
+						&:hover {
+						color: #B20637;
+						}
+					}
+				} /* end #show-name */
+
+				.menu-container {
+				font: normal normal 300 16px/normal arial, helvetica, sans-serif;
+				border-bottom: none;
+				float: left;
+				margin-bottom: 10px;
+
+					a {
+					color: #000;
+					}
+
+					.sf-menu {
+						
+						> li {
+							> a,
+							> a:visited {
+							border: none;
+							border-bottom: 1px dotted #ccc;
+							padding:0;
+							margin-right: 20px;
+							margin-top: 9px;
+							}
+
+							> a:hover {
+							border-bottom: 1px solid #000;
+							}
+						} /* end > li */
+
+						.sub-menu {
+						background: #efefef;
+						width: 10em;
+						max-width: 10em;
+
+							.sub-menu {
+							left: 10em !important;
+							}
+
+							li a {
+							border-top: none;
+							}
+						}
+					}
+				}
+
+				#show-description {
+				float: left;
+				margin-bottom: 22px;
+				width: 860px;
+				color: #666;
+				font-size: 14px;
+				}
+			} /* end #show-header */
+
+			// this is woefully non-descriptive. i have no idea where it's going to turn up, but it looks like it's only within "blocks"
+			.section-header {
+			font-size: 14px;
+			border-bottom: 1px solid #eee;
+			line-height: 24px;
+			padding-bottom: 5px;
+			margin-bottom: 10px;
+			color: #666;
+			}
+
+			/* i'm pretty certain we've abandoned this stuff,
+			but just in case, here it is. either way, it's
+			only visible to logged-in users with at least
+			the editor capability. - montchr */
+			.post-metadata {
+			background: #ffe;
+			padding: 10px;
+			clear:both;
+			margin: 0 0 10px;
+
+				.section-header {
+				border-bottom: 1px dotted #999;
+				}
+
+				.post-meta-key {
+				font-weight: 600;
+				}
+			} /* end .post-metadata */
+		} /* end #content */
+	} /* end #main */
+} /* end .has-taxonomy-show (show and episodes pages) */
+
+	/*
+
+	========================
+	==SHOW PAGE
+	========================
+
+	*/
+
+	.has-taxonomy-show.not-singular {
+
+		/* this also has the badly-named class of .taxonomy-shows -
+		the body element has the same class. not good.
+		but here, scss' nesting capabilities makes everyone happy -
+		i'm just going to use #content nested within .has-taxonomy-show.not-singular
+		- montchr */
+		#content {
+
+			.entry-meta,
+			.meta-prep-entry-date {
+			display: none;
+			}
+
+			#show-episodes {
+			width:620px;
+			margin: 10px 10px 0;
+			float: left;
+
+				.hentry {
+				float: left;
+				width: 290px;
+				position: relative;
+				min-height: 210px;	/* orginal 122px Updated 08-18-2011 Pwinnick */
+				max-height: 210px; /* Added 07/26/2011 Pwinnick */
+
+					h2.entry-title {
+					font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */
+					font-weight: 500;
+					}
+
+					.entry-content {
+					padding-top: 0;
+					font-size: 13px;
+
+						.thumbnail {
+						top: 0;
+						left:0;
+						}
+
+						p {
+						font-size: 14px;
+						color: #444;
+						}
+					}
+				} /* end .hentry */
+			} /* end #show-episodes */
+
+			#show-clips {
+			float: left;
+			margin-top: 20px;
+			padding: 0 10px;
+			width: 940px;
+			background: #fdfdfd;
+			border-bottom: 1px solid #eee;
+
+				h2.page-title {
+				margin-right: 10px;
+				margin-bottom: 15px;
+				border-bottom: none;
+				padding-top: 20px;
+				}
+
+				h2.entry-title {
+				font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/
+				line-height: 24px;
+				float: right;
+				width: 140px;
+				}
+
+				.clip {
+				float: left;
+				width: 300px;
+				margin-left: 0;
+				margin-right: 10px;
+				float: left;
+				}
+
+				.entry-content {
+				padding-top: 0;
+				}
+
+			} /* end #show-clips */
+
+			.shows_nav {
+			float: left;
+			width: 100%;
+			padding: 10px 0;
+			
+				.nav-next {
+				float:left;
+				width: 50%;
+				text-align: left;
+				}
+
+				.nav-previous {
+				float: right;
+				width: 50%;
+				text-align: right;
+				}
+			}
+		} /* end #content */
+	} /* end .has-taxonomy-show.not-singular (show page) */
+
+
+
+
+	/*
+
+	========================
+	==EPISODE & OTHER PAGES
+	========================
+
+	*/
+
+	.has-taxonomy-show.singular {
+
+		#content {
+
+			.hentry {
+			margin: 0 20px 0 10px;
+			float: left;
+			width: 600px;
+
+				.entry-title {
+				padding-bottom: 0;
+				font-weight: bold;
+				font-size: 28px;
+				line-height: 38px;
+				}
+			}
+
+			// move this below the .hentry for semantics
+			.video-sidebar {
+			float: right;
+			width: 320px;
+			margin-left: -10px;
+			margin-top: 64px;
+			background: #f3f3f3;
+
+			.video-block .clip-item {
+				
+				}
+
+				.video-block .video-title {
+
+				}
+
+				.video-block 
+
+				.video-block {
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 10px;
+				float: left;
+
+					h3.section-header {
+					padding-bottom: 5px;
+					margin-bottom: 5px;
+					border-bottom: 1px dotted #999;
+					color: #555;
+					-moz-text-shadow: -1px 1px #fff;
+					text-shadow: -1px 1px #fff;
+					}
+
+					.clip-item {
+					clear: both;
+					float: left;
+					margin: 5px 0px;
+					}
+
+					.video-title {
+					clear: both;
+					float: right;
+					width: 140px;
+					font-family: arial, helvetica, sans-serif;
+					font-weight: 400;
+					font-size: 14px;
+					margin-bottom: 10px;
+					}
+
+					.thumbnail {
+					float: left;
+					margin-right: 10px;
+					margin-bottom: 10px;
+					}
+				}
+			} /* end .video-sidebar */
+		} /* end #content */
+	} /* end .has-taxonomy-show.singular (episode & other pages) */

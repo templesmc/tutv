@@ -10,1338 +10,262 @@
 
 @import "mixins";
 
-
 /*********************
 GENERAL STYLES
 *********************/
 
-body {
-font-family: $sans-serif;
-font-size: 100%;
-line-height: 1.5;
-
-background: url('images/background.jpg') 50% 0 no-repeat;
-}
-
-
-/* pretty sure everything is already sans-serif...
-p, ul, ol, dd {
-	font-family: arial, helvetica, sans-serif;
-}
-*/
-
-
-
-
-
+@import "general";
 
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 
-/*
-
-========================
-==HOME PAGE
-========================
-
-*/
-.home {
-
 	/*
-	// I'm not seeing this on the home page and the only .hentry classes on home don't use this
-	.home-info .hentry {
-	width:738px;
-	margin-left: 0;
-	margin-bottom: 10px
-	}
+	========================
+	==HOME PAGE
+	========================
 	*/
 
-	#main {
-	padding: 0 10px;
-	width: 960px;
+	@import "home";
 
-		#container {
-			width: 960px; // overrides the more general #container width declaration
+	/*
+	========================
+	==SHOWS PAGE
+	========================
+	*/
 
-			#content {
-			width: auto;
-			padding: 0;
+	@import "shows-page";
 
-				/* FEATURED SLIDESHOW */
+	/*
+	========================
+	==SCHEDULE PAGE
+	========================
+	*/
 
-				#front-featured {
-				width: 960px;
-				height: 290px !important; // what's so important about it?
-				padding: 0px;
-				position: realtive; // umm... "realtive"... it must be important then...
-				z-index: 0 !important; // also, quite effective
-				margin: 0 0 30px 0; /* margin: 0 0 30px 0; orginal 06-13-2011 Pwinnick*/
+	@import "schedule-page";
 
-					.attachment-banner {
-					float: right;
-					}
+	/*********************
+	SHOW, CLIP, AND EPISODE PAGES
+	**********************/
 
-					ul {
-					list-style: none;
-					margin:0;
-					overflow: hidden;
-					height: 330px;
-					}
+	@import "shows-episodes-clips";
 
-					li {
-					height: 330px;
-					float: none;
-					position: relative;
-					margin-bottom: 20px;	
-					}
+	/*
+	========================
+	==FAST FACTS
+	========================
+	*/
 
-					h2 { /* this should really have a class name because it's IMPORTANT. maybe .headline because that's what it is... */
-					line-height: 38px;
-					font-size: 32px;
-					font-weight: 300;
-					font-family: arial, helvetica, sans-serif;
-					margin-bottom: 8px;
-					word-wrap: break-word;
+	.slug-fast-facts-on-tutv {
+		table.facts {
+		margin: 0;
+		padding: 0;
+		border: none;
+		}
 
-						a {
-						color:#5b6d7b;  /* 06-11-2011 PWinnick */
-						text-decoration: none;
+		tr.facts {
+		margin: 0;
+		padding: 0;
+		border: none;
+		}
+	} /* end .slug-fast-facts-on-tutv */
 
-							&:hover {
-							color: #4ad5f4;
-							}
-						}
-					} /* end h2 */
 
-					#headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
-					font-size: 20px;
-					font-weight: 200;
-					font-family: $sans-serif;
-					margin-bottom: 6px;
-					word-wrap: break-word;
-					color: #d0632d;
-					}
 
-					#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
-					background-image: url('images/subheadline.png');
-					background-repeat: no-repeat;
-					height: 25px;
-					width: 100%; /*192px*/
-					margin-bottom: 8px;
-					margin-top: -10px;
-					padding-top: 2px;
 
-						a {
-						font-size: 13px;
-						font-family: $sans-serif;
-						font-weight: bold;
-						color: #2F3E51;
-						padding: 0px 80px 0px 24px;
+	/*
+	========================
+	==STAFF PAGE
+	========================
+	*/
 
-							&:hover {
-							color: #005588;
-							}
-						}
-					} /* end #subheadline */
-
-					#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
-					background-image: url('images/watchheadline.png');
-					background-repeat: no-repeat;
-					height: 25px;
-					width: 232px;
-					margin-bottom: 8px;
-					margin-top: 4px;
-					padding-top: 2px;
-					border-top-color: #EFEFEF;
-					border-top-width: 1px;
-					border-top-style: solid;
-
-						a {
-						font-size: 12px;
-						font-family: arial, helvetica, sans-serif;
-						font-weight: 200;
-						/*color: #EFEFEF;*/
-						padding: 0px 0px 0px 26px;
-
-							&:hover {
-							color: #005588;
-							}
-						}
-					} /* end #subheadline2 */
-
-					.wp-caption { display: none; } // take this out of the template!
-
-					.description {
-					position: absolute;
-					left: 0;
-					padding: 10px 10px 0px 10px;
-					background: black;
-					background: rgba(0,0,0,.8);
-					color: #fff;
-					z-index: 3;
-					float: left;
-					height:280px;
-					width:300px;
-					margin-left: 16px; 
-
-						blockquote {
-						margin: 0;
-						}
-
-						.more-link {
-						display: block;
-						}
-
-						img { display: none; } // this should just be taken out of the template entirely. no need to display: none;
-					} /* end .description */
-				} /* end #front-featured */
-
-				/* This should actually be a sibling of the slideshow - it's the navigation for the slideshow, not for the "front" as the id name would suggest. */
-				#front-navigation {
-				font-size:18px;
-				line-height:22px;
-				width: 600px;
-				float: left;
-				/*margin-bottom: -20px; /* -40px orginal 06-13-2011 Pwinnick*/
-				position: relative;
-				margin-left: 340px; /* 10px original 06-06-2011 Pwinnick*/
-				top: -20px; /* -70px orginal 06-06-2011 Pwinnick*/
-				z-index: 100;
-				padding: 10px;
-
-					.nav {
-
-						img,
-						.no-thumbnail {
-						opacity: .8;
-						display: block;
-						}
-
-						&:hover {
-							img { opacity: 1; }
-						}
-
-						&.active {
-							img { opacity: 1; }
-						}
-					}
-				} /*end #front-navigation */
-
-				/*
-				a lot of this block stuff is badly structured in the template files and uses badly named classes. also, it looks like template comments are also misleading. take a closer look. - montchr
-				*/
-
-				.front-block {
-				float: left;
-				width: 300px;
-
-					h3 {
-					border-bottom: 1px solid #F0F0F9;
-					padding-bottom: 5px;
-					margin-bottom: 10px;
-					}
-
-					.avatar {
-					float:left;
-					margin:.25em 10px 0 0;
-					}
-				}
-
-				// rename this - it doesn't make sense with the other classes/ids
-				#last-front-block {
-				width: 960px;
-				margin: 72px 0px 72px 0px;
-				}
-
-				// rename this - stupid
-				#front-block-3 {
-				margin-right: 0;
-				clear: left;
-
-					.news-block {
-						h3 {
-						border-bottom: none;
-						margin-bottom: 0;
-						}
-					}
-				} /* end #front-block-3 */
-
-				#schedule-block {
-				position: relative;
-				margin-left: 40px; /* 20px original 07-07-2011 PWinnick*/
-				width: 620px; /* 640px original 07-07-2011 Pwinnick*/
-				background: #F4F7FC;
-
-					.section-header {
-					background-image: url('images/mid-menu.png');
-					background-repeat: repeat-x;
-					height: 28px;
-					margin-bottom: -8px;
-					border: 0px;
-					}
-
-					.hentry {
-					width: 290px;
-					padding: 4px 4px 0px 10px;
-					background: #fff;
-					border-bottom: 1px solid #ccc;
-					border-right: 1px solid #ccc;
-					border-left: 1px solid #ccc;
-
-						ul {
-						border-top:1px solid #eee;
-						list-style:none;
-						margin:0;
-
-							li {
-							display:inline;
-
-								a {
-								border-bottom:1px solid #eee;
-								color:#666;
-								display:block;
-								padding:6px 0;
-								text-decoration:none;
-
-									&:visited {
-									border-bottom:1px solid #eee;
-									color:#666;
-									display:block;
-									padding:6px 0;
-									text-decoration:none;
-									}
-
-									&:hover,
-									&:active {
-									color: #000;
-									}
-								} /* end a */
-							} /* end li */
-						} /* end ul */
-
-						.entry-content {
-						display: none;
-						}
-
-						&.active {
-						background: #F4F7FC; 
-						border-right-color: #F4F7FC;
-						border-bottom: 1px solid #ccc;
-						background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
-						background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
-
-							.entry-content {
-							display: block;
-							position: absolute;
-							overflow: hidden;
-							top: 26px; /* 28px original 06-06-2011 PWinnick */
-							right: 0;
-							bottom: 0;
-							width: 300px; /* 240px original 09-08-2011 PWinnick */
-							padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
-							border-bottom: 1px solid #CCC;
-							border-right: 1px solid #CCC;
-							/*border-top: 1px solid #ccc;*/
-							min-height: 220px;
-							background: #F4F7FC;
-							font-size: 13px; /*modified 09-15-2011 PWinnick */
-
-								.thumbnail {
-								margin-bottom: 4px;
-								opacity: 1;
-								}
-							}
-						} /* end &.active */
-
-						.scheduled-time {
-						color: #666;
-						text-shadow: -1px 1px #fff;
-						margin-top: -4px;
-						font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-						font-family: arial, helvetica, sans-serif;
-						}
-
-						.entry-title {
-						font-size: 14px;
-						margin-bottom: -2px;
-						border-bottom: none;
-						}
-					} /* end .hentry */
-				} /* end #schedule-block */
-
-				
-
-				.home .shows-item {
-				float:left;
-				margin-right: 10px;
-				width: 140px;
-				margin-bottom: 10px;
-				}
-
-				.home .shows-item:nth-child(2n+1) {
-				margin-right: 0;
-				} 
-
-				.home .shows-item:nth-child(2n+2) {
-				margin-right: 20px;
-				}
-			} /* end #content */
-		} /* end #container */
-	} /* end #main */
-
-
-	/* FEATURED VIDEO SECTION */
-
-	#featured-video-block {
-	width: 960px;
-	height: 200px;
-	margin: 72px 0px 72px 0px;
-	/*background: #f6f6f6;
-	-webkit-box-shadow: 4px 4px 4px #ccc;
-	-moz-box-shadow: 4px 4px 4px #ccc;
-	box-shadow: 4px 4px 4px #ccc;*/
-
-		.featured-videos {
-		float: left;
-		margin-top: 4px;
-		margin-right: 24px;
-		margin-left: 24px;
-		width: 140px;
-
-			.featured-video-thumbnail {
-			margin-bottom: 8px;
-			-webkit-box-shadow: 5px 5px 5px #ccc;
-			-moz-box-shadow: 5px 5px 5px #ccc;
-			box-shadow: 5px 5px 5px #ccc;
-			}
-
-			.featured-video-show {
-			font-size: 12px;
-			font-weight: bold;
-			line-height: 16px;
-			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
-			text-align: left;
-			color: #444;
-			}
-
-			.featured-video-episode-title {
-			font-size: 12px;
-			line-height: 16px;
-			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
-			text-align: left;
-			color: #444;
-			}
-
-			.featured-video-trt {
-			font-size: 11px;
-			line-height: 16px;
-			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
-			text-align: left;
-			color: #4c4c4c;
-			}
-		} /* END .featured-videos */
-	} /* END #featured-video-block */
-} /* END .home */
-
-
-
-
-/*
-
-========================
-==FAST FACTS
-========================
-
-*/
-
-.slug-fast-facts-on-tutv {
-	table.facts {
-	margin: 0;
-	padding: 0;
-	border: none;
-	}
-
-	tr.facts {
-	margin: 0;
-	padding: 0;
-	border: none;
-	}
-} /* end .slug-fast-facts-on-tutv */
-
-
-
-
-/*
-
-========================
-==STAFF PAGE
-========================
-
-*/
-
-table.staff {
-padding: 0px;
-margin-bottom: 32px;
-border: 0px solid #ccc;
-font-size: 13.5px;
-font-family: arial, helvetica, sans-serif;
-table-layout: fixed;
-
-	tr {
-	border: 0px;
+	table.staff {
 	padding: 0px;
-	margin: 0px;
+	margin-bottom: 32px;
+	border: 0px solid #ccc;
+	font-size: 13.5px;
+	font-family: arial, helvetica, sans-serif;
+	table-layout: fixed;
 
-		td {
-		vertical-align: top;
+		tr {
 		border: 0px;
-		padding: 4px 8px 8px 8px;
+		padding: 0px;
 		margin: 0px;
 
-			&#section {
-			margin-bottom: 4px 0px 0px 0px;
-			}
+			td {
+			vertical-align: top;
+			border: 0px;
+			padding: 4px 8px 8px 8px;
+			margin: 0px;
 
-			&#title {
-			width: 250px;
-			}
+				&#section {
+				margin-bottom: 4px 0px 0px 0px;
+				}
 
-			&#name {
-			width: 160px;
-			}
+				&#title {
+				width: 250px;
+				}
 
-			&#status {
-			font-style: italic;
-			color: #aaa;
-			width: 100px;
-			}
-		} /* end td */
-	} /* end tr */
-} /* end table.staff */
+				&#name {
+				width: 160px;
+				}
 
-
-
-
-
-/*
-
-========================
-==BLOG
-========================
-
-*/
-
-.blog {
-
-	.hentry {
-	float: left;
-
-		img {
-			&.wp-post-image {
-			display: block;
-			padding-bottom: 22px;
-			float: left;
-			}
-		}
-	}
-} /* END .blog */
+				&#status {
+				font-style: italic;
+				color: #aaa;
+				width: 100px;
+				}
+			} /* end td */
+		} /* end tr */
+	} /* end table.staff */
 
 
 
 
 
+	/*
+	========================
+	==BLOG
+	========================
+	*/
 
-/*
+	.blog {
 
-========================
-==SINGLE POST PAGE
-========================
-
-*/
-
-.single {
-
-	.show-notes {
-		.meta-prep-author,
-		.entry-meta .author,
-		.entry-meta .author a,
-		.entry-meta abbr, 
-		.meta-sep-entry-date {
-		display: inline;
-		font-size: inherit;
-		text-transform: none;
-		}
-	}
-
-	.post {
-		.meta-prep-author,
-		.entry-meta .author,
-		.entry-meta .author a,
-		.entry-meta abbr, 
-		.meta-sep-entry-date {
-		display: inline;
-		font-size: inherit;
-		text-transform: none;
-		}
-
-		.entry-meta {
-		display: none;
-		}
-	} /* end .post */
-} /* END .single */                        /* single post page */
-
-
-/*
-
-========================
-==PAGE
-========================
-
-*/
-
-.page {
-
-	#page-list {
-	list-style: none;
-	margin-left: 0;
-
-		h1 {
-		font-size: 18px;
-		padding-bottom: 18px;
-
-			a {
-			color: #000;
-			text-decoration: none;
-			}
-		}
-
-		.wp-post-image {
+		.hentry {
 		float: left;
-		margin-right: 10px;
+
+			img {
+				&.wp-post-image {
+				display: block;
+				padding-bottom: 22px;
+				float: left;
+				}
+			}
 		}
-	} /* end #page-list */
+	} /* END .blog */
 
-	#subpage-menu {
-	margin: -20px 0px 20px;
-	width: 940px;
-	height: 24px;
 
-		li {
-		display:inline;
+
+
+	/*
+	========================
+	==SINGLE POST PAGE
+	========================
+	*/
+
+	.single {
+
+		.show-notes {
+			.meta-prep-author,
+			.entry-meta .author,
+			.entry-meta .author a,
+			.entry-meta abbr, 
+			.meta-sep-entry-date {
+			display: inline;
+			font-size: inherit;
+			text-transform: none;
+			}
+		}
+
+		.post {
+			.meta-prep-author,
+			.entry-meta .author,
+			.entry-meta .author a,
+			.entry-meta abbr, 
+			.meta-sep-entry-date {
+			display: inline;
+			font-size: inherit;
+			text-transform: none;
+			}
+
+			.entry-meta {
+			display: none;
+			}
+		} /* end .post */
+	} /* END .single */                        /* single post page */
+
+
+
+
+	/*
+	========================
+	==PAGE
+	========================
+	*/
+
+	.page {
+
+		#page-list {
 		list-style: none;
-		padding-right: 5px;
-		margin-right: 5px;
-		float: left;
-		}
+		margin-left: 0;
 
-		a {
-		color: #666;
-		float: left;
-		font-size: 18px;
-		line-height: 24px;
-		text-shadow: #fff 1px 1px;
+			h1 {
+			font-size: 18px;
+			padding-bottom: 18px;
 
-			&:hover {
-			color: #000;
-
+				a {
+				color: #000;
+				text-decoration: none;
+				}
 			}
-		}
 
-		// .children is contained within '#subpage-menu li' in the one place i can find it, on the submissions page. not sure if this is the best way to organize this menu. - montchr
-		.children {
-		float:left;
-		margin: 0;
-		border-left: 1px solid #666;
-		margin-left: 5px;
-		padding-left: 5px;
+			.wp-post-image {
+			float: left;
+			margin-right: 10px;
+			}
+		} /* end #page-list */
+
+		#subpage-menu {
+		margin: -20px 0px 20px;
+		width: 940px;
+		height: 24px;
 
 			li {
-			border-right: 1px solid #aaa;
-			}
-
-			a {
-			color: #888;
-			}
-
-			.current_page_item {
-				> a {
-				border-bottom: 1px dotted #888;
-				}
-			}
-		} /* end .children */
-	} /* end #subpage-menu */
-} /* end .page */
-
-
-
-
-/*
-
-========================
-==SHOWS PAGE
-========================
-
-*/
-
-/*
-the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
-
-the .shows-page-grid class can be safely changed to .shows-page, despite .shows-page being used in the old stylesheet. .shows-page doesn't appear anywhere in this template, and from looking at the code it seems pretty clear that it's not useful.
-
-*/
-.page-template-page-shows-grid-php {
-
-	#content.shows-page-grid {
-
-		#filtering-nav {
-
-			/* genre box colors */
-			.genre-documentary {background: #F9EFE2;}
-			.genre-interviews {background: #E9E4D3;}
-			.genre-news {background: #E3E4E3;}
-			.genre-sports {background: #F0955F;}
-			.genre-educational {background: #FDF3DE;}
-			.genre-entertainment {background: #DCE9EA;}
-			.genre-music {background: #99CC99;}
-			.genre-fitness {background: #CC9999;}
-			.genre-specials {
-				background: #018DBB;
-				color: #fff;
-			}
-
-			// let's give this a class name like ".filtering-nav-head"
-			h2 {
-			font-family: $sans-serif;
-			font-weight: bold;
-			margin-left: 6px;
-			}
-
-			// give this a class ".filtering-nav-list"
-			ul {
+			display:inline;
 			list-style: none;
-			margin: 0 0 10px 0;
-
-				// give this a class ".filtering-nav-list-item"
-				li {
-				list-style: none;
-				display: inline;
-
-
-					a {
-					color: #333;
-					padding: 3px;
-					margin: 0 12px 0 3px;
-
-						&:hover {
-						-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						}
-
-						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.
-						&.active {
-						// border: 1px dotted #ccc;
-						}
-					} /* end .filtering-nav-list-item a */
-				} /* end .filtering-nav-list-item */
-			} /* end .filtering-nav-list */
-		} /* end #filtering-nav */
-
-		// more unique name? .shows-page-show-container
-		.hentry {
-		width: 160px;
-		margin: 20px 11px;
-		padding: 8px; 
-		float: left;
-		clear: none; // .taxonomy-page-item (which selects the same element) has clear: both; for what reason?
-
-			// .col2 and .col3 widths are probably just making things look ugly, but .col2 is closest to 50% column.
-			&.col2 {
-			width: 347px; /* 337px original 06-08-2011 Pwinnick */
+			padding-right: 5px;
+			margin-right: 5px;
+			float: left;
 			}
-
-			&.col3 {
-			width: 544px; /* 534px original 06-08-2011 Pwinnick */
-			}
-
-			// more unique name plz... .shows-page-show
-			.entry-content {
-			padding: 0 0 10px;
-
-				// consider a more unique name like .shows-page-show-title
-				.entry-title {
-				// this typography sucks... 11px margin? 26px line-height? use a formal rhythm.
-				font-size: 18px; 
-				line-height: 26px;
-				margin-bottom: 11px;
-
-					a {
-					color: #333;
-
-						&:hover {
-						color: #999;
-						}
-					}
-				} /* end .entry-title */
-
-				// more unique name like .shows-page-show-description
-				.description {
-				display: inline;
-				font-size: 14px;
-				}
-			} /* end .shows-page-show */
-		}
-	} /* end .shows-page-grid */
-} /* end .page.slug-shows */
-
-
-
-
-/*
-
-========================
-==SCHEDULE PAGE
-========================
-
-*/
-
-/* the normal page template body class isn't showing up in this instance */
-.page-template-page-schedule-php {
-
-	#main {
-	padding: 0 10px;
-	width: 960px;
-
-		#container {
-		width: 960px;
-		}
-	}
-} /* end .page-template-page-schedule-php */
-
-#schedule {
-padding-bottom: 120px;
-float: left;
-
-	.today {
-	font-weight: bold;
-	}
-
-	// consider alternate names for this and h3.entry-title - montchr
-	h1.entry-title {
-	margin: 0 10px;
-	}
-
-	#schedule-nav {
-	list-style: none;
-	font-family: arial, helvetica, sans-serif;
-	margin: 0;
-	padding-left: 10px;
-	width: 100%;
-	float: left;
-	border-bottom: 1px solid #444;
-
-		h2 {
-		font-family: $sans-serif;
-		font-size: 16px;
-		}
-
-		li {
-		float: left;
-		margin: 0 5px;
-		}
-
-		a {
-		font-size: 16px;
-		font-weight: 300;
-		float: left;
-		padding: 7px 10px;
-		border: 1px solid #999;
-		background: #fafafa;
-		background: rgba(250, 250, 250, .6);
-		border-bottom: none;
-		border-radius: 6px 6px 0 0;
-		}
-
-		.active {
 
 			a {
-			color: #000;
-			z-index: 100;
-			font-weight: 500;
-			position: relative;
-			background: none;
-			padding: 10px 13px;
-			margin-top: -6px;
+			color: #666;
+			float: left;
 			font-size: 18px;
-			margin-bottom: -1px;
-			border-color: #444;
-			border-bottom: 1px solid white;
+			line-height: 24px;
+			text-shadow: #fff 1px 1px;
 
 				&:hover {
-				color: #787779;
+				color: #000;
+
 				}
 			}
-		}
-	} /* end #schedule-nav */
 
-	.hentry {
-	width: 540px;
-	clear: both;
-	float: left;
-	padding:10px;
-	margin-right: 10px;
-	position: relative;
-	min-height: 26px;
-	font-family: arial, helvetica, sans-serif;
-	// does this transition have any effect?
-	-webkit-transition: background .5s ease;
-	   -moz-transition: background .5s ease;
-	     -o-transition: background .5s ease;
-	        transition: background .5s ease;
+			// .children is contained within '#subpage-menu li' in the one place i can find it, on the submissions page. not sure if this is the best way to organize this menu. - montchr
+			.children {
+			float:left;
+			margin: 0;
+			border-left: 1px solid #666;
+			margin-left: 5px;
+			padding-left: 5px;
 
-		h2.schedule-date {
-		margin-bottom: 0;
-		width: 540px;
-		font-size: 20px;
-		font-weight: normal;
-		line-height: 24px;
-		padding:15px 10px;
-		color: #333;
-		font-family: arial, helvetica, sans-serif;
+				li {
+				border-right: 1px solid #aaa;
+				}
 
-			&:first-child {
-			border-top: none;
-			padding-top: 0;
-			}
-		}
+				a {
+				color: #888;
+				}
 
-		// consider alternate names for this and h1.entry-title - montchr
-		h3.entry-title {
-		font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-		font-weight: normal;
-		font-family: arial, helvetica, sans-serif;
-		padding: 0;
-		color: #aaa;
-		margin-left: 140px;
-		width: 400px;
-		}
-
-		.scheduled-time {
-		color: #777;
-		text-shadow: -1px 1px #fff;
-		margin-bottom: 5px;
-		font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-		float:left;
-		width:80px;
-		position: absolute;
-		left: 10px;
-
-			.start {}
-		}
-
-		.entry-content {
-		color: #555;
-		padding-top: 0;
-		position: absolute;
-		z-index: 10;
-		top:0;
-		right: -400px;
-		width: 370px;
-		padding: 10px;
-		margin-right: 10px;
-		background: #f0f0f9;
-		visibility: hidden;
-		opacity:0;
-		-webkit-transition: opacity .3s ease-out;
-		   -moz-transition: opacity .3s ease-out;
-		        transition: opacity .3s ease-out;
-
-			p {
-			margin-bottom: 0;
-			}
-		} /* end .entry-content */
-
-		.thumbnail {
-		opacity: 1;
-		margin-bottom: 8px;
-		}
-
-		// a search through the schedule page turns up no results for this class
-		.show-title {
-		width: 140px;
-		}
-
-		&:hover {
-		background: #f0f0f9 !important;
-
-			// Works with the above .entry-content to produce the fade effect upon hover.
-			.entry-content {
-			display: block;
-			visibility: visible;
-			opacity: 1;
-			}
-		}
-
-		&.item-even {
-		background: #f3f3f3;
-		}
-
-		&.item-odd {
-		background: #fefefe;
-		}
-	} /* end .hentry */
-} /* end #schedule */
-
-
-
-
-
-
-
-
-/*********************
-SHOW, CLIP, AND EPISODE PAGES
-**********************/
-
-/* Show, Clips, and Episode Pages (All) */
-.has-taxonomy-show {
-
-	#main {
-	padding: 0 10px;
-	width: 960px;
-
-		#content {
-		width: 960px;
-		padding-top: 5px;
-
-			.navigation,
-			.hentry {
-			margin: 0 10px;
-			}
-
-			#nav-below {
-			display: none;
-			}
-
-			#show-header {
-			margin-bottom: 10px;
-			float: left;
-			background: #fff url(images/show-page-shadow.png) no-repeat bottom center;
-			background-color: rgba(255,255,255,.8);
-			padding: 10px;
-			margin:0;
-			width: 940px;
-			min-height: 106px;
-			position: relative;
-
-				#show-name {
-				font-size: 32px;
-				font-weight: 300;
-				line-height: 32px;
-				margin-bottom: 10px;
-				margin-right: 20px;
-				float: left;
-
-					a {
-					color: #666;
-
-						&:hover {
-						color: #B20637;
-						}
-					}
-				} /* end #show-name */
-
-				.menu-container {
-				font: normal normal 300 16px/normal arial, helvetica, sans-serif;
-				border-bottom: none;
-				float: left;
-				margin-bottom: 10px;
-
-					a {
-					color: #000;
-					}
-
-					.sf-menu {
-						
-						> li {
-							> a,
-							> a:visited {
-							border: none;
-							border-bottom: 1px dotted #ccc;
-							padding:0;
-							margin-right: 20px;
-							margin-top: 9px;
-							}
-
-							> a:hover {
-							border-bottom: 1px solid #000;
-							}
-						} /* end > li */
-
-						.sub-menu {
-						background: #efefef;
-						width: 10em;
-						max-width: 10em;
-
-							.sub-menu {
-							left: 10em !important;
-							}
-
-							li a {
-							border-top: none;
-							}
-						}
+				.current_page_item {
+					> a {
+					border-bottom: 1px dotted #888;
 					}
 				}
-
-				#show-description {
-				float: left;
-				margin-bottom: 22px;
-				width: 860px;
-				color: #666;
-				font-size: 14px;
-				}
-			} /* end #show-header */
-
-			// this is woefully non-descriptive. i have no idea where it's going to turn up, but it looks like it's only within "blocks"
-			.section-header {
-			font-size: 14px;
-			border-bottom: 1px solid #eee;
-			line-height: 24px;
-			padding-bottom: 5px;
-			margin-bottom: 10px;
-			color: #666;
-			}
-
-			/* i'm pretty certain we've abandoned this stuff,
-			but just in case, here it is. either way, it's
-			only visible to logged-in users with at least
-			the editor capability. - montchr */
-			.post-metadata {
-			background: #ffe;
-			padding: 10px;
-			clear:both;
-			margin: 0 0 10px;
-
-				.section-header {
-				border-bottom: 1px dotted #999;
-				}
-
-				.post-meta-key {
-				font-weight: 600;
-				}
-			} /* end .post-metadata */
-		} /* end #content */
-	} /* end #main */
-} /* end .has-taxonomy-show (show and episodes pages) */
-
-
-
-
-	/*
-
-	========================
-	==SHOW PAGE
-	========================
-
-	*/
-
-	.has-taxonomy-show.not-singular {
-
-		/* this also has the badly-named class of .taxonomy-shows -
-		the body element has the same class. not good.
-		but here, scss' nesting capabilities makes everyone happy -
-		i'm just going to use #content nested within .has-taxonomy-show.not-singular
-		- montchr */
-		#content {
-
-			.entry-meta,
-			.meta-prep-entry-date {
-			display: none;
-			}
-
-			#show-episodes {
-			width:620px;
-			margin: 10px 10px 0;
-			float: left;
-
-				.hentry {
-				float: left;
-				width: 290px;
-				position: relative;
-				min-height: 210px;	/* orginal 122px Updated 08-18-2011 Pwinnick */
-				max-height: 210px; /* Added 07/26/2011 Pwinnick */
-
-					h2.entry-title {
-					font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */
-					font-weight: 500;
-					}
-
-					.entry-content {
-					padding-top: 0;
-					font-size: 13px;
-
-						.thumbnail {
-						top: 0;
-						left:0;
-						}
-
-						p {
-						font-size: 14px;
-						color: #444;
-						}
-					}
-				} /* end .hentry */
-			} /* end #show-episodes */
-
-			#show-clips {
-			float: left;
-			margin-top: 20px;
-			padding: 0 10px;
-			width: 940px;
-			background: #fdfdfd;
-			border-bottom: 1px solid #eee;
-
-				h2.page-title {
-				margin-right: 10px;
-				margin-bottom: 15px;
-				border-bottom: none;
-				padding-top: 20px;
-				}
-
-				h2.entry-title {
-				font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/
-				line-height: 24px;
-				float: right;
-				width: 140px;
-				}
-
-				.clip {
-				float: left;
-				width: 300px;
-				margin-left: 0;
-				margin-right: 10px;
-				float: left;
-				}
-
-				.entry-content {
-				padding-top: 0;
-				}
-
-			} /* end #show-clips */
-
-			.shows_nav {
-			float: left;
-			width: 100%;
-			padding: 10px 0;
-			
-				.nav-next {
-				float:left;
-				width: 50%;
-				text-align: left;
-				}
-
-				.nav-previous {
-				float: right;
-				width: 50%;
-				text-align: right;
-				}
-			}
-		} /* end #content */
-	} /* end .has-taxonomy-show.not-singular (show page) */
-
-
-
-
-	/*
-
-	========================
-	==EPISODE & OTHER PAGES
-	========================
-
-	*/
-
-	.has-taxonomy-show.singular {
-
-		#content {
-
-			.hentry {
-			margin: 0 20px 0 10px;
-			float: left;
-			width: 600px;
-
-				.entry-title {
-				padding-bottom: 0;
-				font-weight: bold;
-				font-size: 28px;
-				line-height: 38px;
-				}
-			}
-
-			// move this below the .hentry for semantics
-			.video-sidebar {
-			float: right;
-			width: 320px;
-			margin-left: -10px;
-			margin-top: 64px;
-			background: #f3f3f3;
-
-			.video-block .clip-item {
-				
-				}
-
-				.video-block .video-title {
-
-				}
-
-				.video-block 
-
-				.video-block {
-				padding-top: 10px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 10px;
-				float: left;
-
-					h3.section-header {
-					padding-bottom: 5px;
-					margin-bottom: 5px;
-					border-bottom: 1px dotted #999;
-					color: #555;
-					-moz-text-shadow: -1px 1px #fff;
-					text-shadow: -1px 1px #fff;
-					}
-
-					.clip-item {
-					clear: both;
-					float: left;
-					margin: 5px 0px;
-					}
-
-					.video-title {
-					clear: both;
-					float: right;
-					width: 140px;
-					font-family: arial, helvetica, sans-serif;
-					font-weight: 400;
-					font-size: 14px;
-					margin-bottom: 10px;
-					}
-
-					.thumbnail {
-					float: left;
-					margin-right: 10px;
-					margin-bottom: 10px;
-					}
-				}
-			} /* end .video-sidebar */
-		} /* end #content */
-	} /* end .has-taxonomy-show.singular (episode & other pages)
-
-
-
+			} /* end .children */
+		} /* end #subpage-menu */
+	} /* end .page */
 
 
 
@@ -1497,9 +421,6 @@ padding: 0 20px; */
 		/*z-index: 2200;*/
 		position: relative;
 		float: right;
-		-moz-border-radius: 4px;
-		-webkit-border-radius: 4px;
-		border-radius: 4px;
 		-webkit-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
 		-moz-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
 		box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
@@ -1516,7 +437,7 @@ padding: 0 20px; */
 				a:hover,
 				a:active {
 				background: transparent;
-				/*z-index: 2400; */
+				z-index: 2400;
 				}
 
 				li {

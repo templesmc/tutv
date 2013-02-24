@@ -1,0 +1,397 @@
+.home {
+
+	/*
+	// I'm not seeing this on the home page and the only .hentry classes on home don't use this
+	.home-info .hentry {
+	width:738px;
+	margin-left: 0;
+	margin-bottom: 10px
+	}
+	*/
+
+	#main {
+	padding: 0 10px;
+	width: 960px;
+
+		#container {
+			width: 960px; // overrides the more general #container width declaration
+
+			#content {
+			width: auto;
+			padding: 0;
+
+				/* FEATURED SLIDESHOW */
+
+				#front-featured {
+				width: 960px;
+				height: 290px !important; // what's so important about it?
+				padding: 0px;
+				position: realtive; // umm... "realtive"... it must be important then...
+				z-index: 0 !important; // also, quite effective
+				margin: 0 0 30px 0; /* margin: 0 0 30px 0; orginal 06-13-2011 Pwinnick*/
+
+					.attachment-banner {
+					float: right;
+					}
+
+					ul {
+					list-style: none;
+					margin:0;
+					overflow: hidden;
+					height: 330px;
+					}
+
+					li {
+					height: 330px;
+					float: none;
+					position: relative;
+					margin-bottom: 20px;	
+					}
+
+					h2 { /* this should really have a class name because it's IMPORTANT. maybe .headline because that's what it is... */
+					line-height: 38px;
+					font-size: 32px;
+					font-weight: 300;
+					font-family: arial, helvetica, sans-serif;
+					margin-bottom: 8px;
+					word-wrap: break-word;
+
+						a {
+						color:#5b6d7b;  /* 06-11-2011 PWinnick */
+						text-decoration: none;
+
+							&:hover {
+							color: #4ad5f4;
+							}
+						}
+					} /* end h2 */
+
+					#headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
+					font-size: 20px;
+					font-weight: 200;
+					font-family: $sans-serif;
+					margin-bottom: 6px;
+					word-wrap: break-word;
+					color: #d0632d;
+					}
+
+					#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
+					background-image: url('images/subheadline.png');
+					background-repeat: no-repeat;
+					height: 25px;
+					width: 100%; /*192px*/
+					margin-bottom: 8px;
+					margin-top: -10px;
+					padding-top: 2px;
+
+						a {
+						font-size: 13px;
+						font-family: $sans-serif;
+						font-weight: bold;
+						color: #2F3E51;
+						padding: 0px 80px 0px 24px;
+
+							&:hover {
+							color: #005588;
+							}
+						}
+					} /* end #subheadline */
+
+					#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
+					background-image: url('images/watchheadline.png');
+					background-repeat: no-repeat;
+					height: 25px;
+					width: 232px;
+					margin-bottom: 8px;
+					margin-top: 4px;
+					padding-top: 2px;
+					border-top-color: #EFEFEF;
+					border-top-width: 1px;
+					border-top-style: solid;
+
+						a {
+						font-size: 12px;
+						font-family: arial, helvetica, sans-serif;
+						font-weight: 200;
+						/*color: #EFEFEF;*/
+						padding: 0px 0px 0px 26px;
+
+							&:hover {
+							color: #005588;
+							}
+						}
+					} /* end #subheadline2 */
+
+					.wp-caption { display: none; } // take this out of the template!
+
+					.description {
+					position: absolute;
+					left: 0;
+					padding: 10px 10px 0px 10px;
+					background: black;
+					background: rgba(0,0,0,.8);
+					color: #fff;
+					z-index: 3;
+					float: left;
+					height:280px;
+					width:300px;
+					margin-left: 16px; 
+
+						blockquote {
+						margin: 0;
+						}
+
+						.more-link {
+						display: block;
+						}
+
+						img { display: none; } // this should just be taken out of the template entirely. no need to display: none;
+					} /* end .description */
+				} /* end #front-featured */
+
+				/* This should actually be a sibling of the slideshow - it's the navigation for the slideshow, not for the "front" as the id name would suggest. */
+				#front-navigation {
+				font-size:18px;
+				line-height:22px;
+				width: 600px;
+				float: left;
+				/*margin-bottom: -20px; /* -40px orginal 06-13-2011 Pwinnick*/
+				position: relative;
+				margin-left: 340px; /* 10px original 06-06-2011 Pwinnick*/
+				top: -20px; /* -70px orginal 06-06-2011 Pwinnick*/
+				z-index: 100;
+				padding: 10px;
+
+					.nav {
+
+						img,
+						.no-thumbnail {
+						opacity: .8;
+						display: block;
+						}
+
+						&:hover {
+							img { opacity: 1; }
+						}
+
+						&.active {
+							img { opacity: 1; }
+						}
+					}
+				} /*end #front-navigation */
+
+				/*
+				a lot of this block stuff is badly structured in the template files and uses badly named classes. also, it looks like template comments are also misleading. take a closer look. - montchr
+				*/
+
+				.front-block {
+				float: left;
+				width: 300px;
+
+					h3 {
+					border-bottom: 1px solid #F0F0F9;
+					padding-bottom: 5px;
+					margin-bottom: 10px;
+					}
+
+					.avatar {
+					float:left;
+					margin:.25em 10px 0 0;
+					}
+				}
+
+				// rename this - it doesn't make sense with the other classes/ids
+				#last-front-block {
+				width: 960px;
+				margin: 72px 0px 72px 0px;
+				}
+
+				// rename this - stupid
+				#front-block-3 {
+				margin-right: 0;
+				clear: left;
+
+					.news-block {
+						h3 {
+						border-bottom: none;
+						margin-bottom: 0;
+						}
+					}
+				} /* end #front-block-3 */
+
+				#schedule-block {
+				position: relative;
+				margin-left: 40px; /* 20px original 07-07-2011 PWinnick*/
+				width: 620px; /* 640px original 07-07-2011 Pwinnick*/
+				background: #F4F7FC;
+
+					.section-header {
+					background-image: url('images/mid-menu.png');
+					background-repeat: repeat-x;
+					height: 28px;
+					margin-bottom: -8px;
+					border: 0px;
+					}
+
+					.hentry {
+					width: 290px;
+					padding: 4px 4px 0px 10px;
+					background: #fff;
+					border-bottom: 1px solid #ccc;
+					border-right: 1px solid #ccc;
+					border-left: 1px solid #ccc;
+
+						ul {
+						border-top:1px solid #eee;
+						list-style:none;
+						margin:0;
+
+							li {
+							display:inline;
+
+								a {
+								border-bottom:1px solid #eee;
+								color:#666;
+								display:block;
+								padding:6px 0;
+								text-decoration:none;
+
+									&:visited {
+									border-bottom:1px solid #eee;
+									color:#666;
+									display:block;
+									padding:6px 0;
+									text-decoration:none;
+									}
+
+									&:hover,
+									&:active {
+									color: #000;
+									}
+								} /* end a */
+							} /* end li */
+						} /* end ul */
+
+						.entry-content {
+						display: none;
+						}
+
+						&.active {
+						background: #F4F7FC; 
+						border-right-color: #F4F7FC;
+						border-bottom: 1px solid #ccc;
+						background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
+						background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
+
+							.entry-content {
+							display: block;
+							position: absolute;
+							overflow: hidden;
+							top: 26px; /* 28px original 06-06-2011 PWinnick */
+							right: 0;
+							bottom: 0;
+							width: 300px; /* 240px original 09-08-2011 PWinnick */
+							padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
+							border-bottom: 1px solid #CCC;
+							border-right: 1px solid #CCC;
+							/*border-top: 1px solid #ccc;*/
+							min-height: 220px;
+							background: #F4F7FC;
+							font-size: 13px; /*modified 09-15-2011 PWinnick */
+
+								.thumbnail {
+								margin-bottom: 4px;
+								opacity: 1;
+								}
+							}
+						} /* end &.active */
+
+						.scheduled-time {
+						color: #666;
+						text-shadow: -1px 1px #fff;
+						margin-top: -4px;
+						font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+						font-family: arial, helvetica, sans-serif;
+						}
+
+						.entry-title {
+						font-size: 14px;
+						margin-bottom: -2px;
+						border-bottom: none;
+						}
+					} /* end .hentry */
+				} /* end #schedule-block */
+
+				
+
+				.home .shows-item {
+				float:left;
+				margin-right: 10px;
+				width: 140px;
+				margin-bottom: 10px;
+				}
+
+				.home .shows-item:nth-child(2n+1) {
+				margin-right: 0;
+				} 
+
+				.home .shows-item:nth-child(2n+2) {
+				margin-right: 20px;
+				}
+			} /* end #content */
+		} /* end #container */
+	} /* end #main */
+
+
+	/* FEATURED VIDEO SECTION */
+
+	#featured-video-block {
+	width: 960px;
+	height: 200px;
+	margin: 72px 0px 72px 0px;
+	/*background: #f6f6f6;
+	-webkit-box-shadow: 4px 4px 4px #ccc;
+	-moz-box-shadow: 4px 4px 4px #ccc;
+	box-shadow: 4px 4px 4px #ccc;*/
+
+		.featured-videos {
+		float: left;
+		margin-top: 4px;
+		margin-right: 24px;
+		margin-left: 24px;
+		width: 140px;
+
+			.featured-video-thumbnail {
+			margin-bottom: 8px;
+			-webkit-box-shadow: 5px 5px 5px #ccc;
+			-moz-box-shadow: 5px 5px 5px #ccc;
+			box-shadow: 5px 5px 5px #ccc;
+			}
+
+			.featured-video-show {
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 16px;
+			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
+			text-align: left;
+			color: #444;
+			}
+
+			.featured-video-episode-title {
+			font-size: 12px;
+			line-height: 16px;
+			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
+			text-align: left;
+			color: #444;
+			}
+
+			.featured-video-trt {
+			font-size: 11px;
+			line-height: 16px;
+			font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
+			text-align: left;
+			color: #4c4c4c;
+			}
+		} /* END .featured-videos */
+	} /* END #featured-video-block */
+} /* END .home */

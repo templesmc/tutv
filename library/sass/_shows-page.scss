@@ -1,0 +1,110 @@
+/*
+the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
+
+the .shows-page-grid class can be safely changed to .shows-page, despite .shows-page being used in the old stylesheet. .shows-page doesn't appear anywhere in this template, and from looking at the code it seems pretty clear that it's not useful.
+
+*/
+.page-template-page-shows-grid-php {
+
+	#content.shows-page-grid {
+
+		#filtering-nav {
+
+			/* genre box colors */
+			.genre-documentary {background: #F9EFE2;}
+			.genre-interviews {background: #E9E4D3;}
+			.genre-news {background: #E3E4E3;}
+			.genre-sports {background: #F0955F;}
+			.genre-educational {background: #FDF3DE;}
+			.genre-entertainment {background: #DCE9EA;}
+			.genre-music {background: #99CC99;}
+			.genre-fitness {background: #CC9999;}
+			.genre-specials {
+				background: #018DBB;
+				color: #fff;
+			}
+
+			// let's give this a class name like ".filtering-nav-head"
+			h2 {
+			font-family: $sans-serif;
+			font-weight: bold;
+			margin-left: 6px;
+			}
+
+			// give this a class ".filtering-nav-list"
+			ul {
+			list-style: none;
+			margin: 0 0 10px 0;
+
+				// give this a class ".filtering-nav-list-item"
+				li {
+				list-style: none;
+				display: inline;
+
+
+					a {
+					color: #333;
+					padding: 3px;
+					margin: 0 12px 0 3px;
+
+						&:hover {
+						-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
+						}
+
+						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.
+						&.active {
+						// border: 1px dotted #ccc;
+						}
+					} /* end .filtering-nav-list-item a */
+				} /* end .filtering-nav-list-item */
+			} /* end .filtering-nav-list */
+		} /* end #filtering-nav */
+
+		// more unique name? .shows-page-show-container
+		.hentry {
+		width: 160px;
+		margin: 20px 11px;
+		padding: 8px; 
+		float: left;
+		clear: none; // .taxonomy-page-item (which selects the same element) has clear: both; for what reason?
+
+			// .col2 and .col3 widths are probably just making things look ugly, but .col2 is closest to 50% column.
+			&.col2 {
+			width: 347px; /* 337px original 06-08-2011 Pwinnick */
+			}
+
+			&.col3 {
+			width: 544px; /* 534px original 06-08-2011 Pwinnick */
+			}
+
+			// more unique name plz... .shows-page-show
+			.entry-content {
+			padding: 0 0 10px;
+
+				// consider a more unique name like .shows-page-show-title
+				.entry-title {
+				// this typography sucks... 11px margin? 26px line-height? use a formal rhythm.
+				font-size: 18px; 
+				line-height: 26px;
+				margin-bottom: 11px;
+
+					a {
+					color: #333;
+
+						&:hover {
+						color: #999;
+						}
+					}
+				} /* end .entry-title */
+
+				// more unique name like .shows-page-show-description
+				.description {
+				display: inline;
+				font-size: 14px;
+				}
+			} /* end .shows-page-show */
+		}
+	} /* end .shows-page-grid */
+} /* end .page.slug-shows */

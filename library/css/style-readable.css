@@ -1574,11 +1574,9 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /*
-
 ========================
 ==HOME PAGE
 ========================
-
 */
 .home {
   /*
@@ -1951,193 +1949,9 @@ style a page via class
 
 /* END .home */
 /*
-
-========================
-==FAST FACTS
-========================
-
-*/
-.slug-fast-facts-on-tutv table.facts {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-.slug-fast-facts-on-tutv tr.facts {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-/* end .slug-fast-facts-on-tutv */
-/*
-
-========================
-==STAFF PAGE
-========================
-
-*/
-table.staff {
-  padding: 0px;
-  margin-bottom: 32px;
-  border: 0px solid #cccccc;
-  font-size: 13.5px;
-  font-family: arial, helvetica, sans-serif;
-  table-layout: fixed;
-  /* end tr */
-}
-table.staff tr {
-  border: 0px;
-  padding: 0px;
-  margin: 0px;
-  /* end td */
-}
-table.staff tr td {
-  vertical-align: top;
-  border: 0px;
-  padding: 4px 8px 8px 8px;
-  margin: 0px;
-}
-table.staff tr td#section {
-  margin-bottom: 4px 0px 0px 0px;
-}
-table.staff tr td#title {
-  width: 250px;
-}
-table.staff tr td#name {
-  width: 160px;
-}
-table.staff tr td#status {
-  font-style: italic;
-  color: #aaa;
-  width: 100px;
-}
-
-/* end table.staff */
-/*
-
-========================
-==BLOG
-========================
-
-*/
-.blog .hentry {
-  float: left;
-}
-.blog .hentry img.wp-post-image {
-  display: block;
-  padding-bottom: 22px;
-  float: left;
-}
-
-/* END .blog */
-/*
-
-========================
-==SINGLE POST PAGE
-========================
-
-*/
-.single {
-  /* end .post */
-}
-.single .show-notes .meta-prep-author,
-.single .show-notes .entry-meta .author,
-.single .show-notes .entry-meta .author a,
-.single .show-notes .entry-meta abbr,
-.single .show-notes .meta-sep-entry-date {
-  display: inline;
-  font-size: inherit;
-  text-transform: none;
-}
-.single .post .meta-prep-author,
-.single .post .entry-meta .author,
-.single .post .entry-meta .author a,
-.single .post .entry-meta abbr,
-.single .post .meta-sep-entry-date {
-  display: inline;
-  font-size: inherit;
-  text-transform: none;
-}
-.single .post .entry-meta {
-  display: none;
-}
-
-/* END .single */
-/* single post page */
-/*
-
-========================
-==PAGE
-========================
-
-*/
-.page {
-  /* end #page-list */
-  /* end #subpage-menu */
-}
-.page #page-list {
-  list-style: none;
-  margin-left: 0;
-}
-.page #page-list h1 {
-  font-size: 18px;
-  padding-bottom: 18px;
-}
-.page #page-list h1 a {
-  color: #000;
-  text-decoration: none;
-}
-.page #page-list .wp-post-image {
-  float: left;
-  margin-right: 10px;
-}
-.page #subpage-menu {
-  margin: -20px 0px 20px;
-  width: 940px;
-  height: 24px;
-  /* end .children */
-}
-.page #subpage-menu li {
-  display: inline;
-  list-style: none;
-  padding-right: 5px;
-  margin-right: 5px;
-  float: left;
-}
-.page #subpage-menu a {
-  color: #666;
-  float: left;
-  font-size: 18px;
-  line-height: 24px;
-  text-shadow: white 1px 1px;
-}
-.page #subpage-menu a:hover {
-  color: #000;
-}
-.page #subpage-menu .children {
-  float: left;
-  margin: 0;
-  border-left: 1px solid #666666;
-  margin-left: 5px;
-  padding-left: 5px;
-}
-.page #subpage-menu .children li {
-  border-right: 1px solid #aaaaaa;
-}
-.page #subpage-menu .children a {
-  color: #888;
-}
-.page #subpage-menu .children .current_page_item > a {
-  border-bottom: 1px dotted #888888;
-}
-
-/* end .page */
-/*
-
 ========================
 ==SHOWS PAGE
 ========================
-
 */
 /*
 the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
@@ -2246,11 +2060,9 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 /* end .page.slug-shows */
 /*
-
 ========================
 ==SCHEDULE PAGE
 ========================
-
 */
 /* the normal page template body class isn't showing up in this instance */
 .page-template-page-schedule-php #main {
@@ -2703,13 +2515,179 @@ SHOW, CLIP, AND EPISODE PAGES
   margin-bottom: 10px;
 }
 
-/* end .has-taxonomy-show.singular (episode & other pages)
+/* end .has-taxonomy-show.singular (episode & other pages) */
+/*
+========================
+==FAST FACTS
+========================
+*/
+.slug-fast-facts-on-tutv table.facts {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.slug-fast-facts-on-tutv tr.facts {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
+/* end .slug-fast-facts-on-tutv */
+/*
+========================
+==STAFF PAGE
+========================
+*/
+table.staff {
+  padding: 0px;
+  margin-bottom: 32px;
+  border: 0px solid #cccccc;
+  font-size: 13.5px;
+  font-family: arial, helvetica, sans-serif;
+  table-layout: fixed;
+  /* end tr */
+}
+table.staff tr {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  /* end td */
+}
+table.staff tr td {
+  vertical-align: top;
+  border: 0px;
+  padding: 4px 8px 8px 8px;
+  margin: 0px;
+}
+table.staff tr td#section {
+  margin-bottom: 4px 0px 0px 0px;
+}
+table.staff tr td#title {
+  width: 250px;
+}
+table.staff tr td#name {
+  width: 160px;
+}
+table.staff tr td#status {
+  font-style: italic;
+  color: #aaa;
+  width: 100px;
+}
 
+/* end table.staff */
+/*
+========================
+==BLOG
+========================
+*/
+.blog .hentry {
+  float: left;
+}
+.blog .hentry img.wp-post-image {
+  display: block;
+  padding-bottom: 22px;
+  float: left;
+}
 
+/* END .blog */
+/*
+========================
+==SINGLE POST PAGE
+========================
+*/
+.single {
+  /* end .post */
+}
+.single .show-notes .meta-prep-author,
+.single .show-notes .entry-meta .author,
+.single .show-notes .entry-meta .author a,
+.single .show-notes .entry-meta abbr,
+.single .show-notes .meta-sep-entry-date {
+  display: inline;
+  font-size: inherit;
+  text-transform: none;
+}
+.single .post .meta-prep-author,
+.single .post .entry-meta .author,
+.single .post .entry-meta .author a,
+.single .post .entry-meta abbr,
+.single .post .meta-sep-entry-date {
+  display: inline;
+  font-size: inherit;
+  text-transform: none;
+}
+.single .post .entry-meta {
+  display: none;
+}
 
+/* END .single */
+/* single post page */
+/*
+========================
+==PAGE
+========================
+*/
+.page {
+  /* end #page-list */
+  /* end #subpage-menu */
+}
+.page #page-list {
+  list-style: none;
+  margin-left: 0;
+}
+.page #page-list h1 {
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+.page #page-list h1 a {
+  color: #000;
+  text-decoration: none;
+}
+.page #page-list .wp-post-image {
+  float: left;
+  margin-right: 10px;
+}
+.page #subpage-menu {
+  margin: -20px 0px 20px;
+  width: 940px;
+  height: 24px;
+  /* end .children */
+}
+.page #subpage-menu li {
+  display: inline;
+  list-style: none;
+  padding-right: 5px;
+  margin-right: 5px;
+  float: left;
+}
+.page #subpage-menu a {
+  color: #666;
+  float: left;
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: white 1px 1px;
+}
+.page #subpage-menu a:hover {
+  color: #000;
+}
+.page #subpage-menu .children {
+  float: left;
+  margin: 0;
+  border-left: 1px solid #666666;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+.page #subpage-menu .children li {
+  border-right: 1px solid #aaaaaa;
+}
+.page #subpage-menu .children a {
+  color: #888;
+}
+.page #subpage-menu .children .current_page_item > a {
+  border-bottom: 1px dotted #888888;
+}
 
-
+/* end .page */
 /*********************
 LINK STYLES
 *********************/
@@ -2844,9 +2822,6 @@ HEADER STYLES
   /*z-index: 2200;*/
   position: relative;
   float: right;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
   -webkit-box-shadow: rgba(228, 194, 200, 0.5) -10px 7px 5px;
   -moz-box-shadow: rgba(228, 194, 200, 0.5) -10px 7px 5px;
   box-shadow: rgba(228, 194, 200, 0.5) -10px 7px 5px;
@@ -2884,7 +2859,7 @@ HEADER STYLES
 #header #access .menu .sf-menu a:hover,
 #header #access .menu .sf-menu a:active {
   background: transparent;
-  /*z-index: 2400; */
+  z-index: 2400;
 }
 #header #access .menu .sf-menu li:hover a {
   background: #f0c2c6;
