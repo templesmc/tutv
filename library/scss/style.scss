@@ -10,17 +10,21 @@
 
 @import "mixins";
 
+/*********************
+GENERAL STYLES
+*********************/
+
+@import "general";
+
 /****************
 ** GRID SYSTEM **
 *****************/
 
 @import "grid";
 
-/*********************
-GENERAL STYLES
-*********************/
-
-@import "general";
+#wrapper {
+	@extend .container_12;
+}
 
 /********************
 WORDPRESS BODY CLASSES
