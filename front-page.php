@@ -135,11 +135,14 @@ Template Name: Front Page
 							<div class="featured-video-episode-title"><?php the_title(); ?></div>
 
 							<?php
+							/*
+							//We're not using the TRT. But it might be useful for future designs. Keeping it for now. -montchr, 2013.03.14
 							$the_trt = get_post_meta(get_the_ID(), 'TRT', TRUE);
 							$post_type = get_post_type_object(get_post_type());
 							if($the_trt) {
 								echo "<div class='featured-video-trt'>" . $post_type->labels->singular_name . " (" . $the_trt . ")</div>";
-							} ?>
+							}
+							*/ ?>
 
 						</a>
 					</div><!-- end .featured-video -->
