@@ -42,7 +42,7 @@ Template Name: Front Page
 					
 					?>
 
-					<li id="item-<?php $i++; echo $i; ?>" class="item <?php if( !has_post_thumbnail() ) echo "no-thumbnail"; ?>">
+					<li id="item-<?php $i++; echo $i; ?>" class="item<?php if( !has_post_thumbnail() ) echo ' no-thumbnail'; ?>">
 
 						<a name="item-<?php echo $i; ?>"></a>  
 
