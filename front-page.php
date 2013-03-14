@@ -155,17 +155,13 @@ Template Name: Front Page
 			<div id="last-front-block">
 
 				<!-- Watch Live Section -->	
-				<div id="front-block-3" class="front-block">  
-					
-					<div class="front-block news-block"> 
+				<div id="watch-live-block" class="front-block">  
 
 						<?php the_post() ?>
 						<?php the_content() ?>
 						<?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-					
-					</div><!-- end .front-block.news-block -->
 				
-				</div> <!-- end #front-block-3 -->
+				</div> <!-- end #watch-live-block -->
 
 				<div id="schedule-block" class="front-block">
 
