@@ -56,6 +56,12 @@ Template Name: Front Page
 
 						<div class="description">
 
+							<!--
+							Some problematic names of variables and ids to follow, as addressed in _home.scss .
+							These naming problems extend into the database and likely can't be changed without significant investment.
+
+								Postponed. -montchr, 2013.03.14
+							-->
 							<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_show(); the_title(); ?></a></h2>
 
 							<?php 
