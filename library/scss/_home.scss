@@ -16,9 +16,6 @@
 				/* FEATURED SLIDESHOW */
 
 				#front-featured {
-				@extend .grid_12;
-				@extend .alpha;
-				@extend .omega;
 				height: 290px; // what's so important about it?
 				padding: 0px;
 				position: relative; // umm... "realtive"... it must be important then...
@@ -144,43 +141,9 @@
 					} /* end .description */
 				} /* end #front-featured */
 
-				/* This should actually be a sibling of the slideshow - it's the navigation for the slideshow, not for the "front" as the id name would suggest. */
-				#front-navigation {
-				font-size:18px;
-				line-height:22px;
-				width: 600px;
-				float: left;
-				/*margin-bottom: -20px; /* -40px orginal 06-13-2011 Pwinnick*/
-				position: relative;
-				margin-left: 340px; /* 10px original 06-06-2011 Pwinnick*/
-				top: -20px; /* -70px orginal 06-06-2011 Pwinnick*/
-				z-index: 100;
-				padding: 10px;
-
-					.nav {
-
-						img,
-						.no-thumbnail {
-						opacity: .8;
-						display: block;
-						}
-
-						&:hover {
-							img { opacity: 1; }
-						}
-
-						&.active {
-							img { opacity: 1; }
-						}
-					}
-				} /*end #front-navigation */
-
 				/* FEATURED VIDEO SECTION */
 
 				#featured-video-block {
-				@extend .grid_12;
-				@extend .alpha;
-				@extend .omega;
 				height: 200px;
 				margin: 72px 0px 72px 0px;
 				/*background: #f6f6f6;
@@ -188,12 +151,7 @@
 				-moz-box-shadow: 4px 4px 4px #ccc;
 				box-shadow: 4px 4px 4px #ccc;*/
 
-					.featured-videos {
-					float: left;
-					margin-top: 4px;
-					margin-right: 24px;
-					margin-left: 24px;
-					width: 140px;
+					.featured-video {
 
 						.featured-video-thumbnail {
 						margin-bottom: 8px;
@@ -206,7 +164,7 @@
 						font-size: 12px;
 						font-weight: bold;
 						line-height: 16px;
-						font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
+						font-family: $sans-serif; /* replace with sans-serif mixin */
 						text-align: left;
 						color: #444;
 						}
@@ -214,24 +172,14 @@
 						.featured-video-episode-title {
 						font-size: 12px;
 						line-height: 16px;
-						font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
+						font-family: $sans-serif; /* replace with sans-serif mixin */
 						text-align: left;
 						color: #444;
-						}
-
-						.featured-video-trt {
-						font-size: 11px;
-						line-height: 16px;
-						font-family: lucida grande, helvetica, arial, verdana, sans-serif; /* replace with sans-serif mixin */
-						text-align: left;
-						color: #4c4c4c;
 						}
 					} /* END .featured-videos */
 				} /* END #featured-video-block */
 
 				.front-block {
-				float: left;
-				width: 300px;
 
 					h3 {
 					border-bottom: 1px solid #F0F0F9;
@@ -246,29 +194,10 @@
 				}
 
 				// rename this - it doesn't make sense with the other classes/ids
-				#last-front-block {
-				@extend .grid_12;
-				@extend .alpha;
-				@extend .omega;
+				#schedule-meta-block {
 				margin: 72px 0px 72px 0px;
 
-					// rename this - stupid
-					#front-block-3 {
-					margin-right: 0;
-					clear: left;
-
-						.news-block {
-							h3 {
-							border-bottom: none;
-							margin-bottom: 0;
-							}
-						}
-					} /* end #front-block-3 */
-
 					#schedule-block {
-					position: relative;
-					margin-left: 40px; /* 20px original 07-07-2011 PWinnick*/
-					width: 620px; /* 640px original 07-07-2011 Pwinnick*/
 					background: #F4F7FC;
 
 						.section-header {
@@ -367,7 +296,7 @@
 							}
 						} /* end .hentry */
 					} /* end #schedule-block */
-				} /* end #last-front-block */
+				} /* end #schedule-meta-block */
 			} /* end #content */
 		} /* end #container */
 	} /* end #main */

@@ -18,13 +18,13 @@ Template Name: Front Page
 <?php get_header() ?>
 
 	<div id="container">
-		
+
 		<div id="content">
 		
 		<?php thematic_navigation_above(); ?>
 		<?php get_sidebar('index-top') ?>
 
-			<div id="front-featured">
+			<div id="front-featured" class="grid_12 alpha omega">
 				<ul>
 					<?php
 
@@ -105,65 +105,18 @@ Template Name: Front Page
 			
 			</div> <!-- #front-featured -->
 			
-			<!-- Featured Video Section -->
-			<div id="featured-video-block" class="grid_12 alpha omega">
+			<!-- Recent Blog Posts Block -->
+			<div id="recent-blog-posts-block" class="grid_6 alpha">
 
-				<h3 class="section-header">Featured Videos:</h3>
+				<!-- stuff goes here! -->
 
-				<?php
-				// set class to alpha/omega depending on position in 4 column layout
-				// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-				$style_classes = array('alpha', '', '', 'omega');
-				$styles_count = count($style_classes);
-				$style_index = 0;
-
-				$featuredVideos = new WP_Query();
-				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=5');
-				?>
-
-				<?php while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post();
-
-					// this is the second part of the operation that determines first or last class based on column divisions. see above.
-					$k = $style_classes[$style_index++ % $styles_count]; ?>
-
-					<div class="featured-video grid_3 <?php echo $k; ?>">
-
-						<a href="<?php the_permalink(); ?>" rel="bookmark">
-
-							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
-							<div class="featured-video-show"><?php the_show(); ?></div>
-							<div class="featured-video-episode-title"><?php the_title(); ?></div>
-
-							<?php
-							/*
-							//We're not using the TRT. But it might be useful for future designs. Keeping it for now. -montchr, 2013.03.14
-							$the_trt = get_post_meta(get_the_ID(), 'TRT', TRUE);
-							$post_type = get_post_type_object(get_post_type());
-							if($the_trt) {
-								echo "<div class='featured-video-trt'>" . $post_type->labels->singular_name . " (" . $the_trt . ")</div>";
-							}
-							*/ ?>
-
-						</a>
-					</div><!-- end .featured-video -->
-				<?php
-				endwhile;
-				wp_reset_query();
-				?>
-			</div><!-- end #featured-video-block -->
+			</div> <!-- end #recent-blog-posts-block -->
 			
-			<div id="last-front-block">
+			<!-- Schedule and Site Meta Block -->
+			<div id="schedule-meta-block" class="grid_6 omega">
 
-				<!-- Watch Live Section -->	
-				<div id="watch-live-block" class="front-block">  
-
-						<?php the_post() ?>
-						<?php the_content() ?>
-						<?php edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
-				
-				</div> <!-- end #watch-live-block -->
-
-				<div id="schedule-block" class="front-block">
+				<!-- Schedule Block -->
+				<div id="schedule-block" class="grid_12 alpha omega">
 
 					<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
 
@@ -271,8 +224,77 @@ Template Name: Front Page
 					<?php } ?>
 
 				</div><!-- end #schedule-block -->
-		
-			</div><!-- end #last-front-block -->
+
+				<!-- Site Meta Block -->
+				<div id="site-meta-block" class="grid_12 alpha omega">
+
+					<!-- Watch Live Section -->	
+					<div id="watch-live-block" class="front-site-meta-link grid_12 alpha omega">  
+						<!-- stuff goes here -->
+					</div> <!-- end #watch-live-block -->
+
+					<div id="about-tutv-block" class="front-site-meta-link grid_6 alpha">
+						<!-- stuff goes here -->
+					</div> <!-- end #about-tutv-block -->
+
+					<div id="submit-a-video-block" class="front-site-meta-link grid_6 omega">
+						<!-- stuff goes here -->
+					</div> <!-- end #submit-a-video-block -->
+
+					<div id="read-the-blog-block" class="front-site-meta-link grid_12 alpha omega">
+						<!-- stuff goes here -->
+					</div> <!-- end #read-the-blog-block -->
+
+				</div><!-- end #site-meta-block -->
+
+			</div><!-- end #schedule-meta-block -->
+
+			<!-- Featured Video Section -->
+			<div id="featured-video-block" class="grid_12 alpha omega">
+
+				<h3 class="section-header">Featured Videos:</h3>
+
+				<?php
+				// set class to alpha/omega depending on position in 4 column layout
+				// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+				$style_classes = array('alpha', '', '', 'omega');
+				$styles_count = count($style_classes);
+				$style_index = 0;
+
+				$featuredVideos = new WP_Query();
+				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=5');
+				?>
+
+				<?php while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post();
+
+					// this is the second part of the operation that determines first or last class based on column divisions. see above.
+					$k = $style_classes[$style_index++ % $styles_count]; ?>
+
+					<div class="featured-video grid_3 <?php echo $k; ?>">
+
+						<a href="<?php the_permalink(); ?>" rel="bookmark">
+
+							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
+							<div class="featured-video-show"><?php the_show(); ?></div>
+							<div class="featured-video-episode-title"><?php the_title(); ?></div>
+
+							<?php
+							/*
+							//We're not using the TRT. But it might be useful for future designs. Keeping it for now. -montchr, 2013.03.14
+							$the_trt = get_post_meta(get_the_ID(), 'TRT', TRUE);
+							$post_type = get_post_type_object(get_post_type());
+							if($the_trt) {
+								echo "<div class='featured-video-trt'>" . $post_type->labels->singular_name . " (" . $the_trt . ")</div>";
+							}
+							*/ ?>
+
+						</a>
+					</div><!-- end .featured-video -->
+				<?php
+				endwhile;
+				wp_reset_query();
+				?>
+			</div><!-- end #featured-video-block -->
 
 			<?php 
 			// calling the widget area 'index-bottom'
