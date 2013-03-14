@@ -9,7 +9,7 @@ Template Name: Front Page
 	function childtheme_shows_scripts() {
 	
 		wp_enqueue_script('slideshow', get_bloginfo('stylesheet_directory') . '/js/jcarousellite.min.js', array('jquery'), '1.0', false);
-		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array('slideshow', 'jquery'), '1.0', false);
+		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home-ck.js', array('slideshow', 'jquery'), '1.0', false);
 
 	}
 
