@@ -98,52 +98,29 @@ Template Name: Front Page
 				<div class="next"> </div>
 			
 			</div> <!-- #front-featured -->
-
-			<?php if($i > 1) : //only show navigation for multiple posts ?>
-
-				<div id="front-navigation">
-
-					<?php 
-
-					$j = 0;
-					
-					foreach($slides as $slide) { ?>
-
-						<div class="item-<?php $j++; echo $j; ?> nav">
-
-							<a href="#item-<?php echo $j; ?>">
-								<?php
-
-								$title = get_the_show($slide) . get_the_title($slide);
-								
-								if( has_post_thumbnail( $slide ) ) {
-
-									echo get_the_post_thumbnail( $slide, 'banner-thumbnail', array( 'title' => $title ) );
-								
-								} else {
-								
-									echo "<span class='no-thumbnail'>$title</span>";
-								
-								} ?>
-							</a>
-						</div>
-					<?php } // end foreach ?>
-				</div><!-- end #front-navigation -->
-			<?php endif; ?>
 			
 			<!-- Featured Video Section -->
-			<div id="featured-video-block">
+			<div id="featured-video-block" class="grid_12 alpha omega">
 
 				<h3 class="section-header">Featured Videos:</h3>
 
 				<?php
+				// set class to alpha/omega depending on position in 4 column layout
+				// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+				$style_classes = array('alpha', '', '', 'omega');
+				$styles_count = count($style_classes);
+				$style_index = 0;
+
 				$featuredVideos = new WP_Query();
-				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=5'); 
+				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=5');
 				?>
 
-				<?php while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post(); ?>
+				<?php while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post();
 
-					<div class="featured-videos">
+					// this is the second part of the operation that determines first or last class based on column divisions. see above.
+					$k = $style_classes[$style_index++ % $styles_count]; ?>
+
+					<div class="featured-video grid_3 <?php echo $k; ?>">
 
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
 
@@ -159,7 +136,7 @@ Template Name: Front Page
 							} ?>
 
 						</a>
-					</div><!-- end .featured-videos -->
+					</div><!-- end .featured-video -->
 				<?php
 				endwhile;
 				wp_reset_query();
