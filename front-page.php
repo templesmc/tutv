@@ -173,30 +173,34 @@ Template Name: Front Page
 						$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 						$term = $terms[0];
 						
-						$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_4 alpha";
+						$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_6 alpha omega";
 							if( $date_value < $active_start_time ) {
 								$output .= ' active';
 							}
 							$output .= "'>";
 
-							$output .= "<div class='scheduled-time'>$formatted_time</div>";
+							$output .= "<div class='entry-info grid_4 alpha'>";
 
-							$output .= "<h4 class='entry-title'>";
+								$output .= "<div class='scheduled-time'>$formatted_time</div>";
 
-								if( $term ) {
-									$output .= "<a href='" . get_show_link($term) . "'>";
-										$output .= get_the_show($scheduled_page->ID);
+								$output .= "<h4 class='entry-title'>";
+
+									if( $term ) {
+										$output .= "<a href='" . get_show_link($term) . "'>";
+											$output .= get_the_show($scheduled_page->ID);
+										$output .= '</a>';
+									}
+									$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
+										$output .= get_the_title($scheduled_page->ID);
 									$output .= '</a>';
-								}
-								$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
-									$output .= get_the_title($scheduled_page->ID);
-								$output .= '</a>';
-							
-							$output .= '</h4>';
+								
+								$output .= '</h4>';
 
-							$post = get_post($scheduled_page->ID); 
-							setup_postdata($post);
-							
+								$post = get_post($scheduled_page->ID); 
+								setup_postdata($post);
+								
+							$output .= '</div><!-- .entry-info -->';
+
 							$output .= '<div class="entry-content grid_2 omega">';
 
 								$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
