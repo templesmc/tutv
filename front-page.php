@@ -173,7 +173,7 @@ Template Name: Front Page
 						$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 						$term = $terms[0];
 						
-						$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug}";
+						$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_4 alpha";
 							if( $date_value < $active_start_time ) {
 								$output .= ' active';
 							}
@@ -197,7 +197,7 @@ Template Name: Front Page
 							$post = get_post($scheduled_page->ID); 
 							setup_postdata($post);
 							
-							$output .= '<div class="entry-content">';
+							$output .= '<div class="entry-content grid_2 omega">';
 
 								$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
 									$output .= get_video_thumbnail($scheduled_page->ID);

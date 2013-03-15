@@ -201,51 +201,28 @@
 					background: #F4F7FC;
 
 						.section-header {
-						background-image: url('images/mid-menu.png');
-						background-repeat: repeat-x;
 						height: 28px;
 						margin-bottom: -8px;
 						border: 0px;
 						}
 
 						.hentry {
-						width: 290px;
-						padding: 4px 4px 0px 10px;
 						background: #fff;
 						border-bottom: 1px solid #ccc;
 						border-right: 1px solid #ccc;
 						border-left: 1px solid #ccc;
 
-							ul {
-							border-top:1px solid #eee;
-							list-style:none;
-							margin:0;
+							.scheduled-time {
+							display: inline;
+							color: #666;
+							font-size: 14px; /* 16px original 06-06-2011 PWinnick */
+							}
 
-								li {
-								display:inline;
-
-									a {
-									border-bottom:1px solid #eee;
-									color:#666;
-									display:block;
-									padding:6px 0;
-									text-decoration:none;
-
-										&:visited {
-										border-bottom:1px solid #eee;
-										color:#666;
-										display:block;
-										padding:6px 0;
-										text-decoration:none;
-										}
-
-										&:hover,
-										&:active {
-										color: #000;
-										}
-									} /* end a */
-								} /* end li */
-							} /* end ul */
+							.entry-title {
+							display: inline;
+							font-size: 14px;
+							border-bottom: none;
+							}
 
 							.entry-content {
 							display: none;
@@ -269,31 +246,18 @@
 								padding: 4px 4px 4px 9px; /* 18px; original 09-08-2011 PWinnick */
 								border-bottom: 1px solid #CCC;
 								border-right: 1px solid #CCC;
-								/*border-top: 1px solid #ccc;*/
 								min-height: 220px;
 								background: #F4F7FC;
 								font-size: 13px; /*modified 09-15-2011 PWinnick */
 
 									.thumbnail {
+									display: block;
 									margin-bottom: 4px;
 									opacity: 1;
+									max-width: 100%;
 									}
 								}
 							} /* end &.active */
-
-							.scheduled-time {
-							color: #666;
-							text-shadow: -1px 1px #fff;
-							margin-top: -4px;
-							font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-							font-family: arial, helvetica, sans-serif;
-							}
-
-							.entry-title {
-							font-size: 14px;
-							margin-bottom: -2px;
-							border-bottom: none;
-							}
 						} /* end .hentry */
 					} /* end #schedule-block */
 				} /* end #schedule-meta-block */
