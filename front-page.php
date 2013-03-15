@@ -120,7 +120,7 @@ Template Name: Front Page
 			<div id="schedule-meta-block" class="grid_6 omega">
 
 				<!-- Schedule Block -->
-				<div id="schedule-block" class="grid_12 alpha omega">
+				<div id="schedule-block" class="grid_6 alpha omega">
 
 					<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
 
@@ -230,22 +230,22 @@ Template Name: Front Page
 				</div><!-- end #schedule-block -->
 
 				<!-- Site Meta Block -->
-				<div id="site-meta-block" class="grid_12 alpha omega">
+				<div id="site-meta-block" class="grid_6 alpha omega">
 
 					<!-- Watch Live Section -->	
-					<div id="watch-live-block" class="front-site-meta-link grid_12 alpha omega">  
+					<div id="watch-live-block" class="front-site-meta-link grid_6 alpha omega">  
 						<!-- stuff goes here -->
 					</div> <!-- end #watch-live-block -->
 
-					<div id="about-tutv-block" class="front-site-meta-link grid_6 alpha">
+					<div id="about-tutv-block" class="front-site-meta-link grid_3 alpha">
 						<!-- stuff goes here -->
 					</div> <!-- end #about-tutv-block -->
 
-					<div id="submit-a-video-block" class="front-site-meta-link grid_6 omega">
+					<div id="submit-a-video-block" class="front-site-meta-link grid_3 omega">
 						<!-- stuff goes here -->
 					</div> <!-- end #submit-a-video-block -->
 
-					<div id="read-the-blog-block" class="front-site-meta-link grid_12 alpha omega">
+					<div id="read-the-blog-block" class="front-site-meta-link grid_6 alpha omega">
 						<!-- stuff goes here -->
 					</div> <!-- end #read-the-blog-block -->
 
