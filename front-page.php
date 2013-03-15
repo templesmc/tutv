@@ -179,7 +179,7 @@ Template Name: Front Page
 							}
 							$output .= "'>";
 
-							$output .= "<div class='entry-info grid_4 alpha'>";
+							$output .= "<div class='entry-info grid_4 omega'>";
 
 								$output .= "<div class='scheduled-time'>$formatted_time</div>";
 
@@ -201,7 +201,7 @@ Template Name: Front Page
 								
 							$output .= '</div><!-- .entry-info -->';
 
-							$output .= '<div class="entry-content grid_2 omega">';
+							$output .= '<div class="entry-content grid_2 alpha omega">';
 
 								$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
 									$output .= get_video_thumbnail($scheduled_page->ID);
