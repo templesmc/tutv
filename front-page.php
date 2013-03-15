@@ -24,6 +24,10 @@ Template Name: Front Page
 		<?php thematic_navigation_above(); ?>
 		<?php get_sidebar('index-top') ?>
 
+			<div id="masthead" class="grid_12 alpha omega">
+				<!-- stuff goes here -->
+			</div>
+
 			<div id="front-featured" class="grid_12 alpha omega">
 				<ul>
 					<?php
