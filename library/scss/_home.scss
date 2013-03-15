@@ -257,51 +257,57 @@
 
 					#featured-buttons-block {
 					height: 250px;
-					padding: 10px;
 
-						.front-featured-button {
-						background-color: $ea-gray;
+						a.front-featured-button {
+						background-color: $gray93;
 						height: 90px;
-
-							a {
-							display: block;
+						display: block;
 
 								h3.front-featured-button-title {
 								text-transform: uppercase;
 
 									em {
-
+									text-transform: lowercase;
 									}
 								} /* end h3.front-featured-button-title */
-							} /* end a */
-						} /* end .front-featured-button */
+						} /* end a.front-featured-button */
 
 						.watch-live-button {
 						margin-bottom: 10px;
+						color: $tu-cherry;
 
-							a {
-							color: $tu-cherry;
+							&:hover,
+							&:active {
+							color: inherit;
 							}
 						}
 
 						.about-tutv-button {
-							a {
-							color: #1caae4;
+						color: $about-button;
+
+							&:hover,
+							&:active {
+							color: inherit;
 							}
 						}
 
 						.submit-a-video-button {
-							a {
-							color: #00b3a0;
+						color: $submit-button;
+
+							&:hover,
+							&:active {
+							color: inherit;
 							}
 						}
 
 						.read-the-blog-button {
-						height: 45px;
+						height: 50px;
 						margin-top: 10px;
+						color: $blog-button;
 
-							a {
-							color: #5e666b;
+							&:hover,
+							&:active {
+							color: inherit;
 							}
 						}
 
