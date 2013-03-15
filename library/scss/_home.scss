@@ -254,6 +254,59 @@
 							} /* end &.active */
 						} /* end .hentry */
 					} /* end #schedule-block */
+
+					#featured-buttons-block {
+					height: 250px;
+					padding: 10px;
+
+						.front-featured-button {
+						background-color: $ea-gray;
+						height: 90px;
+
+							a {
+							display: block;
+
+								h3.front-featured-button-title {
+								text-transform: uppercase;
+
+									em {
+
+									}
+								} /* end h3.front-featured-button-title */
+							} /* end a */
+						} /* end .front-featured-button */
+
+						.watch-live-button {
+						margin-bottom: 10px;
+
+							a {
+							color: $tu-cherry;
+							}
+						}
+
+						.about-tutv-button {
+							a {
+							color: #1caae4;
+							}
+						}
+
+						.submit-a-video-button {
+							a {
+							color: #00b3a0;
+							}
+						}
+
+						.read-the-blog-button {
+						height: 45px;
+						margin-top: 10px;
+
+							a {
+							color: #5e666b;
+							}
+						}
+
+
+					} /* end #featured-buttons-block */
 				} /* end #schedule-meta-block */
 			} /* end #content */
 		} /* end #container */

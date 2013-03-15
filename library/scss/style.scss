@@ -289,18 +289,18 @@ a, a:visited {
 	     -o-transition: color .3s ease, background .3s ease;
 	        transition: color .3s ease, background .3s ease;
 
-	color: $link-color;
+	// color: $link-color;
 
 	&:active,
 	&:visited,
 	&:hover {
-	color: $link-color;				/* #5b6d7b Defines color of all links originally #25BADB */
+	//color: $link-color;				/* #5b6d7b Defines color of all links originally #25BADB */
 	text-decoration: none;
 	}
 
 	/* on hover */
 	&:hover, &:focus {
-	color: $link-hover;
+	//color: $link-hover;
 	text-decoration: none;
 
 		.thumbnail {
