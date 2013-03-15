@@ -52,8 +52,48 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
-$tu-cherry:			#b0013a;
-$ea-gray:			#eaeaea;
+/* Everyone's favorite red. The red of the blood of Temple students.
+In mockups as #b0013a, but the official color is #9e1b34. */
+$tu-cherry:			#9e1b34; 
+
+/*
+Descriptive Variables
+*/
+$white:				#ffffff;
+$black:				#000000;
+
+$blue:				#0176b7;
+$light-blue:		#42abe8;
+$teal:				#00b3a0; /* Used for Submit A Video Button */
+
+	/* Grays */
+	$gray20:			#333333;
+	$gray40:			#666666;
+	$gray93: 			#eaeaea;
+
+
+/*
+Functional Variables
+*/
+
+$body-color:		$gray20; /* Used for body content text */
+$info-color:		$black; /* Used for non-content text */
+	
+	/* Link Colors */
+	$link-color:		$blue;
+	$link-hover:		$tu-cherry;
+
+	/* Buttons */
+	$button:				$light-blue;
+
+	$watch-live-button:		$tu-cherry;
+	$about-button:			$light-blue;
+	$submit-button:			$teal;
+	$blog-button:			$gray40;
+
+
+
+
 
 /*
 Here's a great tutorial on how to
