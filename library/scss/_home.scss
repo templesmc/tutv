@@ -265,6 +265,8 @@
 
 								h3.front-featured-button-title {
 								text-transform: uppercase;
+								line-height: 90px; /* this vertically centers the h3 */
+								text-align: center;
 
 									em {
 									text-transform: lowercase;
@@ -304,6 +306,10 @@
 						height: 50px;
 						margin-top: 10px;
 						color: $blog-button;
+
+							h3.front-featured-button-title {
+							line-height: 50px; /* this vertically centers the h3 */
+							}
 
 							&:hover,
 							&:active {
