@@ -68,7 +68,7 @@ thematic_before(); ?>
     
     ?>   
 
-    <div id="header" class="container_12">
+    <div id="header">
     
         <?php 
         
