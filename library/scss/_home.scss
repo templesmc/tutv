@@ -1,14 +1,5 @@
+/* Please don't style these top guys here. */
 .home {
-
-	/*
-	// I'm not seeing this on the home page and the only .hentry classes on home don't use this
-	.home-info .hentry {
-	width:738px;
-	margin-left: 0;
-	margin-bottom: 10px
-	}
-	*/
-
 	#main {
 		#container {
 			#content {
@@ -181,24 +172,41 @@
 
 				.front-block {
 
-					h3 {
-					border-bottom: 1px solid #F0F0F9;
-					padding-bottom: 5px;
-					margin-bottom: 10px;
-					}
+					.front-block-header-container {
+						height: 46px;
 
-					.avatar {
-					float:left;
-					margin:.25em 10px 0 0;
+						h3 {
+							font-size: 20px;
+						}
+					}
+				} /* end .front-block */
+
+				#recent-blog-posts-block {
+
+					.entry-content {
+						height: 250px;
+						border: 1px solid $gray88;
 					}
 				}
 
-				// rename this - it doesn't make sense with the other classes/ids
-				#schedule-meta-block {
-				margin: 72px 0px 72px 0px;
+				#schedule-meta-block-block {
 
 					#schedule-block {
 					background: #F4F7FC;
+					margin-bottom: 20px;
+
+						/* I think this goes in here somewhere... -montchr
+
+							h3 {
+						border-bottom: 1px solid #F0F0F9;
+						padding-bottom: 5px;
+						margin-bottom: 10px;
+						}
+
+						.avatar {
+						float:left;
+						margin:.25em 10px 0 0;
+						} */
 
 						.section-header {
 						height: 28px;
@@ -319,7 +327,7 @@
 
 
 					} /* end #featured-buttons-block */
-				} /* end #schedule-meta-block */
+				} /* end #schedule-meta-block-block */
 			} /* end #content */
 		} /* end #container */
 	} /* end #main */

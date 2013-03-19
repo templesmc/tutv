@@ -110,19 +110,35 @@ Template Name: Front Page
 			</div> <!-- #front-featured -->
 			
 			<!-- Recent Blog Posts Block -->
-			<div id="recent-blog-posts-block" class="grid_6 alpha">
+			<div id="recent-blog-posts-block" class="front-block grid_6 alpha">
 
-				<!-- stuff goes here! -->
+				<div class="front-block-header-container">
+					<h3 class="front-block-header section-header"><a class='header' href="/blog">Recent Blog Posts</a></h3>
+				</div>
+
+				<div>
+					<div class="entry-content">
+						
+					</div>
+				</div><!-- .post -->
+
+				<div>
+					<div class="entry-content">
+						
+					</div>
+				</div><!-- .post -->
 
 			</div> <!-- end #recent-blog-posts-block -->
 			
-			<!-- Schedule and Site Meta Block -->
-			<div id="schedule-meta-block" class="grid_6 omega">
+			<!-- Schedule and Featured Buttons Block Block -->
+			<div id="schedule-meta-block-block" class="grid_6 omega">
 
 				<!-- Schedule Block -->
-				<div id="schedule-block" class="grid_6 alpha omega">
+				<div id="schedule-block" class="front-block grid_6 alpha omega">
 
-					<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
+					<div class="front-block-header-container">
+						<h3 class="front-block-header section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
+					</div>
 
 					<?php
 					$active_start_time = time();
@@ -233,7 +249,7 @@ Template Name: Front Page
 
 				</div><!-- end #schedule-block -->
 
-				<!-- Site Meta Block -->
+				<!-- Featured Buttons Block -->
 				<div id="featured-buttons-block" class="grid_6 alpha omega">
 
 					<!-- Watch Live Section -->	
@@ -255,7 +271,7 @@ Template Name: Front Page
 
 				</div><!-- end #featured-buttons-block -->
 
-			</div><!-- end #schedule-meta-block -->
+			</div><!-- end #schedule-meta-block-block -->
 
 			<!-- Featured Video Section -->
 			<div id="featured-video-block" class="grid_12 alpha omega">

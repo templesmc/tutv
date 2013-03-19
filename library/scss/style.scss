@@ -408,108 +408,113 @@ padding: 0 20px; */
 		display: none;
 		}
 	} /* end #branding */
+} /* end #header */
 
-	#access {
-	font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
-	font-weight: 500;
-	border-bottom: none;
-	height: 125px;
-	padding: 20px 0;
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#access {
+font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
+font-weight: 500;
+border-bottom: none;
+height: 125px;
+padding: 20px 0;
+width: auto;
+
+	a {
+	color:#5f0a03; /* #662222 alt, original #221F1F 06/08/2011 Pwinnick */
+	text-shadow: 0px 0px 1px #ccc; /* Added 06/08/2011 Pwinnick */ 
+	}
+
+	.menu {
 	width: auto;
+	z-index: 2200;
+	position: relative;
+	float: right;
 
-		a {
-		color:#5f0a03; /* #662222 alt, original #221F1F 06/08/2011 Pwinnick */
-		text-shadow: 0px 0px 1px #ccc; /* Added 06/08/2011 Pwinnick */ 
-		}
+		/* Superfish dropdown menus */
+		.sf-menu {
+		border-right:none;
 
-		.menu {
-		width: auto;
-		z-index: 2200;
-		position: relative;
-		float: right;
+			li,
+			li li,
+			li:hover,
+			li.sfHover,
+			a:focus,
+			a:hover,
+			a:active {
+			background: transparent;
+			z-index: 2400;
+			}
 
-			/* Superfish dropdown menus */
-			.sf-menu {
-			border-right:none;
+			li {
 
-				li,
-				li li,
-				li:hover,
-				li.sfHover,
-				a:focus,
-				a:hover,
-				a:active {
-				background: transparent;
-				z-index: 2400;
+				&:hover {
+
+					a {
+					background: #f0c2c6;
+
+						&:hover {
+							background: #dfb4b8; 
+						}
+					}
+				}
+
+				&.sfHover {
+
+					a {
+					background: #f0c2c6;
+
+						&:hover {
+							background: #dfb4b8; 
+						}
+					}
+				}
+			} /* end .sf-menu li */
+
+			.sub-menu {
+				a {
+				background: #f0c2c6;
+					&:hover {
+					color: #fff;
+					}
 				}
 
 				li {
+				font:13px arial, helvetica, sans-serif;
+				font-weight: normal;
+				margin-bottom: -4px;
+				}
 
-					&:hover {
+				ul {
+				background: #f0c2c6; /* Added 07-21-2011 Pwinnick */
+				border:none;
+				padding-bottom: 8px; /* Added 07-21-2011 Pwinnick */
+				margin-top: 6px; /* Added 07-21-2011 Pwinnick */
+				}
+			} /* end .sub-menu */
 
-						a {
-						background: #f0c2c6;
+			a {
+			border: none;
+			border-right: none;
+			-webkit-transition-duration: .2s;
+			-moz-transition-duration: .2s;
+			-o-transition-duration: .2s;
+			transition-duration: .2s;
 
-							&:hover {
-								background: #dfb4b8; 
-							}
-						}
-					}
+				&:hover {
+					background: #dfb4b8;
+				}
 
-					&.sfHover {
-
-						a {
-						background: #f0c2c6;
-
-							&:hover {
-								background: #dfb4b8; 
-							}
-						}
-					}
-				} /* end .sf-menu li */
-
-				.sub-menu {
-					a {
-					background: #f0c2c6;
-						&:hover {
-						color: #fff;
-						}
-					}
-
-					li {
-					font:13px arial, helvetica, sans-serif;
-					font-weight: normal;
-					margin-bottom: -4px;
-					}
-
-					ul {
-					background: #f0c2c6; /* Added 07-21-2011 Pwinnick */
-					border:none;
-					padding-bottom: 8px; /* Added 07-21-2011 Pwinnick */
-					margin-top: 6px; /* Added 07-21-2011 Pwinnick */
-					}
-				} /* end .sub-menu */
-
-				a {
-				border: none;
-				border-right: none;
-				-webkit-transition-duration: .2s;
-				-moz-transition-duration: .2s;
-				-o-transition-duration: .2s;
-				transition-duration: .2s;
-
-					&:hover {
-						background: #dfb4b8;
-					}
-
-					&:first-child {
-						border-left: none;
-					}
-				} /* end .sf-menu a */
-			} /* end .sf-menu */
-		} /* end .menu */
-	} /* end #access */
-} /* end #header */
+				&:first-child {
+					border-left: none;
+				}
+			} /* end .sf-menu a */
+		} /* end .sf-menu */
+	} /* end .menu */
+} /* end #access */
 
 .categories-menu .sf-menu a {border-left: none;} /* not sure what the .categories-menu class refers to */
 
@@ -519,17 +524,10 @@ POST & CONTENT STYLES
 **********************/
 
 #main {
-padding-top: 0;
-position: relative;
-z-index: 4;
 
 	#container {
-	width: 940px;
 
 		#content  {
-		padding:22px 0 0 10px;
-		margin:0;
-		width: auto;
 
 			.entry-content {
 			font-family: $sans-serif;
@@ -682,7 +680,12 @@ FOOTER STYLES
 ********************/
 
 #footer {
-margin-top: 20px;
+
+/* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+http://css-tricks.com/full-browser-width-bars/#comment-94090 */
+margin: 20px -2000px 0;
+padding: 0 2000px;
+border-bottom: 1px solid $gray88;
 
 	// copyright info
 	#siteinfo {
