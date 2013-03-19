@@ -374,26 +374,34 @@ padding: 0 20px; */
 }
 
 #header {
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		background: black;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		right: 100%;
+		width: 9999px;
+		border-bottom: 1px solid $gray93;
+	}
+
 	#branding {
 	padding: 20px 0;
-	height:150px;
+	width: auto;
+	float: left;
+	height: 125px;
 
 		#blog-title {
-		background:url("images/logo-backdrop.png") no-repeat 0 0;
-		height:100px;
-		margin-left:-770px;
-		padding:10px 0 275px 715px;
-		position:absolute;
-		width:335px;
+		height:125px;
 
 			a {
 			text-indent: -9999em;
 			background: url('images/logo.png') no-repeat;
-			height: 80px;
 			width: 254px;
 			display: block;
 			height:72px;
-			margin-left:56px;
 
 				&:hover {
 					opacity: .7;
@@ -404,22 +412,17 @@ padding: 0 20px; */
 		#blog-description {
 		/*display none or keep the other styles? */
 		display: none;
-		color: #A8D344;
-		font-size:14px;
-		font-style:normal;
-		position:absolute;
 		}
 	} /* end #branding */
 
 	#access {
-	font:500 20px arial, helvetica, sans-serif; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
-	font-weight: bold; /* Added 06/08/2011 Pwinnick */
-	padding-bottom: 34px;
+	font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
+	font-weight: 500;
 	border-bottom: none;
-	position: absolute;
-	right: 20px;
-	top:0;
-	padding:60px 0px 0;
+	height: 125px;
+	padding: 20px 0;
+	width: auto;
+	float: right;
 
 		a {
 		color:#5f0a03; /* #662222 alt, original #221F1F 06/08/2011 Pwinnick */
@@ -428,12 +431,9 @@ padding: 0 20px; */
 
 		.menu {
 		width: auto;
-		/*z-index: 2200;*/
+		z-index: 2200;
 		position: relative;
 		float: right;
-		-webkit-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
-		-moz-box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
-		box-shadow: rgba(228, 194, 200, .5) -10px 7px 5px;
 
 			/* Superfish dropdown menus */
 			.sf-menu {
@@ -498,7 +498,6 @@ padding: 0 20px; */
 				} /* end .sub-menu */
 
 				a {
-				background: #FFE5E9;
 				border: none;
 				border-right: none;
 				-webkit-transition-duration: .2s;
@@ -514,25 +513,6 @@ padding: 0 20px; */
 						border-left: none;
 					}
 				} /* end .sf-menu a */
-
-				/* What's so important about #menu-item-269 ?
-				#access .sf-menu #menu-item-269 ul {
-				background: #f0c2c6; 
-				border:none;
-				width: 580px !important; 
-				padding-bottom: 8px;
-				margin-top: 6px; 
-				}
-
-				#access .sf-menu #menu-item-269 li {
-				font:13px arial, helvetica, sans-serif; 
-				font-weight: normal;
-				margin-bottom: -4px;
-				float: left;
-				width: 33.3% !important; 
-				}
-				*/
-
 			} /* end .sf-menu */
 		} /* end .menu */
 	} /* end #access */
