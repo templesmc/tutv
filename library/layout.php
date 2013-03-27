@@ -314,3 +314,25 @@ function childtheme_footer($thm_footertext) {
 	return $thm_footertext;
 }
 add_filter('thematic_footertext','childtheme_footer');
+
+/**
+ * Add widget area to header for search box.
+ *
+ */
+function tutv_header_search() {
+	echo '<div id="header-search">';
+		get_search_form();
+	echo '</div> <!-- end #header-search -->';
+}
+add_action('thematic_header', 'tutv_header_search', 8);
+
+/**
+ * Add widget area to footer for search box.
+ *
+ */
+function tutv_footer_search() {
+	echo '<div id="footer-search">';
+		get_search_form();
+	echo '</div> <!-- end #footer-search -->';
+}
+add_action('thematic_footer', 'tutv_footer_search', 8);
