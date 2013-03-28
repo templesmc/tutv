@@ -365,30 +365,22 @@ H1, H2, H3, H4 STYLES
 HEADER STYLES
 *********************/
 
-#header,
-#main {
-/* this stuff is redundent, and it should be handled by the layout scss partial anyway
-width: 940px; 
-margin: 0 auto;
-padding: 0 20px; */
-}
-
 #header {
 
-	/* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-	http://css-tricks.com/full-browser-width-bars/#comment-94090 */
-	margin: 0 -2000px;
-	padding: 0 2000px;
-	border-bottom: 1px solid $gray88;
+/* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+http://css-tricks.com/full-browser-width-bars/#comment-94090 
+Note that body element must have the attribute overflow-x: hidden; */
+margin: 0 -2000px;
+padding: 0 2000px;
+border-bottom: 1px solid $gray88;
 
 	#branding {
-	padding: 20px 0;
+	padding: 15px 0 0;
 	width: auto;
 	float: left;
-	height: 125px;
 
 		#blog-title {
-		height:125px;
+		height:72px;
 
 			a {
 			text-indent: -9999em;
@@ -419,14 +411,11 @@ NAVIGATION STYLES
 font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */
 font-weight: 500;
 border-bottom: none;
-height: 125px;
-padding: 20px 0;
+height: auto;
+padding: 20px 0 0;
 width: auto;
-
-	a {
-	color:#5f0a03; /* #662222 alt, original #221F1F 06/08/2011 Pwinnick */
-	text-shadow: 0px 0px 1px #ccc; /* Added 06/08/2011 Pwinnick */ 
-	}
+float: right;
+color: black;
 
 	.menu {
 	width: auto;
@@ -451,67 +440,98 @@ width: auto;
 
 			li {
 
-				&:hover {
 
+				a {
+				text-transform: lowercase;
+				font-weight: 700;
+				font-size: 20px;
+				border: none;
+				border-right: none;
+				color: black;
+				padding: 0 10px 15px;
+				-webkit-transition-duration: .2s;
+				-moz-transition-duration: .2s;
+				-o-transition-duration: .2s;
+				transition-duration: .2s;
+
+					&:hover {
+					color: $tu-cherry;
+					}
+
+					&:first-child {
+						border-left: none;
+					}
+				} /* end .sf-menu li a */
+
+				/* "watch live" */
+				&#menu-item-30554 {
 					a {
-					background: #f0c2c6;
+					color: $tu-cherry;
 
 						&:hover {
-							background: #dfb4b8; 
+						color: black;
+						}
+					}
+				} /* end "watch live" item */
+
+				&:hover {
+					a {
+						&:hover {
+
 						}
 					}
 				}
 
 				&.sfHover {
-
 					a {
-					background: #f0c2c6;
-
 						&:hover {
-							background: #dfb4b8; 
+
 						}
 					}
 				}
 			} /* end .sf-menu li */
 
+			/* top level menu items */
+			> li {
+				
+
+
+			} /* end > li */
+
 			.sub-menu {
-				a {
-				background: #f0c2c6;
-					&:hover {
-					color: #fff;
-					}
-				}
+			background: $teal;
+			top: 36px;
+			width: 15em !important; // as far as i know, this is the only way to keep equal heights - fighting with superfish <montchr>
+			overflow: visible !important; // as far as i know, this is the only way to get carets - fighting with superfish <montchr>
 
 				li {
-				font:13px arial, helvetica, sans-serif;
-				font-weight: normal;
-				margin-bottom: -4px;
-				}
+					a {
+					font-size: 12px;
+					font-weight: normal;
+					text-transform: uppercase;
+					padding: 7px 10px;
+					background: $teal;
 
-				ul {
-				background: #f0c2c6; /* Added 07-21-2011 Pwinnick */
-				border:none;
-				padding-bottom: 8px; /* Added 07-21-2011 Pwinnick */
-				margin-top: 6px; /* Added 07-21-2011 Pwinnick */
+						&:hover {
+						color: #fff;
+						background: #000;
+						}
+					}
+				} /* end li */
+
+				/* Forms the caret above the dropdown */
+				&:after {
+				position: absolute;
+				top: -10px;
+				left: 30px;
+				display: inline-block;
+				border-right: 9px solid transparent;
+				border-bottom: 10px solid #00b3a0;
+				border-left: 9px solid transparent;
+				content: '';
+				z-index: 99999;
 				}
 			} /* end .sub-menu */
-
-			a {
-			border: none;
-			border-right: none;
-			-webkit-transition-duration: .2s;
-			-moz-transition-duration: .2s;
-			-o-transition-duration: .2s;
-			transition-duration: .2s;
-
-				&:hover {
-					background: #dfb4b8;
-				}
-
-				&:first-child {
-					border-left: none;
-				}
-			} /* end .sf-menu a */
 		} /* end .sf-menu */
 	} /* end .menu */
 } /* end #access */
@@ -623,16 +643,33 @@ POST & CONTENT STYLES
 display: none;
 }
 
+/*****************************
+SEARCH FORMS
+******************************/
 
+#searchbox,
+#searchbutton {
+font: 14px $sans-serif;
+}
 
+#searchbox {
+float: right;
+}
 
+#searchbutton {
+margin-right: 10px;
+}
 
+/* HEADER SEARCH */
+div#header-search {
+	float: right;
+	margin-top: 15px;
+} /* end #header-search */
 
+/* FOOTER SEARCH */
+div#footer-search {
 
-
-
-
-
+} /* end #footer-search */
 
 /*****************************
 SIDEBARS & ASIDES & WIDGETS
@@ -640,13 +677,6 @@ SIDEBARS & ASIDES & WIDGETS
 
 .main-aside { width: 230px;border:1px solid #ccc;padding:18px 0 0;}
 #primary {border: none;margin-bottom: 0;}
-
-#s {
-color:#999;
-font-family: arial, helvetica, sans-serif;
-width: 180px;
-}
-
 
 // from bones
 
@@ -743,16 +773,4 @@ border-bottom: 1px solid $gray88;
 			}
 		}
 	} /* end #third */
-
-	#customizable-search {
-		#searchbox {
-		float: right;
-		margin: 14px -10px 0px 0px;
-		font-family: arial, helvetica, sans-serif;
-		}
-
-		#searchbutton {
-		margin: 4px -10px 0px 200px;
-		}
-	} /* end #customizable-search */
 } /* end #footer */
