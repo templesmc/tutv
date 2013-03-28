@@ -1,8 +1,11 @@
+html, body {
+overflow-x: hidden;
+}
+
 body {
 font-family: $sans-serif;
 font-size: 100%;
 line-height: 1.5;
-overflow-x: hidden;
 }
 
 
