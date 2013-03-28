@@ -519,7 +519,9 @@ color: black;
 					}
 				} /* end li */
 
-				/* Forms the caret above the dropdown */
+				/* Forms the caret above the dropdown
+				http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-for-twitter-bootstrap
+				<montchr> */
 				&:after {
 				position: absolute;
 				top: -10px;
@@ -644,32 +646,49 @@ display: none;
 }
 
 /*****************************
-SEARCH FORMS
+SEARCH FORMS & SOCIAL ICONS
 ******************************/
 
-#searchbox,
-#searchbutton {
-font: 14px $sans-serif;
-}
+	/************************ SEARCH FORMS ************************/
 
-#searchbox {
-float: right;
-}
+		#searchbox,
+		#searchbutton {
+		font: 14px $sans-serif;
+		}
 
-#searchbutton {
-margin-right: 10px;
-}
+		#searchbox {
+		float: right;
+		}
 
-/* HEADER SEARCH */
-div#header-search {
-	float: right;
-	margin-top: 15px;
-} /* end #header-search */
+		#searchbutton {
+		margin-right: 10px;
+		}
 
-/* FOOTER SEARCH */
-div#footer-search {
+		/* HEADER SEARCH */
+		div#header-search {
+			float: right;
+			margin-top: 15px;
+		} /* end #header-search */
 
-} /* end #footer-search */
+		/* FOOTER SEARCH */
+		div#footer-search {
+			float: right;
+		} /* end #footer-search */
+
+	/************************ SOCIAL MEDIA ************************/
+
+		ul.social-media-icons {
+		list-style: none;
+		margin: 0;
+
+			li.social-media-icon,
+			li.social-media-icon a,
+			li.social-media-icon a img {
+			display: inline-block;
+			}
+		} /* end .social-media-icons */
+
+
 
 /*****************************
 SIDEBARS & ASIDES & WIDGETS
@@ -717,9 +736,19 @@ margin: 20px -2000px 0;
 padding: 0 2000px;
 border-bottom: 1px solid $gray88;
 
+	#footer-inner {
+	padding: 2em 0;
+	}
+
+	#footer-social-media {
+	float: left;
+	}
+
 	// copyright info
 	#siteinfo {
 	font: 11px $sans-serif;
+	padding: 1em 0;
+	clear: both;
 	}
 
 	.aside {

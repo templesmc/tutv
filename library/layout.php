@@ -318,6 +318,8 @@ add_filter('thematic_footertext','childtheme_footer');
 /**
  * Add widget area to header for search box.
  *
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ *
  */
 function tutv_header_search() {
 	echo '<div id="header-search">';
@@ -329,10 +331,48 @@ add_action('thematic_header', 'tutv_header_search', 8);
 /**
  * Add widget area to footer for search box.
  *
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ *
  */
-function tutv_footer_search() {
+function tutv_footer() {
+	echo '<div id="footer-social-media">';
+		tutv_social_media_icons();
+	echo '</div> <!-- end #footer-social-media -->';
 	echo '<div id="footer-search">';
 		get_search_form();
 	echo '</div> <!-- end #footer-search -->';
 }
-add_action('thematic_footer', 'tutv_footer_search', 8);
+add_action('thematic_footer', 'tutv_footer', 8);
+
+/**
+ * Returns list of social media icons.
+ * 
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @since 2.0.0
+ *
+ */
+function tutv_social_media_icons(
+	$fb_url = 'https://www.facebook.com/TempleTV',
+	$twitter_url = 'https://twitter.com/templetv',
+	$rss_url = 'feed://templetv.net/feed'
+	) {
+	?>
+	<ul class="social-media-icons">
+		<li id="fb-icon" class="social-media-icon">
+			<a href="<?php echo $fb_url; ?>" title="Like us on Facebook">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />
+			</a>
+		</li>
+		<li id="twitter-icon" class="social-media-icon">
+			<a href="<?php echo $twitter_url; ?>" title="Follow us on Twitter">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
+			</a>
+		</li>
+		<li id="rss-icon" class="social-media-icon">
+			<a href="<?php echo $rss_url; ?>" title="Subscribe to our latest updates">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />
+			</a>
+		</li>
+	</ul> <!-- end .social-media-icons -->
+	<?php
+}

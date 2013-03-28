@@ -9,13 +9,17 @@
     ?>    
 
 	<div id="footer">
+
+        <div id="footer-inner">
     
-        <?php
-        
-        // action hook creating the footer 
-        thematic_footer();
-        
-        ?>
+            <?php
+            
+            // action hook creating the footer 
+            thematic_footer();
+            
+            ?>
+
+        </div> <!-- end #footer-inner -->
         
 	</div><!-- #footer -->
 	
