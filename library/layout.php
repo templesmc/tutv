@@ -316,7 +316,7 @@ function childtheme_footer($thm_footertext) {
 add_filter('thematic_footertext','childtheme_footer');
 
 /**
- * Add widget area to header for search box.
+ * Add search box to header via thematic_header hook.
  *
  * @author Chris Montgomery <mont.chr@gmail.com>
  *
@@ -329,7 +329,7 @@ function tutv_header_search() {
 add_action('thematic_header', 'tutv_header_search', 8);
 
 /**
- * Add widget area to footer for search box.
+ * Add social media icons and search box to footer via thematic_footer hook.
  *
  * @author Chris Montgomery <mont.chr@gmail.com>
  *
@@ -349,6 +349,10 @@ add_action('thematic_footer', 'tutv_footer', 8);
  * 
  * @author Chris Montgomery <mont.chr@gmail.com>
  * @since 2.0.0
+ *
+ * @param string $fb_url The TUTV Facebook page URL
+ * @param string $twitter_url The TUTV Twitter profile URL
+ * @param string $rss_url The templetv.net RSS feed with feed:// protocol
  *
  */
 function tutv_social_media_icons(
