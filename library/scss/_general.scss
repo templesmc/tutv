@@ -13,9 +13,6 @@ background: url(images/background-full.jpg) no-repeat center center scroll;
 background-size: cover;
 }
 
-
-/* pretty sure everything is already sans-serif...
-p, ul, ol, dd {
-	font-family: arial, helvetica, sans-serif;
+#wrapper {
+	@extend .container_12;
 }
-*/
