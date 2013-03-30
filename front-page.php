@@ -20,13 +20,26 @@ Template Name: Front Page
 	<div id="container">
 
 		<div id="content">
-		
-		<?php thematic_navigation_above(); ?>
-		<?php get_sidebar('index-top') ?>
 
 			<div id="masthead" class="grid_12 alpha omega">
-				<!-- stuff goes here -->
-			</div>
+
+				<div id="tutv-network-info">
+
+					<p class="cable"><span class="cable-provider">Comcast</span> <span class="cable-channel-number">50</span></p>
+					<p class="cable"><span class="cable-provider">Verizon</span> <span class="cable-channel-number">45</span></p>
+					<p class="location">in <em class="city">Philadelphia</em></p>
+
+				</div> <!-- end #tutv-network-info -->
+
+				<div id="masthead-social-media">
+
+					<p>Follow Us</p>
+					
+					<?php tutv_social_media_icons(); ?>
+
+				</div> <!-- end #masthead-social-media -->
+			
+			</div> <!-- end #masthead -->
 
 			<div id="front-featured" class="grid_12 alpha omega">
 				<ul>

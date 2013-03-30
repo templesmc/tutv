@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic);
 /*************
 ** THEMATIC **
 **************/
@@ -609,7 +608,6 @@ http://sachagreif.com/sass-color-variables/
 /*********************
 TYPOGRAPHY
 *********************/
-/* Lato */
 /*
 WEB FONTS
 */
@@ -961,7 +959,18 @@ style a page via class
 .home { /* end #main */ }
 .home #main { /* end #container */ }
 .home #main #container { /* end #content */ }
-.home #main #container #content { /* FEATURED SLIDESHOW */ /* end #front-featured */ /* FEATURED VIDEO SECTION */ /* END #featured-video-block */ /* end .front-block */ /* end #schedule-meta-block-block */ }
+.home #main #container #content { /* MASTHEAD */ /* end #masthead */ /* FEATURED SLIDESHOW */ /* end #front-featured */ /* FEATURED VIDEO SECTION */ /* END #featured-video-block */ /* end .front-block */ /* end #schedule-meta-block-block */ }
+.home #main #container #content #masthead { background: url(images/phillyskyline.png) no-repeat center 26%; height: 175px; /* end #tutv-network-info */ /* end #masthead-social-media */ }
+.home #main #container #content #masthead p { background-color: #eaeaea; font-weight: 300; text-transform: uppercase; font-size: 1.25rem; /* 20px */ padding: 0 0.125em; cursor: default; }
+.home #main #container #content #masthead #tutv-network-info, .home #main #container #content #masthead #masthead-social-media { margin-top: 1.25em; }
+.home #main #container #content #masthead #tutv-network-info { float: left; /* end p */ }
+.home #main #container #content #masthead #tutv-network-info p { display: inline-block; float: left; clear: both; }
+.home #main #container #content #masthead #tutv-network-info p.cable { margin-bottom: .25em; }
+.home #main #container #content #masthead #tutv-network-info p.location { background-color: transparent; margin-top: .75em; text-transform: lowercase; font-style: italic; font-weight: 400; }
+.home #main #container #content #masthead #tutv-network-info p.location em { font-style: normal; text-transform: uppercase; font-weight: 700; color: #9e1b34; }
+.home #main #container #content #masthead #masthead-social-media { float: right; }
+.home #main #container #content #masthead #masthead-social-media p { background-color: #eaeaea; display: inline; margin-right: 1em; font-weight: 300; text-transform: uppercase; margin-bottom: .25em; font-size: 1.25rem; /* 20px */ position: relative; top: -0.5em; }
+.home #main #container #content #masthead #masthead-social-media ul.social-media-icons { display: inline; }
 .home #main #container #content #front-featured { height: 290px; padding: 0px; position: relative; z-index: 0; margin: 0 0 30px 0; /* margin: 0 0 30px 0; orginal 06-13-2011 Pwinnick*/ /* end h2 */ /* end #subheadline */ /* end #subheadline2 */ /* end .description */ }
 .home #main #container #content #front-featured .attachment-banner { float: right; }
 .home #main #container #content #front-featured ul { list-style: none; margin: 0; overflow: hidden; height: 330px; }
@@ -1304,7 +1313,7 @@ http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-f
 /*********************
 POST & CONTENT STYLES
 **********************/
-#main { /* end #container */ }
+#main { padding-top: 0; padding-bottom: 3em; /* end #container */ }
 #main #container { /* end #content */ }
 #main #container #content .entry-content { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #main #container #content .entry-content:hover .thumbnail { opacity: 1; }

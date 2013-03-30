@@ -4,6 +4,78 @@
 		#container {
 			#content {
 
+				/* MASTHEAD */
+
+				#masthead {
+				background: url(images/phillyskyline.png) no-repeat center 26%;
+				height: 175px;
+
+					p {
+					background-color: $masthead-text-background;
+					font-weight: 300;
+					text-transform: uppercase;
+					font-size: 1.25rem; /* 20px */
+					padding: 0 0.125em;
+					cursor: default;
+					}
+
+					#tutv-network-info,
+					#masthead-social-media {
+					margin-top: 1.25em;
+					}
+
+					#tutv-network-info {
+					float: left;
+
+						p {
+						display: inline-block;
+						float: left;
+						clear: both;
+
+							&.cable {
+							margin-bottom: .25em;
+							}
+						
+
+							&.location {
+							background-color: transparent;
+							margin-top: .75em;
+							text-transform: lowercase;
+							font-style: italic;
+							font-weight: 400;
+
+								em {
+								font-style: normal;
+								text-transform: uppercase;
+								font-weight: 700;
+								color: $tu-cherry;
+								}
+							}
+						} /* end p */
+					} /* end #tutv-network-info */
+
+					#masthead-social-media {
+					float: right;
+
+						p {
+						background-color: $masthead-text-background;
+						display: inline;
+						margin-right: 1em;
+						font-weight: 300;
+						text-transform: uppercase;
+						margin-bottom: .25em;
+						font-size: 1.25rem; /* 20px */
+
+						position: relative;
+						top: -0.5em;
+						}
+
+						ul.social-media-icons {
+							display: inline;
+						}
+					} /* end #masthead-social-media */
+				} /* end #masthead */
+
 				/* FEATURED SLIDESHOW */
 
 				#front-featured {
