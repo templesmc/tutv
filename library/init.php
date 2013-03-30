@@ -4,22 +4,25 @@
 date_default_timezone_set( get_option('timezone_string') );
 
 /**
- * Enqueue/register main stylesheet.
+ * Enqueue/register sitewide scripts and stylesheets.
  *
- * Derived from Bones.
- * 
  * This is necessary in order to keep the necessary theme registration info
- * in /style.css and keep the active stylesheet at /style-active.css
+ * in /style.css and keep the active stylesheet at /style-active.css. It also loads
+ * web fonts and other necessaries.
  *
  * @author Chris Montgomery
  * @see http://themble.com/bones/ Bones website
  *
  * @since 2.0.0
- * @version 1.0.1
+ * @version 1.0.0
  */
-add_action('wp_enqueue_scripts', 'tutv_styles', 999);
-function tutv_styles() {
+add_action('wp_enqueue_scripts', 'tutv_scripts_and_styles', 999);
+function tutv_scripts_and_styles() {
   if (!is_admin()) {
+
+  	// load google web fonts
+  	wp_register_style( 'tutv-webfonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic', array(), '', 'all' );
+    wp_enqueue_style( 'tutv-webfonts' );
 
     // register main stylesheet
     wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '', 'all' );
@@ -27,6 +30,8 @@ function tutv_styles() {
 
   }
 }
+
+
 
 // Define custom thumbnail sizes
 add_theme_support( 'post-thumbnails' );
