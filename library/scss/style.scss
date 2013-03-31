@@ -498,6 +498,8 @@ color: black;
 			.sub-menu {
 			background: $teal;
 			top: 36px;
+			display: none;
+			visibility: hidden;
 			width: 15em !important; // as far as i know, this is the only way to keep equal heights - fighting with superfish <montchr>
 			overflow: visible !important; // as far as i know, this is the only way to get carets - fighting with superfish <montchr>
 

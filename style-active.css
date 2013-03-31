@@ -1299,7 +1299,7 @@ NAVIGATION STYLES
 #access .menu .sf-menu li a:first-child { border-left: none; }
 #access .menu .sf-menu li#menu-item-30554 a { color: #9e1b34; }
 #access .menu .sf-menu li#menu-item-30554 a:hover { color: black; }
-#access .menu .sf-menu .sub-menu { background: #00b3a0; top: 36px; width: 15em !important; overflow: visible !important; /* end li */ /* Forms the caret above the dropdown
+#access .menu .sf-menu .sub-menu { background: #00b3a0; top: 36px; display: none; visibility: hidden; width: 15em !important; overflow: visible !important; /* end li */ /* Forms the caret above the dropdown
 http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-for-twitter-bootstrap
 <montchr> */ }
 #access .menu .sf-menu .sub-menu li a { font-size: 12px; font-weight: normal; text-transform: uppercase; padding: 7px 10px; background: #00b3a0; }
