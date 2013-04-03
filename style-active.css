@@ -650,13 +650,6 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
-/*********************
-GENERAL STYLES
-*********************/
-html, body { overflow-x: hidden; }
-
-body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; background: url(images/background-full.jpg) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-
 /****************
 ** GRID SYSTEM **
 *****************/
@@ -946,6 +939,18 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 .container_16 .pull_15 { left: -900px; }
 
+/*********************
+GENERAL STYLES
+*********************/
+html, body { overflow-x: hidden; }
+
+body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; background: url(images/background-full.jpg) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.block { border: 1px solid #e0e0e0; background: white; }
+.block .block-header { height: 40px; }
+.block .block-header h3.section-header { font-size: 20px; }
+
+/* end .block */
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -959,7 +964,7 @@ style a page via class
 .home { /* end #main */ }
 .home #main { /* end #container */ }
 .home #main #container { /* end #content */ }
-.home #main #container #content { /* MASTHEAD */ /* end #masthead */ /* FEATURED SLIDESHOW */ /* end #front-featured */ /* FEATURED VIDEO SECTION */ /* END #featured-video-block */ /* end .front-block */ /* end #schedule-meta-block-block */ }
+.home #main #container #content { /* MASTHEAD */ /* end #masthead */ /* FEATURED SLIDESHOW */ /* end #front-featured */ /* FEATURED VIDEO SECTION */ /* END #featured-video-block */ /* end #schedule-meta-block-block */ }
 .home #main #container #content #masthead { background: url(images/phillyskyline.png) no-repeat center 26%; height: 175px; /* end #tutv-network-info */ /* end #masthead-social-media */ }
 .home #main #container #content #masthead p { background-color: #eaeaea; font-weight: 300; text-transform: uppercase; font-size: 1.25rem; /* 20px */ padding: 0 0.125em; cursor: default; }
 .home #main #container #content #masthead #tutv-network-info, .home #main #container #content #masthead #masthead-social-media { margin-top: 1.25em; }
@@ -997,8 +1002,6 @@ box-shadow: 4px 4px 4px #ccc;*/ /* END .featured-videos */ }
 .home #main #container #content #featured-video-block .featured-video .featured-video-thumbnail { margin-bottom: 8px; -webkit-box-shadow: 5px 5px 5px #cccccc; -moz-box-shadow: 5px 5px 5px #cccccc; box-shadow: 5px 5px 5px #cccccc; }
 .home #main #container #content #featured-video-block .featured-video .featured-video-show { font-size: 12px; font-weight: bold; line-height: 16px; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; /* replace with sans-serif mixin */ text-align: left; color: #444; }
 .home #main #container #content #featured-video-block .featured-video .featured-video-episode-title { font-size: 12px; line-height: 16px; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; /* replace with sans-serif mixin */ text-align: left; color: #444; }
-.home #main #container #content .front-block .front-block-header-container { height: 46px; }
-.home #main #container #content .front-block .front-block-header-container h3 { font-size: 20px; }
 .home #main #container #content #recent-blog-posts-block .entry-content { height: 250px; border: 1px solid #e0e0e0; }
 .home #main #container #content #schedule-meta-block-block { /* end #schedule-block */ /* end #featured-buttons-block */ }
 .home #main #container #content #schedule-meta-block-block #schedule-block { background: #F4F7FC; margin-bottom: 20px; 						/* I think this goes in here somewhere... -montchr
@@ -1013,7 +1016,6 @@ box-shadow: 4px 4px 4px #ccc;*/ /* END .featured-videos */ }
 						float:left;
 						margin:.25em 10px 0 0;
 						} */ /* end .hentry */ }
-.home #main #container #content #schedule-meta-block-block #schedule-block .section-header { height: 28px; margin-bottom: -8px; border: 0px; }
 .home #main #container #content #schedule-meta-block-block #schedule-block .hentry { background: #fff; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; border-left: 1px solid #cccccc; /* end &.active */ }
 .home #main #container #content #schedule-meta-block-block #schedule-block .hentry .scheduled-time { display: inline; color: #666; font-size: 14px; /* 16px original 06-06-2011 PWinnick */ }
 .home #main #container #content #schedule-meta-block-block #schedule-block .hentry .entry-title { display: inline; font-size: 14px; border-bottom: none; }

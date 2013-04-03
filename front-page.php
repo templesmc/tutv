@@ -123,10 +123,10 @@ Template Name: Front Page
 			</div> <!-- #front-featured -->
 			
 			<!-- Recent Blog Posts Block -->
-			<div id="recent-blog-posts-block" class="front-block grid_6 alpha">
+			<div id="recent-blog-posts-block" class="front-block block grid_6 alpha">
 
-				<div class="front-block-header-container">
-					<h3 class="front-block-header section-header"><a class='header' href="/blog">Recent Blog Posts</a></h3>
+				<div class="block-header">
+					<h3 class="section-header"><a class='header' href="/blog">Recent Blog Posts</a></h3>
 				</div>
 
 				<div>
@@ -147,10 +147,10 @@ Template Name: Front Page
 			<div id="schedule-meta-block-block" class="grid_6 omega">
 
 				<!-- Schedule Block -->
-				<div id="schedule-block" class="front-block grid_6 alpha omega">
+				<div id="schedule-block" class="front-block block grid_6 alpha omega">
 
-					<div class="front-block-header-container">
-						<h3 class="front-block-header section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
+					<div class="block-header">
+						<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
 					</div>
 
 					<?php
@@ -299,7 +299,7 @@ Template Name: Front Page
 				$style_index = 0;
 
 				$featuredVideos = new WP_Query();
-				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=5');
+				$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=4');
 				?>
 
 				<?php while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post();
@@ -307,7 +307,7 @@ Template Name: Front Page
 					// this is the second part of the operation that determines first or last class based on column divisions. see above.
 					$k = $style_classes[$style_index++ % $styles_count]; ?>
 
-					<div class="featured-video grid_3 <?php echo $k; ?>">
+					<div class="featured-video block grid_3 <?php echo $k; ?>">
 
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
 

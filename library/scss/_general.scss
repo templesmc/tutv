@@ -16,3 +16,16 @@ background-size: cover;
 #wrapper {
 	@extend .container_12;
 }
+
+.block {
+border: 1px solid $border-color;
+background: white;
+
+	.block-header {
+		height: 40px;
+
+		h3.section-header {
+			font-size: 20px;
+		}
+	}
+} /* end .block */
