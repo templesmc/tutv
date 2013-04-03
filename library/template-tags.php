@@ -162,13 +162,14 @@ function get_the_show( $post_id, $before = '', $after = ': ' ) {
 /**
  * Print the first show name for a given post
  * 
- * @param int $post_id The post id to return a show for.
+ * For use in The Loop only.
+ *
  * @param int $before Text to display before the show name.
  * @param int $after Text to display after the show name.
  */
 function the_show( $before = '', $after = ': ' ) {
 	global $post;
-	echo get_the_show( $post->ID, $before = '', $after = ': ' );
+	echo get_the_show( $post->ID, $before, $after );
 }
 
 // Get a post thumbnail
