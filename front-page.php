@@ -143,8 +143,8 @@ Template Name: Front Page
 
 			</div> <!-- end #recent-blog-posts-block -->
 			
-			<!-- Schedule and Featured Buttons Block Block -->
-			<div id="schedule-meta-block-block" class="grid_6 omega">
+			<!-- Schedule and Featured Buttons Block Container -->
+			<div id="schedule-meta-block-container" class="grid_6 omega">
 
 				<!-- Schedule Block -->
 				<div id="schedule-block" class="front-block block grid_6 alpha omega">
@@ -262,8 +262,8 @@ Template Name: Front Page
 
 				</div><!-- end #schedule-block -->
 
-				<!-- Featured Buttons Block -->
-				<div id="featured-buttons-block" class="grid_6 alpha omega">
+				<!-- Featured Buttons Section -->
+				<div id="featured-buttons-section" class="grid_6 alpha omega">
 
 					<!-- Watch Live Section -->	
 					<a href="/watch-live" id="watch-live-button" class="front-featured-button grid_6 alpha omega" title="Watch TUTV Live">
@@ -282,12 +282,12 @@ Template Name: Front Page
 						<h3 id="read-the-blog-button-title" class="front-featured-button-title"><em>read</em> the blog</h3>
 					</a><!-- end #read-the-blog-button -->
 
-				</div><!-- end #featured-buttons-block -->
+				</div><!-- end #featured-buttons-section -->
 
-			</div><!-- end #schedule-meta-block-block -->
+			</div><!-- end #schedule-meta-block-container -->
 
 			<!-- Featured Video Section -->
-			<div id="featured-video-block" class="grid_12 alpha omega">
+			<div id="featured-video-section" class="grid_12 alpha omega">
 
 				<h3 class="section-header">Featured Videos</h3>
 
@@ -335,7 +335,7 @@ Template Name: Front Page
 				endwhile;
 				wp_reset_query();
 				?>
-			</div><!-- end #featured-video-block -->
+			</div><!-- end #featured-video-section -->
 
 			<?php 
 			// calling the widget area 'index-bottom'
