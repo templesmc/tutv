@@ -1371,8 +1371,8 @@ SIDEBARS & ASIDES & WIDGETS
 /*******************
 FOOTER STYLES 
 ********************/
-#footer { background: #FFFFFF; padding-top: 2.2em; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 20px -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
+#footer { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
 #footer #footer-inner { padding: 2em 0; }
 #footer #footer-social-media { float: left; }
 #footer #siteinfo { font: 11px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 1em 0; clear: both; }
