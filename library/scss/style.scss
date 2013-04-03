@@ -553,7 +553,7 @@ POST & CONTENT STYLES
 
 #main {
 padding-top: 0;
-padding-bottom: 3em;
+padding-bottom: 0;
 
 	#container {
 
@@ -738,6 +738,7 @@ FOOTER STYLES
 
 #footer {
 background: #FFFFFF;
+padding-top: 2.2em;
 
 /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
 http://css-tricks.com/full-browser-width-bars/#comment-94090 */

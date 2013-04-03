@@ -1318,7 +1318,7 @@ http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-f
 /*********************
 POST & CONTENT STYLES
 **********************/
-#main { padding-top: 0; padding-bottom: 3em; /* end #container */ }
+#main { padding-top: 0; padding-bottom: 0; /* end #container */ }
 #main #container { /* end #content */ }
 #main #container #content .entry-content { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #main #container #content .entry-content:hover .thumbnail { opacity: 1; }
@@ -1371,7 +1371,7 @@ SIDEBARS & ASIDES & WIDGETS
 /*******************
 FOOTER STYLES 
 ********************/
-#footer { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+#footer { background: #FFFFFF; padding-top: 2.2em; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
 http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 20px -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
 #footer #footer-inner { padding: 2em 0; }
 #footer #footer-social-media { float: left; }

@@ -17,9 +17,9 @@ Template Name: Front Page
 
 <?php get_header() ?>
 
-	<div id="container">
+	<div id="container" class="clearfix">
 
-		<div id="content">
+		<div id="content" class="clearfix">
 
 			<div id="masthead" class="grid_12 alpha omega">
 
