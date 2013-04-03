@@ -321,6 +321,13 @@ a, a:visited {
 H1, H2, H3, H4 STYLES
 **********************/
 
+h3.section-header {
+font-family: $sans-serif;
+font-size: 20px;
+text-transform: uppercase;
+margin: 0.5em;
+}
+
 .entry-content {
 
 	h1, .h1 {

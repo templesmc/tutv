@@ -22,7 +22,8 @@ border: 1px solid $border-color;
 background: white;
 
 	.block-header {
-		height: 40px;
+		@extend .clearfix;
+		background-color: white;
 
 		h3.section-header {
 			font-size: 20px;
