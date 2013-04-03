@@ -204,44 +204,6 @@
 					} /* end .description */
 				} /* end #front-featured */
 
-				/* FEATURED VIDEO SECTION */
-
-				#featured-video-block {
-				height: 200px;
-				margin: 72px 0px 72px 0px;
-				/*background: #f6f6f6;
-				-webkit-box-shadow: 4px 4px 4px #ccc;
-				-moz-box-shadow: 4px 4px 4px #ccc;
-				box-shadow: 4px 4px 4px #ccc;*/
-
-					.featured-video {
-
-						.featured-video-thumbnail {
-						margin-bottom: 8px;
-						-webkit-box-shadow: 5px 5px 5px #ccc;
-						-moz-box-shadow: 5px 5px 5px #ccc;
-						box-shadow: 5px 5px 5px #ccc;
-						}
-
-						.featured-video-show {
-						font-size: 12px;
-						font-weight: bold;
-						line-height: 16px;
-						font-family: $sans-serif; /* replace with sans-serif mixin */
-						text-align: left;
-						color: #444;
-						}
-
-						.featured-video-episode-title {
-						font-size: 12px;
-						line-height: 16px;
-						font-family: $sans-serif; /* replace with sans-serif mixin */
-						text-align: left;
-						color: #444;
-						}
-					} /* END .featured-videos */
-				} /* END #featured-video-block */
-
 				#recent-blog-posts-block {
 
 					.entry-content {
@@ -383,6 +345,52 @@
 
 					} /* end #featured-buttons-block */
 				} /* end #schedule-meta-block-block */
+
+				/* FEATURED VIDEO SECTION */
+				#featured-video-block {
+				margin: 2.2em 0 0;
+
+					h3.section-header {
+					letter-spacing: 0.05em;
+					color: $tu-cherry;
+					}
+
+					.featured-video {
+					height: 220px;
+					padding: 1.5em;
+					border: 1px solid $border-color;
+					background: white;
+					font-size: 12px;
+					font-family: $sans-serif;
+					text-align: left;
+
+						a {
+						display: block;
+						text-decoration: none;
+						color: black;
+
+							&:hover {
+							color: $tu-cherry;
+							}
+
+							.featured-video-thumbnail {
+							margin-bottom: 0.5em;
+
+								img {
+								max-width: 100%;
+								height: auto;
+								}
+							}
+
+							.featured-video-show {
+							font-size: 12px;
+							font-weight: 700;
+							font-family: $sans-serif;
+							text-align: left;
+							}
+						} /* end a */
+					} /* END .featured-videos */
+				} /* END #featured-video-block */
 			} /* end #content */
 		} /* end #container */
 	} /* end #main */

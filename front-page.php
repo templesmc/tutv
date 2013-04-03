@@ -289,7 +289,7 @@ Template Name: Front Page
 			<!-- Featured Video Section -->
 			<div id="featured-video-block" class="grid_12 alpha omega">
 
-				<h3 class="section-header">Featured Videos:</h3>
+				<h3 class="section-header">Featured Videos</h3>
 
 				<?php
 				// set class to alpha/omega depending on position in 4 column layout
@@ -312,8 +312,12 @@ Template Name: Front Page
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
 
 							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
-							<div class="featured-video-show"><?php the_show(); ?></div>
-							<div class="featured-video-episode-title"><?php the_title(); ?></div>
+
+							<?php
+							// if the show is defined, echo it with a colon suffix
+							if ( function_exists('the_show')) { echo the_show( '<span class="featured-video-show">', '</span>: ') . ''; }
+							?>
+							<span class="featured-video-episode-title"><?php the_title(); ?></span>
 
 							<?php
 							/*
