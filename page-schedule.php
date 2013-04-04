@@ -3,6 +3,9 @@
 Template Name: Schedule Page
 */
 ?>
+
+<?php get_header(); ?>
+
 <?php
 
 	// set timezone to wordpress timezone
@@ -52,9 +55,6 @@ Template Name: Schedule Page
 	}
 	
 	query_posts($args);
-	
-    // calling the header.php
-    get_header();
 
     // action hook for placing content above #container
     thematic_abovecontainer();
