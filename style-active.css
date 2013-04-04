@@ -946,9 +946,14 @@ html, body { overflow-x: hidden; }
 
 body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; background: url(images/background-full.jpg) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.block { border: 1px solid #e0e0e0; background: white; }
-.block .block-header { background-color: white; }
-.block .block-header h3.section-header { font-size: 20px; }
+.block .block-header { background-color: #0176b7; color: white; }
+.block .block-header a { color: white; text-decoration: none; }
+.block .block-header a:hover { color: white; }
+.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; }
+.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
+.block .block-header p a { text-decoration: none; color: white; }
+.block .block-header p a:hover { text-decoration: none; color: white; }
+.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
 
 /* end .block */
 /********************
@@ -995,20 +1000,11 @@ style a page via class
 .home #main #container #content #front-featured .description blockquote { margin: 0; }
 .home #main #container #content #front-featured .description .more-link { display: block; }
 .home #main #container #content #front-featured .description img { display: none; }
+.home #main #container #content #recent-blog-posts-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0176b7), color-stop(100%, rgba(1, 118, 183, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #recent-blog-posts-block .entry-content { height: 250px; border: 1px solid #e0e0e0; }
 .home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
-.home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; margin-bottom: 20px; 						/* I think this goes in here somewhere... -montchr
-
-							h3 {
-						border-bottom: 1px solid #F0F0F9;
-						padding-bottom: 5px;
-						margin-bottom: 10px;
-						}
-
-						.avatar {
-						float:left;
-						margin:.25em 10px 0 0;
-						} */ /* end .hentry */ }
+.home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; margin-bottom: 20px; /* end .hentry */ }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry { background: #fff; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; border-left: 1px solid #cccccc; /* end &.active */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry .scheduled-time { display: inline; color: #666; font-size: 14px; /* 16px original 06-06-2011 PWinnick */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry .entry-title { display: inline; font-size: 14px; border-bottom: none; }

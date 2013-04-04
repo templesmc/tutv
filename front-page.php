@@ -126,141 +126,157 @@ Template Name: Front Page
 			<div id="recent-blog-posts-block" class="front-block block grid_6 alpha">
 
 				<div class="block-header">
-					<h3 class="section-header"><a class='header' href="/blog">Recent Blog Posts</a></h3>
+					<h3 class="section-header">Recent Blog Posts</h3>
+					<p><a class='header' href="/blog">view more &rarr;</a></p>
 				</div>
 
-				<div>
-					<div class="entry-content">
-						
-					</div>
-				</div><!-- .post -->
+				<div class="block-inner">
 
-				<div>
-					<div class="entry-content">
-						
-					</div>
-				</div><!-- .post -->
+					<div>
+						<div class="entry-content">
+							
+						</div>
+					</div><!-- .post -->
+
+					<div>
+						<div class="entry-content">
+							
+						</div>
+					</div><!-- .post -->
+
+				</div> <!-- end .block-inner -->
 
 			</div> <!-- end #recent-blog-posts-block -->
 			
+
+
 			<!-- Schedule and Featured Buttons Block Container -->
 			<div id="schedule-meta-block-container" class="grid_6 omega">
+
+
 
 				<!-- Schedule Block -->
 				<div id="schedule-block" class="front-block block grid_6 alpha omega">
 
 					<div class="block-header">
-						<h3 class="section-header"><a class='header' href="/schedule">Programing Schedule:</a></h3>
+						<h3 class="section-header">Airing on TUTV</h3>
+						<p><a class='header' href="/schedule">view more &rarr;</a></p>
 					</div>
 
-					<?php
-					$active_start_time = time();
-					$args = array(
-						'post_type'=>'events',
-						'meta_key' => 'date_value',
-						'orderby' => 'meta_value',
-						'meta_compare' => '>=',
-						//search for shows starting up to 3 hours ago
-						'meta_value' => $active_start_time - 60 * 60 * 3,
-						'order' => 'ASC',
-						'posts_per_page' => '10',
-					);
-					query_posts($args);
-					$final_output = '';
-					$num_items = 0;
-					
-					global $wp_query;
-					p2p_type( 'schedule_event' )->each_connected( $wp_query );
-					
-					while ( have_posts() ) : the_post();
+					<div class="block-inner">
 
-						//get the episode associated with this schedule item
-						$episodes = $post->connected;
-									
-							//if there are connected episodes, set the first one to display
-							if( $episodes ) {
-								$scheduled_page = $episodes[0] ;
-							} else {
-								continue;
-							}
-
-						$date_value = get_post_meta(get_the_ID(), 'date_value', true);
+						<?php
+						$active_start_time = time();
+						$args = array(
+							'post_type'=>'events',
+							'meta_key' => 'date_value',
+							'orderby' => 'meta_value',
+							'meta_compare' => '>=',
+							//search for shows starting up to 3 hours ago
+							'meta_value' => $active_start_time - 60 * 60 * 3,
+							'order' => 'ASC',
+							'posts_per_page' => '10',
+						);
+						query_posts($args);
+						$final_output = '';
+						$num_items = 0;
 						
-							if( $date_value ) {
-								$formatted_time = "<span class='start'>";
-								$formatted_time .= date('h:i A', $date_value);
-								$formatted_time .= "</span>";
-							} else {
-								continue;
-							}
-
-							// only show uncoming shows starting in the next 4 fours
-							if ( $date_value > $active_start_time + 60 * 60 * 8 ) {
-								continue;
-							}
+						global $wp_query;
+						p2p_type( 'schedule_event' )->each_connected( $wp_query );
 						
-						$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
-						$term = $terms[0];
-						
-						$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_6 alpha omega";
-							if( $date_value < $active_start_time ) {
-								$output .= ' active';
-							}
-							$output .= "'>";
+						while ( have_posts() ) : the_post();
 
-							$output .= "<div class='entry-info grid_4 omega'>";
+							//get the episode associated with this schedule item
+							$episodes = $post->connected;
+										
+								//if there are connected episodes, set the first one to display
+								if( $episodes ) {
+									$scheduled_page = $episodes[0] ;
+								} else {
+									continue;
+								}
 
-								$output .= "<div class='scheduled-time'>$formatted_time</div>";
-
-								$output .= "<h4 class='entry-title'>";
-
-									if( $term ) {
-										$output .= "<a href='" . get_show_link($term) . "'>";
-											$output .= get_the_show($scheduled_page->ID);
-										$output .= '</a>';
-									}
-									$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
-										$output .= get_the_title($scheduled_page->ID);
-									$output .= '</a>';
-								
-								$output .= '</h4>';
-
-								$post = get_post($scheduled_page->ID); 
-								setup_postdata($post);
-								
-							$output .= '</div><!-- .entry-info -->';
-
-							$output .= '<div class="entry-content grid_2 alpha omega">';
-
-								$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
-									$output .= get_video_thumbnail($scheduled_page->ID);
-								$output .= '</a>';
-								$output .= get_the_excerpt();
+							$date_value = get_post_meta(get_the_ID(), 'date_value', true);
 							
-							$output .= '</div><!-- .entry-content -->';
-						$output .= '</div><!-- .post -->';
+								if( $date_value ) {
+									$formatted_time = "<span class='start'>";
+									$formatted_time .= date('h:i A', $date_value);
+									$formatted_time .= "</span>";
+								} else {
+									continue;
+								}
+
+								// only show uncoming shows starting in the next 4 fours
+								if ( $date_value > $active_start_time + 60 * 60 * 8 ) {
+									continue;
+								}
+							
+							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
+							$term = $terms[0];
+							
+							$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_6 alpha omega";
+								if( $date_value < $active_start_time ) {
+									$output .= ' active';
+								}
+								$output .= "'>";
+
+								$output .= "<div class='entry-info grid_4 omega'>";
+
+									$output .= "<div class='scheduled-time'>$formatted_time</div>";
+
+									$output .= "<h4 class='entry-title'>";
+
+										if( $term ) {
+											$output .= "<a href='" . get_show_link($term) . "'>";
+												$output .= get_the_show($scheduled_page->ID);
+											$output .= '</a>';
+										}
+										$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
+											$output .= get_the_title($scheduled_page->ID);
+										$output .= '</a>';
+									
+									$output .= '</h4>';
+
+									$post = get_post($scheduled_page->ID); 
+									setup_postdata($post);
+									
+								$output .= '</div><!-- .entry-info -->';
+
+								$output .= '<div class="entry-content grid_2 alpha omega">';
+
+									$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
+										$output .= get_video_thumbnail($scheduled_page->ID);
+									$output .= '</a>';
+									$output .= get_the_excerpt();
+								
+								$output .= '</div><!-- .entry-content -->';
+							$output .= '</div><!-- .post -->';
+							
+							// if the selected showtime is in the past, replace all previously queued showtimes
+							// with the most recent showtime
+							if ( $date_value < $active_start_time ) {
+								$final_output = $output;
+								$num_items = 1;
+							} else if ($num_items < 5 ) { //limit the number of items to 5
+								$final_output .= $output;
+								$num_items++;
+							} else {
+								break;
+							}
 						
-						// if the selected showtime is in the past, replace all previously queued showtimes
-						// with the most recent showtime
-						if ( $date_value < $active_start_time ) {
-							$final_output = $output;
-							$num_items = 1;
-						} else if ($num_items < 5 ) { //limit the number of items to 5
-							$final_output .= $output;
-							$num_items++;
-						} else {
-							break;
-						}
-					
-					endwhile;
-					
-					if ( $final_output ) {
-						echo $final_output;
-					} else { ?>
-						<p class="notice">Sorry, there are no showtimes listed for the next few hours.</p>
-					<?php } ?>
+						endwhile;
+						
+						if ( $final_output ) {
+							echo $final_output;
+						} else { ?>
+							<p class="notice">Sorry, there are no showtimes listed for the next few hours.</p>
+						<?php } ?>
+
+					</div> <!-- end .block-inner -->
 
 				</div><!-- end #schedule-block -->
+
+
 
 				<!-- Featured Buttons Section -->
 				<div id="featured-buttons-section" class="grid_6 alpha omega">
