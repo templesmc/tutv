@@ -280,21 +280,47 @@
 						} /* end .hentry */
 					} /* end #schedule-block */
 
+					/* FEATURED BUTTONS SECTION */
 					#featured-buttons-section {
 					height: 250px;
 
 						a.front-featured-button {
-						background-color: $gray93;
+						background: $gray93 url(images/background-layer2.jpg) repeat center center scroll;
 						height: 90px;
 						display: block;
+						text-decoration: none;
 
 								h3.front-featured-button-title {
 								text-transform: uppercase;
 								line-height: 90px; /* this vertically centers the h3 */
 								text-align: center;
+								font-weight: 300;
 
 									em {
 									text-transform: lowercase;
+									font-weight: 900;
+									font-style: italic;
+									}
+
+									&#about-tutv-button-title,
+									&#submit-a-video-button-title,
+									&#read-the-blog-button-title {
+										em {
+										font-weight: 700;
+										}
+									}
+
+									&#watch-live-button-title {
+									font-size: 36px;
+									}
+
+									&#about-tutv-button-title,
+									&#submit-a-video-button-title {
+									font-size: 24px;
+									}
+
+									&#read-the-blog-button-title {
+									font-size: 20px;
 									}
 								} /* end h3.front-featured-button-title */
 						} /* end a.front-featured-button */

@@ -996,7 +996,7 @@ style a page via class
 .home #main #container #content #front-featured .description .more-link { display: block; }
 .home #main #container #content #front-featured .description img { display: none; }
 .home #main #container #content #recent-blog-posts-block .entry-content { height: 250px; border: 1px solid #e0e0e0; }
-.home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* end #featured-buttons-section */ }
+.home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; margin-bottom: 20px; 						/* I think this goes in here somewhere... -montchr
 
 							h3 {
@@ -1017,9 +1017,13 @@ style a page via class
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry.active .entry-content { display: block; overflow: hidden; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; min-height: 220px; background: #F4F7FC; font-size: 13px; /*modified 09-15-2011 PWinnick */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry.active .entry-content .thumbnail { display: block; margin-bottom: 4px; opacity: 1; max-width: 100%; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section { height: 250px; /* end a.front-featured-button */ }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button { background-color: #eaeaea; height: 90px; display: block; /* end h3.front-featured-button-title */ }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title { text-transform: uppercase; line-height: 90px; /* this vertically centers the h3 */ text-align: center; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title em { text-transform: lowercase; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button { background: #eaeaea url(images/background-layer2.jpg) repeat center center scroll; height: 90px; display: block; text-decoration: none; /* end h3.front-featured-button-title */ }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title { text-transform: uppercase; line-height: 90px; /* this vertically centers the h3 */ text-align: center; font-weight: 300; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title em { text-transform: lowercase; font-weight: 900; font-style: italic; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#read-the-blog-button-title em { font-weight: 700; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#watch-live-button-title { font-size: 36px; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title { font-size: 24px; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#read-the-blog-button-title { font-size: 20px; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button { margin-bottom: 10px; color: #9e1b34; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button:active { color: inherit; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #about-tutv-button { color: #42abe8; }
