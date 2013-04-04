@@ -170,8 +170,7 @@ Template Name: Front Page
 
 								<div class="entry-content">
 
-									<!-- what goes here? it can't be the excerpt, because that's too short.
-									and it can't be the first paragraph because that's so unpredictable. -->
+									<?php the_excerpt(); ?>
 
 								</div> <!-- end .entry-content -->
 
