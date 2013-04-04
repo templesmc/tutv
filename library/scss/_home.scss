@@ -217,9 +217,29 @@
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */
 					}
 
-					.entry-content {
-						height: 250px;
-						border: 1px solid $gray88;
+					.post {
+					height: 250px;
+					padding: 1.125em;
+
+						.featured-image-container {
+						display: inline-block;
+						float: left;
+						padding: 0 1.125em 1.125em 0;
+						}
+
+						.entry-header {
+						display: inline;
+
+							h4 {
+							display: inline;
+							padding: 0;
+							font-style: normal;
+							}
+						}
+					
+						&:first-child {
+						border-bottom: 1px solid $gray88;
+						}
 					}
 				}
 

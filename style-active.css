@@ -598,6 +598,7 @@ Functional Variables
 */
 /* Used for body content text */
 /* Used for non-content text */
+/* Used for several types of header elements */
 /* Link Colors */
 /* Buttons */
 /*
@@ -611,7 +612,7 @@ TYPOGRAPHY
 /*
 WEB FONTS
 */
-.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
+.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
 .wf-loading #blog-title a { visibility: visible; }
 
 .wf-active { /* i don't think this does anything special - montchr */ }
@@ -949,7 +950,7 @@ body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font
 .block .block-header { background-color: #0176b7; color: white; }
 .block .block-header a { color: white; text-decoration: none; }
 .block .block-header a:hover { color: white; }
-.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; }
+.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
 .block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
 .block .block-header p a { text-decoration: none; color: white; }
 .block .block-header p a:hover { text-decoration: none; color: white; }
@@ -1001,7 +1002,11 @@ style a page via class
 .home #main #container #content #front-featured .description .more-link { display: block; }
 .home #main #container #content #front-featured .description img { display: none; }
 .home #main #container #content #recent-blog-posts-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0176b7), color-stop(100%, rgba(1, 118, 183, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
-.home #main #container #content #recent-blog-posts-block .entry-content { height: 250px; border: 1px solid #e0e0e0; }
+.home #main #container #content #recent-blog-posts-block .post { height: 250px; padding: 1.125em; }
+.home #main #container #content #recent-blog-posts-block .post .featured-image-container { display: inline-block; float: left; padding: 0 1.125em 1.125em 0; }
+.home #main #container #content #recent-blog-posts-block .post .entry-header { display: inline; }
+.home #main #container #content #recent-blog-posts-block .post .entry-header h4 { display: inline; padding: 0; font-style: normal; }
+.home #main #container #content #recent-blog-posts-block .post:first-child { border-bottom: 1px solid #e0e0e0; }
 .home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; margin-bottom: 20px; /* end .hentry */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
@@ -1271,12 +1276,26 @@ for mobile devices.
 /*********************
 H1, H2, H3, H4 STYLES
 **********************/
-h3.section-header { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; text-transform: uppercase; margin: 0.5em; }
+h1, .h1, h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
 
-.entry-content h1, .entry-content .h1 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 28px; font-weight: 500; padding: 28px 0 14px 0; }
-.entry-content h2, .entry-content .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 22px; font-weight: 600; padding: 28px 0 14px 0; }
-.entry-content h3, .entry-content .h3 { font-size: 18px; font-style: italic; padding: 14px 0 14px 0; }
-.entry-content h4, .entry-content .h4 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; text-transform: uppercase; letter-spacing: .02em; font-size: 14px; }
+h2, .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
+
+h3, .h3 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; padding: 0 0 0.5em; font-weight: 400; }
+
+h4, .h4 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; font-size: 18px; padding: 0 0 0.5em; color: #0176b7; }
+
+/*
+h2.entry-title {
+font-family: $sans-serif;
+font-size: 34px;
+padding: 0.5em;
+font-weight: 300;
+} */
+h1.page-title { color: #00b3a0; }
+
+h2.entry-title { color: #0176b7; }
+
+h3.section-header { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; text-transform: uppercase; margin: 0.5em; padding: 0; }
 
 /*********************
 HEADER STYLES
@@ -1326,7 +1345,6 @@ POST & CONTENT STYLES
 #main #container #content .entry-meta .meta-prep-author, #main #container #content .entry-meta .author, #main #container #content .entry-meta .meta-sep-entry-date, #main #container #content .entry-meta .meta-prep-entry-date, #main #container #content .entry-meta .entry-date { display: none; }
 #main #container #content .entry-meta abbr { font-size: 12px; }
 #main #container #content .entry-utility { display: none; }
-#main #container #content h1.entry-title, #main #container #content .page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; padding-bottom: 22px; font-size: 35px; line-height: 39px; }
 #main #container #content h2.entry-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; padding-bottom: 4px; }
 #main #container #content h1 span, #main #container #content .page-title span { font-style: normal; }
 #main #container #content .thumbnail { background: #d7d7d7 url(images/thumbnail-placeholder.png); height: 100px; width: 140px; opacity: .85; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }

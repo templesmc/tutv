@@ -132,17 +132,60 @@ Template Name: Front Page
 
 				<div class="block-inner">
 
-					<div>
-						<div class="entry-content">
-							
-						</div>
-					</div><!-- .post -->
+					<?php
 
-					<div>
-						<div class="entry-content">
-							
-						</div>
-					</div><!-- .post -->
+					// Sets args for the two recent blog posts in the query
+					$args = array(
+						'post_type'        => 'post', // posts of post type post...
+						'category_name'    => 'blog', // ...in blog category...
+						'tax_query'        => array( // ...is NOT featured...
+							array( // this is not a clear way of querying. can it be improved? query above uses deprecated arg ({tax})
+								'taxonomy'         => 'featured',
+								'field'            => 'slug',
+								'terms'            => 'on',
+								'operator'         => 'NOT IN'
+							)
+						),
+						'posts_per_page'   => 2 // ...and get only two.
+					);
+
+					// This is the query
+					$recent_blog_posts = new WP_Query($args);
+
+					// The Loop
+					if ($recent_blog_posts->have_posts()) :
+						while ($recent_blog_posts->have_posts()) :
+							$recent_blog_posts->the_post();
+					?>
+
+							<div id="post-<?php the_ID(); ?>" <?php post_class('article clearfix'); ?> role="article">
+								
+								<div class="featured-image-container">
+									<?php the_post_thumbnail('thumbnail'); ?>
+								</div> <!-- end .featured-image-container -->
+
+								<div class="entry-header">
+									<h4 class="h2" <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+								</div> <!-- end .entry-header -->
+
+								<div class="entry-content">
+
+									<!-- what goes here? it can't be the excerpt, because that's too short.
+									and it can't be the first paragraph because that's so unpredictable. -->
+
+								</div> <!-- end .entry-content -->
+
+							</div><!-- .post -->
+
+					<?php
+						// Close the loop
+						endwhile; 
+					endif;
+
+					wp_reset_postdata();
+
+					?>
+
 
 				</div> <!-- end .block-inner -->
 
