@@ -59,7 +59,7 @@ if (apply_filters('thematic_show_bodyclass',TRUE)) {
 // action hook for placing content before opening #wrapper
 thematic_before(); ?>
 
-<div id="wrapper" class="hfeed container_12 clearfix">
+<div id="wrapper" class="hfeed clearfix">
 
     <?php
     
@@ -69,13 +69,17 @@ thematic_before(); ?>
     ?>   
 
     <div id="header" class="clearfix">
+
+        <div id="header-inner" class="container_12 clearfix">
     
-        <?php 
-        
-        // action hook creating the theme header
-        thematic_header();
-        
-        ?>
+            <?php 
+            
+            // action hook creating the theme header
+            thematic_header();
+            
+            ?>
+
+        </div> <!-- end #header-inner -->
         
     </div><!-- #header-->
     
@@ -86,5 +90,9 @@ thematic_before(); ?>
     
     ?>   
 
-    <div id="main" class="container_12 clearfix">
+    <div id="main" class="clearfix">
+
+        <?php thematic_abovecontainer(); ?>
+
+        <div id="container" class="container_12 clearfix">
     

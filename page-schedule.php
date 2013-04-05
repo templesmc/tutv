@@ -6,10 +6,6 @@ Template Name: Schedule Page
 
 <?php get_header(); ?>
 
-<?php thematic_abovecontainer(); ?>
-
-	<div id="container" class="container_12 clearfix">
-
 		<div id="content" class="clearfix">
 
 			<div id="page-header" class="block grid_12 alpha omega clearfix">
@@ -336,11 +332,8 @@ Template Name: Schedule Page
 
 <?php 
 
-	// action hook for placing content below #container
-	thematic_belowcontainer();
-
 	// calling the standard sidebar 
-	thematic_sidebar();
+	// thematic_sidebar();
 	
 	// calling footer.php
 	get_footer();

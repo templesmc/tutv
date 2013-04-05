@@ -17,11 +17,9 @@ Template Name: Front Page
 
 <?php get_header() ?>
 
-	<div id="container" class="clearfix">
-
 		<div id="content" class="clearfix">
 
-			<div id="masthead" class="grid_12 alpha omega">
+			<div id="masthead" class="grid_12">
 
 				<div id="tutv-network-info">
 
@@ -41,7 +39,7 @@ Template Name: Front Page
 			
 			</div> <!-- end #masthead -->
 
-			<div id="front-featured" class="grid_12 alpha omega">
+			<div id="front-featured" class="grid_12">
 				<ul>
 					<?php
 
@@ -123,7 +121,7 @@ Template Name: Front Page
 			</div> <!-- #front-featured -->
 			
 			<!-- Recent Blog Posts Block -->
-			<div id="recent-blog-posts-block" class="front-block block grid_6 alpha">
+			<div id="recent-blog-posts-block" class="front-block block grid_6">
 
 				<div class="block-header">
 					<h3 class="section-header">Recent Blog Posts</h3>
@@ -193,7 +191,7 @@ Template Name: Front Page
 
 
 			<!-- Schedule and Featured Buttons Block Container -->
-			<div id="schedule-meta-block-container" class="grid_6 omega">
+			<div id="schedule-meta-block-container" class="grid_6">
 
 
 
@@ -345,7 +343,7 @@ Template Name: Front Page
 			</div><!-- end #schedule-meta-block-container -->
 
 			<!-- Featured Video Section -->
-			<div id="featured-video-section" class="grid_12 alpha omega">
+			<div id="featured-video-section" class="grid_12">
 
 				<h3 class="section-header">Featured Videos</h3>
 
@@ -401,7 +399,7 @@ Template Name: Front Page
 			?>
 
 		</div><!-- #content -->
-	</div><!-- #container -->
 
-<?php thematic_sidebar(); ?>
+<?php //thematic_sidebar(); ?>
+
 <?php get_footer(); ?>

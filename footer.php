@@ -1,3 +1,6 @@
+        </div><!-- #container -->
+
+        <?php thematic_belowcontainer(); ?>
 
     </div><!-- #main -->
     
