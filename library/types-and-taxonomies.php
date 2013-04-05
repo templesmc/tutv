@@ -14,7 +14,7 @@ function tutv_taxonomies_and_post_types() {
 		'public' => true, 
 		'show_ui' => true,
 		'supports' => array(
-			'title', 'editor', 'thumbnail', 'custom-fields'
+			'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'
 		),
 		'rewrite' => array(
 			'slug' => 'shows/%show_name%',
