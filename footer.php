@@ -8,9 +8,11 @@
     
     ?>    
 
-	<div id="footer">
+    </div><!-- #wrapper .hfeed -->
 
-        <div id="footer-inner">
+	<div id="footer" class="clearfix">
+
+        <div id="footer-inner" class="container_12 clearfix">
     
             <?php
             
@@ -29,8 +31,6 @@
     thematic_belowfooter();
     
     ?>  
-
-</div><!-- #wrapper .hfeed -->
 
 <?php 
 
