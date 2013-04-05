@@ -18,6 +18,9 @@ background-size: cover;
 }
 
 .block {
+background-color: white;
+border: 1px solid $border-color;
+margin: 1.5rem 0;
 
 	.block-header {
 	@extend .clearfix;

@@ -205,6 +205,7 @@
 				} /* end #front-featured */
 
 				#recent-blog-posts-block {
+				border: none;
 
 					.block-header {
 					background: $blog-button; /* Old browsers */
@@ -247,6 +248,7 @@
 
 					#schedule-block {
 					background: #F4F7FC;
+					border: none;
 					margin-bottom: 20px;
 
 						.block-header {
