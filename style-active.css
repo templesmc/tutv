@@ -570,9 +570,9 @@ remember less is more.
 /*********************
 CLEARFIXIN'
 *********************/
-.clearfix, .container_12, #wrapper, .container_16, .block .block-header { zoom: 1; }
-.clearfix:before, .container_12:before, #wrapper:before, .container_16:before, .block .block-header:before, .clearfix:after, .container_12:after, #wrapper:after, .container_16:after, .block .block-header:after { content: ""; display: table; }
-.clearfix:after, .container_12:after, #wrapper:after, .container_16:after, .block .block-header:after { clear: both; }
+.clearfix, .container_12, .container_16, .block .block-header { zoom: 1; }
+.clearfix:before, .container_12:before, .container_16:before, .block .block-header:before, .clearfix:after, .container_12:after, .container_16:after, .block .block-header:after { content: ""; display: table; }
+.clearfix:after, .container_12:after, .container_16:after, .block .block-header:after { clear: both; }
 
 /*********************
 TOOLS
@@ -612,7 +612,7 @@ TYPOGRAPHY
 /*
 WEB FONTS
 */
-.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
+.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
 .wf-loading #blog-title a { visibility: visible; }
 
 .wf-active { /* i don't think this does anything special - montchr */ }
@@ -664,7 +664,7 @@ body { min-width: 960px; }
 
 /* `Container
 ----------------------------------------------------------------------------------------------------*/
-.container_12, #wrapper, .container_16 { margin-left: auto; margin-right: auto; width: 960px; /* The only part of this file modified from the original.
+.container_12, .container_16 { margin-left: auto; margin-right: auto; width: 960px; /* The only part of this file modified from the original.
 Uses SCSS mixin to use updated micro-clearfix.
 - montchr, 2013.03.15 */ }
 
@@ -674,13 +674,13 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15 { position: relative; }
 
-.container_12 .grid_3, #wrapper .grid_3, .container_16 .grid_4 { width: 220px; }
+.container_12 .grid_3, .container_16 .grid_4 { width: 220px; }
 
-.container_12 .grid_6, #wrapper .grid_6, .container_16 .grid_8 { width: 460px; }
+.container_12 .grid_6, .container_16 .grid_8 { width: 460px; }
 
-.container_12 .grid_9, #wrapper .grid_9, .container_16 .grid_12 { width: 700px; }
+.container_12 .grid_9, .container_16 .grid_12 { width: 700px; }
 
-.container_12 .grid_12, #wrapper .grid_12, .container_16 .grid_16 { width: 940px; }
+.container_12 .grid_12, .container_16 .grid_16 { width: 940px; }
 
 /* `Grid >> Children (Alpha ~ First, Omega ~ Last)
 ----------------------------------------------------------------------------------------------------*/
@@ -690,21 +690,21 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 /* `Grid >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .grid_1, #wrapper .grid_1 { width: 60px; }
+.container_12 .grid_1 { width: 60px; }
 
-.container_12 .grid_2, #wrapper .grid_2 { width: 140px; }
+.container_12 .grid_2 { width: 140px; }
 
-.container_12 .grid_4, #wrapper .grid_4 { width: 300px; }
+.container_12 .grid_4 { width: 300px; }
 
-.container_12 .grid_5, #wrapper .grid_5 { width: 380px; }
+.container_12 .grid_5 { width: 380px; }
 
-.container_12 .grid_7, #wrapper .grid_7 { width: 540px; }
+.container_12 .grid_7 { width: 540px; }
 
-.container_12 .grid_8, #wrapper .grid_8 { width: 620px; }
+.container_12 .grid_8 { width: 620px; }
 
-.container_12 .grid_10, #wrapper .grid_10 { width: 780px; }
+.container_12 .grid_10 { width: 780px; }
 
-.container_12 .grid_11, #wrapper .grid_11 { width: 860px; }
+.container_12 .grid_11 { width: 860px; }
 
 /* `Grid >> 16 Columns
 ----------------------------------------------------------------------------------------------------*/
@@ -734,29 +734,29 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 /* `Prefix Extra Space >> Global
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .prefix_3, #wrapper .prefix_3, .container_16 .prefix_4 { padding-left: 240px; }
+.container_12 .prefix_3, .container_16 .prefix_4 { padding-left: 240px; }
 
-.container_12 .prefix_6, #wrapper .prefix_6, .container_16 .prefix_8 { padding-left: 480px; }
+.container_12 .prefix_6, .container_16 .prefix_8 { padding-left: 480px; }
 
-.container_12 .prefix_9, #wrapper .prefix_9, .container_16 .prefix_12 { padding-left: 720px; }
+.container_12 .prefix_9, .container_16 .prefix_12 { padding-left: 720px; }
 
 /* `Prefix Extra Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .prefix_1, #wrapper .prefix_1 { padding-left: 80px; }
+.container_12 .prefix_1 { padding-left: 80px; }
 
-.container_12 .prefix_2, #wrapper .prefix_2 { padding-left: 160px; }
+.container_12 .prefix_2 { padding-left: 160px; }
 
-.container_12 .prefix_4, #wrapper .prefix_4 { padding-left: 320px; }
+.container_12 .prefix_4 { padding-left: 320px; }
 
-.container_12 .prefix_5, #wrapper .prefix_5 { padding-left: 400px; }
+.container_12 .prefix_5 { padding-left: 400px; }
 
-.container_12 .prefix_7, #wrapper .prefix_7 { padding-left: 560px; }
+.container_12 .prefix_7 { padding-left: 560px; }
 
-.container_12 .prefix_8, #wrapper .prefix_8 { padding-left: 640px; }
+.container_12 .prefix_8 { padding-left: 640px; }
 
-.container_12 .prefix_10, #wrapper .prefix_10 { padding-left: 800px; }
+.container_12 .prefix_10 { padding-left: 800px; }
 
-.container_12 .prefix_11, #wrapper .prefix_11 { padding-left: 880px; }
+.container_12 .prefix_11 { padding-left: 880px; }
 
 /* `Prefix Extra Space >> 16 Columns
 ----------------------------------------------------------------------------------------------------*/
@@ -786,29 +786,29 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 /* `Suffix Extra Space >> Global
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .suffix_3, #wrapper .suffix_3, .container_16 .suffix_4 { padding-right: 240px; }
+.container_12 .suffix_3, .container_16 .suffix_4 { padding-right: 240px; }
 
-.container_12 .suffix_6, #wrapper .suffix_6, .container_16 .suffix_8 { padding-right: 480px; }
+.container_12 .suffix_6, .container_16 .suffix_8 { padding-right: 480px; }
 
-.container_12 .suffix_9, #wrapper .suffix_9, .container_16 .suffix_12 { padding-right: 720px; }
+.container_12 .suffix_9, .container_16 .suffix_12 { padding-right: 720px; }
 
 /* `Suffix Extra Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .suffix_1, #wrapper .suffix_1 { padding-right: 80px; }
+.container_12 .suffix_1 { padding-right: 80px; }
 
-.container_12 .suffix_2, #wrapper .suffix_2 { padding-right: 160px; }
+.container_12 .suffix_2 { padding-right: 160px; }
 
-.container_12 .suffix_4, #wrapper .suffix_4 { padding-right: 320px; }
+.container_12 .suffix_4 { padding-right: 320px; }
 
-.container_12 .suffix_5, #wrapper .suffix_5 { padding-right: 400px; }
+.container_12 .suffix_5 { padding-right: 400px; }
 
-.container_12 .suffix_7, #wrapper .suffix_7 { padding-right: 560px; }
+.container_12 .suffix_7 { padding-right: 560px; }
 
-.container_12 .suffix_8, #wrapper .suffix_8 { padding-right: 640px; }
+.container_12 .suffix_8 { padding-right: 640px; }
 
-.container_12 .suffix_10, #wrapper .suffix_10 { padding-right: 800px; }
+.container_12 .suffix_10 { padding-right: 800px; }
 
-.container_12 .suffix_11, #wrapper .suffix_11 { padding-right: 880px; }
+.container_12 .suffix_11 { padding-right: 880px; }
 
 /* `Suffix Extra Space >> 16 Columns
 ----------------------------------------------------------------------------------------------------*/
@@ -838,29 +838,29 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 /* `Push Space >> Global
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .push_3, #wrapper .push_3, .container_16 .push_4 { left: 240px; }
+.container_12 .push_3, .container_16 .push_4 { left: 240px; }
 
-.container_12 .push_6, #wrapper .push_6, .container_16 .push_8 { left: 480px; }
+.container_12 .push_6, .container_16 .push_8 { left: 480px; }
 
-.container_12 .push_9, #wrapper .push_9, .container_16 .push_12 { left: 720px; }
+.container_12 .push_9, .container_16 .push_12 { left: 720px; }
 
 /* `Push Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .push_1, #wrapper .push_1 { left: 80px; }
+.container_12 .push_1 { left: 80px; }
 
-.container_12 .push_2, #wrapper .push_2 { left: 160px; }
+.container_12 .push_2 { left: 160px; }
 
-.container_12 .push_4, #wrapper .push_4 { left: 320px; }
+.container_12 .push_4 { left: 320px; }
 
-.container_12 .push_5, #wrapper .push_5 { left: 400px; }
+.container_12 .push_5 { left: 400px; }
 
-.container_12 .push_7, #wrapper .push_7 { left: 560px; }
+.container_12 .push_7 { left: 560px; }
 
-.container_12 .push_8, #wrapper .push_8 { left: 640px; }
+.container_12 .push_8 { left: 640px; }
 
-.container_12 .push_10, #wrapper .push_10 { left: 800px; }
+.container_12 .push_10 { left: 800px; }
 
-.container_12 .push_11, #wrapper .push_11 { left: 880px; }
+.container_12 .push_11 { left: 880px; }
 
 /* `Push Space >> 16 Columns
 ----------------------------------------------------------------------------------------------------*/
@@ -890,29 +890,29 @@ Uses SCSS mixin to use updated micro-clearfix.
 
 /* `Pull Space >> Global
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .pull_3, #wrapper .pull_3, .container_16 .pull_4 { left: -240px; }
+.container_12 .pull_3, .container_16 .pull_4 { left: -240px; }
 
-.container_12 .pull_6, #wrapper .pull_6, .container_16 .pull_8 { left: -480px; }
+.container_12 .pull_6, .container_16 .pull_8 { left: -480px; }
 
-.container_12 .pull_9, #wrapper .pull_9, .container_16 .pull_12 { left: -720px; }
+.container_12 .pull_9, .container_16 .pull_12 { left: -720px; }
 
 /* `Pull Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_12 .pull_1, #wrapper .pull_1 { left: -80px; }
+.container_12 .pull_1 { left: -80px; }
 
-.container_12 .pull_2, #wrapper .pull_2 { left: -160px; }
+.container_12 .pull_2 { left: -160px; }
 
-.container_12 .pull_4, #wrapper .pull_4 { left: -320px; }
+.container_12 .pull_4 { left: -320px; }
 
-.container_12 .pull_5, #wrapper .pull_5 { left: -400px; }
+.container_12 .pull_5 { left: -400px; }
 
-.container_12 .pull_7, #wrapper .pull_7 { left: -560px; }
+.container_12 .pull_7 { left: -560px; }
 
-.container_12 .pull_8, #wrapper .pull_8 { left: -640px; }
+.container_12 .pull_8 { left: -640px; }
 
-.container_12 .pull_10, #wrapper .pull_10 { left: -800px; }
+.container_12 .pull_10 { left: -800px; }
 
-.container_12 .pull_11, #wrapper .pull_11 { left: -880px; }
+.container_12 .pull_11 { left: -880px; }
 
 /* `Pull Space >> 16 Columns
 ----------------------------------------------------------------------------------------------------*/
@@ -947,16 +947,6 @@ html, body { overflow-x: hidden; }
 
 body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; background: url(images/background-full.jpg) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.block .block-header { background-color: #0176b7; color: white; }
-.block .block-header a { color: white; text-decoration: none; }
-.block .block-header a:hover { color: white; }
-.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
-.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
-.block .block-header p a { text-decoration: none; color: white; }
-.block .block-header p a:hover { text-decoration: none; color: white; }
-.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
-
-/* end .block */
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -982,7 +972,7 @@ style a page via class
 .home #main #container #content #masthead #masthead-social-media { float: right; }
 .home #main #container #content #masthead #masthead-social-media p { background-color: #eaeaea; display: inline; margin-right: 1em; font-weight: 300; text-transform: uppercase; margin-bottom: .25em; font-size: 1.25rem; /* 20px */ position: relative; top: -0.5em; }
 .home #main #container #content #masthead #masthead-social-media ul.social-media-icons { display: inline; }
-.home #main #container #content #front-featured { height: 290px; padding: 0px; position: relative; z-index: 0; margin: 0 0 30px 0; /* margin: 0 0 30px 0; orginal 06-13-2011 Pwinnick*/ /* end h2 */ /* end #subheadline */ /* end #subheadline2 */ /* end .description */ }
+.home #main #container #content #front-featured { height: 290px; padding: 0px; position: relative; z-index: 0; margin-bottom: 0; /* end h2 */ /* end #subheadline */ /* end #subheadline2 */ /* end .description */ }
 .home #main #container #content #front-featured .attachment-banner { float: right; }
 .home #main #container #content #front-featured ul { list-style: none; margin: 0; overflow: hidden; height: 330px; }
 .home #main #container #content #front-featured li { height: 330px; float: none; position: relative; margin-bottom: 20px; }
@@ -1001,6 +991,7 @@ style a page via class
 .home #main #container #content #front-featured .description blockquote { margin: 0; }
 .home #main #container #content #front-featured .description .more-link { display: block; }
 .home #main #container #content #front-featured .description img { display: none; }
+.home #main #container #content #recent-blog-posts-block { border: none; }
 .home #main #container #content #recent-blog-posts-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0176b7), color-stop(100%, rgba(1, 118, 183, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #recent-blog-posts-block .post { height: 250px; padding: 1.125em; }
 .home #main #container #content #recent-blog-posts-block .post .featured-image-container { display: inline-block; float: left; padding: 0 1.125em 1.125em 0; }
@@ -1008,7 +999,7 @@ style a page via class
 .home #main #container #content #recent-blog-posts-block .post .entry-header h4 { display: inline; padding: 0; font-style: normal; }
 .home #main #container #content #recent-blog-posts-block .post:first-child { border-bottom: 1px solid #e0e0e0; }
 .home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
-.home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; margin-bottom: 20px; /* end .hentry */ }
+.home #main #container #content #schedule-meta-block-container #schedule-block { background: #F4F7FC; border: none; margin-bottom: 20px; /* end .hentry */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry { background: #fff; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; border-left: 1px solid #cccccc; /* end &.active */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .hentry .scheduled-time { display: inline; color: #666; font-size: 14px; /* 16px original 06-06-2011 PWinnick */ }
@@ -1034,7 +1025,7 @@ style a page via class
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button { height: 50px; margin-top: 10px; color: #666666; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button h3.front-featured-button-title { line-height: 50px; /* this vertically centers the h3 */ }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:active { color: inherit; }
-.home #main #container #content #featured-video-section { margin: 2.2em 0 0; /* END .featured-videos */ }
+.home #main #container #content #featured-video-section { /* END .featured-videos */ }
 .home #main #container #content #featured-video-section h3.section-header { letter-spacing: 0.05em; color: #9e1b34; }
 .home #main #container #content #featured-video-section .featured-video { height: 220px; padding: 1.5em; border: 1px solid #e0e0e0; background: white; font-size: 12px; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: left; /* end a */ }
 .home #main #container #content #featured-video-section .featured-video a { display: block; text-decoration: none; color: black; }
@@ -1087,35 +1078,39 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 ==SCHEDULE PAGE
 ========================
 */
-/* the normal page template body class isn't showing up in this instance */
-.page-template-page-schedule-php #main { padding: 0 10px; width: 960px; }
-.page-template-page-schedule-php #main #container { width: 960px; }
+body.slug-schedule { /* end #schedule-section */ }
+body.slug-schedule #schedule-controls { /* end #schedule-nav */ }
+body.slug-schedule #schedule-controls .today { font-weight: bold; }
+body.slug-schedule #schedule-controls #schedule-nav { list-style: none; margin: 0; padding-left: 10px; width: 100%; float: left; border-bottom: 1px solid #e0e0e0; }
+body.slug-schedule #schedule-controls #schedule-nav h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; }
+body.slug-schedule #schedule-controls #schedule-nav li { float: left; margin: 0 5px; }
+body.slug-schedule #schedule-controls #schedule-nav a { font-size: 16px; font-weight: 300; float: left; padding: 10px; border: 1px solid #e0e0e0; background: white; background: rgba(255, 255, 255, 0.6); border-bottom: none; text-decoration: none; }
+body.slug-schedule #schedule-controls #schedule-nav .active a { color: #000; z-index: 100; font-weight: 500; position: relative; background: white; padding: 11px 13px; margin-top: -5px; font-size: 18px; margin-bottom: -1px; border-color: #e0e0e0; border-bottom: 1px solid white; }
+body.slug-schedule #schedule-controls #schedule-nav .active a:hover { color: #787779; }
+body.slug-schedule #schedule-section-container.block { border-top: none; padding-top: 1rem; }
+body.slug-schedule #schedule-section { padding-left: 1em; padding-bottom: 8.5rem; /* end .hentry */ }
+body.slug-schedule #schedule-section .hentry { clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-size: 14px; width: 100%; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* this is part of the multi-day view */ /* end .entry-content */ }
+body.slug-schedule #schedule-section .hentry a { color: black; text-decoration: none; }
+body.slug-schedule #schedule-section .hentry a:hover { color: inherit; }
+body.slug-schedule #schedule-section .hentry h2.schedule-date { margin-bottom: 0; width: 540px; font-size: 20px; font-weight: normal; line-height: 24px; padding: 15px 10px; color: #333; }
+body.slug-schedule #schedule-section .hentry h2.schedule-date:first-child { border-top: none; padding-top: 0; }
+body.slug-schedule #schedule-section .hentry h3.entry-title, body.slug-schedule #schedule-section .hentry .scheduled-time { line-height: 28px; }
+body.slug-schedule #schedule-section .hentry h3.entry-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; padding: 0; color: black; margin-left: 6em; }
+body.slug-schedule #schedule-section .hentry h3.entry-title .show-name { font-weight: 700; }
+body.slug-schedule #schedule-section .hentry .scheduled-time { color: #666666; position: absolute; }
+body.slug-schedule #schedule-section .hentry .entry-content { position: absolute; top: 0; right: -390px; padding: 10px; margin-right: 10px; background: #42abe8; visibility: hidden; opacity: 0; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; }
+body.slug-schedule #schedule-section .hentry .entry-content p { margin-bottom: 0; }
+body.slug-schedule #schedule-section .hentry .entry-content p a { color: black; text-decoration: none; }
+body.slug-schedule #schedule-section .hentry .entry-content p a:hover { color: black; }
+body.slug-schedule #schedule-section .hentry .thumbnail { opacity: 1; margin-bottom: 8px; }
+body.slug-schedule #schedule-section .hentry:hover { position: relative; background: #42abe8 !important; z-index: 99; }
+body.slug-schedule #schedule-section .hentry:hover .scheduled-time { color: #e0e0e0; }
+body.slug-schedule #schedule-section .hentry:hover h3.entry-title a { color: white; }
+body.slug-schedule #schedule-section .hentry:hover .entry-content { display: block; visibility: visible; opacity: 1; }
+body.slug-schedule #schedule-section .hentry.item-even { background: #f3f3f3; }
+body.slug-schedule #schedule-section .hentry.item-odd { background: #fefefe; }
 
-/* end .page-template-page-schedule-php */
-#schedule { padding-bottom: 120px; float: left; /* end #schedule-nav */ /* end .hentry */ }
-#schedule .today { font-weight: bold; }
-#schedule h1.entry-title { margin: 0 10px; }
-#schedule #schedule-nav { list-style: none; font-family: arial, helvetica, sans-serif; margin: 0; padding-left: 10px; width: 100%; float: left; border-bottom: 1px solid #444444; }
-#schedule #schedule-nav h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; }
-#schedule #schedule-nav li { float: left; margin: 0 5px; }
-#schedule #schedule-nav a { font-size: 16px; font-weight: 300; float: left; padding: 7px 10px; border: 1px solid #999999; background: #fafafa; background: rgba(250, 250, 250, 0.6); border-bottom: none; border-radius: 6px 6px 0 0; }
-#schedule #schedule-nav .active a { color: #000; z-index: 100; font-weight: 500; position: relative; background: none; padding: 10px 13px; margin-top: -6px; font-size: 18px; margin-bottom: -1px; border-color: #444; border-bottom: 1px solid white; }
-#schedule #schedule-nav .active a:hover { color: #787779; }
-#schedule .hentry { width: 540px; clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-family: arial, helvetica, sans-serif; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* end .entry-content */ }
-#schedule .hentry h2.schedule-date { margin-bottom: 0; width: 540px; font-size: 20px; font-weight: normal; line-height: 24px; padding: 15px 10px; color: #333; font-family: arial, helvetica, sans-serif; }
-#schedule .hentry h2.schedule-date:first-child { border-top: none; padding-top: 0; }
-#schedule .hentry h3.entry-title { font-size: 14px; /* 16px original 06-06-2011 PWinnick */ font-weight: normal; font-family: arial, helvetica, sans-serif; padding: 0; color: #aaa; margin-left: 140px; width: 400px; }
-#schedule .hentry .scheduled-time { color: #777; text-shadow: -1px 1px white; margin-bottom: 5px; font-size: 14px; /* 16px original 06-06-2011 PWinnick */ float: left; width: 80px; position: absolute; left: 10px; }
-#schedule .hentry .entry-content { color: #555; padding-top: 0; position: absolute; z-index: 10; top: 0; right: -400px; width: 370px; padding: 10px; margin-right: 10px; background: #f0f0f9; visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s ease-out; -moz-transition: opacity 0.3s ease-out; transition: opacity 0.3s ease-out; }
-#schedule .hentry .entry-content p { margin-bottom: 0; }
-#schedule .hentry .thumbnail { opacity: 1; margin-bottom: 8px; }
-#schedule .hentry .show-title { width: 140px; }
-#schedule .hentry:hover { background: #f0f0f9 !important; }
-#schedule .hentry:hover .entry-content { display: block; visibility: visible; opacity: 1; }
-#schedule .hentry.item-even { background: #f3f3f3; }
-#schedule .hentry.item-odd { background: #fefefe; }
-
-/* end #schedule */
+/* end body.slug-schedule */
 /*********************
 SHOW, CLIP, AND EPISODE PAGES
 **********************/
@@ -1168,7 +1163,6 @@ i'm just going to use #content nested within .has-taxonomy-show.not-singular
 .has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content .thumbnail { top: 0; left: 0; }
 .has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content p { font-size: 14px; color: #444; }
 .has-taxonomy-show.not-singular #content #show-clips { float: left; margin-top: 20px; padding: 0 10px; width: 940px; background: #fdfdfd; border-bottom: 1px solid #eeeeee; }
-.has-taxonomy-show.not-singular #content #show-clips h2.page-title { margin-right: 10px; margin-bottom: 15px; border-bottom: none; padding-top: 20px; }
 .has-taxonomy-show.not-singular #content #show-clips h2.entry-title { font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/ line-height: 24px; float: right; width: 140px; }
 .has-taxonomy-show.not-singular #content #show-clips .clip { float: left; width: 300px; margin-left: 0; margin-right: 10px; float: left; }
 .has-taxonomy-show.not-singular #content #show-clips .entry-content { padding-top: 0; }
@@ -1276,7 +1270,7 @@ for mobile devices.
 /*********************
 H1, H2, H3, H4 STYLES
 **********************/
-h1, .h1, h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
+h1, .h1, #page-header h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
 
 h2, .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
 
@@ -1291,7 +1285,8 @@ font-size: 34px;
 padding: 0.5em;
 font-weight: 300;
 } */
-h1.page-title { color: #00b3a0; }
+#page-header { margin-top: 1.5rem; padding: 0 1em; }
+#page-header h1.page-title { color: #00b3a0; font-weight: 300; line-height: 70px; display: inline-block; padding: 0; margin: 0; }
 
 h2.entry-title { color: #0176b7; }
 
@@ -1339,6 +1334,7 @@ POST & CONTENT STYLES
 **********************/
 #main { padding-top: 0; padding-bottom: 0; /* end #container */ }
 #main #container { /* end #content */ }
+#main #container #content { margin-bottom: 2.2em; }
 #main #container #content .entry-content { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 #main #container #content .entry-content:hover .thumbnail { opacity: 1; }
 #main #container #content .entry-meta { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #888; font-size: 14px; margin: 2px 0 4px; }
@@ -1352,6 +1348,17 @@ POST & CONTENT STYLES
 #main #container #content a:hover .thumbnail { opacity: 1; }
 
 /* end #main */
+.block { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
+.block .block-header { background-color: #0176b7; color: white; }
+.block .block-header a { color: white; text-decoration: none; }
+.block .block-header a:hover { color: white; }
+.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
+.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
+.block .block-header p a { text-decoration: none; color: white; }
+.block .block-header p a:hover { text-decoration: none; color: white; }
+.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
+
+/* end .block */
 .episodes .published, .clip .published, .episodes .meta-sep-edit, .clip .meta-sep-edit { display: none; }
 
 /*****************************
@@ -1404,3 +1411,14 @@ http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2
 #footer #third ul li ul li { float: left; display: inline; width: 33.3%; }
 
 /* end #footer */
+/************* OVERRIDES * ************/
+/* STICKY FOOTER HACK */
+/* http://ryanfait.com/sticky-footer/layout.css */
+html, body, #wrapper { height: 100%; }
+
+#wrapper { min-height: 100%; height: auto !important; }
+
+#main { overflow: auto; padding-bottom: 142px; }
+
+/* must be same height as the footer */
+#footer { position: relative; margin-top: -142px; /* negative value of footer height */ height: 142px; clear: both; }

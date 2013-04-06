@@ -8,13 +8,13 @@ Template Name: Schedule Page
 
 		<div id="content" class="clearfix">
 
-			<div id="page-header" class="block grid_12 alpha omega clearfix">
+			<div id="page-header" class="block grid_12 clearfix">
 
 				<h1 class="page-title"><?php the_title(); ?></h1>
 
 			</div> <!-- end #page-header -->
 
-			<div id="schedule-controls" class="grid_12 alpha omega clearfix" role="navigation">
+			<div id="schedule-controls" class="grid_12 clearfix" role="navigation">
 
 				<?php
 
@@ -153,45 +153,11 @@ Template Name: Schedule Page
 			</div> <!-- end #schedule-controls -->
 
 
+			<div id="schedule-section-container" class="block grid_12">
 
-
-			<div id="schedule-section" class="grid_8 first">
-				
-				<?php
-
-				/*
-
-				N.B. A lot of these queries are out of date or not exactly best practice.
-				There are newer and better methods. Simpler, too.
-
-				Refer to these resources:
-				
-				https://github.com/scribu/wp-posts-to-posts/wiki/Basic-usage
-				http://wordpress.stackexchange.com/questions/1753/when-should-you-use-wp-query-vs-query-posts-vs-get-posts
-
-				-montchr, 2013.04.04
-
-				*/
-
-				// builds a secondary query on the query above
-				global $wp_query;
-				p2p_type( 'schedule_event' )->each_connected( $wp_query );
-				
-				if( !have_posts() ) {
-					?>
-					<p class="notice">Sorry, there are no showtimes listed for <strong>
+				<div id="schedule-section" class="grid_7 alpha">
+					
 					<?php
-					if( $filter_by_show ) {
-						echo ($show->name) ? $show->name : esc_html( $_GET['show'] );
-					} else {
-						echo date('l F j, Y', $active_start_time );
-					}
-					?>
-					</strong>.</p>
-					<?php
-				}
-				
-				while ( have_posts() ) : the_post();
 
 					/*
 
@@ -206,89 +172,26 @@ Template Name: Schedule Page
 					-montchr, 2013.04.04
 
 					*/
-				
-					//get the episode associated with this schedule item
-					$episodes = $post->connected;
-					
-					//if there are connected episodes, set the first one to display
-					if( $episodes ) {
-						$scheduled_page = $episodes[0] ;
-					} else {
-						continue;
-					}				
-					
-					$date_value = get_post_meta(get_the_ID(), 'date_value', TRUE);
-					$formatted_time = '';
-					
-					if( $date_value ) {
-						$formatted_time .= "<span class='start'>";
-						$formatted_time .= date('h:i A', $date_value);
-						$formatted_time .= "</span>";
 
-						$current_day = date('w', $date_value);
-						$current_day_name = date('l', $date_value);
-						$current_date_name = date('F j, Y', $date_value);
-					} else {
-						continue;
-					}
-				
-					// only show upcoming shows from the selected day (in the next 16 hours)
-					if ( !$filter_by_show && $date_value > $active_start_time + 60 * 60 * 16 - 1 ) {
-						continue;
-					}
-					// only show schedule results filtered by show for the next week
-					// not used? - montchr
-					if( $filter_by_show && $date_value > $active_start_time + (7 * 60 * 60 * 24) ) {
-						continue;
-					}
-				
-					// to facilitate display of multiple days displayed on one page
-					// i haven't seen this in use - montchr
-					if( $current_day != $active_date ) {			
-						$active_date = $current_day;
-						
-						if( $today['yday'] == date('z', $date_value) ) {
-							$schedule_class = 'today';
+					// builds a secondary query on the query above
+					global $wp_query;
+					p2p_type( 'schedule_event' )->each_connected( $wp_query );
+					
+					if( !have_posts() ) {
+						?>
+						<p class="notice">Sorry, there are no showtimes listed for <strong>
+						<?php
+						if( $filter_by_show ) {
+							echo ($show->name) ? $show->name : esc_html( $_GET['show'] );
 						} else {
-							$schedule_class = '';
+							echo date('l F j, Y', $active_start_time );
 						}
 						?>
-										
-						<h2 class="<?php echo $schedule_class; ?> schedule-date">
-							<span class="schedule-day-name"><?php echo $current_day_name; ?></span>, <span class="schedule-date-name"><?php echo $current_date_name; ?></span>
-						</h2>
-						
+						</strong>.</p>
 						<?php
-						//reset index of scheduled shows for new day
-						$schedule_index = 0;
-					} // endif multiple days on one page
+					}
 					
-					$terms = wp_get_object_terms($post->ID, 'shows');
-					$term = $terms[0];
-					?>
-
-
-
-					<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class(); class_odd_or_even( $schedule_index++ ); echo ' show-' . $term->slug; ?>">
-
-						<div class="scheduled-time"><?php echo $formatted_time; ?></div>
-
-						<h3 class="entry-title">
-							<?php
-							if( $term ) {
-								?>
-								<a href="<?php echo get_show_link($term); ?>">
-									<?php echo get_the_show($scheduled_page->ID); ?>
-								</a>
-								<?php 
-							} 
-							?>
-							<a href="<?php echo get_permalink($scheduled_page->ID);?>">
-								<?php echo get_the_title($scheduled_page->ID); ?>
-							</a>
-						</h3>
-					
-						<?php 
+					while ( have_posts() ) : the_post();
 
 						/*
 
@@ -303,28 +206,131 @@ Template Name: Schedule Page
 						-montchr, 2013.04.04
 
 						*/
+					
+						//get the episode associated with this schedule item
+						$episodes = $post->connected;
+						
+						//if there are connected episodes, set the first one to display
+						if( $episodes ) {
+							$scheduled_page = $episodes[0] ;
+						} else {
+							continue;
+						}				
+						
+						$date_value = get_post_meta(get_the_ID(), 'date_value', TRUE);
+						$formatted_time = '';
+						
+						if( $date_value ) {
+							$formatted_time .= "<span class='start'>";
+							$formatted_time .= date('h:i A', $date_value);
+							$formatted_time .= "</span>";
 
-						$post = get_post($scheduled_page->ID); 
-						setup_postdata($post);
-
-						// Make sure you're using the Advanced Excerpt plugin! It really makes things nicer.
-						$excerpt = get_the_excerpt();
+							$current_day = date('w', $date_value);
+							$current_day_name = date('l', $date_value);
+							$current_date_name = date('F j, Y', $date_value);
+						} else {
+							continue;
+						}
+					
+						// only show upcoming shows from the selected day (in the next 16 hours)
+						if ( !$filter_by_show && $date_value > $active_start_time + 60 * 60 * 16 - 1 ) {
+							continue;
+						}
+						// only show schedule results filtered by show for the next week
+						// not used? - montchr
+						if( $filter_by_show && $date_value > $active_start_time + (7 * 60 * 60 * 24) ) {
+							continue;
+						}
+					
+						// to facilitate display of multiple days displayed on one page
+						// i haven't seen this in use - montchr
+						if( $current_day != $active_date ) {			
+							$active_date = $current_day;
+							
+							if( $today['yday'] == date('z', $date_value) ) {
+								$schedule_class = 'today';
+							} else {
+								$schedule_class = '';
+							}
+							?>
+											
+							<h2 class="<?php echo $schedule_class; ?> schedule-date">
+								<span class="schedule-day-name"><?php echo $current_day_name; ?></span>, <span class="schedule-date-name"><?php echo $current_date_name; ?></span>
+							</h2>
+							
+							<?php
+							//reset index of scheduled shows for new day
+							$schedule_index = 0;
+						} // endif multiple days on one page
+						
+						$terms = wp_get_object_terms($post->ID, 'shows');
+						$term = $terms[0];
 						?>
 
-						<div class="entry-content">
 
-							<a href="<?php echo get_permalink($scheduled_page->ID); ?>">
-								<?php the_video_thumbnail($scheduled_page->ID); ?>
-								<?php if( !empty($excerpt) ) echo $excerpt; ?>
-							</a>
 
-						</div> <!-- end .entry-content -->
+						<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class(); class_odd_or_even( $schedule_index++ ); echo ' show-' . $term->slug; ?>">
 
-					</div><!-- .post -->
+							<div class="scheduled-time"><?php echo $formatted_time; ?></div>
 
-				<?php endwhile; // close the loop ?>
+							<h3 class="entry-title">
+								<?php
+								if( $term ) {
+									?>
+									<span class="show-name">
+										<a href="<?php echo get_show_link($term); ?>">
+											<?php echo get_the_show($scheduled_page->ID); ?>
+										</a>
+									</span>
+									<?php 
+								} 
+								?>
+								<span class="episode-title">
+									<a href="<?php echo get_permalink($scheduled_page->ID);?>">
+										<?php echo get_the_title($scheduled_page->ID); ?>
+									</a>
+								</span>
+							</h3>
+						
+							<?php 
 
-			</div><!-- #schedule -->
+							/*
+
+							N.B. A lot of these queries are out of date or not exactly best practice.
+							There are newer and better methods. Simpler, too.
+
+							Refer to these resources:
+							
+							https://github.com/scribu/wp-posts-to-posts/wiki/Basic-usage
+							http://wordpress.stackexchange.com/questions/1753/when-should-you-use-wp-query-vs-query-posts-vs-get-posts
+
+							-montchr, 2013.04.04
+
+							*/
+
+							$post = get_post($scheduled_page->ID); 
+							setup_postdata($post);
+
+							// Make sure you're using the Advanced Excerpt plugin! It really makes things nicer.
+							$excerpt = get_the_excerpt();
+							?>
+
+							<div class="entry-content grid_5 alpha omega">
+
+								<a href="<?php echo get_permalink($scheduled_page->ID); ?>">
+									<?php the_video_thumbnail($scheduled_page->ID); ?>
+									<?php if( !empty($excerpt) ) echo $excerpt; ?>
+								</a>
+
+							</div> <!-- end .entry-content -->
+
+						</div><!-- .post -->
+
+					<?php endwhile; // close the loop ?>
+
+				</div><!-- #schedule-section -->
+
+			</div> <!-- end #schedule-section-container -->
 		
 		</div><!-- #content .hfeed -->
 

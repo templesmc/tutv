@@ -1,186 +1,198 @@
-/* the normal page template body class isn't showing up in this instance */
-.page-template-page-schedule-php {
+body.slug-schedule {
 
-	#main {
-	padding: 0 10px;
-	width: 960px;
+	#schedule-controls {
 
-		#container {
-		width: 960px;
-		}
-	}
-} /* end .page-template-page-schedule-php */
-
-#schedule {
-padding-bottom: 120px;
-float: left;
-
-	.today {
-	font-weight: bold;
-	}
-
-	// consider alternate names for this and h3.entry-title - montchr
-	h1.entry-title {
-	margin: 0 10px;
-	}
-
-	#schedule-nav {
-	list-style: none;
-	font-family: arial, helvetica, sans-serif;
-	margin: 0;
-	padding-left: 10px;
-	width: 100%;
-	float: left;
-	border-bottom: 1px solid #444;
-
-		h2 {
-		font-family: $sans-serif;
-		font-size: 16px;
+		.today {
+		font-weight: bold;
 		}
 
-		li {
+		#schedule-nav {
+		list-style: none;
+		margin: 0;
+		padding-left: 10px;
+		width: 100%;
 		float: left;
-		margin: 0 5px;
-		}
+		border-bottom: 1px solid $border-color;
 
-		a {
-		font-size: 16px;
-		font-weight: 300;
-		float: left;
-		padding: 7px 10px;
-		border: 1px solid #999;
-		background: #fafafa;
-		background: rgba(250, 250, 250, .6);
-		border-bottom: none;
-		border-radius: 6px 6px 0 0;
-		}
+			h2 {
+			font-family: $sans-serif;
+			font-size: 16px;
+			}
 
-		.active {
+			li {
+			float: left;
+			margin: 0 5px;
+			}
 
 			a {
-			color: #000;
-			z-index: 100;
-			font-weight: 500;
-			position: relative;
-			background: none;
-			padding: 10px 13px;
-			margin-top: -6px;
-			font-size: 18px;
-			margin-bottom: -1px;
-			border-color: #444;
-			border-bottom: 1px solid white;
+			font-size: 16px;
+			font-weight: 300;
+			float: left;
+			padding: 10px;
+			border: 1px solid $border-color;
+			background: white;
+			background: rgba(255, 255, 255, .6);
+			border-bottom: none;
+			text-decoration: none;
+			}
 
-				&:hover {
-				color: #787779;
+			.active {
+
+				a {
+				color: #000;
+				z-index: 100;
+				font-weight: 500;
+				position: relative;
+				background: white;
+				padding: 11px 13px;
+				margin-top: -5px;
+				font-size: 18px;
+				margin-bottom: -1px;
+				border-color: $border-color;
+				border-bottom: 1px solid white;
+
+					&:hover {
+					color: #787779;
+					}
 				}
 			}
-		}
-	} /* end #schedule-nav */
+		} /* end #schedule-nav */
+	}
 
-	.hentry {
-	width: 540px;
-	clear: both;
-	float: left;
-	padding:10px;
-	margin-right: 10px;
-	position: relative;
-	min-height: 26px;
-	font-family: arial, helvetica, sans-serif;
-	// does this transition have any effect?
-	-webkit-transition: background .5s ease;
-	   -moz-transition: background .5s ease;
-	     -o-transition: background .5s ease;
-	        transition: background .5s ease;
+	#schedule-section-container.block {
+	border-top: none;
+	padding-top: 1rem;
+	}
 
-		h2.schedule-date {
-		margin-bottom: 0;
-		width: 540px;
-		font-size: 20px;
-		font-weight: normal;
-		line-height: 24px;
-		padding:15px 10px;
-		color: #333;
-		font-family: arial, helvetica, sans-serif;
+	#schedule-section {
+	padding-left: 1em;
+	padding-bottom: 8.5rem;
 
-			&:first-child {
-			border-top: none;
-			padding-top: 0;
-			}
-		}
-
-		// consider alternate names for this and h1.entry-title - montchr
-		h3.entry-title {
-		font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-		font-weight: normal;
-		font-family: arial, helvetica, sans-serif;
-		padding: 0;
-		color: #aaa;
-		margin-left: 140px;
-		width: 400px;
-		}
-
-		.scheduled-time {
-		color: #777;
-		text-shadow: -1px 1px #fff;
-		margin-bottom: 5px;
-		font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-		float:left;
-		width:80px;
-		position: absolute;
-		left: 10px;
-
-			.start {}
-		}
-
-		.entry-content {
-		color: #555;
-		padding-top: 0;
-		position: absolute;
-		z-index: 10;
-		top:0;
-		right: -400px;
-		width: 370px;
-		padding: 10px;
+		.hentry {
+		clear: both;
+		float: left;
+		padding:10px;
 		margin-right: 10px;
-		background: #f0f0f9;
-		visibility: hidden;
-		opacity:0;
-		-webkit-transition: opacity .3s ease-out;
-		   -moz-transition: opacity .3s ease-out;
-		        transition: opacity .3s ease-out;
+		position: relative;
+		min-height: 26px;
+		font-size: 14px;
+		width: 100%;
+		-webkit-transition: background .5s ease;
+		   -moz-transition: background .5s ease;
+		     -o-transition: background .5s ease;
+		        transition: background .5s ease;
 
-			p {
+		    a {
+		    color: black;
+		    text-decoration: none;
+
+		    	&:hover {
+		    	color: inherit;
+		    	}
+		    }
+
+		    /* this is part of the multi-day view */
+			h2.schedule-date {
 			margin-bottom: 0;
+			width: 540px;
+			font-size: 20px;
+			font-weight: normal;
+			line-height: 24px;
+			padding:15px 10px;
+			color: #333;
+
+				&:first-child {
+				border-top: none;
+				padding-top: 0;
+				}
 			}
-		} /* end .entry-content */
 
-		.thumbnail {
-		opacity: 1;
-		margin-bottom: 8px;
-		}
+			h3.entry-title,
+			.scheduled-time {
+			line-height: 28px;
+			}
 
-		// a search through the schedule page turns up no results for this class
-		.show-title {
-		width: 140px;
-		}
+			h3.entry-title {
+			font-family: $sans-serif;
+			font-weight: normal;
+			font-size: 14px;
+			padding: 0;
+			color: black;
+			margin-left: 6em;
 
-		&:hover {
-		background: #f0f0f9 !important;
+				.show-name {
+				font-weight: 700;
+				}
+			}
 
-			// Works with the above .entry-content to produce the fade effect upon hover.
+			.scheduled-time {
+			color: $gray40;
+			position: absolute;
+			}
+
 			.entry-content {
-			display: block;
-			visibility: visible;
+			position: absolute;
+			top:0;
+			right: -390px;
+			padding: 10px;
+			margin-right: 10px;
+			background: $light-blue;
+			visibility: hidden;
+			opacity:0;
+			-webkit-transition: background .5s ease;
+			   -moz-transition: background .5s ease;
+			     -o-transition: background .5s ease;
+			        transition: background .5s ease;
+
+				p {
+				margin-bottom: 0;
+
+					a {
+					color: black;
+					text-decoration: none;
+
+						&:hover {
+						color: black;
+						}
+					}
+				}
+			} /* end .entry-content */
+
+			.thumbnail {
 			opacity: 1;
+			margin-bottom: 8px;
 			}
-		}
 
-		&.item-even {
-		background: #f3f3f3;
-		}
+			&:hover {
+			position: relative;
+			background: $light-blue !important;
+			z-index: 99;
 
-		&.item-odd {
-		background: #fefefe;
-		}
-	} /* end .hentry */
-} /* end #schedule */
+				.scheduled-time {
+				color: $gray88;
+				}
+
+				h3.entry-title {
+					a {
+					color: white;
+					}
+				}
+
+				// Works with the above .entry-content to produce the fade effect upon hover.
+				.entry-content {
+				display: block;
+				visibility: visible;
+				opacity: 1;
+				}
+			}
+
+			&.item-even {
+			background: #f3f3f3;
+			}
+
+			&.item-odd {
+			background: #fefefe;
+			}
+		} /* end .hentry */
+	} /* end #schedule-section */
+} /* end body.slug-schedule */
