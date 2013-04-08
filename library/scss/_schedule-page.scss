@@ -62,11 +62,11 @@ body.slug-schedule {
 	#schedule-section-container.block {
 	border-top: none;
 	padding-top: 1rem;
+	padding-bottom: 10em;
 	}
 
 	#schedule-section {
 	padding-left: 1em;
-	padding-bottom: 8.5rem;
 
 		.hentry {
 		clear: both;
@@ -193,6 +193,12 @@ body.slug-schedule {
 			&.item-odd {
 			background: #fefefe;
 			}
+
+			/* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
+			http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */
+			&:nth-last-child(1) > .entry-content { bottom: 0; top: inherit; } /* This is last child */
+			&:nth-last-child(2) > .entry-content { bottom: 0; top: inherit; } /* Second to last */
+			&:nth-last-child(3) > .entry-content { bottom: 0; top: inherit; } /* Third to last, etc */
 		} /* end .hentry */
 	} /* end #schedule-section */
 } /* end body.slug-schedule */

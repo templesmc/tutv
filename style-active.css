@@ -1087,9 +1087,10 @@ body.slug-schedule #schedule-controls #schedule-nav li { float: left; margin: 0 
 body.slug-schedule #schedule-controls #schedule-nav a { font-size: 16px; font-weight: 300; float: left; padding: 10px; border: 1px solid #e0e0e0; background: white; background: rgba(255, 255, 255, 0.6); border-bottom: none; text-decoration: none; }
 body.slug-schedule #schedule-controls #schedule-nav .active a { color: #000; z-index: 100; font-weight: 500; position: relative; background: white; padding: 11px 13px; margin-top: -5px; font-size: 18px; margin-bottom: -1px; border-color: #e0e0e0; border-bottom: 1px solid white; }
 body.slug-schedule #schedule-controls #schedule-nav .active a:hover { color: #787779; }
-body.slug-schedule #schedule-section-container.block { border-top: none; padding-top: 1rem; }
-body.slug-schedule #schedule-section { padding-left: 1em; padding-bottom: 8.5rem; /* end .hentry */ }
-body.slug-schedule #schedule-section .hentry { clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-size: 14px; width: 100%; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* this is part of the multi-day view */ /* end .entry-content */ }
+body.slug-schedule #schedule-section-container.block { border-top: none; padding-top: 1rem; padding-bottom: 10em; }
+body.slug-schedule #schedule-section { padding-left: 1em; /* end .hentry */ }
+body.slug-schedule #schedule-section .hentry { clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-size: 14px; width: 100%; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* this is part of the multi-day view */ /* end .entry-content */ /* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
+http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */ /* This is last child */ /* Second to last */ /* Third to last, etc */ }
 body.slug-schedule #schedule-section .hentry a { color: black; text-decoration: none; }
 body.slug-schedule #schedule-section .hentry a:hover { color: inherit; }
 body.slug-schedule #schedule-section .hentry h2.schedule-date { margin-bottom: 0; width: 540px; font-size: 20px; font-weight: normal; line-height: 24px; padding: 15px 10px; color: #333; }
@@ -1109,6 +1110,9 @@ body.slug-schedule #schedule-section .hentry:hover h3.entry-title a { color: whi
 body.slug-schedule #schedule-section .hentry:hover .entry-content { display: block; visibility: visible; opacity: 1; }
 body.slug-schedule #schedule-section .hentry.item-even { background: #f3f3f3; }
 body.slug-schedule #schedule-section .hentry.item-odd { background: #fefefe; }
+body.slug-schedule #schedule-section .hentry:nth-last-child(1) > .entry-content { bottom: 0; top: inherit; }
+body.slug-schedule #schedule-section .hentry:nth-last-child(2) > .entry-content { bottom: 0; top: inherit; }
+body.slug-schedule #schedule-section .hentry:nth-last-child(3) > .entry-content { bottom: 0; top: inherit; }
 
 /* end body.slug-schedule */
 /*********************
