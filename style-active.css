@@ -1092,7 +1092,6 @@ body.slug-schedule #schedule-section { padding-left: 1em; /* end .hentry */ }
 body.slug-schedule #schedule-section .hentry { clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-size: 14px; width: 100%; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* this is part of the multi-day view */ /* end .entry-content */ /* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
 http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */ /* This is last child */ /* Second to last */ /* Third to last, etc */ }
 body.slug-schedule #schedule-section .hentry a { color: black; text-decoration: none; }
-body.slug-schedule #schedule-section .hentry a:hover { color: inherit; }
 body.slug-schedule #schedule-section .hentry h2.schedule-date { margin-bottom: 0; width: 540px; font-size: 20px; font-weight: normal; line-height: 24px; padding: 15px 10px; color: #333; }
 body.slug-schedule #schedule-section .hentry h2.schedule-date:first-child { border-top: none; padding-top: 0; }
 body.slug-schedule #schedule-section .hentry h3.entry-title, body.slug-schedule #schedule-section .hentry .scheduled-time { line-height: 28px; }
@@ -1107,6 +1106,7 @@ body.slug-schedule #schedule-section .hentry .thumbnail { opacity: 1; margin-bot
 body.slug-schedule #schedule-section .hentry:hover { position: relative; background: #42abe8 !important; z-index: 99; }
 body.slug-schedule #schedule-section .hentry:hover .scheduled-time { color: #e0e0e0; }
 body.slug-schedule #schedule-section .hentry:hover h3.entry-title a { color: white; }
+body.slug-schedule #schedule-section .hentry:hover h3.entry-title a:hover { color: black; }
 body.slug-schedule #schedule-section .hentry:hover .entry-content { display: block; visibility: visible; opacity: 1; }
 body.slug-schedule #schedule-section .hentry.item-even { background: #f3f3f3; }
 body.slug-schedule #schedule-section .hentry.item-odd { background: #fefefe; }

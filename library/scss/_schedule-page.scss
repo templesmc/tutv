@@ -85,10 +85,6 @@ body.slug-schedule {
 		    a {
 		    color: black;
 		    text-decoration: none;
-
-		    	&:hover {
-		    	color: inherit;
-		    	}
 		    }
 
 		    /* this is part of the multi-day view */
@@ -175,6 +171,10 @@ body.slug-schedule {
 				h3.entry-title {
 					a {
 					color: white;
+
+						&:hover {
+						color: black;
+						}
 					}
 				}
 
