@@ -271,7 +271,7 @@
 				#schedule-meta-block-container {
 
 					#schedule-block {
-					background: #F4F7FC;
+					background: transparent;
 					border: none;
 					margin-bottom: 20px;
 
@@ -292,8 +292,9 @@
 
 						.block-inner.accordion {
 						font-family: $sans-serif;
-						// height: 405px;
+						height: 415px;
 						border: none;
+						background: transparent;
 
 							.schedule-item {
 							padding: 0.5em;
@@ -441,12 +442,12 @@
 						}
 
 						#read-the-blog-button {
-						height: 50px;
+						height: 45px;
 						margin-top: 10px;
 						color: $blog-button;
 
 							h3.front-featured-button-title {
-							line-height: 50px; /* this vertically centers the h3 */
+							line-height: 45px; /* this vertically centers the h3 */
 							}
 
 							&:hover,
