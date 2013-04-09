@@ -144,7 +144,7 @@ Template Name: Front Page
 								'operator'         => 'NOT IN'
 							)
 						),
-						'posts_per_page'   => 2 // ...and get only two.
+						'posts_per_page'   => 3 // ...and get only two.
 					);
 
 					// This is the query
@@ -163,14 +163,26 @@ Template Name: Front Page
 								</div> <!-- end .featured-image-container -->
 
 								<div class="entry-header">
-									<h4 class="h2" <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+									<h4 class="h3"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 								</div> <!-- end .entry-header -->
 
 								<div class="entry-content">
+									<?php
+									$args = array(
+										'length'      => 20,
+										'use_words'   => 1,
+										'finish_word' => 1,
+										'read_more'   => '<span class="read-more">Read More &rarr;</span>',
+										'add_link'    => 1
+									);
 
-									<?php the_excerpt(); ?>
-
+									the_advanced_excerpt('length=20&use_words=1&finish_word=1&read_more=%26rarr;');
+									?>
 								</div> <!-- end .entry-content -->
+
+								<div class="read-more">
+									<p><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More &rarr;</a></p>
+								</div> <!-- end .read-more -->
 
 							</div><!-- .post -->
 

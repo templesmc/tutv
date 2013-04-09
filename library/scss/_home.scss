@@ -219,8 +219,16 @@
 					}
 
 					.post {
-					height: 250px;
+					height: 225px;
 					padding: 1.125em;
+
+						&:first-child {
+						border-bottom: 1px solid $gray88;
+						}
+
+						&:last-child {
+						border-top: 1px solid $gray88;
+						}
 
 						.featured-image-container {
 						display: inline-block;
@@ -235,14 +243,30 @@
 							display: inline;
 							padding: 0;
 							font-style: normal;
+							line-height: 1.2;
+
+								a {
+								text-decoration: none;
+								}
 							}
 						}
-					
-						&:first-child {
-						border-bottom: 1px solid $gray88;
+
+						.entry-content {
+						font-size: 14px;
 						}
-					}
-				}
+
+						.read-more {
+						font-weight: 900;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+
+							a {
+							color: $teal;
+							}
+						}
+					} /* end .post */
+				} /* end #recent-blog-posts-block */
 
 				#schedule-meta-block-container {
 
