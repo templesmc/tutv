@@ -208,24 +208,29 @@ Template Name: Front Page
 
 
 				<!-- Schedule Block -->
-				<div id="schedule-block" class="front-block block grid_6 alpha omega">
+				<div id="schedule-block" class="front-block block grid_6 alpha omega clearfix">
 
-					<div class="block-header">
+					<div class="block-header clearfix">
 						<h3 class="section-header">Airing on TUTV</h3>
 						<p><a class='header' href="/schedule">view more &rarr;</a></p>
 					</div>
 
-					<div class="block-inner">
+					<div class="block-inner clearfix">
 
 						<?php
-						$active_start_time = time();
+						$timestamp = strtotime('2012-04-13 08:00:00');
+						//echo $timestamp;
+
+						//$active_start_time = time();
+						$active_start_time = $timestamp;
 						$args = array(
 							'post_type'=>'events',
 							'meta_key' => 'date_value',
 							'orderby' => 'meta_value',
 							'meta_compare' => '>=',
 							//search for shows starting up to 3 hours ago
-							'meta_value' => $active_start_time - 60 * 60 * 3,
+							//'meta_value' => $active_start_time - 60 * 60 * 3,
+							'meta_value' => $timestamp,
 							'order' => 'ASC',
 							'posts_per_page' => '10',
 						);
@@ -259,20 +264,22 @@ Template Name: Front Page
 								}
 
 								// only show uncoming shows starting in the next 4 fours
+								/*
 								if ( $date_value > $active_start_time + 60 * 60 * 8 ) {
 									continue;
 								}
+								*/
 							
 							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 							$term = $terms[0];
 							
-							$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug} grid_6 alpha omega";
+							$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug}";
 								if( $date_value < $active_start_time ) {
 									$output .= ' active';
 								}
 								$output .= "'>";
 
-								$output .= "<div class='entry-info grid_4 omega'>";
+								$output .= "<div class='entry-info'>";
 
 									$output .= "<div class='scheduled-time'>$formatted_time</div>";
 
@@ -294,7 +301,7 @@ Template Name: Front Page
 									
 								$output .= '</div><!-- .entry-info -->';
 
-								$output .= '<div class="entry-content grid_2 alpha omega">';
+								$output .= '<div class="entry-content">';
 
 									$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
 										$output .= get_video_thumbnail($scheduled_page->ID);
@@ -309,7 +316,7 @@ Template Name: Front Page
 							if ( $date_value < $active_start_time ) {
 								$final_output = $output;
 								$num_items = 1;
-							} else if ($num_items < 5 ) { //limit the number of items to 5
+							} else if ($num_items < 10 ) { //limit the number of items to 5
 								$final_output .= $output;
 								$num_items++;
 							} else {
