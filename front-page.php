@@ -215,7 +215,7 @@ Template Name: Front Page
 						<p><a class='header' href="/schedule">view more &rarr;</a></p>
 					</div>
 
-					<div class="block-inner clearfix">
+					<div class="block-inner accordion clearfix">
 
 						<?php
 						$timestamp = strtotime('2012-04-13 08:00:00');
@@ -273,13 +273,13 @@ Template Name: Front Page
 							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 							$term = $terms[0];
 							
-							$output = "<div id='post-" . get_the_ID() . "' class='hentry show-{$term->slug}";
+							$output = "<div id='post-" . get_the_ID() . "' class='schedule-item post hentry show-{$term->slug}";
 								if( $date_value < $active_start_time ) {
 									$output .= ' active';
 								}
 								$output .= "'>";
 
-								$output .= "<div class='entry-info'>";
+								$output .= "<div class='entry-info accordion-header'>";
 
 									$output .= "<div class='scheduled-time'>$formatted_time</div>";
 
@@ -301,7 +301,7 @@ Template Name: Front Page
 									
 								$output .= '</div><!-- .entry-info -->';
 
-								$output .= '<div class="entry-content">';
+								$output .= '<div class="entry-content accordion-content">';
 
 									$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
 										$output .= get_video_thumbnail($scheduled_page->ID);
@@ -316,7 +316,7 @@ Template Name: Front Page
 							if ( $date_value < $active_start_time ) {
 								$final_output = $output;
 								$num_items = 1;
-							} else if ($num_items < 10 ) { //limit the number of items to 5
+							} else if ($num_items < 5 ) { //limit the number of items to 5
 								$final_output .= $output;
 								$num_items++;
 							} else {

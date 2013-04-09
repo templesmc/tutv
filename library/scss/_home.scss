@@ -286,53 +286,85 @@
 						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */
 						}
 
-						.hentry {
-						background: #fff;
-						border-bottom: 1px solid #ccc;
-						border-right: 1px solid #ccc;
-						border-left: 1px solid #ccc;
+						/* The Schedule Accordion */
 
-							.scheduled-time {
-							display: inline;
-							color: #666;
-							font-size: 14px; /* 16px original 06-06-2011 PWinnick */
-							}
+						$accordionContentHeight: 200px;
 
-							.entry-title {
-							display: inline;
-							font-size: 14px;
-							border-bottom: none;
-							}
+						.block-inner.accordion {
+						font-family: $sans-serif;
+						// height: 405px;
+						border: none;
 
-							.entry-content {
-							display: none;
-							}
+							.schedule-item {
+							padding: 0.5em;
+							background: #fff;
+							border-left: 1px solid $border-color;
+							border-right: 1px solid $border-color;
+							border-bottom: 1px solid $border-color;
 
-							&.active {
-							background: #F4F7FC; 
-							border-right-color: #F4F7FC;
-							border-bottom: 1px solid #ccc;
-							background-image: -webkit-gradient(linear, 0% 100%, 90% 100%, from(#E3EBFD), to(#F4F7FC));
-							background-image: -moz-linear-gradient(left center, #E3EBFD 0%, #F4F7FC 100%);
+								.scheduled-time {
+								display: inline;
+								color: #666;
+								font-size: 16px;
+								}
 
-								.entry-content {
-								display: block;
+								.entry-title {
+								display: inline;
+								font-size: 16px;
+								border-bottom: none;
+								font-weight: 400;
+								font-style: normal;
+								font-family: $sans-serif;
+								}
+
+								.entry-content.accordion-content {
+								font-size: 14px;
+								height: 0;
 								overflow: hidden;
-								border-bottom: 1px solid #CCC;
-								border-right: 1px solid #CCC;
-								min-height: 220px;
-								background: #F4F7FC;
-								font-size: 13px; /*modified 09-15-2011 PWinnick */
+								display: none;
+								visibility: hidden;
+								-webkit-transition: height .5s;
+								-moz-transition: height .5s;
+								-ms-transition: height .5s;
+								-o-transition: height .5s;
+								transition: height .5s;
+								}
+							}
 
-									.thumbnail {
+							/* On hover, extend the content height */
+							&:hover {
+								.schedule-item {
+								padding: 0.5em;
+
+									.entry-content.accordion-content {
 									display: block;
-									margin-bottom: 4px;
-									opacity: 1;
-									max-width: 100%;
+									visibility: visible;
+									height: $accordionContentHeight;
+									height: 0; // this is important!
+									overflow: hidden;
+									padding-top: 0;
+									-webkit-transition: height .5s;
+									-moz-transition: height .5s;
+									-ms-transition: height .5s;
+									-o-transition: height .5s;
+									transition: height .5s;
 									}
 								}
-							} /* end &.active */
-						} /* end .hentry */
+							} /* end .block-inner.accordion:hover */
+
+							/* On active, extend the content height */
+							.schedule-item.active {
+							background: $light-blue; 
+
+								.entry-content.accordion-content {
+								display: block;
+								visibility: visible;
+								height: $accordionContentHeight;
+								padding-top: .5em;
+								}
+							}
+
+						} /* end .block-inner.accordion */
 					} /* end #schedule-block */
 
 					/* FEATURED BUTTONS SECTION */
