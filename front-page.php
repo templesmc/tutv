@@ -218,7 +218,29 @@ Template Name: Front Page
 					<div class="block-inner accordion clearfix">
 
 						<?php
-						$timestamp = strtotime('2012-04-13 08:00:00');
+						/*
+						I may be wrong,
+						but the way these posts are called seems pretty cumbersome.
+						It should be cleaned up.
+						Besides being nearly unreadable,
+						it doesn't loop in the standard way,
+						but instead adds each post to the $output variable.
+
+						Also, the posts_per_page query var
+						doesn't ACTUALLY control how many are displayed -
+						it only limits the MAX number QUERIED
+						(but of course turning this off would make for a very slow query).
+						The number displayed is regulated by
+						the $num_items elseif on line 338.
+
+						WHy search for shows starting up to three hours in the past
+						and then limit the results to only shows in the next four hours?
+
+
+						-montchr, 2013.04.09
+						*/
+
+						$timestamp = strtotime('2012-04-11 08:00:00');
 						//echo $timestamp;
 
 						//$active_start_time = time(); // this must be active when site is live!
@@ -264,11 +286,10 @@ Template Name: Front Page
 								}
 
 								// only show uncoming shows starting in the next 4 fours
-								/*
 								if ( $date_value > $active_start_time + 60 * 60 * 8 ) {
 									continue;
 								}
-								*/
+
 							
 							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 							$term = $terms[0];
@@ -286,13 +307,17 @@ Template Name: Front Page
 									$output .= "<h4 class='entry-title'>";
 
 										if( $term ) {
-											$output .= "<a href='" . get_show_link($term) . "'>";
-												$output .= get_the_show($scheduled_page->ID);
-											$output .= '</a>';
+											$output .= '<span class="show-name">';
+												$output .= "<a href='" . get_show_link($term) . "'>";
+													$output .= get_the_show($scheduled_page->ID);
+												$output .= '</a>';
+											$output .= '</span>';
 										}
-										$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
-											$output .= get_the_title($scheduled_page->ID);
-										$output .= '</a>';
+										$output .= '<span class="episode-title">';
+											$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
+												$output .= get_the_title($scheduled_page->ID);
+											$output .= '</a>';
+										$output .= '</span>';
 									
 									$output .= '</h4>';
 

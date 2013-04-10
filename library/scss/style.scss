@@ -659,6 +659,14 @@ padding-bottom: 0;
 				}
 			}
 
+			.item-even {
+			background: $row-even;
+			}
+
+			.item-odd {
+			background: $row-odd;
+			}
+
 		} /* end #content */
 	} /* end #container */
 } /* end #main */

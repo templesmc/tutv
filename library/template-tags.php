@@ -277,6 +277,15 @@ function get_weighted_terms( $taxonomy ) {
 }
 
 /**
+ * Get an odd or even class name for a given integer
+ *
+ */
+function get_class_odd_or_even( $num ) {
+	$output = ($num%2) ? ' item-odd' : ' item-even';
+	return $output;
+}
+
+/**
  * Output an odd or even class name for a given integer
  *
  */
