@@ -95,8 +95,23 @@ $border-color: $gray88;
 	$submit-button:			$teal;
 	$blog-button:			$gray40;
 
+	/* Rows & Highlights */
+	$row-even:				$gray93;
+	$row-odd:				$white;
+	$highlight:				lighten($light-blue, 35%);
 
+/* Even/Odd Child Row Colors 
+Must be included for on the element you want to alternate,
+as this uses child selectors to do stuff. */
+@mixin rowColors($odd: $row-odd, $even: $row-even) {
+	&:nth-child(odd) {
+		background-color: $odd;
+	}
 
+	&:nth-child(even) {
+		background-color: $even;
+	}
+}
 
 
 /*

@@ -186,14 +186,6 @@ body.slug-schedule {
 				}
 			}
 
-			&.item-even {
-			background: #f3f3f3;
-			}
-
-			&.item-odd {
-			background: #fefefe;
-			}
-
 			/* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
 			http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */
 			&:nth-last-child(1) > .entry-content { bottom: 0; top: inherit; } /* This is last child */

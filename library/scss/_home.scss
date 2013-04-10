@@ -209,13 +209,13 @@
 
 					.block-header {
 					background: $blog-button; /* Old browsers */
-					background: -moz-linear-gradient(left,  $blue 0%, transparentize($blue, 0.5) 100%); /* FF3.6+ */
-					background: -webkit-gradient(linear, left top, right top, color-stop(0%,$blue), color-stop(100%,transparentize($blue, 0.5))); /* Chrome,Safari4+ */
-					background: -webkit-linear-gradient(left,  $blue 0%,transparentize($blue, 0.5) 100%); /* Chrome10+,Safari5.1+ */
-					background: -o-linear-gradient(left,  $blue 0%,transparentize($blue, 0.5) 100%); /* Opera 11.10+ */
-					background: -ms-linear-gradient(left,  $blue 0%,transparentize($blue, 0.5) 100%); /* IE10+ */
-					background: linear-gradient(to right,  $blue 0%,transparentize($blue, 0.5) 100%); /* W3C */
-					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */
+					background: -moz-linear-gradient(left,  $light-blue 0%, transparentize($light-blue, 0.5) 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, right top, color-stop(0%,$light-blue), color-stop(100%,transparentize($light-blue, 0.5))); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* IE10+ */
+					background: linear-gradient(to right,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */
 					}
 
 					.post {
@@ -277,13 +277,13 @@
 
 						.block-header {
 						background: $blog-button; /* Old browsers */
-						background: -moz-linear-gradient(left,  $light-blue 0%, transparentize($light-blue, 0.5) 100%); /* FF3.6+ */
-						background: -webkit-gradient(linear, left top, right top, color-stop(0%,$light-blue), color-stop(100%,transparentize($light-blue, 0.5))); /* Chrome,Safari4+ */
-						background: -webkit-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* Chrome10+,Safari5.1+ */
-						background: -o-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* Opera 11.10+ */
-						background: -ms-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* IE10+ */
-						background: linear-gradient(to right,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* W3C */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */
+						background: -moz-linear-gradient(left,  $teal 0%, transparentize($teal, 0.5) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, right top, color-stop(0%,$teal), color-stop(100%,transparentize($teal, 0.5))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(left,  $teal 0%,transparentize($teal, 0.5) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(left,  $teal 0%,transparentize($teal, 0.5) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(left,  $teal 0%,transparentize($teal, 0.5) 100%); /* IE10+ */
+						background: linear-gradient(to right,  $teal 0%,transparentize($teal, 0.5) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$teal', endColorstr='transparentize($teal, 0.5)',GradientType=1 ); /* IE6-8 */
 						}
 
 						/* The Schedule Accordion */
@@ -297,26 +297,44 @@
 						background: transparent;
 
 							.schedule-item {
-							padding: 0.5em;
-							background: #fff;
+							padding: 0;
 							border-left: 1px solid $border-color;
 							border-right: 1px solid $border-color;
 							border-bottom: 1px solid $border-color;
 
-								.scheduled-time {
-								display: inline;
-								color: #666;
-								font-size: 16px;
+							@include rowColors();
+
+								.entry-info {
+								padding: 0.5em;
 								}
 
-								.entry-title {
-								display: inline;
-								font-size: 16px;
-								border-bottom: none;
-								font-weight: 400;
-								font-style: normal;
-								font-family: $sans-serif;
-								}
+									.scheduled-time {
+									display: inline;
+									color: black;
+									font-size: 16px;
+									}
+
+									.entry-title {
+									display: inline;
+									font-size: 16px;
+									border-bottom: none;
+									font-weight: 400;
+									font-style: normal;
+									font-family: $sans-serif;
+									margin-left: 1.5em;
+
+										a {
+										color: $link-color;
+
+											&:hover {
+											color: $link-hover;
+											}
+										}
+
+										.show-name {
+										font-weight: 700;
+										}
+									} /* end entry-title */
 
 								.entry-content.accordion-content {
 								font-size: 14px;
@@ -324,18 +342,27 @@
 								overflow: hidden;
 								display: none;
 								visibility: hidden;
-								-webkit-transition: height .5s;
-								-moz-transition: height .5s;
-								-ms-transition: height .5s;
-								-o-transition: height .5s;
-								transition: height .5s;
+								background: $highlight;
+								padding: 1em 0.5em 0.5em;
+								-webkit-transition: all .5s;
+								-moz-transition: all .5s;
+								-ms-transition: all .5s;
+								-o-transition: all .5s;
+								transition: all .5s;
+
+									.thumbnail {
+									margin-left: .5em;
+
+										img {
+										margin-bottom: .5em;
+										}
+									}
 								}
 							}
 
 							/* On hover, extend the content height */
 							&:hover {
 								.schedule-item {
-								padding: 0.5em;
 
 									.entry-content.accordion-content {
 									display: block;
@@ -343,25 +370,36 @@
 									height: $accordionContentHeight;
 									height: 0; // this is important!
 									overflow: hidden;
-									padding-top: 0;
-									-webkit-transition: height .5s;
-									-moz-transition: height .5s;
-									-ms-transition: height .5s;
-									-o-transition: height .5s;
-									transition: height .5s;
+									background-color: $highlight;
+									//padding: 1em 0.5em 0.5em;
+									padding: 0;
+									-webkit-transition: all .5s;
+									-moz-transition: all .5s;
+									-ms-transition: all .5s;
+									-o-transition: all .5s;
+									transition: all .5s;
+
+										.thumbnail {
+										margin-left: 0;
+
+											img {
+											margin-bottom: 0;
+											}
+										}
 									}
 								}
 							} /* end .block-inner.accordion:hover */
 
 							/* On active, extend the content height */
 							.schedule-item.active {
-							background: $light-blue; 
+							background: $highlight; 
 
 								.entry-content.accordion-content {
 								display: block;
 								visibility: visible;
 								height: $accordionContentHeight;
-								padding-top: .5em;
+								padding: 1em 0.5em 0.5em;
+								background-color: $highlight;
 								}
 							}
 

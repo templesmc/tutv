@@ -601,6 +601,10 @@ Functional Variables
 /* Used for several types of header elements */
 /* Link Colors */
 /* Buttons */
+/* Rows & Highlights */
+/* Even/Odd Child Row Colors 
+Must be included for on the element you want to alternate,
+as this uses child selectors to do stuff. */
 /*
 Here's a great tutorial on how to
 use color variables properly:
@@ -992,7 +996,7 @@ style a page via class
 .home #main #container #content #front-featured .description .more-link { display: block; }
 .home #main #container #content #front-featured .description img { display: none; }
 .home #main #container #content #recent-blog-posts-block { border: none; /* end .post */ }
-.home #main #container #content #recent-blog-posts-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0176b7), color-stop(100%, rgba(1, 118, 183, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #0176b7 0%, rgba(1, 118, 183, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$blue', endColorstr='transparentize($blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
+.home #main #container #content #recent-blog-posts-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #recent-blog-posts-block .post { height: 225px; padding: 1.125em; }
 .home #main #container #content #recent-blog-posts-block .post:first-child { border-bottom: 1px solid #e0e0e0; }
 .home #main #container #content #recent-blog-posts-block .post:last-child { border-top: 1px solid #e0e0e0; }
@@ -1005,16 +1009,25 @@ style a page via class
 .home #main #container #content #recent-blog-posts-block .post .read-more a { color: #00b3a0; }
 .home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block { background: transparent; border: none; margin-bottom: 20px; /* The Schedule Accordion */ /* end .block-inner.accordion */ }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */ }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-header { background: #666666; /* Old browsers */ background: -moz-linear-gradient(left, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, #00b3a0), color-stop(100%, rgba(0, 179, 160, 0.5))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%); /* IE10+ */ background: linear-gradient(to right, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$teal', endColorstr='transparentize($teal, 0.5)',GradientType=1 ); /* IE6-8 */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; height: 415px; border: none; background: transparent; /* On hover, extend the content height */ /* end .block-inner.accordion:hover */ /* On active, extend the content height */ }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item { padding: 0.5em; background: #fff; border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .scheduled-time { display: inline; color: #666; font-size: 16px; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-title { display: inline; font-size: 16px; border-bottom: none; font-weight: 400; font-style: normal; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content { font-size: 14px; height: 0; overflow: hidden; display: none; visibility: hidden; -webkit-transition: height 0.5s; -moz-transition: height 0.5s; -ms-transition: height 0.5s; -o-transition: height 0.5s; transition: height 0.5s; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion:hover .schedule-item { padding: 0.5em; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion:hover .schedule-item .entry-content.accordion-content { display: block; visibility: visible; height: 200px; height: 0; overflow: hidden; padding-top: 0; -webkit-transition: height 0.5s; -moz-transition: height 0.5s; -ms-transition: height 0.5s; -o-transition: height 0.5s; transition: height 0.5s; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item.active { background: #42abe8; }
-.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item.active .entry-content.accordion-content { display: block; visibility: visible; height: 200px; padding-top: .5em; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item { padding: 0; border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; /* end entry-title */ }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item:nth-child(odd) { background-color: white; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item:nth-child(even) { background-color: #eaeaea; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-info { padding: 0.5em; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .scheduled-time { display: inline; color: black; font-size: 16px; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-title { display: inline; font-size: 16px; border-bottom: none; font-weight: 400; font-style: normal; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; margin-left: 1.5em; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-title a { color: #0176b7; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-title a:hover { color: #9e1b34; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-title .show-name { font-weight: 700; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content { font-size: 14px; height: 0; overflow: hidden; display: none; visibility: hidden; background: #e1f2fb; padding: 1em 0.5em 0.5em; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -ms-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content .thumbnail { margin-left: .5em; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content .thumbnail img { margin-bottom: .5em; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion:hover .schedule-item .entry-content.accordion-content { display: block; visibility: visible; height: 200px; height: 0; overflow: hidden; background-color: #e1f2fb; padding: 0; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -ms-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion:hover .schedule-item .entry-content.accordion-content .thumbnail { margin-left: 0; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion:hover .schedule-item .entry-content.accordion-content .thumbnail img { margin-bottom: 0; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item.active { background: #e1f2fb; }
+.home #main #container #content #schedule-meta-block-container #schedule-block .block-inner.accordion .schedule-item.active .entry-content.accordion-content { display: block; visibility: visible; height: 200px; padding: 1em 0.5em 0.5em; background-color: #e1f2fb; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section { height: 250px; /* end a.front-featured-button */ }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button { background: #eaeaea url(images/background-layer2.jpg) repeat center center scroll; height: 90px; display: block; text-decoration: none; /* end h3.front-featured-button-title */ }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title { text-transform: uppercase; line-height: 90px; /* this vertically centers the h3 */ text-align: center; font-weight: 300; }
@@ -1115,8 +1128,6 @@ body.slug-schedule #schedule-section .hentry:hover .scheduled-time { color: #e0e
 body.slug-schedule #schedule-section .hentry:hover h3.entry-title a { color: white; }
 body.slug-schedule #schedule-section .hentry:hover h3.entry-title a:hover { color: black; }
 body.slug-schedule #schedule-section .hentry:hover .entry-content { display: block; visibility: visible; opacity: 1; }
-body.slug-schedule #schedule-section .hentry.item-even { background: #f3f3f3; }
-body.slug-schedule #schedule-section .hentry.item-odd { background: #fefefe; }
 body.slug-schedule #schedule-section .hentry:nth-last-child(1) > .entry-content { bottom: 0; top: inherit; }
 body.slug-schedule #schedule-section .hentry:nth-last-child(2) > .entry-content { bottom: 0; top: inherit; }
 body.slug-schedule #schedule-section .hentry:nth-last-child(3) > .entry-content { bottom: 0; top: inherit; }
@@ -1357,6 +1368,8 @@ POST & CONTENT STYLES
 #main #container #content .thumbnail { background: #d7d7d7 url(images/thumbnail-placeholder.png); height: 100px; width: 140px; opacity: .85; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
 #main #container #content .thumbnail:hover { opacity: 1; }
 #main #container #content a:hover .thumbnail { opacity: 1; }
+#main #container #content .item-even { background: #eaeaea; }
+#main #container #content .item-odd { background: white; }
 
 /* end #main */
 .block { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
