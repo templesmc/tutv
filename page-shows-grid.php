@@ -58,18 +58,20 @@ Template Name: Grid Show Listings
 					?>
 					<li><a href="#all" class="all">View All</a></li>
 				</ul>
+
+
 				
 				<h2>Genre: </h2>
 				<ul>
 					<?php
-	                $genres = get_terms('genre');
-	                foreach( $genres as $genre ) {
-	                	echo "<li><a href='#genre-{$genre->slug}' class='genre-{$genre->slug}'>{$genre->name}</a></li>";
-	                }
-	                ?>
-	                <li><a href="#all" class="all">View All</a></li>
+					$genres = get_terms('genre');
+					foreach( $genres as $genre ) {
+						echo "<li><a href='#genre-{$genre->slug}' class='genre-{$genre->slug}'>{$genre->name}</a></li>";
+					}
+					?>
+					<li><a href="#all" class="all">View All</a></li>
 				</ul>
-			</div><!-- #filtering-nav -->
+			</div><!-- #filtering-nav-container -->
 			<div id="wall">
 			<?php
 

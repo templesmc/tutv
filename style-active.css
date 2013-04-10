@@ -1066,22 +1066,22 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 */
 .page-template-page-shows-grid-php { /* end .shows-page-grid */ }
-.page-template-page-shows-grid-php #content.shows-page-grid { /* end #filtering-nav */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav { /* genre box colors */ /* end .filtering-nav-list */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-documentary { background: #F9EFE2; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-interviews { background: #E9E4D3; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-news { background: #E3E4E3; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-sports { background: #F0955F; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-educational { background: #FDF3DE; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-entertainment { background: #DCE9EA; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-music { background: #99CC99; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-fitness { background: #CC9999; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav .genre-specials { background: #018DBB; color: #fff; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; margin-left: 6px; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul { list-style: none; margin: 0 0 10px 0; /* end .filtering-nav-list-item */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li { list-style: none; display: inline; /* end .filtering-nav-list-item a */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li a { color: #333; padding: 3px; margin: 0 12px 0 3px; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav ul li a:hover { -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; }
+.page-template-page-shows-grid-php #content.shows-page-grid { /* end #filtering-nav-container */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container { /* genre box colors */ /* end .filtering-nav-container-list */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-documentary { background: #F9EFE2; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-interviews { background: #E9E4D3; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-news { background: #E3E4E3; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-sports { background: #F0955F; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-educational { background: #FDF3DE; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-entertainment { background: #DCE9EA; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-music { background: #99CC99; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-fitness { background: #CC9999; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-specials { background: #018DBB; color: #fff; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; margin-left: 6px; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul { list-style: none; margin: 0 0 10px 0; /* end .filtering-nav-container-list-item */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li { list-style: none; display: inline; /* end .filtering-nav-container-list-item a */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a { color: #333; padding: 3px; margin: 0 12px 0 3px; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a:hover { -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry { width: 160px; margin: 20px 11px; padding: 8px; float: left; clear: none; /* end .shows-page-show */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.col2 { width: 347px; /* 337px original 06-08-2011 Pwinnick */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.col3 { width: 544px; /* 534px original 06-08-2011 Pwinnick */ }

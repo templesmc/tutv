@@ -8,7 +8,7 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 	#content.shows-page-grid {
 
-		#filtering-nav {
+		#filtering-nav-container {
 
 			/* genre box colors */
 			.genre-documentary {background: #F9EFE2;}
@@ -24,19 +24,19 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 				color: #fff;
 			}
 
-			// let's give this a class name like ".filtering-nav-head"
+			// let's give this a class name like ".filtering-nav-container-head"
 			h2 {
 			font-family: $sans-serif;
 			font-weight: bold;
 			margin-left: 6px;
 			}
 
-			// give this a class ".filtering-nav-list"
+			// give this a class ".filtering-nav-container-list"
 			ul {
 			list-style: none;
 			margin: 0 0 10px 0;
 
-				// give this a class ".filtering-nav-list-item"
+				// give this a class ".filtering-nav-container-list-item"
 				li {
 				list-style: none;
 				display: inline;
@@ -57,10 +57,10 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 						&.active {
 						// border: 1px dotted #ccc;
 						}
-					} /* end .filtering-nav-list-item a */
-				} /* end .filtering-nav-list-item */
-			} /* end .filtering-nav-list */
-		} /* end #filtering-nav */
+					} /* end .filtering-nav-container-list-item a */
+				} /* end .filtering-nav-container-list-item */
+			} /* end .filtering-nav-container-list */
+		} /* end #filtering-nav-container */
 
 		// more unique name? .shows-page-show-container
 		.hentry {
