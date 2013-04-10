@@ -1005,7 +1005,8 @@ style a page via class
 .home #main #container #content #recent-blog-posts-block .post .entry-header h4 { display: inline; padding: 0; font-style: normal; line-height: 1.2; }
 .home #main #container #content #recent-blog-posts-block .post .entry-header h4 a { text-decoration: none; }
 .home #main #container #content #recent-blog-posts-block .post .entry-content { font-size: 14px; }
-.home #main #container #content #recent-blog-posts-block .post .read-more { font-weight: 900; position: absolute; bottom: 0; right: 0; }
+.home #main #container #content #recent-blog-posts-block .post .entry-content p { display: inline; }
+.home #main #container #content #recent-blog-posts-block .post .read-more { font-weight: 700; font-style: italic; display: inline; margin-left: 0.5em; }
 .home #main #container #content #recent-blog-posts-block .post .read-more a { color: #00b3a0; }
 .home #main #container #content #schedule-meta-block-container { /* end #schedule-block */ /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
 .home #main #container #content #schedule-meta-block-container #schedule-block { background: transparent; border: none; margin-bottom: 20px; /* The Schedule Accordion */ /* end .block-inner.accordion */ }

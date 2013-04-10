@@ -157,6 +157,8 @@ Template Name: Front Page
 					?>
 
 							<div id="post-<?php the_ID(); ?>" <?php post_class('article clearfix'); ?> role="article">
+
+								<?php setup_postdata($recent_blog_posts); ?>
 								
 								<div class="featured-image-container">
 									<?php the_post_thumbnail('thumbnail'); ?>
@@ -168,21 +170,31 @@ Template Name: Front Page
 
 								<div class="entry-content">
 									<?php
+									/* If the Advanced Excerpt plugin was updated,
+									maybe it would be possible to control its output
+									without having to completely ignore the custom excerpt.
+									But for now, I will make due with adding a read more link
+									right here in the template. See below.
+
+									Just keep in mind that this plugin,
+									as of this writing (2013.04.10),
+									the Advanced Excerpt plugin
+									hasn't been updated since 2011 (v4.1.1).
+									Be careful of future core WordPress updates. */
 									$args = array(
-										'length'      => 20,
+										'length'      => 10,
+										'no_custom'   => 0,
 										'use_words'   => 1,
 										'finish_word' => 1,
-										'read_more'   => '<span class="read-more">Read More &rarr;</span>',
+										'read_more'   => 'Read More',
 										'add_link'    => 1
 									);
 
-									the_advanced_excerpt('length=20&use_words=1&finish_word=1&read_more=%26rarr;');
+									the_excerpt();
+									//the_advanced_excerpt($args);
 									?>
+									<span class="read-more"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read&nbsp;More&nbsp;&rarr;</a></span>
 								</div> <!-- end .entry-content -->
-
-								<div class="read-more">
-									<p><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read More &rarr;</a></p>
-								</div> <!-- end .read-more -->
 
 							</div><!-- .post -->
 

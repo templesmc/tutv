@@ -253,13 +253,17 @@
 
 						.entry-content {
 						font-size: 14px;
+
+							p {
+							display: inline;
+							}
 						}
 
 						.read-more {
-						font-weight: 900;
-						position: absolute;
-						bottom: 0;
-						right: 0;
+						font-weight: 700;
+						font-style: italic;
+						display: inline;
+						margin-left: 0.5em;
 
 							a {
 							color: $teal;
