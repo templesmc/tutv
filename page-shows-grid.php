@@ -5,51 +5,48 @@ Template Name: Grid Show Listings
 ?>
 <?php
 
-	add_action('wp_print_scripts', 'childtheme_shows_scripts');
-	 
-	function childtheme_shows_scripts() {
-	
-	 	wp_enqueue_script('masonry', get_bloginfo('stylesheet_directory') . '/js/jquery.masonry.min.js', array('jquery'));
-	 
-	}
+add_action('wp_print_scripts', 'childtheme_shows_scripts');
+ 
+function childtheme_shows_scripts() {
+	wp_enqueue_script('masonry', get_bloginfo('stylesheet_directory') . '/js/jquery.masonry.min.js', array('jquery'));
+}
 
-    // calling the header.php
-    get_header();
+// calling the header.php
+get_header();
 
-    // action hook for placing content above #container
-    thematic_abovecontainer();
+// action hook for placing content above #container
+thematic_abovecontainer();
 
 ?>
-	<div id="container">
-		<div id="content" class="shows-page-grid">
 
-            <?php 			
-            the_post();
+	<div id="content" class="shows-page-grid hfeed">
 
-            // displays the page title
-            thematic_page_title();
+		<?php
+		
+		// create the navigation above the content
+		//thematic_navigation_above();
+		
+		$shows_tax = get_taxonomy('shows');
+		$shows = get_weighted_terms('shows');
+		
+		?>
 
-            rewind_posts();
-            
-			
-            // create the navigation above the content
-            //thematic_navigation_above();
-			
-			$shows_tax = get_taxonomy('shows');
-			$shows = get_weighted_terms('shows');
-			
-			?>
-			<h1 class="page-title"><?php echo $shows_tax->labels->name; ?></h1>
+		<h1 class="page-title"><?php echo $shows_tax->labels->name; ?></h1>
 
-			<div id="filtering-nav">
-				<h2>Production Type: </h2>
+		<div id="filtering-nav-container">
+
+			<div id="production-type-filters" class="filtering-nav">
+
+				<h2>Production Type</h2>
+
 				<ul>
 					<?php			
 					global $production_types;
 	
 					foreach( $production_types as $type ) {
-						if( '' == $type['slug'] ) 
+						if( '' == $type['slug'] ) {
 							continue;
+						}
 						
 						$slug = 'type-' . $type['slug'];
 						
@@ -59,9 +56,12 @@ Template Name: Grid Show Listings
 					<li><a href="#all" class="all">View All</a></li>
 				</ul>
 
+			</div> <!-- #production-type-filters -->
 
-				
-				<h2>Genre: </h2>
+			<div id="genre-filters" class="filtering-nav">
+			
+				<h2>Genre</h2>
+
 				<ul>
 					<?php
 					$genres = get_terms('genre');
@@ -71,83 +71,85 @@ Template Name: Grid Show Listings
 					?>
 					<li><a href="#all" class="all">View All</a></li>
 				</ul>
-			</div><!-- #filtering-nav-container -->
-			<div id="wall">
-			<?php
 
-			foreach( $shows as $show ) {
-				$title = $show->name;
-				$desc = $show->description;
-				
-				// set column width by show title and description length				
-				if( strlen($desc) > 250 && strlen($title) > 20 ) {
-					$width = 'col3';
-				} else if( strlen($desc) > 150 || strlen($title) > 20 ) {
-					$width = 'col2';
-				} else {
-					$width = 'col1';
-				}	
-				
-				// set the show genre
-				$genre = get_term_meta( $show->term_id, 'genre', true );
-				if( $genre ) {
-					$genre = 'genre-' . $genre;
-				} else {
-					$genre = '';
-				}
-				
-				// set the production type
-				$term_production_type = get_term_meta( $show->term_id, 'production_type', true ); 
-				if( $term_production_type ) {
-					$type = 'type-' . $production_types[$term_production_type]['slug'];
-				} else {
-					continue;
-				}
-				
-				$show_link = get_term_link( $show, $shows_tax->query_var );
-				?>
-				<div class="hentry taxonomy-page-item <?php echo $shows_tax->query_var;?>-item <?php echo "$type $width $genre"; ?>">
-				
-					<div class="entry-content">
-						
-						<h2 class="entry-title">
-	 						<a href="<?php echo $show_link; ?>">
-	 						<?php echo $title; ?>
-	 						</a>
-	 					</h2>
-	 											
-						<div class="thumbnail alignleft">					
+			</div> <!-- end #genre-filters -->
+
+		</div><!-- #filtering-nav-container -->
+
+		<div id="wall">
+		<?php
+
+		foreach( $shows as $show ) {
+			$title = $show->name;
+			$desc = $show->description;
+			
+			/*
+			nice idea, but badly implemented. saving code as a legacy.
+			// Set column width by show title and description length				
+			if( strlen($desc) > 250 && strlen($title) > 20 ) {
+				$width = 'col3';
+			} else if( strlen($desc) > 150 || strlen($title) > 20 ) {
+				$width = 'col2';
+			} else {
+				$width = 'col1';
+			}
+			*/
+			$width = ''; // turn this off if bringing back the above code
+			
+			// Set the show genre
+			$genre = get_term_meta( $show->term_id, 'genre', true );
+			if( $genre ) {
+				$genre = 'genre-' . $genre;
+			} else {
+				$genre = '';
+			}
+			
+			// Set the production type
+			$term_production_type = get_term_meta( $show->term_id, 'production_type', true ); 
+			if( $term_production_type ) {
+				$type = 'type-' . $production_types[$term_production_type]['slug'];
+			} else {
+				continue;
+			}
+			
+			$show_link = get_term_link( $show, $shows_tax->query_var );
+			?>
+
+			<div class="hentry taxonomy-page-item <?php echo $shows_tax->query_var;?>-item <?php echo "$type $width $genre"; ?>">
+			
+				<div class="entry-content">
+					
+					<h2 class="entry-title">
 						<a href="<?php echo $show_link; ?>">
-						<?php echo $taxonomy_images_plugin->get_image_html( 'thumbnail', $show->term_taxonomy_id ); ?> </a>
-						</div>
-						
-						<div class="description">
-	 						<?php echo $desc;?>
-	 					</div>
- 					 
+							<?php echo $title; ?>
+						</a>
+					</h2>
+											
+					<div class="thumbnail alignleft">					
+						<a href="<?php echo $show_link; ?>">
+							<?php echo $taxonomy_images_plugin->get_image_html( 'thumbnail', $show->term_taxonomy_id ); ?>
+						</a>
 					</div>
 					
-				</div>
-				<?php
-			} /* foreach $shows */
-							
-            // create the navigation below the content
-            thematic_navigation_below();
+					<div class="description">
+						<?php echo $desc;?>
+					</div>
+				 
+				</div> <!-- end .entry-content -->
+				
+			</div> <!-- end .hentry -->
+			<?php
+		} /* end foreach $shows */
+						
+		// create the navigation below the content
+		// thematic_navigation_below();
 
-            ?>
+		?>
 
-		</div><!-- #content .hfeed -->
-	</div><!-- #container -->
+	</div><!-- #content .hfeed -->
 
 <?php 
 
-    // action hook for placing content below #container
-    thematic_belowcontainer();
-
-    // calling the standard sidebar 
-    thematic_sidebar();
-    
-    // calling footer.php
-    get_footer();
+get_footer();
 
 ?>
