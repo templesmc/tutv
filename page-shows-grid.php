@@ -19,7 +19,7 @@ thematic_abovecontainer();
 
 ?>
 
-	<div id="content" class="shows-page-grid hfeed">
+	<div id="content" class="shows-page-grid hfeed clearfix">
 
 		<?php
 		
@@ -31,11 +31,15 @@ thematic_abovecontainer();
 		
 		?>
 
-		<h1 class="page-title"><?php echo $shows_tax->labels->name; ?></h1>
+		<div id="page-header" class="block grid_12 clearfix">
 
-		<div id="filtering-nav-container">
+			<h1 class="page-title"><?php echo $shows_tax->labels->name; ?></h1>
 
-			<div id="production-type-filters" class="filtering-nav">
+		</div> <!-- end #page-header -->
+
+		<div id="filtering-nav-container" class="block grid_12 clearfix">
+
+			<div id="production-type-filters" class="filtering-nav grid_6 alpha clearfix">
 
 				<h2>Production Type</h2>
 
@@ -58,7 +62,7 @@ thematic_abovecontainer();
 
 			</div> <!-- #production-type-filters -->
 
-			<div id="genre-filters" class="filtering-nav">
+			<div id="genre-filters" class="filtering-nav grid_6 omega clearfix">
 			
 				<h2>Genre</h2>
 
@@ -76,7 +80,8 @@ thematic_abovecontainer();
 
 		</div><!-- #filtering-nav-container -->
 
-		<div id="wall">
+		<div id="shows-wall" class="wall grid_12 clearfix">
+
 		<?php
 
 		foreach( $shows as $show ) {
@@ -115,7 +120,7 @@ thematic_abovecontainer();
 			$show_link = get_term_link( $show, $shows_tax->query_var );
 			?>
 
-			<div class="hentry taxonomy-page-item <?php echo $shows_tax->query_var;?>-item <?php echo "$type $width $genre"; ?>">
+			<div class="hentry shows-page-item taxonomy-page-item <?php echo $shows_tax->query_var;?>-item <?php echo "$type $width $genre"; ?> block grid_6 clearfix">
 			
 				<div class="entry-content">
 					
@@ -137,9 +142,15 @@ thematic_abovecontainer();
 				 
 				</div> <!-- end .entry-content -->
 				
-			</div> <!-- end .hentry -->
+			</div> <!-- end .hentry.shows-page-item -->
+
 			<?php
 		} /* end foreach $shows */
+		?>
+
+		</div> <!-- end #shows-wall -->
+
+		<?php
 						
 		// create the navigation below the content
 		// thematic_navigation_below();
