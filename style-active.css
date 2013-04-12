@@ -591,8 +591,9 @@ In mockups as #b0013a, but the official color is #9e1b34. */
 /*
 Descriptive Variables
 */
-/* Used for Submit A Video Button */
+/* Accent Colors */
 /* Grays */
+/* Pastel Colors */
 /*
 Functional Variables
 */
@@ -602,6 +603,7 @@ Functional Variables
 /* Link Colors */
 /* Buttons */
 /* Rows & Highlights */
+/* The Shows Colors */
 /* Even/Odd Child Row Colors 
 Must be included for on the element you want to alternate,
 as this uses child selectors to do stuff. */
@@ -616,7 +618,7 @@ TYPOGRAPHY
 /*
 WEB FONTS
 */
-.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
+.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
 .wf-loading #blog-title a { visibility: visible; }
 
 .wf-active { /* i don't think this does anything special - montchr */ }
@@ -644,17 +646,94 @@ Thanks to @anthonyshort for the inspiration on these.
 USAGE: @include transition(all 0.2s ease-in-out);
 */
 /*********************
+BOX SHADOW
+*********************/
+/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdue it.
 *********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/* Gradient Bar from Bootstrap */
 /*********************
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BORDER RADIUS
+*********************/
+/*********************
+OPACITY
+*********************/
+/*********************
+BUTTON MIXINS
+*********************/
+/* From SASS-Twitter-Bootstrap */
+/***********
+** MIXINS **
+************/
+/* BOOTSTRAP STYLES */
+.btn { display: inline-block; padding: 4px 12px; margin-bottom: 0; font-size: 16px; line-height: 1.5; text-align: center; vertical-align: middle; cursor: pointer; color: #666666; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); background-color: whitesmoke; background-image: -moz-linear-gradient(top, white, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, white, #e6e6e6); background-image: -o-linear-gradient(top, white, #e6e6e6); background-image: linear-gradient(to bottom, white, #e6e6e6); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE6E6E6', GradientType=0); border-color: #e6e6e6 #e6e6e6 #bfbfbf; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #e6e6e6; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); border: 1px solid #e0e0e0; *border: 0; border-bottom-color: #c7c7c7; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; *margin-left: .3em; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { color: #666666; background-color: #e6e6e6; *background-color: #d9d9d9; }
+.btn:active, .btn.active { background-color: #cccccc \9; }
+.btn:first-child { *margin-left: 0; }
+.btn:hover, .btn:focus { color: #666666; text-decoration: none; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
+.btn.active, .btn:active { background-image: none; outline: 0; -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
+.btn.disabled, .btn[disabled] { cursor: default; background-image: none; opacity: 0.65; filter: alpha(opacity=65); -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+.btn-large { padding: 11px 19px; font-size: 20px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+
+.btn-large [class^="icon-"], .btn-large [class*=" icon-"] { margin-top: 4px; }
+
+.btn-small { padding: 2px 10px; font-size: 13.6px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+.btn-small [class^="icon-"], .btn-small [class*=" icon-"] { margin-top: 0; }
+
+.btn-mini [class^="icon-"], .btn-mini [class*=" icon-"] { margin-top: -1px; }
+
+.btn-mini { padding: 0px 6px; font-size: 12px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+.btn-primary.active, .btn-warning.active, .btn-danger.active, .btn-success.active, .btn-info.active, .btn-inverse.active { color: rgba(255, 255, 255, 0.75); }
+
+.btn-primary { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #015db7; background-image: -moz-linear-gradient(top, #0176b7, #0139b7); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0176b7), to(#0139b7)); background-image: -webkit-linear-gradient(top, #0176b7, #0139b7); background-image: -o-linear-gradient(top, #0176b7, #0139b7); background-image: linear-gradient(to bottom, #0176b7, #0139b7); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0176B7', endColorstr='#FF0139B7', GradientType=0); border-color: #0139b7 #0139b7 #01216b; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #0139b7; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { color: white; background-color: #0139b7; *background-color: #01319e; }
+.btn-primary:active, .btn-primary.active { background-color: #012984 \9; }
+
+.btn-warning { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #f9a732; background-image: -moz-linear-gradient(top, #fbb450, #f89406); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406)); background-image: -webkit-linear-gradient(top, #fbb450, #f89406); background-image: -o-linear-gradient(top, #fbb450, #f89406); background-image: linear-gradient(to bottom, #fbb450, #f89406); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFBB450', endColorstr='#FFF89406', GradientType=0); border-color: #f89406 #f89406 #ad6704; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #f89406; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] { color: white; background-color: #f89406; *background-color: #df8505; }
+.btn-warning:active, .btn-warning.active { background-color: #c67605 \9; }
+
+.btn-danger { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #da4e49; background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f)); background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f); background-image: -o-linear-gradient(top, #ee5f5b, #bd362f); background-image: linear-gradient(to bottom, #ee5f5b, #bd362f); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEE5F5B', endColorstr='#FFBD362F', GradientType=0); border-color: #bd362f #bd362f #802420; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #bd362f; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] { color: white; background-color: #bd362f; *background-color: #a9302a; }
+.btn-danger:active, .btn-danger.active { background-color: #942a25 \9; }
+
+.btn-success { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #5bb65b; background-image: -moz-linear-gradient(top, #62c462, #51a351); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351)); background-image: -webkit-linear-gradient(top, #62c462, #51a351); background-image: -o-linear-gradient(top, #62c462, #51a351); background-image: linear-gradient(to bottom, #62c462, #51a351); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF62C462', endColorstr='#FF51A351', GradientType=0); border-color: #51a351 #51a351 #387038; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #51a351; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] { color: white; background-color: #51a351; *background-color: #499249; }
+.btn-success:active, .btn-success.active { background-color: #408140 \9; }
+
+.btn-info { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #49afcd; background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4)); background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4); background-image: -o-linear-gradient(top, #5bc0de, #2f96b4); background-image: linear-gradient(to bottom, #5bc0de, #2f96b4); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5BC0DE', endColorstr='#FF2F96B4', GradientType=0); border-color: #2f96b4 #2f96b4 #1f6377; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #2f96b4; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] { color: white; background-color: #2f96b4; *background-color: #2a85a0; }
+.btn-info:active, .btn-info.active { background-color: #24748c \9; }
+
+.btn-inverse { color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #515151; background-image: -moz-linear-gradient(top, #666666, #333333); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#333333)); background-image: -webkit-linear-gradient(top, #666666, #333333); background-image: -o-linear-gradient(top, #666666, #333333); background-image: linear-gradient(to bottom, #666666, #333333); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF666666', endColorstr='#FF333333', GradientType=0); border-color: #333333 #333333 #0d0d0d; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #333333; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] { color: white; background-color: #333333; *background-color: #262626; }
+.btn-inverse:active, .btn-inverse.active { background-color: #1a1a1a \9; }
+
+button.btn, input[type="submit"].btn { *padding-top: 3px; *padding-bottom: 3px; }
+button.btn::-moz-focus-inner, input[type="submit"].btn::-moz-focus-inner { padding: 0; border: 0; }
+button.btn.btn-large, input[type="submit"].btn.btn-large { *padding-top: 7px; *padding-bottom: 7px; }
+button.btn.btn-small, input[type="submit"].btn.btn-small { *padding-top: 3px; *padding-bottom: 3px; }
+button.btn.btn-mini, input[type="submit"].btn.btn-mini { *padding-top: 1px; *padding-bottom: 1px; }
+
+.btn-link, .btn-link:active, .btn-link[disabled] { background-color: transparent; background-image: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+.btn-link { border-color: transparent; cursor: pointer; color: #0176b7; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+
+.btn-link:hover, .btn-link:focus { color: #9e1b34; text-decoration: underline; background-color: transparent; }
+
+.btn-link[disabled]:hover, .btn-link[disabled]:focus { color: #666666; text-decoration: none; }
+
 /****************
 ** GRID SYSTEM **
 *****************/
@@ -951,6 +1030,165 @@ html, body { overflow-x: hidden; }
 
 body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 100%; line-height: 1.5; background: url(images/background-full.jpg) no-repeat center center scroll; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
+/*********************
+LINK STYLES
+*********************/
+a, a:visited { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; /* on hover */ /* mobile tap color */ }
+a:active, a:visited, a:hover, a:visited:active, a:visited:visited, a:visited:hover { text-decoration: none; }
+a:hover, a:focus, a:visited:hover, a:visited:focus { text-decoration: none; color: #9e1b34; }
+a:hover .thumbnail, a:focus .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail { opacity: 1; }
+a:link, a:visited:link { /*
+this highlights links on iPhones/iPads.
+so it basically works like the :hover selector
+for mobile devices.
+*/ -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+/*********************
+H1, H2, H3, H4 STYLES
+**********************/
+h1, .h1, #page-header h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
+
+h2, .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
+
+h3, .h3, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; padding: 0 0 0.5em; font-weight: 400; }
+
+h4, .h4 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; font-size: 18px; padding: 0 0 0.5em; color: #0176b7; }
+
+/*
+h2.entry-title {
+font-family: $sans-serif;
+font-size: 34px;
+padding: 0.5em;
+font-weight: 300;
+} */
+#page-header { margin-top: 1.5rem; padding: 0 1em; }
+#page-header h1.page-title { color: #00b3a0; font-weight: 300; line-height: 70px; display: inline-block; padding: 0; margin: 0; }
+
+h2.entry-title { color: #0176b7; }
+
+h3.section-header { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; text-transform: uppercase; margin: 0.5em; padding: 0; }
+
+/*********************
+HEADER STYLES
+*********************/
+#header { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+http://css-tricks.com/full-browser-width-bars/#comment-94090 
+Note that body element must have the attribute overflow-x: hidden; */ margin: 0 -2000px; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #branding */ }
+#header #branding { padding: 15px 0 0; width: auto; float: left; /* end #blog-title */ }
+#header #branding #blog-title { height: 72px; /* end a */ }
+#header #branding #blog-title a { text-indent: -9999em; background: url("images/logo.png") no-repeat; width: 254px; display: block; height: 72px; }
+#header #branding #blog-title a:hover { opacity: .7; }
+#header #branding #blog-description { /*display none or keep the other styles? */ display: none; }
+
+/* end #header */
+/*********************
+NAVIGATION STYLES
+*********************/
+#access { font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */ font-weight: 500; border-bottom: none; height: auto; padding: 20px 0 0; width: auto; float: right; color: black; /* end .menu */ }
+#access .menu { width: auto; z-index: 2200; position: relative; float: right; /* Superfish dropdown menus */ /* end .sf-menu */ }
+#access .menu .sf-menu { border-right: none; /* end .sf-menu li */ /* top level menu items */ /* end > li */ /* end .sub-menu */ }
+#access .menu .sf-menu li, #access .menu .sf-menu li li, #access .menu .sf-menu li:hover, #access .menu .sf-menu li.sfHover, #access .menu .sf-menu a:focus, #access .menu .sf-menu a:hover, #access .menu .sf-menu a:active { background: transparent; z-index: 2400; }
+#access .menu .sf-menu li { /* end .sf-menu li a */ /* "watch live" */ /* end "watch live" item */ }
+#access .menu .sf-menu li a { text-transform: lowercase; font-weight: 700; font-size: 20px; border: none; border-right: none; color: black; padding: 0 10px 15px; -webkit-transition-duration: .2s; -moz-transition-duration: .2s; -o-transition-duration: .2s; transition-duration: .2s; }
+#access .menu .sf-menu li a:hover { color: #9e1b34; }
+#access .menu .sf-menu li a:first-child { border-left: none; }
+#access .menu .sf-menu li#menu-item-30554 a { color: #9e1b34; }
+#access .menu .sf-menu li#menu-item-30554 a:hover { color: black; }
+#access .menu .sf-menu .sub-menu { background: #00b3a0; top: 36px; display: none; visibility: hidden; width: 15em !important; overflow: visible !important; /* end li */ /* Forms the caret above the dropdown
+http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-for-twitter-bootstrap
+<montchr> */ }
+#access .menu .sf-menu .sub-menu li a { font-size: 12px; font-weight: normal; text-transform: uppercase; padding: 7px 10px; background: #00b3a0; }
+#access .menu .sf-menu .sub-menu li a:hover { color: #fff; background: #000; }
+#access .menu .sf-menu .sub-menu:after { position: absolute; top: -10px; left: 30px; display: inline-block; border-right: 9px solid transparent; border-bottom: 10px solid #00b3a0; border-left: 9px solid transparent; content: ''; z-index: 99999; }
+
+/* end #access */
+.categories-menu .sf-menu a { border-left: none; }
+
+/* not sure what the .categories-menu class refers to */
+/*********************
+POST & CONTENT STYLES
+**********************/
+#main { padding-top: 0; padding-bottom: 0; /* end #container */ }
+#main #container { /* end #content */ }
+#main #container #content { margin-bottom: 2.2em; }
+#main #container #content .entry-content { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+#main #container #content .entry-content:hover .thumbnail { opacity: 1; }
+#main #container #content .entry-meta { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #888; font-size: 14px; margin: 2px 0 4px; }
+#main #container #content .entry-meta .meta-prep-author, #main #container #content .entry-meta .author, #main #container #content .entry-meta .meta-sep-entry-date, #main #container #content .entry-meta .meta-prep-entry-date, #main #container #content .entry-meta .entry-date { display: none; }
+#main #container #content .entry-meta abbr { font-size: 12px; }
+#main #container #content .entry-utility { display: none; }
+#main #container #content h2.entry-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; padding-bottom: 4px; }
+#main #container #content h1 span, #main #container #content .page-title span { font-style: normal; }
+#main #container #content .thumbnail { background: #d7d7d7 url(images/thumbnail-placeholder.png); height: 100px; width: 140px; opacity: .85; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
+#main #container #content .thumbnail:hover { opacity: 1; }
+#main #container #content a:hover .thumbnail { opacity: 1; }
+#main #container #content .item-even { background: #eaeaea; }
+#main #container #content .item-odd { background: white; }
+
+/* end #main */
+.block { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
+.block .block-header { background-color: #0176b7; color: white; }
+.block .block-header a { color: white; text-decoration: none; }
+.block .block-header a:hover { color: white; }
+.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
+.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
+.block .block-header p a { text-decoration: none; color: white; }
+.block .block-header p a:hover { text-decoration: none; color: white; }
+.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
+
+/* end .block */
+.episodes .published, .clip .published, .episodes .meta-sep-edit, .clip .meta-sep-edit { display: none; }
+
+/*****************************
+SEARCH FORMS & SOCIAL ICONS
+******************************/
+/************************ SEARCH FORMS ************************/
+#searchbox, #searchbutton { font: 14px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+#searchbox { float: right; }
+
+#searchbutton { margin-right: 10px; }
+
+/* HEADER SEARCH */
+div#header-search { float: right; margin-top: 15px; }
+
+/* end #header-search */
+/* FOOTER SEARCH */
+div#footer-search { float: right; }
+
+/* end #footer-search */
+/************************ SOCIAL MEDIA ************************/
+ul.social-media-icons { list-style: none; margin: 0; }
+ul.social-media-icons li.social-media-icon, ul.social-media-icons li.social-media-icon a, ul.social-media-icons li.social-media-icon a img { display: inline-block; }
+
+/* end .social-media-icons */
+/*****************************
+SIDEBARS & ASIDES & WIDGETS
+******************************/
+.main-aside { width: 230px; border: 1px solid #cccccc; padding: 18px 0 0; }
+
+#primary { border: none; margin-bottom: 0; }
+
+.widgettitle { display: none; }
+
+/*******************
+FOOTER STYLES 
+********************/
+#footer { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
+http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
+#footer #footer-inner { padding: 2em 0; }
+#footer #footer-social-media { float: left; }
+#footer #siteinfo { font: 11px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 1em 0; clear: both; }
+#footer .aside ul { list-style-type: none; }
+#footer #first a:active, #footer #first a:link, #footer #first a:visited, #footer #first a:hover { color: #5b6d7b; text-decoration: none; }
+#footer #first ul li { margin: -10px 0px 10px 0px; }
+#footer #first ul li ul { width: 100%; }
+#footer #first ul li ul li { float: left; display: inline; width: 25%; }
+#footer #third ul li { float: right; display: inline; }
+#footer #third ul li ul { width: 100%; }
+#footer #third ul li ul li { float: left; display: inline; width: 33.3%; }
+
+/* end #footer */
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1067,21 +1305,50 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 */
 .page-template-page-shows-grid-php { /* end .shows-page-grid */ }
 .page-template-page-shows-grid-php #content.shows-page-grid { /* end #filtering-nav-container */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container { /* genre box colors */ /* end .filtering-nav-container-list */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-documentary { background: #F9EFE2; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-interviews { background: #E9E4D3; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-news { background: #E3E4E3; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-sports { background: #F0955F; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-educational { background: #FDF3DE; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-entertainment { background: #DCE9EA; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-music { background: #99CC99; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-fitness { background: #CC9999; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .genre-specials { background: #018DBB; color: #fff; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold; margin-left: 6px; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul { list-style: none; margin: 0 0 10px 0; /* end .filtering-nav-container-list-item */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li { list-style: none; display: inline; /* end .filtering-nav-container-list-item a */ }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a { color: #333; padding: 3px; margin: 0 12px 0 3px; }
-.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a:hover { -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container { /* end #genre-filters */ /* end ul */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container #production-type-filters { margin-right: 9px; /* to compensate for the 1px border */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container #genre-filters { margin-left: 9px; /* to compensate for the 1px border */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .filtering-nav { padding: 1em; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul { list-style: none; margin: 0; /* end li */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li { list-style: none; display: inline-block; margin: 0.25em; /* end a */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a { text-decoration: none; /* override button styles for all genre buttons */ /* genre box colors */ }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-production-type { -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all { color: white; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre { color: black; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-production-type { color: black; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #9fe6e2; background-image: -moz-linear-gradient(top, #7fded9, #d0f3f1); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7fded9), to(#d0f3f1)); background-image: -webkit-linear-gradient(top, #7fded9, #d0f3f1); background-image: -o-linear-gradient(top, #7fded9, #d0f3f1); background-image: linear-gradient(to bottom, #7fded9, #d0f3f1); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7FDED9', endColorstr='#FFD0F3F1', GradientType=0); border-color: #d0f3f1 #d0f3f1 #93e3df; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #d0f3f1; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking[disabled] { color: black; background-color: #d0f3f1; *background-color: #bceeeb; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-cooking.active { background-color: #a8e8e5 \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #d0edfc; background-image: -moz-linear-gradient(top, #b1e2fa, white); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b1e2fa), to(white)); background-image: -webkit-linear-gradient(top, #b1e2fa, white); background-image: -o-linear-gradient(top, #b1e2fa, white); background-image: linear-gradient(to bottom, #b1e2fa, white); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFB1E2FA', endColorstr='#FFFFFFFF', GradientType=0); border-color: white white #b7e4fa; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: white; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary[disabled] { color: black; background-color: white; *background-color: #e7f6fd; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-documentary.active { background-color: #cfedfc \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #defffb; background-image: -moz-linear-gradient(top, #c8fff9, white); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#c8fff9), to(white)); background-image: -webkit-linear-gradient(top, #c8fff9, white); background-image: -o-linear-gradient(top, #c8fff9, white); background-image: linear-gradient(to bottom, #c8fff9, white); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC8FFF9', endColorstr='#FFFFFFFF', GradientType=0); border-color: white white #b3fff7; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: white; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational[disabled] { color: black; background-color: white; *background-color: #e6fffc; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-educational.active { background-color: #ccfff9 \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #ffdee8; background-image: -moz-linear-gradient(top, #ffc8d9, white); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffc8d9), to(white)); background-image: -webkit-linear-gradient(top, #ffc8d9, white); background-image: -o-linear-gradient(top, #ffc8d9, white); background-image: linear-gradient(to bottom, #ffc8d9, white); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFC8D9', endColorstr='#FFFFFFFF', GradientType=0); border-color: white white #ffb3ca; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: white; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment[disabled] { color: black; background-color: white; *background-color: #ffe6ed; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-entertainment.active { background-color: #ffccdc \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #e7e7e7; background-image: -moz-linear-gradient(top, #d8d8d8, white); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#d8d8d8), to(white)); background-image: -webkit-linear-gradient(top, #d8d8d8, white); background-image: -o-linear-gradient(top, #d8d8d8, white); background-image: linear-gradient(to bottom, #d8d8d8, white); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFD8D8D8', endColorstr='#FFFFFFFF', GradientType=0); border-color: white white #d9d9d9; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: white; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness[disabled] { color: black; background-color: white; *background-color: #f2f2f2; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-fitness.active { background-color: #e6e6e6 \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening { color: black; text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25); background-color: #02c46e; background-image: -moz-linear-gradient(top, #009e58, #05ff90); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#009e58), to(#05ff90)); background-image: -webkit-linear-gradient(top, #009e58, #05ff90); background-image: -o-linear-gradient(top, #009e58, #05ff90); background-image: linear-gradient(to bottom, #009e58, #05ff90); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF009E58', endColorstr='#FF05FF90', GradientType=0); border-color: #05ff90 #05ff90 #00b866; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #05ff90; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening[disabled] { color: black; background-color: #05ff90; *background-color: #00eb83; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-gardening.active { background-color: #00d174 \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #22f4e4; background-image: -moz-linear-gradient(top, #00eedc, #55fff2); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00eedc), to(#55fff2)); background-image: -webkit-linear-gradient(top, #00eedc, #55fff2); background-image: -o-linear-gradient(top, #00eedc, #55fff2); background-image: linear-gradient(to bottom, #00eedc, #55fff2); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00EEDC', endColorstr='#FF55FFF2', GradientType=0); border-color: #55fff2 #55fff2 #08ffec; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #55fff2; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews[disabled] { color: black; background-color: #55fff2; *background-color: #3bfff0; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-interviews.active { background-color: #22ffee \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #abd9b5; background-image: -moz-linear-gradient(top, #8fcd9d, #d6ecdb); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#8fcd9d), to(#d6ecdb)); background-image: -webkit-linear-gradient(top, #8fcd9d, #d6ecdb); background-image: -o-linear-gradient(top, #8fcd9d, #d6ecdb); background-image: linear-gradient(to bottom, #8fcd9d, #d6ecdb); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF8FCD9D', endColorstr='#FFD6ECDB', GradientType=0); border-color: #d6ecdb #d6ecdb #a1d5ac; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #d6ecdb; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music[disabled] { color: black; background-color: #d6ecdb; *background-color: #c4e5cb; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-music.active { background-color: #b2ddbc \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #9fe6e2; background-image: -moz-linear-gradient(top, #7fded9, #d0f3f1); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7fded9), to(#d0f3f1)); background-image: -webkit-linear-gradient(top, #7fded9, #d0f3f1); background-image: -o-linear-gradient(top, #7fded9, #d0f3f1); background-image: linear-gradient(to bottom, #7fded9, #d0f3f1); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF7FDED9', endColorstr='#FFD0F3F1', GradientType=0); border-color: #d0f3f1 #d0f3f1 #93e3df; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #d0f3f1; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news[disabled] { color: black; background-color: #d0f3f1; *background-color: #bceeeb; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-news.active { background-color: #a8e8e5 \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #c85175; background-image: -moz-linear-gradient(top, #bc355e, #da7d99); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bc355e), to(#da7d99)); background-image: -webkit-linear-gradient(top, #bc355e, #da7d99); background-image: -o-linear-gradient(top, #bc355e, #da7d99); background-image: linear-gradient(to bottom, #bc355e, #da7d99); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBC355E', endColorstr='#FFDA7D99', GradientType=0); border-color: #da7d99 #da7d99 #c9416a; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #da7d99; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials[disabled] { color: black; background-color: #da7d99; *background-color: #d5698a; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-specials.active { background-color: #cf557a \9; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #98dbfd; background-image: -moz-linear-gradient(top, #70cefd, #d5f0fe); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70cefd), to(#d5f0fe)); background-image: -webkit-linear-gradient(top, #70cefd, #d5f0fe); background-image: -o-linear-gradient(top, #70cefd, #d5f0fe); background-image: linear-gradient(to bottom, #70cefd, #d5f0fe); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF70CEFD', endColorstr='#FFD5F0FE', GradientType=0); border-color: #d5f0fe #d5f0fe #89d7fd; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #d5f0fe; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports[disabled] { color: black; background-color: #d5f0fe; *background-color: #bbe8fe; }
+.page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.active { background-color: #a2dffe \9; }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry { width: 160px; margin: 20px 11px; padding: 8px; float: left; clear: none; /* end .shows-page-show */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.col2 { width: 347px; /* 337px original 06-08-2011 Pwinnick */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.col3 { width: 544px; /* 534px original 06-08-2011 Pwinnick */ }
@@ -1275,165 +1542,6 @@ table.staff tr td#status { font-style: italic; color: #aaa; width: 100px; }
 .page #subpage-menu .children .current_page_item > a { border-bottom: 1px dotted #888888; }
 
 /* end .page */
-/*********************
-LINK STYLES
-*********************/
-a, a:visited { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; /* on hover */ /* mobile tap color */ }
-a:active, a:visited, a:hover, a:visited:active, a:visited:visited, a:visited:hover { text-decoration: none; }
-a:hover, a:focus, a:visited:hover, a:visited:focus { text-decoration: none; color: #9e1b34; }
-a:hover .thumbnail, a:focus .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail { opacity: 1; }
-a:link, a:visited:link { /*
-this highlights links on iPhones/iPads.
-so it basically works like the :hover selector
-for mobile devices.
-*/ -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
-
-/*********************
-H1, H2, H3, H4 STYLES
-**********************/
-h1, .h1, #page-header h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
-
-h2, .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
-
-h3, .h3 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; padding: 0 0 0.5em; font-weight: 400; }
-
-h4, .h4 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; font-size: 18px; padding: 0 0 0.5em; color: #0176b7; }
-
-/*
-h2.entry-title {
-font-family: $sans-serif;
-font-size: 34px;
-padding: 0.5em;
-font-weight: 300;
-} */
-#page-header { margin-top: 1.5rem; padding: 0 1em; }
-#page-header h1.page-title { color: #00b3a0; font-weight: 300; line-height: 70px; display: inline-block; padding: 0; margin: 0; }
-
-h2.entry-title { color: #0176b7; }
-
-h3.section-header { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; text-transform: uppercase; margin: 0.5em; padding: 0; }
-
-/*********************
-HEADER STYLES
-*********************/
-#header { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-http://css-tricks.com/full-browser-width-bars/#comment-94090 
-Note that body element must have the attribute overflow-x: hidden; */ margin: 0 -2000px; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #branding */ }
-#header #branding { padding: 15px 0 0; width: auto; float: left; /* end #blog-title */ }
-#header #branding #blog-title { height: 72px; /* end a */ }
-#header #branding #blog-title a { text-indent: -9999em; background: url("images/logo.png") no-repeat; width: 254px; display: block; height: 72px; }
-#header #branding #blog-title a:hover { opacity: .7; }
-#header #branding #blog-description { /*display none or keep the other styles? */ display: none; }
-
-/* end #header */
-/*********************
-NAVIGATION STYLES
-*********************/
-#access { font-size: 20px; /*16px alt, 500 14px orginial 06/08/2011 Pwinnick */ font-weight: 500; border-bottom: none; height: auto; padding: 20px 0 0; width: auto; float: right; color: black; /* end .menu */ }
-#access .menu { width: auto; z-index: 2200; position: relative; float: right; /* Superfish dropdown menus */ /* end .sf-menu */ }
-#access .menu .sf-menu { border-right: none; /* end .sf-menu li */ /* top level menu items */ /* end > li */ /* end .sub-menu */ }
-#access .menu .sf-menu li, #access .menu .sf-menu li li, #access .menu .sf-menu li:hover, #access .menu .sf-menu li.sfHover, #access .menu .sf-menu a:focus, #access .menu .sf-menu a:hover, #access .menu .sf-menu a:active { background: transparent; z-index: 2400; }
-#access .menu .sf-menu li { /* end .sf-menu li a */ /* "watch live" */ /* end "watch live" item */ }
-#access .menu .sf-menu li a { text-transform: lowercase; font-weight: 700; font-size: 20px; border: none; border-right: none; color: black; padding: 0 10px 15px; -webkit-transition-duration: .2s; -moz-transition-duration: .2s; -o-transition-duration: .2s; transition-duration: .2s; }
-#access .menu .sf-menu li a:hover { color: #9e1b34; }
-#access .menu .sf-menu li a:first-child { border-left: none; }
-#access .menu .sf-menu li#menu-item-30554 a { color: #9e1b34; }
-#access .menu .sf-menu li#menu-item-30554 a:hover { color: black; }
-#access .menu .sf-menu .sub-menu { background: #00b3a0; top: 36px; display: none; visibility: hidden; width: 15em !important; overflow: visible !important; /* end li */ /* Forms the caret above the dropdown
-http://stackoverflow.com/questions/11633463/adding-the-arrow-to-dropdown-pills-for-twitter-bootstrap
-<montchr> */ }
-#access .menu .sf-menu .sub-menu li a { font-size: 12px; font-weight: normal; text-transform: uppercase; padding: 7px 10px; background: #00b3a0; }
-#access .menu .sf-menu .sub-menu li a:hover { color: #fff; background: #000; }
-#access .menu .sf-menu .sub-menu:after { position: absolute; top: -10px; left: 30px; display: inline-block; border-right: 9px solid transparent; border-bottom: 10px solid #00b3a0; border-left: 9px solid transparent; content: ''; z-index: 99999; }
-
-/* end #access */
-.categories-menu .sf-menu a { border-left: none; }
-
-/* not sure what the .categories-menu class refers to */
-/*********************
-POST & CONTENT STYLES
-**********************/
-#main { padding-top: 0; padding-bottom: 0; /* end #container */ }
-#main #container { /* end #content */ }
-#main #container #content { margin-bottom: 2.2em; }
-#main #container #content .entry-content { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-#main #container #content .entry-content:hover .thumbnail { opacity: 1; }
-#main #container #content .entry-meta { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #888; font-size: 14px; margin: 2px 0 4px; }
-#main #container #content .entry-meta .meta-prep-author, #main #container #content .entry-meta .author, #main #container #content .entry-meta .meta-sep-entry-date, #main #container #content .entry-meta .meta-prep-entry-date, #main #container #content .entry-meta .entry-date { display: none; }
-#main #container #content .entry-meta abbr { font-size: 12px; }
-#main #container #content .entry-utility { display: none; }
-#main #container #content h2.entry-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 600; font-size: 22px; padding-bottom: 4px; }
-#main #container #content h1 span, #main #container #content .page-title span { font-style: normal; }
-#main #container #content .thumbnail { background: #d7d7d7 url(images/thumbnail-placeholder.png); height: 100px; width: 140px; opacity: .85; -webkit-transition: opacity 0.3s ease; -moz-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
-#main #container #content .thumbnail:hover { opacity: 1; }
-#main #container #content a:hover .thumbnail { opacity: 1; }
-#main #container #content .item-even { background: #eaeaea; }
-#main #container #content .item-odd { background: white; }
-
-/* end #main */
-.block { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
-.block .block-header { background-color: #0176b7; color: white; }
-.block .block-header a { color: white; text-decoration: none; }
-.block .block-header a:hover { color: white; }
-.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
-.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
-.block .block-header p a { text-decoration: none; color: white; }
-.block .block-header p a:hover { text-decoration: none; color: white; }
-.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
-
-/* end .block */
-.episodes .published, .clip .published, .episodes .meta-sep-edit, .clip .meta-sep-edit { display: none; }
-
-/*****************************
-SEARCH FORMS & SOCIAL ICONS
-******************************/
-/************************ SEARCH FORMS ************************/
-#searchbox, #searchbutton { font: 14px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-#searchbox { float: right; }
-
-#searchbutton { margin-right: 10px; }
-
-/* HEADER SEARCH */
-div#header-search { float: right; margin-top: 15px; }
-
-/* end #header-search */
-/* FOOTER SEARCH */
-div#footer-search { float: right; }
-
-/* end #footer-search */
-/************************ SOCIAL MEDIA ************************/
-ul.social-media-icons { list-style: none; margin: 0; }
-ul.social-media-icons li.social-media-icon, ul.social-media-icons li.social-media-icon a, ul.social-media-icons li.social-media-icon a img { display: inline-block; }
-
-/* end .social-media-icons */
-/*****************************
-SIDEBARS & ASIDES & WIDGETS
-******************************/
-.main-aside { width: 230px; border: 1px solid #cccccc; padding: 18px 0 0; }
-
-#primary { border: none; margin-bottom: 0; }
-
-.widgettitle { display: none; }
-
-/*******************
-FOOTER STYLES 
-********************/
-#footer { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
-#footer #footer-inner { padding: 2em 0; }
-#footer #footer-social-media { float: left; }
-#footer #siteinfo { font: 11px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 1em 0; clear: both; }
-#footer .aside ul { list-style-type: none; }
-#footer #first a:active, #footer #first a:link, #footer #first a:visited, #footer #first a:hover { color: #5b6d7b; text-decoration: none; }
-#footer #first ul li { margin: -10px 0px 10px 0px; }
-#footer #first ul li ul { width: 100%; }
-#footer #first ul li ul li { float: left; display: inline; width: 25%; }
-#footer #third ul li { float: right; display: inline; }
-#footer #third ul li ul { width: 100%; }
-#footer #third ul li ul li { float: left; display: inline; width: 33.3%; }
-
-/* end #footer */
 /************* OVERRIDES * ************/
 /* STICKY FOOTER HACK */
 /* http://ryanfait.com/sticky-footer/layout.css */

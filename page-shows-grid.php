@@ -54,10 +54,10 @@ thematic_abovecontainer();
 						
 						$slug = 'type-' . $type['slug'];
 						
-						echo "<li><a href='#{$slug}' class='{$slug}'>{$type['name']}</a></li>";
+						echo "<li><a href='#{$slug}' class='{$slug} btn-production-type btn-small btn'>{$type['name']}</a></li>";
 					}
 					?>
-					<li><a href="#all" class="all">View All</a></li>
+					<li><a href="#all" class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
 				</ul>
 
 			</div> <!-- #production-type-filters -->
@@ -70,10 +70,10 @@ thematic_abovecontainer();
 					<?php
 					$genres = get_terms('genre');
 					foreach( $genres as $genre ) {
-						echo "<li><a href='#genre-{$genre->slug}' class='genre-{$genre->slug}'>{$genre->name}</a></li>";
+						echo "<li><a href='#genre-{$genre->slug}' class='btn-genre-{$genre->slug} btn-genre btn-small btn'>{$genre->name}</a></li>";
 					}
 					?>
-					<li><a href="#all" class="all">View All</a></li>
+					<li><a href="#all" class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
 				</ul>
 
 			</div> <!-- end #genre-filters -->

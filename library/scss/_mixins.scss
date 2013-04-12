@@ -122,18 +122,40 @@ $row-odd:				$white;
 $highlight:				lighten($light-blue, 35%);
 
 /* The Shows Colors */
-$genreCooking:          $moccasin;
-$genreDocumentary:      $paleTurquoise;
-$genreEducational:      $lightCyan;
-$genreEntertainment:    $pink;
-$genreFitness:          $gainsboro;
-$genreGardening:        $seaGreen;
-$genreInterviews:       $darkTurquoise;
-$genreMusic:            $darkSeaGreen;
-$genreNews:             $skyBlue;
-$genreSpecials:         $indianRed;
-$genreSports:           $lightSkyBlue;
+$genreLightenAmount: 20%;
 
+$genreCooking:                         $moccasin;
+$genreCookingHighlight:                lighten($moccasin, $genreLightenAmount);
+
+$genreDocumentary:                     $paleTurquoise;
+$genreDocumentaryHighlight:            lighten($paleTurquoise, $genreLightenAmount);
+
+$genreEducational:                     $lightCyan;
+$genreEducationalHighlight:            lighten($lightCyan, $genreLightenAmount);
+
+$genreEntertainment:                   $pink;
+$genreEntertainmentHighlight:          lighten($pink, $genreLightenAmount);
+
+$genreFitness:                         $gainsboro;
+$genreFitnessHighlight:                lighten($gainsboro, $genreLightenAmount);
+
+$genreGardening:                       $seaGreen;
+$genreGardeningHighlight:              lighten($seaGreen, $genreLightenAmount);
+
+$genreInterviews:                      $darkTurquoise;
+$genreInterviewsHighlight:             lighten($darkTurquoise, $genreLightenAmount);
+
+$genreMusic:                           $darkSeaGreen;
+$genreMusicHighlight:                  lighten($darkSeaGreen, $genreLightenAmount);
+
+$genreNews:                            $skyBlue;
+$genreNewsHighlight:                   lighten($skyBlue, $genreLightenAmount);
+
+$genreSpecials:                        $indianRed;
+$genreSpecialsHighlight:               lighten($indianRed, $genreLightenAmount);
+
+$genreSports:                          $lightSkyBlue;
+$genreSportsHighlight:                 lighten($lightSkyBlue, $genreLightenAmount);
 /* Even/Odd Child Row Colors 
 Must be included for on the element you want to alternate,
 as this uses child selectors to do stuff. */

@@ -10,56 +10,81 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 		#filtering-nav-container {
 
-			/* genre box colors */
-			.genre-documentary {background: #F9EFE2;}
-			.genre-interviews {background: #E9E4D3;}
-			.genre-news {background: #E3E4E3;}
-			.genre-sports {background: #F0955F;}
-			.genre-educational {background: #FDF3DE;}
-			.genre-entertainment {background: #DCE9EA;}
-			.genre-music {background: #99CC99;}
-			.genre-fitness {background: #CC9999;}
-			.genre-specials {
-				background: #018DBB;
-				color: #fff;
+			#production-type-filters {
+			margin-right: 9px; /* to compensate for the 1px border */
 			}
 
-			// let's give this a class name like ".filtering-nav-container-head"
+			#genre-filters {
+			margin-left: 9px; /* to compensate for the 1px border */
+
+			} /* end #genre-filters */
+
+			.filtering-nav {
+			padding: 1em;
+			}
+
 			h2 {
-			font-family: $sans-serif;
-			font-weight: bold;
-			margin-left: 6px;
+			@extend .h3;
 			}
 
-			// give this a class ".filtering-nav-container-list"
 			ul {
 			list-style: none;
-			margin: 0 0 10px 0;
+			margin: 0;
 
-				// give this a class ".filtering-nav-container-list-item"
 				li {
 				list-style: none;
-				display: inline;
-
+				display: inline-block;
+				margin: 0.25em;
 
 					a {
-					color: #333;
-					padding: 3px;
-					margin: 0 12px 0 3px;
+					text-decoration: none;
+					//color: $info-color;
+
+						/* override button styles for all genre buttons */
+						&.btn-genre,
+						&.btn.all,
+						&.btn-production-type {
+						@include border-radius(2px);
+						}
+
+						&.btn.all {
+						color: $white;
+						}
+
+						&.btn-genre {
+						color: $info-color;
+						}
+
+						&.btn-production-type {
+						color: $info-color;
+						}
+
+						/* genre box colors */
+						&.btn-genre-cooking        { @include buttonBackground( $genreCooking, $genreCookingHighlight, $black ); }
+						&.btn-genre-documentary    { @include buttonBackground( $genreDocumentary, $genreDocumentaryHighlight, $black ); }
+						&.btn-genre-educational    { @include buttonBackground( $genreEducational, $genreEducationalHighlight, $black ); }
+						&.btn-genre-entertainment  { @include buttonBackground( $genreEntertainment, $genreEntertainmentHighlight, $black ); }
+						&.btn-genre-fitness        { @include buttonBackground( $genreFitness, $genreFitnessHighlight, $black ); }
+						&.btn-genre-gardening      { @include buttonBackground( $genreGardening, $genreGardeningHighlight, $black, 0 -1px 0 rgba(255,255,255,.25) ); }
+						&.btn-genre-interviews     { @include buttonBackground( $genreInterviews, $genreInterviewsHighlight, $black ); }
+						&.btn-genre-music          { @include buttonBackground( $genreMusic, $genreMusicHighlight, $black ); }
+						&.btn-genre-news           { @include buttonBackground( $genreNews, $genreNewsHighlight, $black ); }
+						&.btn-genre-specials       { @include buttonBackground( $genreSpecials, $genreSpecialsHighlight, $black ); }
+						&.btn-genre-sports         { @include buttonBackground( $genreSports, $genreSportsHighlight, $black ); }
 
 						&:hover {
-						-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						   -moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 7px;
-						}
+							//-webkit-box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, .25);
+							//box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, .25);
+							}
+
 
 						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.
 						&.active {
 						// border: 1px dotted #ccc;
 						}
-					} /* end .filtering-nav-container-list-item a */
-				} /* end .filtering-nav-container-list-item */
-			} /* end .filtering-nav-container-list */
+					} /* end a */
+				} /* end li */
+			} /* end ul */
 		} /* end #filtering-nav-container */
 
 		// more unique name? .shows-page-show-container
