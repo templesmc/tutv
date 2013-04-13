@@ -63,16 +63,16 @@ $white:				#ffffff;
 $black:				#000000;
 
 /* Accent Colors */
-$blue:                  #0176b7 !default;
-$dark-blue:             #0064cd !default;
-$light-blue:            #42abe8 !default;
-$teal:                  #00b3a0 !default;
-$green:                 #46a546 !default; // from bootstrap
-$red:                   #9d261d !default; // from bootstrap
-$yellow:                #ffc40d !default; // from bootstrap
-$orange:                #f89406 !default; // from bootstrap
-$pink:                  #c3325f !default; // from bootstrap
-$purple:                #7a43b6 !default; // from bootstrap
+$blue:                  #0176b7;
+$dark-blue:             #0064cd;
+$light-blue:            #42abe8;
+$teal:                  #00b3a0;
+$green:                 #46a546; // from bootstrap
+$red:                   #9d261d; // from bootstrap
+$yellow:                #ffc40d; // from bootstrap
+$orange:                #f89406; // from bootstrap
+$pink:                  #c3325f; // from bootstrap
+$purple:                #7a43b6; // from bootstrap
 
 /* Grays */
 $gray20:                #333333;
@@ -81,7 +81,7 @@ $gray88:                #e0e0e0;
 $gray93:                #eaeaea;
 
 /* Pastel Colors */
-$moccasin:              rgb(127, 222, 217);
+$moccasin:              rgb(255, 247, 184);
 $paleTurquoise:         rgb(177, 226, 250);
 $lightCyan:             rgb(200, 255, 249);
 $pink:                  rgb(255, 200, 217);
@@ -122,7 +122,7 @@ $row-odd:				$white;
 $highlight:				lighten($light-blue, 35%);
 
 /* The Shows Colors */
-$genreLightenAmount: 20%;
+$genreLightenAmount: 10%;
 
 $genreCooking:                         $moccasin;
 $genreCookingHighlight:                lighten($moccasin, $genreLightenAmount);
@@ -211,12 +211,6 @@ WEB FONTS
 // Web font is active
 .wf-active {
 
-	/* i don't think this does anything special - montchr */
-	.entry-content {
-		h4, .h4 {
-			font-size:14px;
-		}
-	}
 }
 
 /*

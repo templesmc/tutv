@@ -25,16 +25,10 @@ a, a:visited {
 
 	color: $link-color;
 
-	&:active,
-	&:visited,
-	&:hover {
-	//color: $link-color;				/* #5b6d7b Defines color of all links originally #25BADB */
-	text-decoration: none;
-	}
-
 	/* on hover */
-	&:hover, &:focus {
-	//color: $link-hover;
+	&:active,
+	&:hover,
+	&:focus {
 	text-decoration: none;
 	color: $link-hover;
 
@@ -88,14 +82,23 @@ h4, .h4 {
 font-family: $sans-serif;
 font-weight: 700;
 font-style: italic;
-font-size:18px;
+font-size:20px;
 padding: 0 0 0.5em;
 color: $header-color;
 }
 
-h5, .h5 {}
+/* basically just the body text size in 700 weight with bottom padding */
+h5, .h5 {
+font-family: $sans-serif;
+font-weight: 700;
+font-size:16px;
+padding: 0 0 0.5em;
+}
 
-h6, .h6 {}
+h6, .h6 {
+@extend .h5;
+font-size: 12px;
+}
 
 .entry-content {
 
