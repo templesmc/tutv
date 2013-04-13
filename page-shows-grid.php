@@ -122,13 +122,17 @@ thematic_abovecontainer();
 
 			<div class="hentry shows-page-item taxonomy-page-item <?php echo $shows_tax->query_var;?>-item <?php echo "$type $width $genre"; ?> block grid_6 clearfix">
 			
-				<div class="entry-content">
-					
+				<div class="entry-header">
+
 					<h2 class="entry-title">
 						<a href="<?php echo $show_link; ?>">
 							<?php echo $title; ?>
 						</a>
 					</h2>
+
+				</div> <!-- end .entry-header -->
+
+				<div class="entry-content">
 											
 					<div class="thumbnail alignleft">					
 						<a href="<?php echo $show_link; ?>">
@@ -137,7 +141,7 @@ thematic_abovecontainer();
 					</div>
 					
 					<div class="description">
-						<?php echo $desc;?>
+						<p><?php echo $desc;?></p>
 					</div>
 				 
 				</div> <!-- end .entry-content -->

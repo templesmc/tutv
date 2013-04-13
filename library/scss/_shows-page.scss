@@ -24,7 +24,8 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 			}
 
 			h2 {
-			@extend .h3;
+			@extend .h5;
+			color: $info-color;
 			}
 
 			ul {
@@ -87,49 +88,45 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 			} /* end ul */
 		} /* end #filtering-nav-container */
 
-		// more unique name? .shows-page-show-container
-		.hentry {
-		width: 160px;
-		margin: 20px 11px;
-		padding: 8px; 
-		float: left;
-		clear: none; // .taxonomy-page-item (which selects the same element) has clear: both; for what reason?
+		.hentry.shows-page-item {
+		padding: 1em; 
+		margin-left: 5px;
+		margin-right: 5px;
 
-			// .col2 and .col3 widths are probably just making things look ugly, but .col2 is closest to 50% column.
-			&.col2 {
-			width: 347px; /* 337px original 06-08-2011 Pwinnick */
-			}
-
-			&.col3 {
-			width: 544px; /* 534px original 06-08-2011 Pwinnick */
-			}
-
-			// more unique name plz... .shows-page-show
-			.entry-content {
-			padding: 0 0 10px;
-
-				// consider a more unique name like .shows-page-show-title
-				.entry-title {
-				// this typography sucks... 11px margin? 26px line-height? use a formal rhythm.
-				font-size: 18px; 
-				line-height: 26px;
-				margin-bottom: 11px;
+			.entry-header {
+				h2.entry-title {
 
 					a {
-					color: #333;
+					color: $link-color;
 
-						&:hover {
-						color: #999;
+						&:visited {
+						color: $link-color;
+						}
+
+						&:hover,
+						&:active {
+						color: $link-hover;
 						}
 					}
 				} /* end .entry-title */
+			} /* end .entry-header */
 
-				// more unique name like .shows-page-show-description
+			.entry-content {
+
+				.thumbnail {
+				width: 140px;
+				margin-right: 1em;
+				}
+
 				.description {
-				display: inline;
-				font-size: 14px;
+				width: 270px;
+				float: right;
+
+					p {
+
+					}
 				}
 			} /* end .shows-page-show */
-		}
+		} /* end .hentry.shows-page-item */
 	} /* end .shows-page-grid */
 } /* end .page.slug-shows */
