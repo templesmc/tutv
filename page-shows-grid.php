@@ -14,9 +14,6 @@ function childtheme_shows_scripts() {
 // calling the header.php
 get_header();
 
-// action hook for placing content above #container
-thematic_abovecontainer();
-
 ?>
 
 	<div id="content" class="shows-page-grid hfeed clearfix">
