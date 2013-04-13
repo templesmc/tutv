@@ -5,10 +5,10 @@ Template Name: Grid Show Listings
 ?>
 <?php
 
-add_action('wp_print_scripts', 'childtheme_shows_scripts');
+add_action('wp_print_scripts', 'tutv_shows_scripts');
  
-function childtheme_shows_scripts() {
-	wp_enqueue_script('masonry', get_bloginfo('stylesheet_directory') . '/js/jquery.masonry.min.js', array('jquery'));
+function tutv_shows_scripts() {
+	wp_enqueue_script('isotope', get_bloginfo('stylesheet_directory') . '/js/jquery.isotope.min.js', array('jquery'));
 }
 
 // calling the header.php
@@ -51,10 +51,10 @@ get_header();
 						
 						$slug = 'type-' . $type['slug'];
 						
-						echo "<li><a href='#{$slug}' class='{$slug} btn-production-type btn-small btn'>{$type['name']}</a></li>";
+						echo "<li><a href='#{$slug}' data-filter='.{$slug}' class='btn-production-{$slug} btn-production-type btn-small btn'>{$type['name']}</a></li>";
 					}
 					?>
-					<li><a href="#all" class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
+					<li><a href="#" data-filter='*' class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
 				</ul>
 
 			</div> <!-- #production-type-filters -->
@@ -67,10 +67,10 @@ get_header();
 					<?php
 					$genres = get_terms('genre');
 					foreach( $genres as $genre ) {
-						echo "<li><a href='#genre-{$genre->slug}' class='btn-genre-{$genre->slug} btn-genre btn-small btn'>{$genre->name}</a></li>";
+						echo "<li><a href='#genre-{$genre->slug}' data-filter='.genre-{$genre->slug}' class='btn-genre-{$genre->slug} btn-genre btn-small btn'>{$genre->name}</a></li>";
 					}
 					?>
-					<li><a href="#all" class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
+					<li><a href="#" data-filter='*' class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
 				</ul>
 
 			</div> <!-- end #genre-filters -->

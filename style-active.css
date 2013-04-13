@@ -1351,7 +1351,7 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports { color: black; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #84d4fd; background-image: -moz-linear-gradient(top, #70cefd, #a2dffe); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70cefd), to(#a2dffe)); background-image: -webkit-linear-gradient(top, #70cefd, #a2dffe); background-image: -o-linear-gradient(top, #70cefd, #a2dffe); background-image: linear-gradient(to bottom, #70cefd, #a2dffe); background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF70CEFD', endColorstr='#FFA2DFFE', GradientType=0); border-color: #a2dffe #a2dffe #57c5fd; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); *background-color: #a2dffe; /* Darken IE7 buttons by default so they stand out more given they won't have borders */ filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }
 .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:hover, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:focus, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.disabled, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports[disabled] { color: black; background-color: #a2dffe; *background-color: #89d7fd; }
 .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports:active, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre-sports.active { background-color: #70cefd \9; }
-.page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item { padding: 1em; margin-left: 5px; margin-right: 5px; /* end .entry-header */ /* end .shows-page-show */ }
+.page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item { padding: 1em; margin-left: 5px; margin-right: 5px; margin-bottom: 0.5em; /* end .entry-header */ /* end .shows-page-show */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header { /* end .entry-title */ }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header h2.entry-title a { color: #0176b7; }
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header h2.entry-title a:visited { color: #0176b7; }
@@ -1360,6 +1360,20 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .description { width: 270px; float: right; }
 
 /* end .page.slug-shows */
+/**** Isotope filtering ****/
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+.isotope, .isotope .isotope-item { /* change duration value to whatever you like */ -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; -ms-transition-duration: 0.8s; -o-transition-duration: 0.8s; transition-duration: 0.8s; }
+
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; -ms-transition-property: -ms-transform, opacity; -o-transition-property: -o-transform, opacity; transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+
 /*
 ========================
 ==SCHEDULE PAGE
