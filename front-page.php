@@ -267,14 +267,16 @@ Template Name: Front Page
 							'order' => 'ASC',
 							'posts_per_page' => '10',
 						);
-						query_posts($args);
+						//query_posts($args);
+						$query = new WP_Query($args);
+
 						$final_output = '';
 						$num_items = 0;
 						
-						global $wp_query;
-						p2p_type( 'schedule_event' )->each_connected( $wp_query );
+						//global $wp_query;
+						p2p_type( 'schedule_event' )->each_connected( $query );
 						
-						while ( have_posts() ) : the_post();
+						while ( $query->have_posts() ) : $query->the_post();
 
 							//get the episode associated with this schedule item
 							$episodes = $post->connected;
@@ -371,7 +373,7 @@ Template Name: Front Page
 
 				</div><!-- end #schedule-block -->
 
-
+				<?php //tutv_schedule_block('front-block block grid_6 alpha omega clearfix'); ?>
 
 				<!-- Featured Buttons Section -->
 				<div id="featured-buttons-section" class="grid_6 alpha omega">
