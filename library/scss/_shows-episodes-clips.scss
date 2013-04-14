@@ -66,7 +66,6 @@
 			} /* end #page-header */
 
 			h3.section-header {
-			border-bottom: 1px solid #eee;
 			color: $tu-cherry;
 			}
 
@@ -190,6 +189,15 @@
 		float: left;
 		width: 100%;
 		padding: 10px 0;
+
+			a {
+			@extend .block;
+			font-style: normal;
+			font-weight: 700;
+			color: $teal;
+			font-size: 16px;
+			padding: 0.5em;
+			}
 		
 			.nav-next {
 			float:left;
@@ -202,7 +210,7 @@
 			width: 50%;
 			text-align: right;
 			}
-		}
+		} /* end .shows_nav */
 	} /* end #content */
 
 

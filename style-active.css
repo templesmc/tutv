@@ -570,9 +570,9 @@ remember less is more.
 /*********************
 CLEARFIXIN'
 *********************/
-.clearfix, .container_12, .container_16, .block .block-header { zoom: 1; }
-.clearfix:before, .container_12:before, .container_16:before, .block .block-header:before, .clearfix:after, .container_12:after, .container_16:after, .block .block-header:after { content: ""; display: table; }
-.clearfix:after, .container_12:after, .container_16:after, .block .block-header:after { clear: both; }
+.clearfix, .container_12, .container_16, .block .block-header, #content.single-show-page .shows_nav a .block-header { zoom: 1; }
+.clearfix:before, .container_12:before, .container_16:before, .block .block-header:before, #content.single-show-page .shows_nav a .block-header:before, .clearfix:after, .container_12:after, .container_16:after, .block .block-header:after, #content.single-show-page .shows_nav a .block-header:after { content: ""; display: table; }
+.clearfix:after, .container_12:after, .container_16:after, .block .block-header:after, #content.single-show-page .shows_nav a .block-header:after { clear: both; }
 
 /*********************
 TOOLS
@@ -1120,15 +1120,15 @@ POST & CONTENT STYLES
 #main #container #content .item-odd { background: white; }
 
 /* end #main */
-.block { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
-.block .block-header { background-color: #0176b7; color: white; }
-.block .block-header a { color: white; text-decoration: none; }
-.block .block-header a:hover { color: white; }
-.block .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
-.block .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
-.block .block-header p a { text-decoration: none; color: white; }
-.block .block-header p a:hover { text-decoration: none; color: white; }
-.block .block-inner { background-color: white; border: 1px solid #e0e0e0; }
+.block, #content.single-show-page .shows_nav a { background-color: white; border: 1px solid #e0e0e0; margin-bottom: 1.5rem; }
+.block .block-header, #content.single-show-page .shows_nav a .block-header { background-color: #0176b7; color: white; }
+.block .block-header a, #content.single-show-page .shows_nav a .block-header a { color: white; text-decoration: none; }
+.block .block-header a:hover, #content.single-show-page .shows_nav a .block-header a:hover { color: white; }
+.block .block-header h3.section-header, #content.single-show-page .shows_nav a .block-header h3.section-header { font-size: 20px; font-weight: 300; float: left; display: inline-block; color: white; }
+.block .block-header p, #content.single-show-page .shows_nav a .block-header p { display: inline-block; float: right; font-weight: 300; font-style: italic; margin: 0.625em; line-height: 30px; }
+.block .block-header p a, #content.single-show-page .shows_nav a .block-header p a { text-decoration: none; color: white; }
+.block .block-header p a:hover, #content.single-show-page .shows_nav a .block-header p a:hover { text-decoration: none; color: white; }
+.block .block-inner, #content.single-show-page .shows_nav a .block-inner { background-color: white; border: 1px solid #e0e0e0; }
 
 /* end .block */
 .episodes .published, .clip .published, .episodes .meta-sep-edit, .clip .meta-sep-edit { display: none; }
@@ -1381,7 +1381,7 @@ body.slug-schedule #schedule-controls #schedule-nav li { float: left; margin: 0 
 body.slug-schedule #schedule-controls #schedule-nav a { font-size: 16px; font-weight: 300; float: left; padding: 10px; border: 1px solid #e0e0e0; background: white; background: rgba(255, 255, 255, 0.6); border-bottom: none; text-decoration: none; }
 body.slug-schedule #schedule-controls #schedule-nav .active a { color: #000; z-index: 100; font-weight: 500; position: relative; background: white; padding: 11px 13px; margin-top: -5px; font-size: 18px; margin-bottom: -1px; border-color: #e0e0e0; border-bottom: 1px solid white; }
 body.slug-schedule #schedule-controls #schedule-nav .active a:hover { color: #787779; }
-body.slug-schedule #schedule-section-container.block { border-top: none; padding-top: 1rem; padding-bottom: 10em; }
+body.slug-schedule #schedule-section-container.block, body.slug-schedule #content.single-show-page .shows_nav a#schedule-section-container, #content.single-show-page .shows_nav body.slug-schedule a#schedule-section-container { border-top: none; padding-top: 1rem; padding-bottom: 10em; }
 body.slug-schedule #schedule-section { padding-left: 1em; /* end .hentry */ }
 body.slug-schedule #schedule-section .hentry { clear: both; float: left; padding: 10px; margin-right: 10px; position: relative; min-height: 26px; font-size: 14px; width: 100%; -webkit-transition: background 0.5s ease; -moz-transition: background 0.5s ease; -o-transition: background 0.5s ease; transition: background 0.5s ease; /* this is part of the multi-day view */ /* end .entry-content */ /* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
 http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */ /* This is last child */ /* Second to last */ /* Third to last, etc */ }
@@ -1427,7 +1427,7 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container { display: inline-block; float: left; margin-left: 2em; line-height: 50px; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu { list-style: none; margin: 0; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu li { display: inline; float: left; font-style: italic; font-weight: 400; padding-left: 1em; }
-.has-taxonomy-show #main #content h3.section-header { border-bottom: 1px solid #eeeeee; color: #9e1b34; }
+.has-taxonomy-show #main #content h3.section-header { color: #9e1b34; }
 .has-taxonomy-show #main #content a.read_more { color: #42abe8; }
 .has-taxonomy-show #main #content .post-metadata { background: #ffe; padding: 10px; clear: both; margin: 0 0 10px; }
 .has-taxonomy-show #main #content .post-metadata .section-header { border-bottom: 1px dotted #999999; }
@@ -1441,7 +1441,7 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 	========================
 
 	*/
-#content.single-show-page { /* end .hentry */ /* end #show-episodes */ /* end #show-clips */ }
+#content.single-show-page { /* end .hentry */ /* end #show-episodes */ /* end #show-clips */ /* end .shows_nav */ }
 #content.single-show-page .meta-prep-entry-date { display: none; }
 #content.single-show-page .hentry { padding: 1em; /* end .entry-header */ /* end .entry-image */ }
 #content.single-show-page .hentry .entry-header { float: right; width: 110px; }
@@ -1459,6 +1459,7 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 #content.single-show-page #show-clips .entry-image .thumbnail { margin: 0; }
 #content.single-show-page #show-clips .entry-image .thumbnail img { max-width: 100%; }
 #content.single-show-page .shows_nav { float: left; width: 100%; padding: 10px 0; }
+#content.single-show-page .shows_nav a { font-style: normal; font-weight: 700; color: #00b3a0; font-size: 16px; padding: 0.5em; }
 #content.single-show-page .shows_nav .nav-next { float: left; width: 50%; text-align: left; }
 #content.single-show-page .shows_nav .nav-previous { float: right; width: 50%; text-align: right; }
 

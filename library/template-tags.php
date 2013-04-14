@@ -198,8 +198,13 @@ function get_thumb ( $post_ID, $size = 'thumbnail' ){
  * Find the post type for the current query and generate navigation links that also 
  * keep the page number set in the query variables. For instance, '?show_notes_page=1&clip_page=2&episodes_page=1#clip'
  * is on the second page for the clips box and the first page for show_notes and episodes.
+ *
+ * @author Sam Marguiles
+ * @author Chris Montgomery <mont.chr@gmail.com>
+ * @since 1.0.0
+ * @version 1.0.1
  * 
- * $args array Custom post type page number values to use in generating the navigation
+ * @param array $args Custom post type page number values to use in generating the navigation
  */
 
 function get_shows_nav( $args = '' ) {		
@@ -226,7 +231,7 @@ function get_shows_nav( $args = '' ) {
     	$next_args[$current_post_type . '_page'] = $post_type_paged - 1;
     	$next_link = '?' . http_build_query($next_args, '', '&amp;') . '#' . $current_post_type;
     	
-    	echo "<a href='$next_link' class='nav-next'> &laquo; Newer Posts</a>";
+    	echo "<div class='nav-next nav-item'><a href='$next_link'> &larr; Newer</a></div>";
     }
     
     if( $post_type_paged < $max_pages ) {
@@ -234,7 +239,7 @@ function get_shows_nav( $args = '' ) {
     	$previous_args[$current_post_type . '_page'] = $post_type_paged + 1;
     	$previous_link = '?' . http_build_query($previous_args, '', '&amp;') . '#' . $current_post_type;
 
-    	echo "<a href='$previous_link'  class='nav-previous'>Older Posts &raquo;</a>";
+    	echo "<div class='nav-previous nav-item'><a href='$previous_link'>Older &rarr;</a></div>";
     }
     
     echo "</div>";
