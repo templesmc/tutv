@@ -51,7 +51,7 @@ function get_show_background( $show ) {
 }
 
 // Return thumbnail image HTML for a given post's show
-function get_posts_show_thumbnail( $post_id ) {
+function get_posts_show_thumbnail( $post_id, $thumbnail_size = 'thumbnail-square' ) {
 	global $taxonomy_images_plugin;
  	
 	 if( !isset( $post_id ) ) {
@@ -66,7 +66,7 @@ function get_posts_show_thumbnail( $post_id ) {
 	
 	$term = $terms[0];
 
-	return $taxonomy_images_plugin->get_image_html( 'thumbnail', $term->term_taxonomy_id );
+	return $taxonomy_images_plugin->get_image_html( $thumbnail_size, $term->term_taxonomy_id );
 }
 
 // Return video thumbnail from featured image or show image

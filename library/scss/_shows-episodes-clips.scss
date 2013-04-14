@@ -2,101 +2,67 @@
 .has-taxonomy-show {
 
 	#main {
-	padding: 0 10px;
-	width: 960px;
 
 		#content {
-		width: 960px;
-		padding-top: 5px;
 
 			.navigation,
 			.hentry {
-			margin: 0 10px;
+
 			}
 
 			#nav-below {
 			display: none;
 			}
 
-			#show-header {
-			margin-bottom: 10px;
-			float: left;
-			background: #fff url(images/show-page-shadow.png) no-repeat bottom center;
-			background-color: rgba(255,255,255,.8);
-			padding: 10px;
-			margin:0;
-			width: 940px;
-			min-height: 106px;
-			position: relative;
+			#page-header {
+			padding: 1em 0;
 
-				#show-name {
-				font-size: 32px;
-				font-weight: 300;
-				line-height: 32px;
-				margin-bottom: 10px;
-				margin-right: 20px;
-				float: left;
+				#show-thumbnail {
+				margin-right: 9px; // -1px to compensate for border
+				padding-left: 1em;
 
-					a {
-					color: #666;
-
-						&:hover {
-						color: #B20637;
-						}
-					}
-				} /* end #show-name */
-
-				.menu-container {
-				font: normal normal 300 16px/normal arial, helvetica, sans-serif;
-				border-bottom: none;
-				float: left;
-				margin-bottom: 10px;
-
-					a {
-					color: #000;
-					}
-
-					.sf-menu {
-						
-						> li {
-							> a,
-							> a:visited {
-							border: none;
-							border-bottom: 1px dotted #ccc;
-							padding:0;
-							margin-right: 20px;
-							margin-top: 9px;
-							}
-
-							> a:hover {
-							border-bottom: 1px solid #000;
-							}
-						} /* end > li */
-
-						.sub-menu {
-						background: #efefef;
-						width: 10em;
-						max-width: 10em;
-
-							.sub-menu {
-							left: 10em !important;
-							}
-
-							li a {
-							border-top: none;
-							}
-						}
-					}
+					img { max-width: 100%; }
 				}
 
-				#show-description {
-				float: left;
-				margin-bottom: 22px;
-				width: 860px;
-				color: #666;
-				font-size: 14px;
-				}
-			} /* end #show-header */
+				#show-info-container {
+				margin-left: 9px; // -1px to compensate for border
+				padding-right: 1em;
+
+					#show-header {
+
+						h1#show-name {
+						@extend .h2;
+						display: inline-block;
+						float: left;
+						padding: 0;
+						}
+
+						.show-menu-container {
+						display: inline-block;
+						float: left;
+						margin-left: 2em;
+						line-height: 50px;
+
+							ul.show-menu {
+							list-style: none;
+							margin: 0;
+
+								li {
+								display: inline;
+								float: left;
+								font-style: italic;
+								font-weight: 400;
+								padding-left: 1em;
+								}
+							}
+						} /* end .show-menu-container */
+					} /* end #show-header */
+
+					#show-description {
+
+					}
+				} /* end #show-info-container */
+			} /* end #page-header */
 
 			// this is woefully non-descriptive. i have no idea where it's going to turn up, but it looks like it's only within "blocks"
 			.section-header {
@@ -138,102 +104,71 @@
 
 	*/
 
-	.has-taxonomy-show.not-singular {
+	#content.single-show-page {
 
-		/* this also has the badly-named class of .taxonomy-shows -
-		the body element has the same class. not good.
-		but here, scss' nesting capabilities makes everyone happy -
-		i'm just going to use #content nested within .has-taxonomy-show.not-singular
-		- montchr */
-		#content {
+		.entry-meta,
+		.meta-prep-entry-date {
+		display: none;
+		}
 
-			.entry-meta,
-			.meta-prep-entry-date {
-			display: none;
-			}
+		#show-episodes {
 
-			#show-episodes {
-			width:620px;
-			margin: 10px 10px 0;
-			float: left;
-
-				.hentry {
-				float: left;
-				width: 290px;
-				position: relative;
-				min-height: 210px;	/* orginal 122px Updated 08-18-2011 Pwinnick */
-				max-height: 210px; /* Added 07/26/2011 Pwinnick */
-
-					h2.entry-title {
-					font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */
-					font-weight: 500;
-					}
-
-					.entry-content {
-					padding-top: 0;
-					font-size: 13px;
-
-						.thumbnail {
-						top: 0;
-						left:0;
-						}
-
-						p {
-						font-size: 14px;
-						color: #444;
-						}
-					}
-				} /* end .hentry */
-			} /* end #show-episodes */
-
-			#show-clips {
-			float: left;
-			margin-top: 20px;
-			padding: 0 10px;
-			width: 940px;
-			background: #fdfdfd;
-			border-bottom: 1px solid #eee;
+			.hentry {
 
 				h2.entry-title {
-				font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/
-				line-height: 24px;
-				float: right;
-				width: 140px;
-				}
 
-				.clip {
-				float: left;
-				width: 300px;
-				margin-left: 0;
-				margin-right: 10px;
-				float: left;
 				}
 
 				.entry-content {
-				padding-top: 0;
-				}
 
-			} /* end #show-clips */
 
-			.shows_nav {
-			float: left;
-			width: 100%;
-			padding: 10px 0;
-			
-				.nav-next {
-				float:left;
-				width: 50%;
-				text-align: left;
-				}
+					.thumbnail {
 
-				.nav-previous {
-				float: right;
-				width: 50%;
-				text-align: right;
+					}
+
+					p {
+
+					}
 				}
+			} /* end .hentry */
+		} /* end #show-episodes */
+
+		#show-clips {
+
+
+			h2.entry-title {
+
 			}
-		} /* end #content */
-	} /* end .has-taxonomy-show.not-singular (show page) */
+
+			.clip {
+
+			}
+
+			.entry-content {
+
+
+			}
+
+		} /* end #show-clips */
+
+		.shows_nav {
+		float: left;
+		width: 100%;
+		padding: 10px 0;
+		
+			.nav-next {
+			float:left;
+			width: 50%;
+			text-align: left;
+			}
+
+			.nav-previous {
+			float: right;
+			width: 50%;
+			text-align: right;
+			}
+		}
+	} /* end #content */
 
 
 

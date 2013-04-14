@@ -618,7 +618,7 @@ TYPOGRAPHY
 /*
 WEB FONTS
 */
-.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
+.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name, .has-taxonomy-show #main #content #page-header #show-info-container #show-header .wf-loading h1#show-name, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
 .wf-loading #blog-title a { visibility: visible; }
 
 /*
@@ -1030,7 +1030,7 @@ body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font
 /*********************
 LINK STYLES
 *********************/
-a, a:visited { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; /* on hover */ /* mobile tap color */ }
+a, a:visited { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; text-decoration: none; /* on hover */ /* mobile tap color */ }
 a:active, a:hover, a:focus, a:visited:active, a:visited:hover, a:visited:focus { text-decoration: none; color: #9e1b34; }
 a:active .thumbnail, a:hover .thumbnail, a:focus .thumbnail, a:visited:active .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail { opacity: 1; }
 a:link, a:visited:link { /*
@@ -1044,7 +1044,7 @@ H1, H2, H3, H4 STYLES
 **********************/
 h1, .h1, #page-header h1.page-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 40px; font-weight: 300; padding: 0 0 0.5em; text-transform: uppercase; color: #0176b7; }
 
-h2, .h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
+h2, .h2, .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 34px; padding: 0 0 0.5em; font-weight: 300; color: #0176b7; }
 
 h3, .h3 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; padding: 0 0 0.5em; font-weight: 400; }
 
@@ -1419,26 +1419,21 @@ SHOW, CLIP, AND EPISODE PAGES
 **********************/
 /* Show, Clips, and Episode Pages (All) */
 .has-taxonomy-show { /* end #main */ }
-.has-taxonomy-show #main { padding: 0 10px; width: 960px; /* end #content */ }
-.has-taxonomy-show #main #content { width: 960px; padding-top: 5px; /* end #show-header */ /* i'm pretty certain we've abandoned this stuff,
+.has-taxonomy-show #main { /* end #content */ }
+.has-taxonomy-show #main #content { /* end #page-header */ /* i'm pretty certain we've abandoned this stuff,
 but just in case, here it is. either way, it's
 only visible to logged-in users with at least
 the editor capability. - montchr */ /* end .post-metadata */ }
-.has-taxonomy-show #main #content .navigation, .has-taxonomy-show #main #content .hentry { margin: 0 10px; }
 .has-taxonomy-show #main #content #nav-below { display: none; }
-.has-taxonomy-show #main #content #show-header { margin-bottom: 10px; float: left; background: white url(images/show-page-shadow.png) no-repeat bottom center; background-color: rgba(255, 255, 255, 0.8); padding: 10px; margin: 0; width: 940px; min-height: 106px; position: relative; /* end #show-name */ }
-.has-taxonomy-show #main #content #show-header #show-name { font-size: 32px; font-weight: 300; line-height: 32px; margin-bottom: 10px; margin-right: 20px; float: left; }
-.has-taxonomy-show #main #content #show-header #show-name a { color: #666; }
-.has-taxonomy-show #main #content #show-header #show-name a:hover { color: #B20637; }
-.has-taxonomy-show #main #content #show-header .menu-container { font: normal normal 300 16px/normal arial, helvetica, sans-serif; border-bottom: none; float: left; margin-bottom: 10px; }
-.has-taxonomy-show #main #content #show-header .menu-container a { color: #000; }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu { /* end > li */ }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a, .has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a:visited { border: none; border-bottom: 1px dotted #cccccc; padding: 0; margin-right: 20px; margin-top: 9px; }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu > li > a:hover { border-bottom: 1px solid black; }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu { background: #efefef; width: 10em; max-width: 10em; }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu .sub-menu { left: 10em !important; }
-.has-taxonomy-show #main #content #show-header .menu-container .sf-menu .sub-menu li a { border-top: none; }
-.has-taxonomy-show #main #content #show-header #show-description { float: left; margin-bottom: 22px; width: 860px; color: #666; font-size: 14px; }
+.has-taxonomy-show #main #content #page-header { padding: 1em 0; /* end #show-info-container */ }
+.has-taxonomy-show #main #content #page-header #show-thumbnail { margin-right: 9px; padding-left: 1em; }
+.has-taxonomy-show #main #content #page-header #show-thumbnail img { max-width: 100%; }
+.has-taxonomy-show #main #content #page-header #show-info-container { margin-left: 9px; padding-right: 1em; /* end #show-header */ }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header { /* end .show-menu-container */ }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name { display: inline-block; float: left; padding: 0; }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container { display: inline-block; float: left; margin-left: 2em; line-height: 50px; }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu { list-style: none; margin: 0; }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu li { display: inline; float: left; font-style: italic; font-weight: 400; padding-left: 1em; }
 .has-taxonomy-show #main #content .section-header { font-size: 14px; border-bottom: 1px solid #eeeeee; line-height: 24px; padding-bottom: 5px; margin-bottom: 10px; color: #666; }
 .has-taxonomy-show #main #content .post-metadata { background: #ffe; padding: 10px; clear: both; margin: 0 0 10px; }
 .has-taxonomy-show #main #content .post-metadata .section-header { border-bottom: 1px dotted #999999; }
@@ -1452,28 +1447,14 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 	========================
 
 	*/
-.has-taxonomy-show.not-singular { /* this also has the badly-named class of .taxonomy-shows -
-the body element has the same class. not good.
-but here, scss' nesting capabilities makes everyone happy -
-i'm just going to use #content nested within .has-taxonomy-show.not-singular
-- montchr */ /* end #content */ }
-.has-taxonomy-show.not-singular #content { /* end #show-episodes */ /* end #show-clips */ }
-.has-taxonomy-show.not-singular #content .entry-meta, .has-taxonomy-show.not-singular #content .meta-prep-entry-date { display: none; }
-.has-taxonomy-show.not-singular #content #show-episodes { width: 620px; margin: 10px 10px 0; float: left; /* end .hentry */ }
-.has-taxonomy-show.not-singular #content #show-episodes .hentry { float: left; width: 290px; position: relative; min-height: 210px; /* orginal 122px Updated 08-18-2011 Pwinnick */ max-height: 210px; /* Added 07/26/2011 Pwinnick */ }
-.has-taxonomy-show.not-singular #content #show-episodes .hentry h2.entry-title { font-size: 15px; /* 20px orginial 06-06-2011 Pwinnick */ font-weight: 500; }
-.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content { padding-top: 0; font-size: 13px; }
-.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content .thumbnail { top: 0; left: 0; }
-.has-taxonomy-show.not-singular #content #show-episodes .hentry .entry-content p { font-size: 14px; color: #444; }
-.has-taxonomy-show.not-singular #content #show-clips { float: left; margin-top: 20px; padding: 0 10px; width: 940px; background: #fdfdfd; border-bottom: 1px solid #eeeeee; }
-.has-taxonomy-show.not-singular #content #show-clips h2.entry-title { font-size: 14px; /* 18px original 06-06-2011 Pwinnick*/ line-height: 24px; float: right; width: 140px; }
-.has-taxonomy-show.not-singular #content #show-clips .clip { float: left; width: 300px; margin-left: 0; margin-right: 10px; float: left; }
-.has-taxonomy-show.not-singular #content #show-clips .entry-content { padding-top: 0; }
-.has-taxonomy-show.not-singular #content .shows_nav { float: left; width: 100%; padding: 10px 0; }
-.has-taxonomy-show.not-singular #content .shows_nav .nav-next { float: left; width: 50%; text-align: left; }
-.has-taxonomy-show.not-singular #content .shows_nav .nav-previous { float: right; width: 50%; text-align: right; }
+#content.single-show-page { /* end #show-episodes */ /* end #show-clips */ }
+#content.single-show-page .entry-meta, #content.single-show-page .meta-prep-entry-date { display: none; }
+#content.single-show-page #show-episodes { /* end .hentry */ }
+#content.single-show-page .shows_nav { float: left; width: 100%; padding: 10px 0; }
+#content.single-show-page .shows_nav .nav-next { float: left; width: 50%; text-align: left; }
+#content.single-show-page .shows_nav .nav-previous { float: right; width: 50%; text-align: right; }
 
-/* end .has-taxonomy-show.not-singular (show page) */
+/* end #content */
 	/*
 
 	========================

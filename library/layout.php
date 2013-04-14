@@ -264,36 +264,42 @@ function tutv_show_header( $force = false ) {
 		$term = get_the_show_term( $post->ID );
 		if ( empty( $term ) || has_no_show( $term ) ) 
 			return;
-		
-		$show_background = get_show_background($term->slug);
-		
-		
-		if( !empty($show_background) ) {
-			?>
-			<style>body { background: url("<?php echo  $show_background; ?>") 50% 0 no-repeat; }</style>
-			<?php
-		}
 		?>
-		<div id="show-header">
-		
-			<?php			
-			if ($term->name) {
-			?>
-				<h1 id="show-name">
-					<a href="<?php echo get_show_link($term) ?>"><?php echo $term->name; ?></a>
-				</h1>
-			<?php
-			}
-			wp_nav_menu( array(
-				'fallback_cb'     => '',
-				'theme_location'  => $term->slug,
-				'container_class' => 'menu-container',
-				'menu_class' => 'sf-menu'
-			) );
 
-			?>
+		<div id="show-thumbnail" class="grid_3 alpha">
+
+			<?php // print_r($term); ?>
+
+			<?php echo get_posts_show_thumbnail($post->ID, 'thumbnail-square'); ?>
+
+		</div> <!-- end #show-thumbnail -->
+
+		<div id="show-info-container" class="grid_9 omega">
+
+			<div id="show-header" class="clearfix">
+
+				<?php			
+				if ($term->name) {
+				?>
+					<h1 id="show-name">
+						<a href="<?php echo get_show_link($term) ?>"><?php echo $term->name; ?></a>
+					</h1>
+				<?php
+				}
+
+				wp_nav_menu( array(
+					'fallback_cb'     => '',
+					'theme_location'  => $term->slug,
+					'container_class' => 'show-menu-container',
+					'menu_class'      => 'show-menu',
+					'link_before'     => '&raquo;  '
+				) );
+
+				?>
+
+			</div> <!-- #show-header -->
+
 			<div id="show-description">
-
 				<p>
 				<?php
 				if ($term->description) {
@@ -302,7 +308,7 @@ function tutv_show_header( $force = false ) {
 				?>
 				</p>
 			</div>
-		</div> <!-- #show-header -->
+		</div> <!-- end #show-info-container -->
 		<?php
 	}
 }

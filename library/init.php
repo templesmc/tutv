@@ -39,6 +39,7 @@ add_image_size( 'banner', 960, 330, true ); // Slideshow image size
 add_image_size( 'banner-thumbnail', 75, 50, true ); // Slideshow thumbnail size
 add_image_size( 'thumbnail', 180, 130, true ); // Thumbnail size
 add_image_size( 'large', 540, 400, true ); // Thumbnail size
+add_image_size( 'thumbnail-square', 200, 200, true ); // square thumbnail size for show page headers
 
 add_theme_support('nav-menus');
 add_theme_support( 'automatic-feed-links' );
