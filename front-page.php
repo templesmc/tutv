@@ -125,7 +125,7 @@ Template Name: Front Page
 
 				<div class="block-header">
 					<h3 class="section-header">Recent Blog Posts</h3>
-					<p><a class='header' href="/blog">view more &rarr;</a></p>
+					<p><a class='header' href="<?php echo home_url('/blog'); ?>">view more &rarr;</a></p>
 				</div>
 
 				<div class="block-inner">
@@ -223,7 +223,7 @@ Template Name: Front Page
 
 					<div class="block-header clearfix">
 						<h3 class="section-header">Airing on TUTV</h3>
-						<p><a class='header' href="/schedule">view more &rarr;</a></p>
+						<p><a class='header' href="<?php echo home_url('/schedule'); ?>">view more &rarr;</a></p>
 					</div>
 
 					<div class="block-inner accordion clearfix">
