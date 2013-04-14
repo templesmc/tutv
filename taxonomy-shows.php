@@ -55,25 +55,21 @@ get_header();
 
 				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix <?php echo $k ?>">
 
+					<div class="entry-header">
+						
+						<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+
+						<?php echo thematic_postheader_postmeta(); ?>
+
+					</div> <!-- end .entry-header -->
+
 					<div class="entry-image">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
 					</div> <!-- end .entry-image -->
 
-					<div class="entry-inner">
-
-						<div class="entry-header">
-							
-							<h3 class="h3"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-							<?php echo thematic_postheader_postmeta(); ?>
-
-						</div> <!-- end .entry-header -->
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-						</div> <!-- end .entry-content -->
-
-					</div> <!-- end .entry-inner -->
+					<div class="entry-content">
+						<?php the_excerpt(); ?>
+					</div> <!-- end .entry-content -->
 
 				</div><!-- .post -->
 
@@ -133,28 +129,36 @@ Disabled feature. Post type is still active but not used since 2011.
 
 
 		/* CLIPS PAGING */
+
+		// set class to alpha/omega depending on position in 4 column layout
+		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+		$style_classes = array('alpha', '', '', 'omega');
+		$styles_count = count($style_classes);
+		$style_index = 0;
+
 		$clips_paged = ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1;
 		query_posts($query_string . '&post_type=clip&posts_per_page=4&paged=' . $clips_paged);
 		
 		if( have_posts()) { ?>
 
-			<div id="show-clips" class="show-block">
+			<div id="show-clips" class="show-block grid_12 clearfix">
 
 				<a name="clip"></a>
 
-				<h2 class="section-header"><?php the_show(); ?> Clips</h2>
+				<h3 class="section-header"><?php the_show(); ?> Clips</h3>
 				
 				<?php 
 				
-				while ( have_posts() ) : the_post(); ?>
+				while ( have_posts() ) : the_post();
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix">
+				// this is the second part of the operation that determines first or last class based on column divisions. see above.
+				$k = $style_classes[$style_index++ % $styles_count]; ?>
 
-					<div class="entry-inner">
+				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix <?php echo $k ?>">
 
 						<div class="entry-header">
 							
-							<h3 class="h3"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+							<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 							<?php echo thematic_postheader_postmeta(); ?>
 
@@ -163,8 +167,6 @@ Disabled feature. Post type is still active but not used since 2011.
 					<div class="entry-image">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
 					</div> <!-- end .entry-image -->
-
-					</div> <!-- end .entry-inner -->
 
 				</div><!-- .post -->
 

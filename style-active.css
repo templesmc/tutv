@@ -586,8 +586,8 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/* Everyone's favorite red. The red of the blood of Temple students.
-In mockups as #b0013a, but the official color is #9e1b34. */
+/* Everyone's favorite red.
+The red of the blood of Temple students. */
 /*
 Descriptive Variables
 */
@@ -618,7 +618,7 @@ TYPOGRAPHY
 /*
 WEB FONTS
 */
-.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name, .has-taxonomy-show #main #content #page-header #show-info-container #show-header .wf-loading h1#show-name, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
+.wf-loading a, .wf-loading p, .wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading h2, .wf-loading .h2, .wf-loading .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name, .has-taxonomy-show #main #content #page-header #show-info-container #show-header .wf-loading h1#show-name, .wf-loading h3, .wf-loading .h3, .wf-loading h4, .wf-loading .h4, .wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading #content.single-show-page .hentry .entry-header h3.entry-title, #content.single-show-page .hentry .entry-header .wf-loading h3.entry-title, .wf-loading h6, .wf-loading .h6 { visibility: hidden; }
 .wf-loading #blog-title a { visibility: visible; }
 
 /*
@@ -1051,17 +1051,10 @@ h3, .h3 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; f
 h4, .h4 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-style: italic; font-size: 20px; padding: 0 0 0.5em; color: #0176b7; }
 
 /* basically just the body text size in 700 weight with bottom padding */
-h5, .h5, h6, .h6, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2 { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; padding: 0 0 0.5em; }
+h5, .h5, h6, .h6, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, #content.single-show-page .hentry .entry-header h3.entry-title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; padding: 0 0 0.5em; }
 
 h6, .h6 { font-size: 12px; }
 
-/*
-h2.entry-title {
-font-family: $sans-serif;
-font-size: 34px;
-padding: 0.5em;
-font-weight: 300;
-} */
 #page-header { margin-top: 1.5rem; padding: 0 1em; }
 #page-header h1.page-title { color: #00b3a0; font-weight: 300; line-height: 70px; display: inline-block; padding: 0; margin: 0; }
 
@@ -1430,11 +1423,11 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 .has-taxonomy-show #main #content #page-header #show-thumbnail img { max-width: 100%; }
 .has-taxonomy-show #main #content #page-header #show-info-container { margin-left: 9px; padding-right: 1em; /* end #show-header */ }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header { /* end .show-menu-container */ }
-.has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name { display: inline-block; float: left; padding: 0; }
+.has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name { display: inline-block; float: left; padding: 0; color: #00b3a0; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container { display: inline-block; float: left; margin-left: 2em; line-height: 50px; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu { list-style: none; margin: 0; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu li { display: inline; float: left; font-style: italic; font-weight: 400; padding-left: 1em; }
-.has-taxonomy-show #main #content .section-header { font-size: 14px; border-bottom: 1px solid #eeeeee; line-height: 24px; padding-bottom: 5px; margin-bottom: 10px; color: #666; }
+.has-taxonomy-show #main #content h3.section-header { border-bottom: 1px solid #eeeeee; color: #9e1b34; }
 .has-taxonomy-show #main #content .post-metadata { background: #ffe; padding: 10px; clear: both; margin: 0 0 10px; }
 .has-taxonomy-show #main #content .post-metadata .section-header { border-bottom: 1px dotted #999999; }
 .has-taxonomy-show #main #content .post-metadata .post-meta-key { font-weight: 600; }
@@ -1447,9 +1440,23 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 	========================
 
 	*/
-#content.single-show-page { /* end #show-episodes */ /* end #show-clips */ }
-#content.single-show-page .entry-meta, #content.single-show-page .meta-prep-entry-date { display: none; }
-#content.single-show-page #show-episodes { /* end .hentry */ }
+#content.single-show-page { /* end .hentry */ /* end #show-episodes */ /* end #show-clips */ }
+#content.single-show-page .meta-prep-entry-date { display: none; }
+#content.single-show-page .hentry { padding: 1em; /* end .entry-header */ /* end .entry-image */ }
+#content.single-show-page .hentry .entry-header { float: right; width: 110px; }
+#content.single-show-page .hentry .entry-header h3.entry-title { line-height: 1.2; }
+#content.single-show-page .hentry .entry-header h3.entry-title a { color: #0176b7; }
+#content.single-show-page .hentry .entry-image { float: left; width: 140px; margin: 0 1em 1em 0; }
+#content.single-show-page .hentry .entry-image .thumbnail { margin: 0; }
+#content.single-show-page .hentry .entry-image .thumbnail img { max-width: 100%; }
+#content.single-show-page .hentry .entry-content { clear: both; padding: 0; font-size: 14px; }
+#content.single-show-page #show-episodes .hentry { height: 320px; }
+#content.single-show-page #show-clips { /* end .entry-image */ }
+#content.single-show-page #show-clips .entry-header { float: none; }
+#content.single-show-page #show-clips .entry-meta { display: none; }
+#content.single-show-page #show-clips .entry-image { margin: 0 auto; width: 180px; margin: 0 1em 1em 0; }
+#content.single-show-page #show-clips .entry-image .thumbnail { margin: 0; }
+#content.single-show-page #show-clips .entry-image .thumbnail img { max-width: 100%; }
 #content.single-show-page .shows_nav { float: left; width: 100%; padding: 10px 0; }
 #content.single-show-page .shows_nav .nav-next { float: left; width: 50%; text-align: left; }
 #content.single-show-page .shows_nav .nav-previous { float: right; width: 50%; text-align: right; }
