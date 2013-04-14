@@ -6,6 +6,7 @@ require_once( dirname( __FILE__ ) . '/library/types-and-taxonomies.php' );
 require_once( dirname( __FILE__ ) . '/library/layout.php' );
 require_once( dirname( __FILE__ ) . '/library/layout-video-sidebar.php' );
 require_once( dirname( __FILE__ ) . '/library/template-tags.php' );
+require_once( dirname( __FILE__ ) . '/library/sidebar-functions.php' );
 
 require_once( dirname( __FILE__ ) . '/library/admin.php' );
 require_once( dirname( __FILE__ ) . '/library/admin-meta.php' );

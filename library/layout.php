@@ -330,33 +330,72 @@ add_action('thematic_footer', 'tutv_footer', 8);
  * @author Chris Montgomery <mont.chr@gmail.com>
  * @since 2.0.0
  *
+ * @param array $icon The icon(s) to return.
  * @param string $fb_url The TUTV Facebook page URL
  * @param string $twitter_url The TUTV Twitter profile URL
  * @param string $rss_url The templetv.net RSS feed with feed:// protocol
  *
  */
 function tutv_social_media_icons(
+	$icon,
 	$fb_url = 'https://www.facebook.com/TempleTV',
 	$twitter_url = 'https://twitter.com/templetv',
 	$rss_url = 'feed://templetv.net/feed'
-	) {
-	?>
-	<ul class="social-media-icons">
-		<li id="fb-icon" class="social-media-icon">
-			<a href="<?php echo $fb_url; ?>" title="Like us on Facebook">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />
-			</a>
-		</li>
-		<li id="twitter-icon" class="social-media-icon">
-			<a href="<?php echo $twitter_url; ?>" title="Follow us on Twitter">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
-			</a>
-		</li>
-		<li id="rss-icon" class="social-media-icon">
-			<a href="<?php echo $rss_url; ?>" title="Subscribe to our latest updates">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />
-			</a>
-		</li>
-	</ul> <!-- end .social-media-icons -->
-	<?php
+) {
+	
+	if ( empty($icon) ) { ?>
+		<ul class="social-media-icons">
+			<li id="fb-icon" class="social-media-icon">
+				<a href="<?php echo $fb_url; ?>" title="Like us on Facebook">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />
+				</a>
+			</li>
+			<li id="twitter-icon" class="social-media-icon">
+				<a href="<?php echo $twitter_url; ?>" title="Follow us on Twitter">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
+				</a>
+			</li>
+			<li id="rss-icon" class="social-media-icon">
+				<a href="<?php echo $rss_url; ?>" title="Subscribe to our latest updates">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />
+				</a>
+			</li>
+		</ul> <!-- end .social-media-icons -->
+	<?php } // endif 
+
+	$output = '';
+
+	if ( $icon == 'facebook' || in_array('facebook', $icon) ) {
+		$output .= '<div id="fb-icon" class="social-media-icon">';
+			$output .= '<a href="' . $fb_url . '" title="Like us on Facebook">';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />';
+			$output .= '</a>';
+		$output .= '</div>';
+	}
+
+	if ( $icon == 'twitter' || in_array('twitter', $icon) ) {
+		$output .= '<div id="twitter-icon" class="social-media-icon">';
+			$output .= '<a href="' . $twitter_url . '" title="Follow us on Twitter">';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />';
+			$output .= '</a>';
+		$output .= '</div>';
+	}
+
+	if ( $icon == 'rss' || in_array('rss', $icon) ) {
+		$output .= '<div id="rss-icon" class="social-media-icon">';
+			$output .= '<a href="' . $rss_url . '" title="Subscribe to our latest updates">';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />';
+			$output .= '</a>';
+		$output .= '</div>';
+	}
+
+	if ( $icon == 'contact' || in_array('contact', $icon) ) {
+		$output .= '<div id="contact-icon" class="social-media-icon">';
+			$output .= '<a href="' . home_url('/contact') . '" title="Questions? Contact us">';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-contact.png" title="Questions? Contact us" alt="Questions? Contact us" />';
+			$output .= '</a>';
+		$output .= '</div>';
+	}
+
+	echo $output;
 }
