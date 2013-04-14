@@ -29,8 +29,9 @@ get_header();
 		
 		global $query_string;
 		
+		/* EPISODES PAGING */
 		$episodes_paged = ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1;
-		query_posts($query_string . '&post_type=episodes&posts_per_page=8&paged=' . $episodes_paged);
+		query_posts($query_string . '&post_type=episodes&posts_per_page=9&paged=' . $episodes_paged);
 		
 		// create the navigation above the content
 		//thematic_navigation_above();
@@ -54,6 +55,8 @@ get_header();
 		
 		wp_reset_query();
 
+
+		/* SHOW NOTES PAGING */
 		$show_notes_paged = ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1;
 		query_posts($query_string . '&post_type=show_notes&posts_per_page=3&paged=' . $show_notes_paged);
 		
@@ -89,13 +92,16 @@ get_header();
 		
 		wp_reset_query();
 
+
+		/* CLIPS PAGING */
 		$clips_paged = ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1;
-		
 		query_posts($query_string . '&post_type=clip&posts_per_page=3&paged=' . $clips_paged);
 		
 		if( have_posts()) { ?>
 
-			<div id="show-clips" class="show-block"><a name="clip"></a>
+			<div id="show-clips" class="show-block">
+
+				<a name="clip"></a>
 
 				<h2 class="section-header"><?php the_show(); ?> Clips</h2>
 				
