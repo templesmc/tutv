@@ -19,13 +19,19 @@ get_header();
 
 	<div id="content" class="single-show-page taxonomy-shows hfeed">
 
-		<div id="page-header" class="block grid_12">
+		<div id="page-header" class="block grid_12 clearfix">
 
 			<?php tutv_show_header( true ); ?>
 
 		</div> <!-- end #page-header -->
 
 		<?php 
+
+		// set class to alpha/omega depending on position in 4 column layout
+		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+		$style_classes = array('alpha', '', 'omega');
+		$styles_count = count($style_classes);
+		$style_index = 0;
 		
 		global $query_string;
 		
@@ -35,14 +41,19 @@ get_header();
 		
 		if( have_posts() ) { ?>
 
-			<div id="show-episodes" class="show-block clearfix">
+			<div id="show-episodes" class="show-block grid_12 clearfix">
 
 				<a name="episodes"></a>
 				<?php 
 				
-				while ( have_posts() ) : the_post(); ?>
+				while ( have_posts() ) : the_post();
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix">
+				// this is the second part of the operation that determines first or last class based on column divisions. see above.
+				$k = $style_classes[$style_index++ % $styles_count];
+
+				?>
+
+				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix <?php echo $k ?>">
 
 					<div class="entry-image">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
