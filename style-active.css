@@ -1428,6 +1428,7 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu { list-style: none; margin: 0; }
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu li { display: inline; float: left; font-style: italic; font-weight: 400; padding-left: 1em; }
 .has-taxonomy-show #main #content h3.section-header { border-bottom: 1px solid #eeeeee; color: #9e1b34; }
+.has-taxonomy-show #main #content a.read_more { color: #42abe8; }
 .has-taxonomy-show #main #content .post-metadata { background: #ffe; padding: 10px; clear: both; margin: 0 0 10px; }
 .has-taxonomy-show #main #content .post-metadata .section-header { border-bottom: 1px dotted #999999; }
 .has-taxonomy-show #main #content .post-metadata .post-meta-key { font-weight: 600; }
