@@ -182,16 +182,15 @@ Template Name: Front Page
 									hasn't been updated since 2011 (v4.1.1).
 									Be careful of future core WordPress updates. */
 									$args = array(
-										'length'      => 10,
-										'no_custom'   => 0,
+										'length'      => 20,
 										'use_words'   => 1,
 										'finish_word' => 1,
-										'read_more'   => 'Read More',
+										'read_more'   => 'Read More &rarr;',
 										'add_link'    => 1
 									);
 
-									the_excerpt();
-									//the_advanced_excerpt($args);
+									//the_excerpt();
+									the_advanced_excerpt($args);
 									?>
 									<span class="read-more"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read&nbsp;More&nbsp;&rarr;</a></span>
 								</div> <!-- end .entry-content -->

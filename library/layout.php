@@ -165,32 +165,6 @@ function tutv_episode_meta($content) {
 }
 add_filter ('thematic_post_meta_entrydate', 'tutv_episode_meta');
 
-// Change the excerpt length
-function tutv_excerpt_length( $length ) {
-	return 24;
-}
-add_filter('excerpt_length', 'tutv_excerpt_length', 999);
-
-// Custom excerpt more text
-function custom_excerpt_more( $more ) {
-    global $post;
-	return '<a href="'. get_permalink($post->ID) . '"> [...]</a>';
-}
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
-
-// Remove 'read more' jump link
-function tutv_remove_more_jump_link( $link ) { 
-	$offset = strpos( $link, '#more-' );
-	if ( $offset ) {
-		$end = strpos( $link, '"',$offset );
-	}
-	if ( $end ) {
-		$link = substr_replace( $link, '', $offset, $end-$offset) ;
-	}
-	return $link;
-}
-add_filter('the_content_more_link', 'tutv_remove_more_jump_link');
-
 // Show excerpt on show taxonomy page
 function tutv_conditional_excerpt( $display_type ) {
 	if( is_tax( 'shows' ) ){

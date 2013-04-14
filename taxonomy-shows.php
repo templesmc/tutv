@@ -68,7 +68,19 @@ get_header();
 					</div> <!-- end .entry-image -->
 
 					<div class="entry-content">
-						<?php the_excerpt(); ?>
+
+						<?php
+
+						$args = array(
+							'length'          => 10,
+							'use_words'       => 1,
+							'finish_sentence' => 1,
+							'read_more'       => '&rarr;',
+							'add_link'        => 1
+						);
+
+						the_advanced_excerpt( $args ); ?>
+
 					</div> <!-- end .entry-content -->
 
 				</div><!-- .post -->
