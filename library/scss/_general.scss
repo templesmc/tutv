@@ -24,6 +24,7 @@ a, a:visited {
 	        transition: color .3s ease, background .3s ease;
 
 	color: $link-color;
+	text-decoration: none;
 
 	/* on hover */
 	&:active,
