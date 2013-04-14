@@ -26,3 +26,70 @@ function tutv_sidebar_connect_block() { ?>
 	</div> <!-- end .connect-block -->
 <?php
 }
+
+/**
+ * Featured buttons blocks for sidebar.
+ *
+ * @author Chris Montgomery
+ * @since 2.0.0
+ * @version 1.0.0
+ */
+function tutv_sidebar_featured_buttons() { ?>
+	<div class="sidebar-featured-buttons-section">
+		<a href="<?php home_url('/about'); ?>" id="sidebar-about-tutv-button" class="sidebar-featured-button block" title="About TUTV">
+			<h3><em>about</em> TUTV</h3>
+		</a><!-- end #about-tutv-button -->
+		<a href="<?php home_url('/blog'); ?>" id="sidebar-temple-update-blog-button" class="sidebar-featured-button block" title="Temple Update Blog">
+			<h3><em>temple update</em> blog</h3>
+		</a><!-- end #read-the-blog-button -->
+		<a href="<?php home_url('/watch-live'); ?>" id="sidebar-watch-live-button" class="sidebar-featured-button block" title="Watch Live">
+			<h3>watch <em>live</em></h3>
+		</a><!-- end #watch-live-button -->
+	</div><!-- end #featured-buttons-section -->
+<?php
+}
+
+/**
+ * Featured Videos sidebar
+ *
+ * @author Chris Montgomery
+ * @author Sam Marguiles
+ * @since 2.0.0
+ * @version 1.0.0
+ *
+ * @param string $grid_class 960gs class for block widths 
+ */
+function tutv_sidebar_featured_videos($grid_class = 'grid_2') { ?>
+	<div id="featured-video-sidebar-section">
+		<h3 class="section-header">Featured Videos</h3>
+		<?php
+		// set class to alpha/omega depending on position in 2 column layout
+		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+		$style_classes = array('alpha', 'omega');
+		$styles_count = count($style_classes);
+		$style_index = 0;
+
+		$featuredVideos = new WP_Query();
+		$featuredVideos->query('post_type=any&featured-video=on&posts_per_page=6');
+
+		while ( $featuredVideos->have_posts() ) : $featuredVideos->the_post();
+
+			// this is the second part of the operation that determines first or last class based on column divisions. see above.
+			$k = $style_classes[$style_index++ % $styles_count]; ?>
+			<div class="featured-video block <?php echo $grid_class . ' ' . $k; ?> clearfix">
+				<a href="<?php the_permalink(); ?>" rel="bookmark">
+					<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
+					<?php
+					// if the show is defined, echo it with a colon suffix
+					if ( function_exists('the_show')) { echo the_show( '<span class="featured-video-show">', '</span>: ') . ''; }
+					?>
+					<span class="featured-video-episode-title"><?php the_title(); ?></span>
+				</a>
+			</div><!-- end .featured-video -->
+		<?php
+		endwhile;
+		wp_reset_query();
+		?>
+	</div><!-- end #featured-video-section -->
+<?php
+} // don't remove this bracket!
