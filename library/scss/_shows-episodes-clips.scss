@@ -229,25 +229,13 @@
 		#content {
 
 			.hentry {
-			margin: 0 20px 0 10px;
-			float: left;
-			width: 600px;
 
 				.entry-title {
-				padding-bottom: 0;
-				font-weight: bold;
-				font-size: 28px;
-				line-height: 38px;
+
 				}
 			}
 
-			// move this below the .hentry for semantics
 			.video-sidebar {
-			float: right;
-			width: 320px;
-			margin-left: -10px;
-			margin-top: 64px;
-			background: #f3f3f3;
 
 			.video-block .clip-item {
 				
@@ -257,43 +245,21 @@
 
 				}
 
-				.video-block 
-
 				.video-block {
-				padding-top: 10px;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-bottom: 10px;
-				float: left;
 
 					h3.section-header {
-					padding-bottom: 5px;
-					margin-bottom: 5px;
-					border-bottom: 1px dotted #999;
-					color: #555;
-					-moz-text-shadow: -1px 1px #fff;
-					text-shadow: -1px 1px #fff;
+
 					}
 
 					.clip-item {
-					clear: both;
-					float: left;
-					margin: 5px 0px;
+
 					}
 
 					.video-title {
-					clear: both;
-					float: right;
-					width: 140px;
-					font-family: arial, helvetica, sans-serif;
-					font-weight: 400;
-					font-size: 14px;
-					margin-bottom: 10px;
+
 					}
 
 					.thumbnail {
-					float: left;
-					margin-right: 10px;
 					margin-bottom: 10px;
 					}
 				}

@@ -9,7 +9,7 @@ function tutv_video_sidebar() {
 		echo $content;
 	}
 }
-add_filter('thematic_navigation_above', 'tutv_video_sidebar', 10);
+//add_filter('thematic_navigation_above', 'tutv_video_sidebar', 10);
 
 // Video sidebar widget for showtimes of a current episode or event
 function tutv_upcoming_showtimes() {
