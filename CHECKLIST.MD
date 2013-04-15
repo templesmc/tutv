@@ -2,6 +2,10 @@
 
 ## General
 
+### Schedules / Schedule Block
+
+All occurances of the `$timestamp` variable must be checked and fixed. This was necessary for working on the staging site, but will break the live site.
+
 ### Social Media Icons
 
 The "Contact" icon is weird... maybe the little dongle should go off to the left?
