@@ -87,6 +87,32 @@
 					background: transparent;
 					border: none;
 
+						.flex-control-nav {
+						width: auto;
+						position: absolute;
+						bottom: -270px;
+						right: 16px;
+						}
+
+						.flex-control-paging {
+							li {
+								a {
+								background: #ffffff;
+								background: rgba(255,255,255,0.9);
+
+									&:hover {
+									background: $gray88;
+									background: rgba(255,255,255,0.7);
+									}
+
+									&.flex-active {
+									background: #333;
+									background: rgba(255,255,255,0.3);
+									}
+								} /* end a */
+							} /* end li */
+						} /* end .flex-control-paging */
+
 						li {
 						height: 290px;
 						overflow: hidden;
