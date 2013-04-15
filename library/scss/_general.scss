@@ -57,45 +57,46 @@ a:visited,
 H1, H2, H3, H4 STYLES
 **********************/
 
-h1, .h1 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 font-family: $sans-serif;
+padding: 0 0 0.5em;
+line-height: 1.2;
+}
+
+h1, .h1 {
 font-size:40px;
 font-weight: 300;
-padding: 0 0 0.5em;
 text-transform: uppercase;
 color: $header-color;
 }
 
 h2, .h2 {
-font-family: $sans-serif;
 font-size: 34px;
-padding: 0 0 0.5em;
 font-weight: 300;
 color: $header-color;
 }
 
 h3, .h3 {
-font-family: $sans-serif;
 font-size: 24px;
-padding: 0 0 0.5em;
 font-weight: 400;
 }
 
 h4, .h4 {
-font-family: $sans-serif;
 font-weight: 700;
 font-style: italic;
 font-size:20px;
-padding: 0 0 0.5em;
 color: $header-color;
 }
 
 /* basically just the body text size in 700 weight with bottom padding */
 h5, .h5 {
-font-family: $sans-serif;
 font-weight: 700;
 font-size:16px;
-padding: 0 0 0.5em;
 }
 
 h6, .h6 {

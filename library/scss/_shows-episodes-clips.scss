@@ -229,9 +229,12 @@
 		#content {
 
 			.hentry {
+			padding: 1em;
 
-				.entry-title {
-
+				h1.entry-title {
+				@extend .h1;
+				font-weight: 300;
+				text-transform: none;
 				}
 			}
 
