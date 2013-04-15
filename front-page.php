@@ -4,13 +4,12 @@ Template Name: Front Page
 */
 ?>
 <?php
-	add_action('wp_print_scripts', 'childtheme_shows_scripts');
+	add_action('wp_print_scripts', 'tutv_home_scripts');
 	 
-	function childtheme_shows_scripts() {
+	function tutv_home_scripts() {
 	
-		//wp_enqueue_script('slideshow', get_bloginfo('stylesheet_directory') . '/js/jcarousellite.min.js', array('jquery'), '1.0', false);
 		wp_enqueue_script('flexslider', get_bloginfo('stylesheet_directory') . '/js/jquery.flexslider-min.js', array('jquery'), '1.0', false);
-		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array(), '2.0', false);
+		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array('jquery', 'flexslider'), '2.0', false);
 
 	}
 
