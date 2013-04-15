@@ -1166,6 +1166,16 @@ SIDEBARS & ASIDES & WIDGETS
 .connect-block .social-connection .social-media-icon { display: inline-block; float: left; width: 36px; }
 .connect-block .social-connection a.social-connection-link { line-height: 36px; display: inline-block; font-size: 14px; padding-left: 0.5em; }
 
+/* end .connect-block */
+.sidebar-featured-buttons-section { margin-bottom: 2.5em; /* end a.sidebar-featured-button */ }
+.sidebar-featured-buttons-section a.sidebar-featured-button { display: block; text-align: center; margin-bottom: 0.75em; }
+.sidebar-featured-buttons-section a.sidebar-featured-button h3 { padding: 0; font-style: italic; font-weight: normal; line-height: 2; }
+.sidebar-featured-buttons-section a.sidebar-featured-button h3 em { font-weight: 900; }
+.sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-about-tutv-button { color: #42abe8; }
+.sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-temple-update-blog-button { color: #00b3a0; }
+.sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-watch-live-button { color: #9e1b34; }
+
+/* end .sidebar-featured-buttons-section */
 .widgettitle { display: none; }
 
 /*******************

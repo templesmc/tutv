@@ -549,7 +549,41 @@ margin-top: 1.5rem;
 			padding-left: 0.5em;
 			}
 		}
-	}
+	} /* end .connect-block */
+
+	.sidebar-featured-buttons-section {
+	margin-bottom: 2.5em;
+
+		a.sidebar-featured-button {
+		display: block;
+		text-align: center;
+		margin-bottom: 0.75em;
+
+			h3 {
+			padding: 0;
+			font-style: italic;
+			font-weight: normal;
+			line-height: 2;
+
+				em {
+				font-weight: 900;
+				}
+			}
+
+			&#sidebar-about-tutv-button {
+			color: $about-button;
+			}
+
+			&#sidebar-temple-update-blog-button {
+			color: $teal;
+			}
+
+			&#sidebar-watch-live-button {
+			color: $watch-live-button;
+			}
+		} /* end a.sidebar-featured-button */
+
+	} /* end .sidebar-featured-buttons-section */
 
 	.widgettitle {display: none;}
 
