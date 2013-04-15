@@ -1,67 +1,15 @@
-/*************
-** THEMATIC **
-**************/
-
 @import "thematic/thematic";
-
-/***********
-** MIXINS **
-************/
-
 @import "mixins";
-
-/***********
-** MIXINS **
-************/
-
 @import "bootstrap/bootstrap";
-
-/****************
-** GRID SYSTEM **
-*****************/
-
+@import "flexslider";
 @import "grid";
-
-/*********************
-GENERAL STYLES
-*********************/
 
 @import "general";
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-
-	/*
-	========================
-	==HOME PAGE
-	========================
-	*/
-
-	@import "home";
-
-	/*
-	========================
-	==SHOWS PAGE
-	========================
-	*/
-
-	@import "shows-page";
-
-	/*
-	========================
-	==SCHEDULE PAGE
-	========================
-	*/
-
-	@import "schedule-page";
-
-	/*********************
-	SHOW, CLIP, AND EPISODE PAGES
-	**********************/
-
-	@import "shows-episodes-clips";
+@import "home";
+@import "shows-page";
+@import "schedule-page";
+@import "shows-episodes-clips";
 
 	/*
 	========================
