@@ -97,7 +97,7 @@ Template Name: Front Page
 								$subheadline3 = get_post_meta(get_the_ID(), 'subheadline3', TRUE);
 
 								if($headline) {
-									echo "<h3 id='headline'>" . $headline . "</h3>"; 
+									echo "<h3 class='headline'>" . $headline . "</h3>"; 
 								}
 
 								the_excerpt();
@@ -108,9 +108,12 @@ Template Name: Front Page
 								if($subheadline2) {
 									echo "<div id='subheadline2'>" . $subheadline2 . "</div>"; 
 								}
+								/*
+								// Nah, just... don't. There's already too much going on.
 								if($subheadline3) {
 									echo "<div id='subheadline3'>" . $subheadline3 . "</div>"; 
 								}
+								*/
 								
 								?>
 

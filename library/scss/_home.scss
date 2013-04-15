@@ -87,94 +87,26 @@
 					background: transparent;
 					border: none;
 
-						.attachment-banner {
-						float: right;
-						}
-
-						ul {
-
-						}
-
 						li {
 						height: 290px;
 						overflow: hidden;
 						}
 
-						h2 { /* this should really have a class name because it's IMPORTANT. maybe .headline because that's what it is... */
-						font-weight: 300;
-						word-wrap: break-word;
-						} /* end h2 */
-
-						#headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
-						font-size: 20px;
-						font-weight: 200;
-						font-family: $sans-serif;
-						margin-bottom: 6px;
-						word-wrap: break-word;
-						color: #d0632d;
+						.attachment-banner {
+						float: right;
 						}
-
-						#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
-						background-image: url('images/subheadline.png');
-						background-repeat: no-repeat;
-						height: 25px;
-						width: 100%; /*192px*/
-						margin-bottom: 8px;
-						margin-top: -10px;
-						padding-top: 2px;
-
-							a {
-							font-size: 13px;
-							font-family: $sans-serif;
-							font-weight: bold;
-							color: #2F3E51;
-							padding: 0px 80px 0px 24px;
-
-								&:hover {
-								color: #005588;
-								}
-							}
-						} /* end #subheadline */
-
-						#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
-						background-image: url('images/watchheadline.png');
-						background-repeat: no-repeat;
-						height: 25px;
-						width: 232px;
-						margin-bottom: 8px;
-						margin-top: 4px;
-						padding-top: 2px;
-						border-top-color: #EFEFEF;
-						border-top-width: 1px;
-						border-top-style: solid;
-
-							a {
-							font-size: 12px;
-							font-family: arial, helvetica, sans-serif;
-							font-weight: 200;
-							/*color: #EFEFEF;*/
-							padding: 0px 0px 0px 26px;
-
-								&:hover {
-								color: #005588;
-								}
-							}
-						} /* end #subheadline2 */
-
-						.wp-caption { display: none; } // take this out of the template!
 
 						.description {
 						position: absolute;
-						left: 0;
-						padding: 10px 10px 0px 10px;
+						right: 0.75em;
+						padding: 1em;
 						background: black;
 						background: rgba(0,0,0,.8);
 						color: #fff;
 						z-index: 3;
 						float: right;
 						height: 290px;
-						width: 380px;
-						margin-left: 16px; 
+						width: 360px;
 
 							blockquote {
 							margin: 0;
@@ -186,6 +118,54 @@
 
 							img { display: none; } // this should just be taken out of the template entirely. no need to display: none;
 						} /* end .description */
+
+						h2 {
+						font-size: 30px;
+						font-weight: 300;
+						word-wrap: break-word;
+						text-transform: uppercase;
+						line-height: 1.2;
+						padding-bottom: 8px;
+
+							a { color: $light-blue; }
+
+						} /* end h2 */
+
+						h3.headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
+						font-size: 20px;
+						word-wrap: break-word;
+						line-height: 1.2;
+						padding-bottom: 8px;
+						}
+
+						p { // this is the excerpt
+						font-size: 14px;
+						margin-bottom: 1em;
+						}
+
+						#subheadline a,
+						#subheadline2 a {
+							@extend .btn;
+							//@extend .btn-small;
+							@extend .btn-mini;
+						}
+
+						#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
+						float: left;
+						margin-right: 0.5em;
+
+							a { @extend .btn-primary; }
+
+						} /* end #subheadline */
+
+						#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
+
+							a { @extend .btn-info; }
+
+						} /* end #subheadline2 */
+
+						.wp-caption { display: none; } // take this out of the template!
+
 					} /* end .flexslider */
 
 					
