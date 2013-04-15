@@ -80,9 +80,9 @@ function tutv_sidebar_featured_videos($grid_class = 'grid_2') { ?>
 
 			// this is the second part of the operation that determines first or last class based on column divisions. see above.
 			$k = $style_classes[$style_index++ % $styles_count]; ?>
-			<div class="featured-video block <?php echo $grid_class . ' ' . $k; ?> clearfix">
+			<div class="featured-video video-item block <?php echo $grid_class . ' ' . $k; ?> clearfix">
 				<a href="<?php the_permalink(); ?>" rel="bookmark">
-					<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
+					<div class="featured-video-thumbnail thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
 					<?php
 					// if the show is defined, echo it with a colon suffix
 					if ( function_exists('the_show')) { echo the_show( '<span class="featured-video-show">', '</span>: ') . ''; }

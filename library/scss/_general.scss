@@ -376,8 +376,8 @@ padding-bottom: 0;
 
 			.thumbnail {
 			background: #d7d7d7 url(images/thumbnail-placeholder.png);
-			height: 100px;
-			width: 140px;
+			//height: 100px;
+			//width: 140px;
 			opacity: .85;
 			-webkit-transition: opacity .3s ease;
 			-moz-transition: opacity .3s ease;
@@ -527,13 +527,14 @@ SEARCH FORMS & SOCIAL ICONS
 SIDEBARS & ASIDES & WIDGETS
 ******************************/
 
-.featured-video-section {
+.featured-video-section,
+.video-section {
 
 	h3.section-header {
 	color: $tu-cherry;
 	}
 
-	.featured-video {
+	.video-item {
 	font-size: 12px;
 	height: 200px; // adjust if needed, but this should be fine
 
@@ -546,7 +547,7 @@ SIDEBARS & ASIDES & WIDGETS
 			color: $tu-cherry;
 			}
 
-			.featured-video-thumbnail {
+			.thumbnail {
 			margin-bottom: 0.5em;
 
 				img {
@@ -555,7 +556,8 @@ SIDEBARS & ASIDES & WIDGETS
 				}
 			}
 
-			.featured-video-show {
+			.featured-video-show,
+			.video-title {
 			font-size: 12px;
 			font-weight: 700;
 			font-family: $sans-serif;
@@ -624,16 +626,17 @@ margin-top: 1.5rem;
 		} /* end a.sidebar-featured-button */
 	} /* end .sidebar-featured-buttons-section */
 
-	.featured-video-section {
+	.featured-video-section,
+	.video-section {
 
-		.featured-video {
+		.video-item {
 		padding: 8px; // 0.5em
 		height: 200px; // adjust if needed, but this should be fine
 
 			a {
 			width: 122px;
 			} /* end a */
-		} /* end .featured-video */
+		} /* end .video-item */
 	} /* end .featured-video-section */
 
 } /* end .sidebar */

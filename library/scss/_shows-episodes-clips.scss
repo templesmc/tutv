@@ -235,32 +235,58 @@
 				}
 			}
 
+			.sidebar {
+			margin-top: 0;
+			}
+
+			// this will only work with each video item 2-columns wide
 			.video-sidebar {
 
-			.video-block .clip-item {
-				
+				h3.section-header {
+				font-size: 16px;
 				}
 
-				.video-block .video-title {
+				.upcoming-showtimes {
 
-				}
+					ul {
+					@extend div;
+					@extend .block;
+					list-style: none;
+					padding: 1em;
 
-				.video-block {
+						.scheduled-date {
+						font-weight: 700;
+						}
 
-					h3.section-header {
+						.scheduled-time {
+						float: right;
+						}
+					}
+				} /* end .upcoming-showtimes */
 
+				.video-section {
+				@extend .clearfix;
+
+					.video-item {
+					@extend .block;
+					@extend .grid_2;
+					@extend .clearfix;
+					width: 140px;
+
+						&:nth-child(odd) {
+						@extend .omega;
+						}
+
+						&:nth-child(even) {
+						@extend .alpha;
+						}
 					}
 
-					.clip-item {
-
-					}
-
-					.video-title {
-
+					a {
 					}
 
 					.thumbnail {
-					margin-bottom: 10px;
+					float: none;
 					}
 				}
 			} /* end .video-sidebar */

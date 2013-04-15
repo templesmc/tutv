@@ -56,7 +56,7 @@ function tutv_upcoming_showtimes() {
 				$formatted_time .= date( 'h:i A', $start_time );
 				$current_day = date( 'w', $start_time );
 				$current_day_name = date( 'l', $start_time );
-				$current_date_name = date( 'F j, Y', $start_time );
+				$current_date_name = date( 'M. j, Y', $start_time );
 	
 				$output .= '<li>';
 				$output .= "<span class='scheduled-date'>$current_day_name, $current_date_name</span>";
@@ -288,15 +288,15 @@ function tutv_video_block( $term, $args, $title = '' ) {
 	
 	if( $video_block->have_posts() ) {
 		
-		$content = "<div class='" . $post_type->query_var . "-block video-block'>";
+		$content = "<div class='" . $post_type->query_var . "-block video-section'>";
 		$content .= "<h3 class='section-header'>$title</h3>";
 		while ($video_block->have_posts()) : $video_block->the_post();
 			$content .=  "<div class='" . $post_type->query_var . "-item video-item'>";
 				$content .=  '<a href="' . get_permalink( get_the_ID() ) . '" rel="bookmark">';
+					$content .= get_video_thumbnail( get_the_ID() ); 
 					$content .=  '<span class="video-title">';
 						$content .=  get_the_show( get_the_ID() ) . get_the_title(); 
 					$content .= '</span>';
-					$content .= get_video_thumbnail( get_the_ID() ); 
 
 				$content .= '</a>';
 			$content .= '</div>';
