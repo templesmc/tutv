@@ -28,3 +28,25 @@ We have two new sizes.
 Technically, the `'thumbnail'` size is not new, but its dimensions have increased. In places where only 140px is necessary, limit in stylesheet using `width: 140px;` or `max-width: 100%;` on an image with a 140px container. __Check to make sure all thumbnails are fitting properly.__
 
 The `'thumbnail-square'` size is only used in the show header.
+
+### Excerpts
+
+Still a problem. How did we resolve it before? Excluding elements?
+
+For Temple Update, suggest moving meta info below Top Stories.
+
+
+# Remaining Tasks
+
+- [] front slider
+- [] episode pages
+- [] clips pages
+- [] watch live page
+	- [] schedule block
+- [] submissions page
+	- [] menu
+- [] contact page
+- [] blog
+	- [] single post
+	- [] archive
+	- [] daily archives (low priority)
