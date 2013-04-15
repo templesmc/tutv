@@ -1159,9 +1159,12 @@ ul.social-media-icons li.social-media-icon, ul.social-media-icons li.social-medi
 /*****************************
 SIDEBARS & ASIDES & WIDGETS
 ******************************/
-.main-aside { width: 230px; border: 1px solid #cccccc; padding: 18px 0 0; }
+.sidebar { margin-top: 1.5rem; }
 
-#primary { border: none; margin-bottom: 0; }
+.connect-block { padding: 2em; }
+.connect-block .social-connection { height: 36px; margin: 0.5em 0; }
+.connect-block .social-connection .social-media-icon { display: inline-block; float: left; width: 36px; }
+.connect-block .social-connection a.social-connection-link { line-height: 36px; display: inline-block; font-size: 14px; padding-left: 0.5em; }
 
 .widgettitle { display: none; }
 

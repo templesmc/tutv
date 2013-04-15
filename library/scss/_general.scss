@@ -525,12 +525,31 @@ SEARCH FORMS & SOCIAL ICONS
 SIDEBARS & ASIDES & WIDGETS
 ******************************/
 
-.main-aside { width: 230px;border:1px solid #ccc;padding:18px 0 0;}
-#primary {border: none;margin-bottom: 0;}
+.sidebar {
+margin-top: 1.5rem;
+}
 
-// from bones
+	.connect-block {
+	padding: 2em;
 
-.sidebar {}
+		.social-connection {
+		height: 36px;
+		margin: 0.5em 0;
+
+			.social-media-icon {
+			display: inline-block;
+			float: left;
+			width: 36px;
+			}
+
+			a.social-connection-link {
+			line-height: 36px;
+			display: inline-block;
+			font-size: 14px;
+			padding-left: 0.5em;
+			}
+		}
+	}
 
 	.widgettitle {display: none;}
 
