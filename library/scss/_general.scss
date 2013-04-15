@@ -17,7 +17,9 @@ background-size: cover;
 LINK STYLES
 *********************/
 
-a, a:visited {
+a,
+a:visited,
+.entry-title a { // .entry-title a overrides some thematic bullshit
 	-webkit-transition: color .3s ease, background .3s ease;
 	   -moz-transition: color .3s ease, background .3s ease;
 	     -o-transition: color .3s ease, background .3s ease;

@@ -1030,10 +1030,10 @@ body { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; font
 /*********************
 LINK STYLES
 *********************/
-a, a:visited { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; text-decoration: none; /* on hover */ /* mobile tap color */ }
-a:active, a:hover, a:focus, a:visited:active, a:visited:hover, a:visited:focus { text-decoration: none; color: #9e1b34; }
-a:active .thumbnail, a:hover .thumbnail, a:focus .thumbnail, a:visited:active .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail { opacity: 1; }
-a:link, a:visited:link { /*
+a, a:visited, .entry-title a { -webkit-transition: color 0.3s ease, background 0.3s ease; -moz-transition: color 0.3s ease, background 0.3s ease; -o-transition: color 0.3s ease, background 0.3s ease; transition: color 0.3s ease, background 0.3s ease; color: #0176b7; text-decoration: none; /* on hover */ /* mobile tap color */ }
+a:active, a:hover, a:focus, a:visited:active, a:visited:hover, a:visited:focus, .entry-title a:active, .entry-title a:hover, .entry-title a:focus { text-decoration: none; color: #9e1b34; }
+a:active .thumbnail, a:hover .thumbnail, a:focus .thumbnail, a:visited:active .thumbnail, a:visited:hover .thumbnail, a:visited:focus .thumbnail, .entry-title a:active .thumbnail, .entry-title a:hover .thumbnail, .entry-title a:focus .thumbnail { opacity: 1; }
+a:link, a:visited:link, .entry-title a:link { /*
 this highlights links on iPhones/iPads.
 so it basically works like the :hover selector
 for mobile devices.
