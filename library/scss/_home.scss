@@ -496,50 +496,16 @@
 				} /* end #schedule-meta-block-container */
 
 				/* FEATURED VIDEO SECTION */
-				#featured-video-section {
-
-					h3.section-header {
-					letter-spacing: 0.05em;
-					color: $tu-cherry;
-					}
+				.featured-video-section {
 
 					.featured-video {
 					height: 220px;
 					padding: 1.5em;
-					border: 1px solid $border-color;
-					background: white;
-					font-size: 12px;
-					font-family: $sans-serif;
-					text-align: left;
-
-						a {
-						display: block;
-						text-decoration: none;
-						color: black;
-
-							&:hover {
-							color: $tu-cherry;
-							}
-
-							.featured-video-thumbnail {
-							margin-bottom: 0.5em;
-
-								img {
-								max-width: 100%;
-								height: auto;
-								}
-							}
-
-							.featured-video-show {
-							font-size: 12px;
-							font-weight: 700;
-							font-family: $sans-serif;
-							text-align: left;
-							}
-						} /* end a */
 					} /* END .featured-videos */
 				} /* END #featured-video-section */
+
 			} /* end #content */
+			
 		} /* end #container */
 	} /* end #main */
 } /* END .home */

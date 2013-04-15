@@ -52,6 +52,8 @@ function tutv_sidebar_featured_buttons() { ?>
 /**
  * Featured Videos sidebar
  *
+ * N.B. This will only work well with two columns, as the a/o style class would need to change with the new param.
+ *
  * @author Chris Montgomery
  * @author Sam Marguiles
  * @since 2.0.0
@@ -60,7 +62,7 @@ function tutv_sidebar_featured_buttons() { ?>
  * @param string $grid_class 960gs class for block widths 
  */
 function tutv_sidebar_featured_videos($grid_class = 'grid_2') { ?>
-	<div id="featured-video-sidebar-section">
+	<div class="featured-video-section">
 		<h3 class="section-header">Featured Videos</h3>
 		<?php
 		// set class to alpha/omega depending on position in 2 column layout
@@ -90,6 +92,6 @@ function tutv_sidebar_featured_videos($grid_class = 'grid_2') { ?>
 		endwhile;
 		wp_reset_query();
 		?>
-	</div><!-- end #featured-video-section -->
+	</div><!-- end .featured-video-section -->
 <?php
 } // don't remove this bracket!

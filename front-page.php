@@ -400,7 +400,7 @@ Template Name: Front Page
 			</div><!-- end #schedule-meta-block-container -->
 
 			<!-- Featured Video Section -->
-			<div id="featured-video-section" class="grid_12">
+			<div class="featured-video-section grid_12 clearfix">
 
 				<h3 class="section-header">Featured Videos</h3>
 

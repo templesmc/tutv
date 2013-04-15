@@ -525,9 +525,46 @@ SEARCH FORMS & SOCIAL ICONS
 SIDEBARS & ASIDES & WIDGETS
 ******************************/
 
+.featured-video-section {
+
+	h3.section-header {
+	color: $tu-cherry;
+	}
+
+	.featured-video {
+	font-size: 12px;
+	height: 200px; // adjust if needed, but this should be fine
+
+		a {
+		display: block;
+		text-decoration: none;
+		color: black;
+
+			&:hover {
+			color: $tu-cherry;
+			}
+
+			.featured-video-thumbnail {
+			margin-bottom: 0.5em;
+
+				img {
+				max-width: 100%;
+				height: auto;
+				}
+			}
+
+			.featured-video-show {
+			font-size: 12px;
+			font-weight: 700;
+			font-family: $sans-serif;
+			text-align: left;
+			}
+		} /* end a */
+	} /* end .featured-video */
+} /* end #featured-video-sidebar-section */
+
 .sidebar {
 margin-top: 1.5rem;
-}
 
 	.connect-block {
 	padding: 2em;
@@ -550,6 +587,7 @@ margin-top: 1.5rem;
 			}
 		}
 	} /* end .connect-block */
+
 
 	.sidebar-featured-buttons-section {
 	margin-bottom: 2.5em;
@@ -582,8 +620,21 @@ margin-top: 1.5rem;
 			color: $watch-live-button;
 			}
 		} /* end a.sidebar-featured-button */
-
 	} /* end .sidebar-featured-buttons-section */
+
+	.featured-video-section {
+
+		.featured-video {
+		padding: 8px; // 0.5em
+		height: 200px; // adjust if needed, but this should be fine
+
+			a {
+			width: 122px;
+			} /* end a */
+		} /* end .featured-video */
+	} /* end .featured-video-section */
+
+} /* end .sidebar */
 
 	.widgettitle {display: none;}
 
