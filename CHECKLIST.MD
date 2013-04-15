@@ -2,6 +2,10 @@
 
 ## General
 
+### Social Media Icons
+
+The "Contact" icon is weird... maybe the little dongle should go off to the left?
+
 ### Search Form
 
 Make sure search is searching in the right place. See `searchform.php`.
@@ -21,6 +25,6 @@ We have two new sizes.
 	add_image_size( 'thumbnail', 180, 130, true ); // Thumbnail size
 	add_image_size( 'thumbnail-square', 200, 200, true ); // square thumbnail size for show page headers
 
-Technically, the `'thumbnail'` size is not new, but its dimensions have increased. In places where only 140px is necessary, limit in stylesheet using `width: 140px;` or `max-width: 100%;` on an image with a 140px container.
+Technically, the `'thumbnail'` size is not new, but its dimensions have increased. In places where only 140px is necessary, limit in stylesheet using `width: 140px;` or `max-width: 100%;` on an image with a 140px container. __Check to make sure all thumbnails are fitting properly.__
 
 The `'thumbnail-square'` size is only used in the show header.
