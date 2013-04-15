@@ -79,129 +79,116 @@
 				/* FEATURED SLIDESHOW */
 
 				#front-featured {
-				height: 290px; // what's so important about it?
-				padding: 0px;
-				position: relative; // umm... "realtive"... it must be important then...
-				z-index: 0; // also, quite effective
-				margin-bottom: 0;
+				height: 290px !important; // what's so important about it?
+				margin-bottom: 2.2em;
 
-					.attachment-banner {
-					float: right;
-					}
+					.flexslider {
+					margin-bottom: 0;
+					background: transparent;
+					border: none;
 
-					ul {
-					list-style: none;
-					margin:0;
-					overflow: hidden;
-					height: 330px;
-					}
-
-					li {
-					height: 330px;
-					float: none;
-					position: relative;
-					margin-bottom: 20px;	
-					}
-
-					h2 { /* this should really have a class name because it's IMPORTANT. maybe .headline because that's what it is... */
-					line-height: 38px;
-					font-size: 32px;
-					font-weight: 300;
-					font-family: arial, helvetica, sans-serif;
-					margin-bottom: 8px;
-					word-wrap: break-word;
-
-						a {
-						color:#5b6d7b;  /* 06-11-2011 PWinnick */
-						text-decoration: none;
-
-							&:hover {
-							color: #4ad5f4;
-							}
+						.attachment-banner {
+						float: right;
 						}
-					} /* end h2 */
 
-					#headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
-					font-size: 20px;
-					font-weight: 200;
-					font-family: $sans-serif;
-					margin-bottom: 6px;
-					word-wrap: break-word;
-					color: #d0632d;
-					}
+						ul {
 
-					#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
-					background-image: url('images/subheadline.png');
-					background-repeat: no-repeat;
-					height: 25px;
-					width: 100%; /*192px*/
-					margin-bottom: 8px;
-					margin-top: -10px;
-					padding-top: 2px;
-
-						a {
-						font-size: 13px;
-						font-family: $sans-serif;
-						font-weight: bold;
-						color: #2F3E51;
-						padding: 0px 80px 0px 24px;
-
-							&:hover {
-							color: #005588;
-							}
 						}
-					} /* end #subheadline */
 
-					#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
-					background-image: url('images/watchheadline.png');
-					background-repeat: no-repeat;
-					height: 25px;
-					width: 232px;
-					margin-bottom: 8px;
-					margin-top: 4px;
-					padding-top: 2px;
-					border-top-color: #EFEFEF;
-					border-top-width: 1px;
-					border-top-style: solid;
+						li {
+						height: 290px;
+						overflow: hidden;
+						}
 
-						a {
-						font-size: 12px;
-						font-family: arial, helvetica, sans-serif;
+						h2 { /* this should really have a class name because it's IMPORTANT. maybe .headline because that's what it is... */
+						font-weight: 300;
+						word-wrap: break-word;
+						} /* end h2 */
+
+						#headline { /* this is not a headline, it's a subheadline. also, it should NOT be an id */
+						font-size: 20px;
 						font-weight: 200;
-						/*color: #EFEFEF;*/
-						padding: 0px 0px 0px 26px;
+						font-family: $sans-serif;
+						margin-bottom: 6px;
+						word-wrap: break-word;
+						color: #d0632d;
+						}
 
-							&:hover {
-							color: #005588;
+						#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
+						background-image: url('images/subheadline.png');
+						background-repeat: no-repeat;
+						height: 25px;
+						width: 100%; /*192px*/
+						margin-bottom: 8px;
+						margin-top: -10px;
+						padding-top: 2px;
+
+							a {
+							font-size: 13px;
+							font-family: $sans-serif;
+							font-weight: bold;
+							color: #2F3E51;
+							padding: 0px 80px 0px 24px;
+
+								&:hover {
+								color: #005588;
+								}
 							}
-						}
-					} /* end #subheadline2 */
+						} /* end #subheadline */
 
-					.wp-caption { display: none; } // take this out of the template!
+						#subheadline2 { /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */
+						background-image: url('images/watchheadline.png');
+						background-repeat: no-repeat;
+						height: 25px;
+						width: 232px;
+						margin-bottom: 8px;
+						margin-top: 4px;
+						padding-top: 2px;
+						border-top-color: #EFEFEF;
+						border-top-width: 1px;
+						border-top-style: solid;
 
-					.description {
-					position: absolute;
-					left: 0;
-					padding: 10px 10px 0px 10px;
-					background: black;
-					background: rgba(0,0,0,.8);
-					color: #fff;
-					z-index: 3;
-					float: left;
-					height:280px;
-					width:300px;
-					margin-left: 16px; 
+							a {
+							font-size: 12px;
+							font-family: arial, helvetica, sans-serif;
+							font-weight: 200;
+							/*color: #EFEFEF;*/
+							padding: 0px 0px 0px 26px;
 
-						blockquote {
-						margin: 0;
-						}
+								&:hover {
+								color: #005588;
+								}
+							}
+						} /* end #subheadline2 */
 
-						.more-link {
-						display: block;
-						}
+						.wp-caption { display: none; } // take this out of the template!
 
-						img { display: none; } // this should just be taken out of the template entirely. no need to display: none;
-					} /* end .description */
+						.description {
+						position: absolute;
+						left: 0;
+						padding: 10px 10px 0px 10px;
+						background: black;
+						background: rgba(0,0,0,.8);
+						color: #fff;
+						z-index: 3;
+						float: right;
+						height: 290px;
+						width: 380px;
+						margin-left: 16px; 
+
+							blockquote {
+							margin: 0;
+							}
+
+							.more-link {
+							//display: block;
+							}
+
+							img { display: none; } // this should just be taken out of the template entirely. no need to display: none;
+						} /* end .description */
+					} /* end .flexslider */
+
+					
 				} /* end #front-featured */
 
 				#recent-blog-posts-block {

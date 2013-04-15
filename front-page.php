@@ -8,8 +8,9 @@ Template Name: Front Page
 	 
 	function childtheme_shows_scripts() {
 	
-		wp_enqueue_script('slideshow', get_bloginfo('stylesheet_directory') . '/js/jcarousellite.min.js', array('jquery'), '1.0', false);
-		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home-ck.js', array('slideshow', 'jquery'), '1.0', false);
+		//wp_enqueue_script('slideshow', get_bloginfo('stylesheet_directory') . '/js/jcarousellite.min.js', array('jquery'), '1.0', false);
+		wp_enqueue_script('flexslider', get_bloginfo('stylesheet_directory') . '/js/jquery.flexslider-min.js', array('jquery'), '1.0', false);
+		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array(), '2.0', false);
 
 	}
 
@@ -39,8 +40,12 @@ Template Name: Front Page
 			
 			</div> <!-- end #masthead -->
 
-			<div id="front-featured" class="grid_12">
-				<ul>
+			<div id="front-featured" class="grid_12 flexslider-container clearfix">
+
+				<div class="flexslider">
+				
+					<ul class="slides">
+
 					<?php
 
 					query_posts( array( 
@@ -57,66 +62,69 @@ Template Name: Front Page
 					
 					?>
 
-					<li id="item-<?php $i++; echo $i; ?>" class="item<?php if( !has_post_thumbnail() ) echo ' no-thumbnail'; ?>">
+						<li id="item-<?php $i++; echo $i; ?>" class="item<?php if( !has_post_thumbnail() ) echo ' no-thumbnail'; ?>">
 
-						<a name="item-<?php echo $i; ?>"></a>  
+							<a name="item-<?php echo $i; ?>"></a>  
 
-						<?php
+							<?php
 
-						$slides[] = $post->ID;
-						
-						the_post_thumbnail('banner');
-						
-						?>
-
-						<div class="description">
-
-							<!--
-							Some problematic names of variables and ids to follow, as addressed in _home.scss .
-							These naming problems extend into the database and likely can't be changed without significant investment.
-
-								Postponed. -montchr, 2013.03.14
-							-->
-							<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_show(); the_title(); ?></a></h2>
-
-							<?php 
+							$slides[] = $post->ID;
 							
-							global $more;    // Declare global $more (before the loop).
-							$more = 0;       // Set (inside the loop) to display content above the more tag.
-							$headline = get_post_meta(get_the_ID(), 'headline', TRUE);
-							$subheadline = get_post_meta(get_the_ID(), 'subheadline', TRUE);
-							$subheadline2 = get_post_meta(get_the_ID(), 'subheadline2', TRUE);
-							$subheadline3 = get_post_meta(get_the_ID(), 'subheadline3', TRUE);
-
-							if($headline) {
-								echo "<h3 id='headline'>" . $headline . "</h3>"; 
-							}
-
-							the_excerpt();
-
-							if($subheadline) {
-								echo "<div id='subheadline'>" . $subheadline . "</div>"; 
-							}
-							if($subheadline2) {
-								echo "<div id='subheadline2'>" . $subheadline2 . "</div>"; 
-							}
-							if($subheadline3) {
-								echo "<div id='subheadline3'>" . $subheadline3 . "</div>"; 
-							}
+							the_post_thumbnail('banner');
 							
 							?>
 
-							</div>
-					</li>
-					
-				<?php 
-				
-				endwhile; // end the featured post loop
-				
-				?>
-				</ul>
+							<div class="description">
 
-				<div class="next"> </div>
+								<?php
+								/*
+								Some problematic names of variables and ids to follow, as addressed in _home.scss .
+								These naming problems extend into the database and likely can't be changed without significant investment.
+
+									Postponed. -montchr, 2013.03.14
+								*/
+								?>
+
+								<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_show(); the_title(); ?></a></h2>
+
+								<?php 
+								
+								global $more;    // Declare global $more (before the loop).
+								$more = 0;       // Set (inside the loop) to display content above the more tag.
+								$headline = get_post_meta(get_the_ID(), 'headline', TRUE);
+								$subheadline = get_post_meta(get_the_ID(), 'subheadline', TRUE);
+								$subheadline2 = get_post_meta(get_the_ID(), 'subheadline2', TRUE);
+								$subheadline3 = get_post_meta(get_the_ID(), 'subheadline3', TRUE);
+
+								if($headline) {
+									echo "<h3 id='headline'>" . $headline . "</h3>"; 
+								}
+
+								the_excerpt();
+
+								if($subheadline) {
+									echo "<div id='subheadline'>" . $subheadline . "</div>"; 
+								}
+								if($subheadline2) {
+									echo "<div id='subheadline2'>" . $subheadline2 . "</div>"; 
+								}
+								if($subheadline3) {
+									echo "<div id='subheadline3'>" . $subheadline3 . "</div>"; 
+								}
+								
+								?>
+
+								</div>
+						</li>
+						
+					<?php 
+					
+					endwhile; // end the featured post loop
+					
+					?>
+					</ul> <!-- end ul.slides -->
+
+				</div> <!-- end .flexslider -->
 			
 			</div> <!-- #front-featured -->
 			
