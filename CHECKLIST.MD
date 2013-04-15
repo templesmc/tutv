@@ -38,7 +38,7 @@ For Temple Update, suggest moving meta info below Top Stories.
 
 # Remaining Tasks
 
-- [] front slider
+- [x] front slider
 - [] episode pages
 - [] clips pages
 - [] watch live page
