@@ -110,7 +110,6 @@
 		}
 
 		.hentry {
-		padding: 1em;
 
 			.entry-header {
 			float: right;
@@ -229,17 +228,11 @@
 		#content {
 
 			.hentry {
-			padding: 1em;
 
-				h1.entry-title {
-				@extend .h1;
-				font-weight: 300;
-				text-transform: none;
-				}
 			}
 
 			.sidebar {
-			margin-top: 0;
+				
 			}
 
 			// this will only work with each video item 2-columns wide
