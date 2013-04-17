@@ -32,6 +32,16 @@ function tutv_body_classes( $classes ) {
 		$classes[] = 'show-post';
 	}
 	
+	// blog post
+	if( is_singular( array( 'post' ) ) && in_category( 'blog' ) ) {
+		$classes[] = 'blog-post blog';
+	}
+
+	// blog archive page (using index.php on page)
+	if ( is_home() && !is_front_page() ) {
+		$classes[] = 'blog-archive';
+	}
+
 	return $classes;
 }
 add_filter('body_class', 'tutv_body_classes');
