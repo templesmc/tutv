@@ -226,7 +226,7 @@ function tutv_meta_footer( $content ) {
 	}
 	echo $content;
 }
-add_filter ('thematic_postfooter', 'tutv_meta_footer', 3);
+//add_filter ('thematic_postfooter', 'tutv_meta_footer', 3);
 	
 // Output the page title of the 'posts page'
 //
