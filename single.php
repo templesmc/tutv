@@ -8,13 +8,23 @@
 
 			<?php 
 			
-			the_post(); ?>
+			the_post();
 
-			<div id="page-header" class="grid_12 block clearfix">
-			
-				<?php thematic_navigation_above(); ?>
+			if (!is_singular( 'post' )) :
 
-			</div> <!-- end #page-header -->
+			?>
+
+				<div id="page-header" class="grid_12 block clearfix">
+				
+					<?php thematic_navigation_above(); ?>
+
+				</div> <!-- end #page-header -->
+
+			<?php
+
+			endif;
+
+			?>
 
 			<div id="main-content" class="grid_8 block clearfix">
 
@@ -49,6 +59,14 @@
 				tutv_sidebar_connect_block();
 
 				tutv_video_sidebar();
+
+				if (is_singular( 'post' ) && in_category( 'blog' )) :
+
+					tutv_sidebar_featured_buttons();
+
+					tutv_sidebar_featured_videos();
+
+				endif;
 
 				?>
 

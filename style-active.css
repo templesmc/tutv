@@ -4623,6 +4623,12 @@ table.staff tr td#status {
 ==BLOG
 ========================
 */
+.blog {
+  /* single blog post */
+}
+.blog.blog-post #content {
+  margin-top: 1.5rem;
+}
 .blog .hentry {
   float: left;
 }

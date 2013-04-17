@@ -92,6 +92,14 @@
 
 	.blog {
 
+		/* single blog post */
+		&.blog-post {
+
+			#content {
+				margin-top: 1.5rem;
+			}
+		}
+
 		.hentry {
 		float: left;
 
