@@ -66,19 +66,18 @@ h6, .h6 {
 font-family: $sans-serif;
 padding: 0 0 0.5em;
 line-height: 1.2;
+color: $header-color;
 }
 
 h1, .h1 {
 font-size:40px;
 font-weight: 300;
 text-transform: uppercase;
-color: $header-color;
 }
 
 h2, .h2 {
 font-size: 34px;
 font-weight: 300;
-color: $header-color;
 }
 
 h3, .h3 {
@@ -90,7 +89,6 @@ h4, .h4 {
 font-weight: 700;
 font-style: italic;
 font-size:20px;
-color: $header-color;
 }
 
 /* basically just the body text size in 700 weight with bottom padding */
@@ -114,7 +112,7 @@ padding: 0 1em;
 
 	h1.page-title {
 	@extend .h1;
-	color: $teal;
+	color: $header-color;
 	font-weight: 300;
 	line-height: 70px;
 	display: inline-block;
