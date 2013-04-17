@@ -3272,13 +3272,13 @@ SIDEBARS & ASIDES & WIDGETS
 .sidebar .sidebar-featured-buttons-section a.sidebar-featured-button h3 em {
   font-weight: 900;
 }
-.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-about-tutv-button {
+.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-about-tutv-button h3 {
   color: #42abe8;
 }
-.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-temple-update-blog-button {
+.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-temple-update-blog-button h3 {
   color: #00b3a0;
 }
-.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-watch-live-button {
+.sidebar .sidebar-featured-buttons-section a.sidebar-featured-button#sidebar-watch-live-button h3 {
   color: #9e1b34;
 }
 .sidebar .featured-video-section,
@@ -3751,31 +3751,23 @@ FOOTER STYLES
 }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#watch-live-button-title {
   font-size: 36px;
+  color: #9e1b34;
 }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title {
   font-size: 24px;
 }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title {
+  color: #42abe8;
+}
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title {
+  color: #00b3a0;
+}
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#read-the-blog-button-title {
   font-size: 20px;
+  color: #666666;
 }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button {
   margin-bottom: 10px;
-  color: #9e1b34;
-}
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button:active {
-  color: inherit;
-}
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section #about-tutv-button {
-  color: #42abe8;
-}
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section #about-tutv-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #about-tutv-button:active {
-  color: inherit;
-}
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section #submit-a-video-button {
-  color: #00b3a0;
-}
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section #submit-a-video-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #submit-a-video-button:active {
-  color: inherit;
 }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button {
   height: 45px;

@@ -672,15 +672,15 @@ margin-top: 1.5rem;
 			}
 
 			&#sidebar-about-tutv-button {
-			color: $about-button;
+				h3 { color: $about-button; }
 			}
 
 			&#sidebar-temple-update-blog-button {
-			color: $teal;
+				h3 { color: $teal; }
 			}
 
 			&#sidebar-watch-live-button {
-			color: $watch-live-button;
+				h3 { color: $watch-live-button; }
 			}
 		} /* end a.sidebar-featured-button */
 	} /* end .sidebar-featured-buttons-section */

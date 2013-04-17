@@ -428,6 +428,7 @@
 
 									&#watch-live-button-title {
 									font-size: 36px;
+									color: $tu-cherry;
 									}
 
 									&#about-tutv-button-title,
@@ -435,38 +436,23 @@
 									font-size: 24px;
 									}
 
+									&#about-tutv-button-title {
+									color: $about-button;
+									}
+
+									&#submit-a-video-button-title {
+									color: $submit-button;
+									}
+
 									&#read-the-blog-button-title {
 									font-size: 20px;
+									color: $blog-button;
 									}
 								} /* end h3.front-featured-button-title */
 						} /* end a.front-featured-button */
 
 						#watch-live-button {
 						margin-bottom: 10px;
-						color: $tu-cherry;
-
-							&:hover,
-							&:active {
-							color: inherit;
-							}
-						}
-
-						#about-tutv-button {
-						color: $about-button;
-
-							&:hover,
-							&:active {
-							color: inherit;
-							}
-						}
-
-						#submit-a-video-button {
-						color: $submit-button;
-
-							&:hover,
-							&:active {
-							color: inherit;
-							}
 						}
 
 						#read-the-blog-button {
