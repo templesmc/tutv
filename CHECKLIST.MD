@@ -39,18 +39,27 @@ Still a problem. How did we resolve it before? Excluding elements?
 
 For Temple Update, suggest moving meta info below Top Stories.
 
+### Watch Live
 
-# Remaining Tasks
+Ensemble embed must be made proportionately smaller in post editor to fit within container.
+
+### Page Header Submenus
+
+How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`).
+
+I haven't touched Sam's function that generates these because trying to approximate Bella's mockup would mean removing some of his code.
+
+
+## Remaining Tasks
 
 - [x] front slider
-- [] episode pages
-- [] clips pages
+- [x] episode pages
+- [x] clips pages
 - [] watch live page
 	- [] schedule block
-- [] submissions page
-	- [] menu
-- [] contact page
+- [/] submissions page
+	- [/] menu
+- [x] contact page
 - [] blog
-	- [] single post
+	- [/] single post
 	- [] archive
-	- [] daily archives (low priority)
