@@ -341,6 +341,33 @@ color: black;
 	} /* end .menu */
 } /* end #access */
 
+.archive-navigation {
+float: left;
+width: 100%;
+padding: 10px 0;
+
+	a {
+	@extend .block;
+	font-style: normal;
+	font-weight: 700;
+	color: $teal;
+	font-size: 16px;
+	padding: 0.5em;
+	}
+
+	.nav-next {
+	float:left;
+	width: 50%;
+	text-align: left;
+	}
+
+	.nav-previous {
+	float: right;
+	width: 50%;
+	text-align: right;
+	}
+} /* end .archive-navigation */
+
 .categories-menu .sf-menu a {border-left: none;} /* not sure what the .categories-menu class refers to */
 
 

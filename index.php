@@ -71,8 +71,8 @@
 					<?php if(function_exists('wp_pagenavi')) { ?>
 						<?php wp_pagenavi(); ?>
 					<?php } else { ?>  
-						<div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&larr;</span> Older', 'thematic')) ?></div>
-						<div class="nav-next"><?php previous_posts_link(__('Newer <span class="meta-nav">&rarr;</span>', 'thematic')) ?></div>
+						<div class="nav-previous"><?php next_posts_link(__('Older  <span class="meta-nav">&rarr;</span>', 'thematic')) ?></div>
+						<div class="nav-next"><?php previous_posts_link(__('<span class="meta-nav">&larr;</span>  Newer', 'thematic')) ?></div>
 					<?php } ?>
 
 			</div> <!-- end #blog-archive-nav -->
