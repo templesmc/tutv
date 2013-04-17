@@ -2790,6 +2790,7 @@ h6, .h6 {
 #page-header {
   margin-top: 1.5rem;
   padding: 0 1em;
+  /* end .page-header-menu-container */
 }
 #page-header h1.page-title {
   color: #00b3a0;
@@ -2799,7 +2800,33 @@ h6, .h6 {
   padding: 0;
   margin: 0;
 }
+#page-header .page-header-menu-container {
+  display: inline-block;
+  float: left;
+  margin-left: 2em;
+  line-height: 50px;
+  /* end ul */
+}
+#page-header .page-header-menu-container ul {
+  list-style: none;
+  margin: 0;
+  /* end li */
+}
+#page-header .page-header-menu-container ul li {
+  display: inline;
+  float: left;
+  font-style: italic;
+  font-weight: 400;
+  padding-left: 1em;
+}
+#page-header .page-header-menu-container ul li.current_page_item {
+  font-style: normal;
+}
+#page-header .page-header-menu-container ul li.current_page_item a, #page-header .page-header-menu-container ul li.current_page_item a:visited {
+  color: #9e1b34;
+}
 
+/* end #page-header */
 h2.entry-title {
   color: #0176b7;
 }
@@ -4375,31 +4402,11 @@ body.slug-schedule #schedule-section .hentry:nth-last-child(3) > .entry-content 
   padding-right: 1em;
   /* end #show-header */
 }
-.has-taxonomy-show #main #content #page-header #show-info-container #show-header {
-  /* end .show-menu-container */
-}
 .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name {
   display: inline-block;
   float: left;
   padding: 0;
   color: #00b3a0;
-}
-.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container {
-  display: inline-block;
-  float: left;
-  margin-left: 2em;
-  line-height: 50px;
-}
-.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu {
-  list-style: none;
-  margin: 0;
-}
-.has-taxonomy-show #main #content #page-header #show-info-container #show-header .show-menu-container ul.show-menu li {
-  display: inline;
-  float: left;
-  font-style: italic;
-  font-weight: 400;
-  padding-left: 1em;
 }
 .has-taxonomy-show #main #content h3.section-header {
   color: #9e1b34;
@@ -4438,6 +4445,7 @@ body.slug-schedule #schedule-section .hentry:nth-last-child(3) > .entry-content 
   display: none;
 }
 #content.single-show-page .hentry {
+  padding: 1em;
   /* end .entry-header */
   /* end .entry-image */
 }

@@ -98,11 +98,14 @@ function tutv_page_submenus( $content ) {
 		$args = array(
 			'title_li' => '',
 			'echo' => 0,
-			'include' =>  $parent . ',' . implode(",", $pageids)
+			'include' =>  $parent . ',' . implode(",", $pageids),
+			'link_before' => '&raquo;  '
 		);
-		$output .= '<ul id="subpage-menu">';
+		$output .= '<div class="subpage-menu-container page-header-menu-container">';
+		$output .= '<ul id="subpage-menu page-header-menu">';
 		$output .= wp_list_pages( $args );
 		$output .= '</ul>';
+		$output .= '</div> <!-- end .subpage-menu-container -->';
 	}
 
 	return $output . $content;
@@ -264,8 +267,8 @@ function tutv_show_header( $force = false ) {
 				wp_nav_menu( array(
 					'fallback_cb'     => '',
 					'theme_location'  => $term->slug,
-					'container_class' => 'show-menu-container',
-					'menu_class'      => 'show-menu',
+					'container_class' => 'show-menu-container page-header-menu-container',
+					'menu_class'      => 'show-menu page-header-menu',
 					'link_before'     => '&raquo;  '
 				) );
 

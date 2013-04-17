@@ -37,26 +37,7 @@
 						padding: 0;
 						color: $teal;
 						}
-
-						.show-menu-container {
-						display: inline-block;
-						float: left;
-						margin-left: 2em;
-						line-height: 50px;
-
-							ul.show-menu {
-							list-style: none;
-							margin: 0;
-
-								li {
-								display: inline;
-								float: left;
-								font-style: italic;
-								font-weight: 400;
-								padding-left: 1em;
-								}
-							}
-						} /* end .show-menu-container */
+						
 					} /* end #show-header */
 
 					#show-description {
@@ -110,6 +91,7 @@
 		}
 
 		.hentry {
+			padding: 1em;
 
 			.entry-header {
 			float: right;
