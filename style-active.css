@@ -4634,7 +4634,43 @@ table.staff tr td#status {
 ========================
 */
 .blog {
+  /* end blog archive */
   /* end &.single.blog-post */
+}
+.blog .sidebar {
+  margin-top: 0;
+}
+.blog.blog-archive {
+  /* ent .hentry */
+}
+.blog.blog-archive .hentry {
+  padding: 2em;
+  /* end .entry-meta */
+  /* end .entry-content */
+}
+.blog.blog-archive .hentry .entry-header h1 {
+  text-transform: none;
+}
+.blog.blog-archive .hentry .entry-meta {
+  font-style: normal;
+  /* end .comments-meta */
+}
+.blog.blog-archive .hentry .entry-meta .comments-meta img {
+  padding-right: 0.5em;
+  position: relative;
+  top: 3px;
+}
+.blog.blog-archive .hentry .entry-meta .posted-date {
+  color: #b3b3b3;
+}
+.blog.blog-archive .hentry .entry-content img {
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  padding: 0.5em;
+  max-width: 100%;
+}
+.blog.blog-archive .hentry .entry-content a {
+  font-weight: 700;
 }
 .blog.single.blog-post #content {
   margin-top: 1.5rem;

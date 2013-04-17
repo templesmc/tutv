@@ -92,6 +92,49 @@
 
 	.blog {
 
+		.sidebar { margin-top: 0; }
+
+		&.blog-archive {
+
+			.hentry {
+				padding: 2em;
+
+				.entry-header {
+					h1 { text-transform: none; }
+				}
+
+				.entry-meta {
+					font-style: normal;
+
+					.comments-meta {
+						img {
+							padding-right: 0.5em;
+							position: relative;
+							top: 3px;
+						}
+					} /* end .comments-meta */
+
+					.posted-date { color: $gray70; }
+
+				} /* end .entry-meta */
+
+				.entry-content {
+
+					img {
+						text-align: center;
+						border: 1px solid $border-color;
+						padding: 0.5em;
+						max-width: 100%;
+					}
+
+					a {
+						font-weight: 700;
+					}
+				} /* end .entry-content */
+			} /* ent .hentry */
+
+		} /* end blog archive */
+
 		&.single.blog-post {
 
 			#content {
