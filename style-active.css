@@ -3224,6 +3224,12 @@ SIDEBARS & ASIDES & WIDGETS
   font-size: 14px;
   padding-left: 0.5em;
 }
+.sidebar .connect-block .social-connection #contact-icon {
+  text-align: center;
+  position: relative;
+  left: 3px;
+  top: 2px;
+}
 .sidebar .sidebar-featured-buttons-section {
   margin-bottom: 2.5em;
   /* end a.sidebar-featured-button */
