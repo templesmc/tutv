@@ -4684,7 +4684,6 @@ table.staff tr td#status {
 .page {
   /* end .entry-main */
   /* end #page-list */
-  /* end #subpage-menu */
 }
 .page .entry-main {
   padding: 2em;
@@ -4721,45 +4720,6 @@ table.staff tr td#status {
 .page #page-list .wp-post-image {
   float: left;
   margin-right: 10px;
-}
-.page #subpage-menu {
-  margin: -20px 0px 20px;
-  width: 940px;
-  height: 24px;
-  /* end .children */
-}
-.page #subpage-menu li {
-  display: inline;
-  list-style: none;
-  padding-right: 5px;
-  margin-right: 5px;
-  float: left;
-}
-.page #subpage-menu a {
-  color: #666;
-  float: left;
-  font-size: 18px;
-  line-height: 24px;
-  text-shadow: white 1px 1px;
-}
-.page #subpage-menu a:hover {
-  color: #000;
-}
-.page #subpage-menu .children {
-  float: left;
-  margin: 0;
-  border-left: 1px solid #666666;
-  margin-left: 5px;
-  padding-left: 5px;
-}
-.page #subpage-menu .children li {
-  border-right: 1px solid #aaaaaa;
-}
-.page #subpage-menu .children a {
-  color: #888;
-}
-.page #subpage-menu .children .current_page_item > a {
-  border-bottom: 1px dotted #888888;
 }
 
 /* end .page */

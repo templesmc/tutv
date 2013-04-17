@@ -222,56 +222,6 @@
 			margin-right: 10px;
 			}
 		} /* end #page-list */
-
-		#subpage-menu {
-		margin: -20px 0px 20px;
-		width: 940px;
-		height: 24px;
-
-			li {
-			display:inline;
-			list-style: none;
-			padding-right: 5px;
-			margin-right: 5px;
-			float: left;
-			}
-
-			a {
-			color: #666;
-			float: left;
-			font-size: 18px;
-			line-height: 24px;
-			text-shadow: #fff 1px 1px;
-
-				&:hover {
-				color: #000;
-
-				}
-			}
-
-			// .children is contained within '#subpage-menu li' in the one place i can find it, on the submissions page. not sure if this is the best way to organize this menu. - montchr
-			.children {
-			float:left;
-			margin: 0;
-			border-left: 1px solid #666;
-			margin-left: 5px;
-			padding-left: 5px;
-
-				li {
-				border-right: 1px solid #aaa;
-				}
-
-				a {
-				color: #888;
-				}
-
-				.current_page_item {
-					> a {
-					border-bottom: 1px dotted #888;
-					}
-				}
-			} /* end .children */
-		} /* end #subpage-menu */
 	} /* end .page */
 
 	/*

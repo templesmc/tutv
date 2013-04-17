@@ -112,7 +112,7 @@ function tutv_page_submenus( $content ) {
 			'link_before' => '&raquo;  '
 		);
 		$output .= '<div class="subpage-menu-container page-header-menu-container">';
-		$output .= '<ul id="subpage-menu page-header-menu">';
+		$output .= '<ul class="subpage-menu page-header-menu">';
 		$output .= wp_list_pages( $args );
 		$output .= '</ul>';
 		$output .= '</div> <!-- end .subpage-menu-container -->';
