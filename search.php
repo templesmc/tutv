@@ -38,10 +38,6 @@
 
 			</div> <!-- end #main -->
 
-			<?php
-			// this doesn't belong here, but i was testing here anyway. will be moved later.
-			// tutv_schedule_block('front-block block grid_6 alpha omega clearfix'); ?>
-
 			<div id="sidebar" class="sidebar grid_4 clearfix" role="complementary">
 
 				<?php tutv_sidebar_connect_block();
