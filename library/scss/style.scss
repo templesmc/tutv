@@ -92,16 +92,20 @@
 
 	.blog {
 
-		/* single blog post */
-		&.blog-post {
+		&.single.blog-post {
 
 			#content {
 				margin-top: 1.5rem;
 			}
-		}
+
+			.hentry,
+			#nav-below,
+			#comments {
+				padding: 2em;
+			}
+		} /* end &.single.blog-post */
 
 		.hentry {
-		float: left;
 
 			img {
 				&.wp-post-image {

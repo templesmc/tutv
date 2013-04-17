@@ -42,8 +42,20 @@
 				// create the navigation below the content
 				thematic_navigation_below();
 
-				// calling the comments template
-				thematic_comments_template();
+				?>
+
+				<div id="comments">
+
+					<?php
+
+					// calling the comments template
+					thematic_comments_template();
+
+					?>
+
+				</div> <!-- end comments -->
+
+				<?php
 
 				// calling the widget area 'single-bottom'
 				get_sidebar('single-bottom');

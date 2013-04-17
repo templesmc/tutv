@@ -4624,13 +4624,15 @@ table.staff tr td#status {
 ========================
 */
 .blog {
-  /* single blog post */
+  /* end &.single.blog-post */
 }
-.blog.blog-post #content {
+.blog.single.blog-post #content {
   margin-top: 1.5rem;
 }
-.blog .hentry {
-  float: left;
+.blog.single.blog-post .hentry,
+.blog.single.blog-post #nav-below,
+.blog.single.blog-post #comments {
+  padding: 2em;
 }
 .blog .hentry img.wp-post-image {
   display: block;
