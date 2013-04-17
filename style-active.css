@@ -2822,7 +2822,7 @@ h6, .h6 {
 #page-header .page-header-menu-container ul li.current_page_item {
   font-style: normal;
 }
-#page-header .page-header-menu-container ul li.current_page_item a, #page-header .page-header-menu-container ul li.current_page_item a:visited {
+#page-header .page-header-menu-container ul li.current_page_item > a, #page-header .page-header-menu-container ul li.current_page_item > a:visited {
   color: #9e1b34;
 }
 

@@ -140,7 +140,7 @@ padding: 0 1em;
 				&.current_page_item {
 					font-style: normal;
 					
-					a, a:visited { color: $tu-cherry; }
+					& > a, > a:visited { color: $tu-cherry; }
 				}
 			} /* end li */
 		} /* end ul */
