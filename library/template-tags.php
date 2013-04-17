@@ -224,7 +224,7 @@ function get_shows_nav( $args = '' ) {
     
     $max_pages = $wp_query->max_num_pages;
 	
-	echo "<div class='shows_nav navigation' id='$current_post_type" . "_nav'>";
+	echo "<div class='shows_nav archive-navigation navigation' id='$current_post_type" . "_nav'>";
 					
     if( $post_type_paged <= $max_pages && $post_type_paged != 1 ) {
     	$next_args = $args;
