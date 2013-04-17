@@ -5,7 +5,7 @@
 
 ?>
 
-		<div id="content">
+		<div id="content" class="clearfix">
 
 			<?php
 		
