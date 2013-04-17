@@ -107,7 +107,7 @@ function tutv_page_submenus( $content ) {
 
 	return $output . $content;
 }
-add_action( 'the_content', 'tutv_page_submenus' );
+//add_action( 'the_content', 'tutv_page_submenus' );
 
 // Place 'embed' custom field values into the post body
 function  tutv_add_embeds() {
