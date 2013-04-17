@@ -22,6 +22,12 @@ https://github.com/tutv/tutv/issues/6
 
 New pages can be added to menu by going to Appearance > Menu, then clicking Screen Options and checking the appropriate box to display the metabox.
 
+### Page Header Submenus
+
+How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`).
+
+I haven't touched Sam's function that generates these because trying to approximate Bella's mockup would mean removing some of his code.
+
 ### Regenerate Thumbnails
 
 We have two new sizes.
@@ -43,11 +49,9 @@ For Temple Update, suggest moving meta info below Top Stories.
 
 Ensemble embed must be made proportionately smaller in post editor to fit within container.
 
-### Page Header Submenus
+### "Temple Update Blog" Button
 
-How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`).
-
-I haven't touched Sam's function that generates these because trying to approximate Bella's mockup would mean removing some of his code.
+Is this an accurate title? Methinks not.
 
 
 ## Remaining Tasks
@@ -63,3 +67,4 @@ I haven't touched Sam's function that generates these because trying to approxim
 - [] blog
 	- [/] single post
 	- [] archive
+- [] regenerate thumbnails test
