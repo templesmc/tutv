@@ -161,6 +161,36 @@
 
 	.page {
 
+		.entry-main {
+			padding: 2em;
+
+			.hentry {
+				.entry-content {
+					padding: 0;
+
+					h2 {
+						@extend .h3;
+						font-weight: 400;
+						color: $gray20;
+					}
+
+					a {
+						font-weight: 700;
+					}
+				} /* end .entry-content */
+			} /*  end .hentry */
+		} /* end .entry-main */
+
+		.entry-content {
+			h2 {
+
+			}
+		}
+
+		.sidebar {
+			margin-top: 0;
+		}
+
 		#page-list {
 		list-style: none;
 		margin-left: 0;
