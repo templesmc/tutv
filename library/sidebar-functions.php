@@ -10,7 +10,7 @@
  * @version 1.0.0
  */
 function tutv_sidebar_connect_block() {
-	if( !is_singular( array( 'episodes', 'events', 'clip' ) ) ) { ?>
+	if( !is_singular( array( 'episodes', 'events', 'clip' ) ) && !is_page('watch-live') ) { ?>
 		<div class="connect-block block">
 			<div class="facebook social-connection">
 				<?php tutv_social_media_icons('facebook'); ?>
