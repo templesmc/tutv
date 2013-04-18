@@ -24,9 +24,13 @@ New pages can be added to menu by going to Appearance > Menu, then clicking Scre
 
 ### Page Header Submenus
 
-How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`).
+How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`). Yes.
 
 I haven't touched Sam's function that generates these because trying to approximate Bella's mockup would mean removing some of his code.
+
+### Flexslider Nav Gone in Firefox
+
+Not in Chrome.
 
 ### Regenerate Thumbnails
 
@@ -68,3 +72,11 @@ Is this an accurate title? Methinks not.
 	- [/] single post
 	- [] archive
 - [] regenerate thumbnails test
+
+
+# The Future
+
+### Double Scrollbars when Logged In
+
+WTF?!
+
