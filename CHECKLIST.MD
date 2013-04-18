@@ -22,6 +22,8 @@ https://github.com/tutv/tutv/issues/6
 
 New pages can be added to menu by going to Appearance > Menu, then clicking Screen Options and checking the appropriate box to display the metabox.
 
+THis is fine.
+
 ### Page Header Submenus
 
 How should submenus be handled? Maybe the page name should stay as the parent on all subpages and the subpage (current page) should still stay in the submenu and merely have its formatting change (as currently styled with selector `li.current_page_item`). Yes.
