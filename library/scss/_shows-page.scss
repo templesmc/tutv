@@ -1,3 +1,11 @@
+/******************************************************************
+Site Name: Temple TV
+Author: Chris Montgomery
+
+Stylesheet: Shows Page Stylesheet
+
+******************************************************************/
+
 /*
 the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
 
@@ -54,6 +62,18 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 						&.btn-genre {
 						color: $info-color;
+						@include box-shadow(none);
+						border: none;
+
+							&.active,
+							&:active {
+								@include box-shadow(none);
+							}
+
+							&:hover,
+							&:focus {
+								background-position: 0;
+							}
 						}
 
 						&.btn-production-type {
@@ -61,22 +81,21 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 						}
 
 						/* genre box colors */
-						&.btn-genre-cooking        { @include buttonBackground( $genreCooking, $genreCookingHighlight, $black ); }
-						&.btn-genre-documentary    { @include buttonBackground( $genreDocumentary, $genreDocumentaryHighlight, $black ); }
-						&.btn-genre-educational    { @include buttonBackground( $genreEducational, $genreEducationalHighlight, $black ); }
-						&.btn-genre-entertainment  { @include buttonBackground( $genreEntertainment, $genreEntertainmentHighlight, $black ); }
-						&.btn-genre-fitness        { @include buttonBackground( $genreFitness, $genreFitnessHighlight, $black ); }
-						&.btn-genre-gardening      { @include buttonBackground( $genreGardening, $genreGardeningHighlight, $black, 0 -1px 0 rgba(255,255,255,.25) ); }
-						&.btn-genre-interviews     { @include buttonBackground( $genreInterviews, $genreInterviewsHighlight, $black ); }
-						&.btn-genre-music          { @include buttonBackground( $genreMusic, $genreMusicHighlight, $black ); }
-						&.btn-genre-news           { @include buttonBackground( $genreNews, $genreNewsHighlight, $black ); }
-						&.btn-genre-specials       { @include buttonBackground( $genreSpecials, $genreSpecialsHighlight, $black ); }
-						&.btn-genre-sports         { @include buttonBackground( $genreSports, $genreSportsHighlight, $black ); }
+						&.btn-genre-cooking        { @include buttonBackground( $genreCooking, $genreCookingHighlight ); }
+						&.btn-genre-documentary    { @include buttonBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
+						&.btn-genre-educational    { @include buttonBackground( $genreEducational, $genreEducationalHighlight ); }
+						&.btn-genre-entertainment  { @include buttonBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
+						&.btn-genre-fitness        { @include buttonBackground( $genreFitness, $genreFitnessHighlight ); }
+						&.btn-genre-gardening      { @include buttonBackground( $genreGardening, $genreGardeningHighlight ); } //, 0 -1px 0 rgba(255,255,255,.25) ); }
+						&.btn-genre-interviews     { @include buttonBackground( $genreInterviews, $genreInterviewsHighlight ); }
+						&.btn-genre-music          { @include buttonBackground( $genreMusic, $genreMusicHighlight ); }
+						&.btn-genre-news           { @include buttonBackground( $genreNews, $genreNewsHighlight ); }
+						&.btn-genre-specials       { @include buttonBackground( $genreSpecials, $genreSpecialsHighlight ); }
+						&.btn-genre-sports         { @include buttonBackground( $genreSports, $genreSportsHighlight ); }
 
 						&:hover {
-							//-webkit-box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, .25);
-							//box-shadow:  2px 2px 3px 0px rgba(0, 0, 0, .25);
-							}
+
+						}
 
 
 						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.

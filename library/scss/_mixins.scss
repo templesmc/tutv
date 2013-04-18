@@ -1,18 +1,8 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: Temple TV
+Author: Chris Montgomery
 
 Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants. I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques like box shadow and
-border-radius.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
 
 ******************************************************************/
 
@@ -123,7 +113,7 @@ $row-odd:				$white;
 $highlight:				lighten($light-blue, 35%);
 
 /* The Shows Colors */
-$genreLightenAmount: 10%;
+$genreLightenAmount: 5%;
 
 $genreCooking:                         $moccasin;
 $genreCookingHighlight:                lighten($moccasin, $genreLightenAmount);
@@ -157,6 +147,7 @@ $genreSpecialsHighlight:               lighten($indianRed, $genreLightenAmount);
 
 $genreSports:                          $lightSkyBlue;
 $genreSportsHighlight:                 lighten($lightSkyBlue, $genreLightenAmount);
+
 /* Even/Odd Child Row Colors 
 Must be included for on the element you want to alternate,
 as this uses child selectors to do stuff. */
@@ -411,28 +402,16 @@ OPACITY
 BUTTON MIXINS
 *********************/
 
-/* From SASS-Twitter-Bootstrap */
+@mixin buttonBackground($normalColor, $hoverColor, $textColor: #000) {
+	background-color: $normalColor;
+	color: $textColor;
 
-@mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
-  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
-  @include gradientBar($startColor, $endColor, $textColor, $textShadow);
-  *background-color: $endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  @include reset-filter();
-
-  // in these cases the gradient won't cover the background, so we override
-  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
-    color: $textColor;
-    background-color: $endColor;
-    *background-color: darken($endColor, 5%);
-  }
-
-  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
-  &:active,
-  &.active {
-    background-color: darken($endColor, 10%) \9;
-  }
+	&:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+	    background-color: $hoverColor;
+	}
 }
 
+/* From SASS-Twitter-Bootstrap */
 $btnBackground:                     $white !default;
 $btnBackgroundHighlight:            darken($white, 10%) !default;
 $btnBorder:                         $border-color !default;

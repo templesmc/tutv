@@ -17,7 +17,8 @@
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
-	@include buttonBackground($btnBackground, $btnBackgroundHighlight, $gray40, 0 1px 1px rgba(255,255,255,.75));
+	// no gradient by default: instead, just background
+	@include buttonBackground($btnBackground, $btnBackgroundHighlight);
 	border: 1px solid $btnBorder;
 	*border: 0; // Remove the border to prevent IE7's black border on input:focus
 	border-bottom-color: darken($btnBorder, 10%);
@@ -30,7 +31,7 @@
 	&:focus {
 	color: $gray40;
 	text-decoration: none;
-	background-position: 0 -15px;
+	//background-position: 0 -15px;
 
 	// transition is only when going to hover/focus, otherwise the background
 	// behind the gradient (there for IE<=9 fallback) gets mismatched
