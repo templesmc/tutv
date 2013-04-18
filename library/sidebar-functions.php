@@ -14,15 +14,15 @@ function tutv_sidebar_connect_block() {
 		<div class="connect-block block">
 			<div class="facebook social-connection">
 				<?php tutv_social_media_icons('facebook'); ?>
-				<a class="social-media-link social-connection-link">Like <em>Temple TV</em> on Facebook</a>
+				<a href="https://www.facebook.com/TempleTV" title="Like us on Facebook" class="social-media-link social-connection-link">Like <em>Temple TV</em> on Facebook</a>
 			</div>
 			<div class="twitter social-connection">
 				<?php tutv_social_media_icons('twitter'); ?>
-				<a class="social-media-link social-connection-link">Follow <em>@TempleTV</em> on Twitter</a>
+				<a href="https://twitter.com/templetv" title="Follow us on Twitter" class="social-media-link social-connection-link">Follow <em>@TempleTV</em> on Twitter</a>
 			</div>
 			<div class="questions social-connection">
 				<?php tutv_social_media_icons('contact'); ?>
-				<a class="contact-link social-connection-link">Questions? <em>Contact us</em></a>
+				<a href="feed://templetv.net/feed" title="Subscribe to our latest updates" class="contact-link social-connection-link">Questions? <em>Contact us</em></a>
 			</div>
 		</div> <!-- end .connect-block -->
 	<?php
