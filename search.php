@@ -11,7 +11,7 @@
 
 				<div id="page-header" class="block clearfix">
 
-					<h1 class="archive-title search-title">Search Results for: <span class="query-string">&laquo;&nbsp;<?php echo esc_attr(get_search_query()); ?>&nbsp;&raquo;</span></h1>
+					<h1 class="archive-title search-title">Search Results for: <span class="query-string">&ldquo;<?php echo esc_attr(get_search_query()); ?>&rdquo;</span></h1>
 
 				</div> <!-- end #page-header -->
 
