@@ -16,6 +16,19 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 
 	#content.shows-page-grid {
 
+		/* genre box colors */
+		.genre-cooking        { @include multiStateBackground( $genreCooking, $genreCookingHighlight ); }
+		.genre-documentary    { @include multiStateBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
+		.genre-educational    { @include multiStateBackground( $genreEducational, $genreEducationalHighlight ); }
+		.genre-entertainment  { @include multiStateBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
+		.genre-fitness        { @include multiStateBackground( $genreFitness, $genreFitnessHighlight ); }
+		.genre-gardening      { @include multiStateBackground( $genreGardening, $genreGardeningHighlight ); }
+		.genre-interviews     { @include multiStateBackground( $genreInterviews, $genreInterviewsHighlight ); }
+		.genre-music          { @include multiStateBackground( $genreMusic, $genreMusicHighlight ); }
+		.genre-news           { @include multiStateBackground( $genreNews, $genreNewsHighlight ); }
+		.genre-specials       { @include multiStateBackground( $genreSpecials, $genreSpecialsHighlight ); }
+		.genre-sports         { @include multiStateBackground( $genreSports, $genreSportsHighlight ); }
+
 		#filtering-nav-container {
 
 			#production-type-filters {
@@ -80,28 +93,7 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 						color: $info-color;
 						}
 
-						/* genre box colors */
-						&.btn-genre-cooking        { @include buttonBackground( $genreCooking, $genreCookingHighlight ); }
-						&.btn-genre-documentary    { @include buttonBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
-						&.btn-genre-educational    { @include buttonBackground( $genreEducational, $genreEducationalHighlight ); }
-						&.btn-genre-entertainment  { @include buttonBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
-						&.btn-genre-fitness        { @include buttonBackground( $genreFitness, $genreFitnessHighlight ); }
-						&.btn-genre-gardening      { @include buttonBackground( $genreGardening, $genreGardeningHighlight ); } //, 0 -1px 0 rgba(255,255,255,.25) ); }
-						&.btn-genre-interviews     { @include buttonBackground( $genreInterviews, $genreInterviewsHighlight ); }
-						&.btn-genre-music          { @include buttonBackground( $genreMusic, $genreMusicHighlight ); }
-						&.btn-genre-news           { @include buttonBackground( $genreNews, $genreNewsHighlight ); }
-						&.btn-genre-specials       { @include buttonBackground( $genreSpecials, $genreSpecialsHighlight ); }
-						&.btn-genre-sports         { @include buttonBackground( $genreSports, $genreSportsHighlight ); }
-
-						&:hover {
-
-						}
-
-
-						// this is meant to give a visual emphasis on the currently active filter, but it's not used. also, dotted border is so 2002.
-						&.active {
-						// border: 1px dotted #ccc;
-						}
+						
 					} /* end a */
 				} /* end li */
 			} /* end ul */
@@ -117,10 +109,10 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 				h2.entry-title {
 
 					a {
-					color: $link-color;
+					color: black;
 
 						&:visited {
-						color: $link-color;
+						color: black;
 						}
 
 						&:hover,

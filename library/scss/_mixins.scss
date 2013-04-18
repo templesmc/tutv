@@ -161,6 +161,15 @@ as this uses child selectors to do stuff. */
 	}
 }
 
+@mixin multiStateBackground($normalColor, $hoverColor, $textColor: #000) {
+	background-color: $normalColor;
+	color: $textColor;
+
+	&:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+	    background-color: $hoverColor;
+	}
+}
+
 
 /*
 Here's a great tutorial on how to
@@ -401,15 +410,6 @@ OPACITY
 /*********************
 BUTTON MIXINS
 *********************/
-
-@mixin buttonBackground($normalColor, $hoverColor, $textColor: #000) {
-	background-color: $normalColor;
-	color: $textColor;
-
-	&:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
-	    background-color: $hoverColor;
-	}
-}
 
 /* From SASS-Twitter-Bootstrap */
 $btnBackground:                     $white !default;

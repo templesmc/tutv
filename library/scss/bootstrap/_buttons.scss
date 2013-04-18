@@ -18,7 +18,7 @@
 	vertical-align: middle;
 	cursor: pointer;
 	// no gradient by default: instead, just background
-	@include buttonBackground($btnBackground, $btnBackgroundHighlight);
+	@include multiStateBackground($btnBackground, $btnBackgroundHighlight);
 	border: 1px solid $btnBorder;
 	*border: 0; // Remove the border to prevent IE7's black border on input:focus
 	border-bottom-color: darken($btnBorder, 10%);
@@ -118,27 +118,27 @@
 // Set the backgrounds
 // -------------------------
 .btn-primary {
-	@include buttonBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
+	@include multiStateBackground($btnPrimaryBackground, $btnPrimaryBackgroundHighlight);
 }
 // Warning appears are orange
 .btn-warning {
-	@include buttonBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
+	@include multiStateBackground($btnWarningBackground, $btnWarningBackgroundHighlight);
 }
 // Danger and error appear as red
 .btn-danger {
-	@include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+	@include multiStateBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
 }
 // Success appears as green
 .btn-success {
-	@include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
+	@include multiStateBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
 }
 // Info appears as a neutral blue
 .btn-info {
-	@include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+	@include multiStateBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
 }
 // Inverse appears as dark gray
 .btn-inverse {
-	@include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+	@include multiStateBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
 }
 
 
