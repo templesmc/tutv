@@ -41,9 +41,14 @@ function tutv_sidebar_featured_buttons() { ?>
 		<a href="<?php echo home_url('/about'); ?>" id="sidebar-about-tutv-button" class="sidebar-featured-button block" title="About TUTV">
 			<h3><em>about</em> TUTV</h3>
 		</a><!-- end #about-tutv-button -->
+		<?php
+		/*
+		// disabled because no such blog exists!
 		<a href="<?php echo home_url('/blog'); ?>" id="sidebar-temple-update-blog-button" class="sidebar-featured-button block" title="Temple Update Blog">
 			<h3><em>temple update</em> blog</h3>
 		</a><!-- end #read-the-blog-button -->
+		*/
+		?>
 		<a href="<?php echo home_url('/watch-live'); ?>" id="sidebar-watch-live-button" class="sidebar-featured-button block" title="Watch Live">
 			<h3>watch <em>live</em></h3>
 		</a><!-- end #watch-live-button -->
