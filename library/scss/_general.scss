@@ -34,10 +34,6 @@ a:visited,
 	&:focus {
 	text-decoration: none;
 	color: $link-hover;
-
-		.thumbnail {
-		opacity: 1;
-		}
 	}
 
 	/* mobile tap color */
@@ -386,12 +382,6 @@ padding-bottom: 0;
 
 			.entry-content {
 			font-family: $sans-serif;
-
-				&:hover {
-					.thumbnail {
-					opacity: 1;
-					}
-				}
 			}
 
 			.entry-meta {
@@ -427,24 +417,9 @@ padding-bottom: 0;
 			}
 
 			.thumbnail {
-			background: #d7d7d7 url(images/thumbnail-placeholder.png);
+			/* background: #d7d7d7 url(images/thumbnail-placeholder.png); // we don't really need this */
 			//height: 100px;
 			//width: 140px;
-			opacity: .85;
-			-webkit-transition: opacity .3s ease;
-			-moz-transition: opacity .3s ease;
-			-o-transition: opacity .3s ease;
-			transition: opacity .3s ease;
-
-				&:hover {
-				opacity: 1;
-				}
-			}
-
-			a:hover {
-				.thumbnail {
-				opacity: 1;
-				}
 			}
 
 			.item-even {
