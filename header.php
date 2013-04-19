@@ -10,7 +10,8 @@
     thematic_head_profile();
 
     // Creating the doc title
-    thematic_doctitle();
+    //thematic_doctitle();
+    tutv_doctitle();
     
     // Creating the content type
     thematic_create_contenttype();

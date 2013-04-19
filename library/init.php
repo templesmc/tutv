@@ -18,17 +18,17 @@ date_default_timezone_set( get_option('timezone_string') );
  */
 add_action('wp_enqueue_scripts', 'tutv_scripts_and_styles', 999);
 function tutv_scripts_and_styles() {
-  if (!is_admin()) {
+	if (!is_admin()) {
 
-  	// load google web fonts
-  	wp_register_style( 'tutv-webfonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic', array(), '', 'all' );
-    wp_enqueue_style( 'tutv-webfonts' );
+		// load google web fonts
+		wp_register_style( 'tutv-webfonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic', array(), '', 'all' );
+		wp_enqueue_style( 'tutv-webfonts' );
 
-    // register main stylesheet
-    wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '', 'all' );
-    wp_enqueue_style( 'tutv-stylesheet' );
+		// register main stylesheet
+		wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '', 'all' );
+		wp_enqueue_style( 'tutv-stylesheet' );
 
-  }
+	}
 }
 
 
@@ -77,3 +77,85 @@ $production_types = array(
 		'slug' => 'syndicated'
 	)
 );
+
+/**
+ * Replacement for thematic_doctitle()
+ *
+ * To be used in <head> only.
+ *
+ */
+function tutv_doctitle() {
+	$site_name = get_bloginfo('name');
+		$separator = '|';
+
+		$post_types = array('post', 'episode', 'clip', 'show_notes', 'show_page', 'events');
+					
+		if ( is_singular($post_types) ) {
+			$content = single_post_title('', FALSE);
+		}
+		elseif ( is_home() || is_front_page() ) { 
+			$content = get_bloginfo('description');
+		}
+		elseif ( is_page() ) { 
+			$content = single_post_title('', FALSE); 
+		}
+		elseif ( is_search() ) { 
+			$content = __('Search Results for:', 'thematic'); 
+			$content .= ' ' . wp_specialchars(stripslashes(get_search_query()), true);
+		}
+		elseif ( is_category() ) {
+			$content = __('Category Archives:', 'thematic');
+			$content .= ' ' . single_cat_title("", false);;
+		}
+		elseif ( is_tag() ) { 
+			$content = __('Tag Archives:', 'thematic');
+			$content .= ' ' . thematic_tag_query();
+		}
+		elseif ( is_404() ) { 
+			$content = __('Not Found', 'thematic'); 
+		}
+		else { 
+			$content = get_bloginfo('description');
+		}
+
+		if (get_query_var('paged')) {
+			$content .= ' ' .$separator. ' ';
+			$content .= 'Page';
+			$content .= ' ';
+			$content .= get_query_var('paged');
+		}
+
+		if($content) {
+			if ( is_home() || is_front_page() ) {
+					$elements = array(
+						'site_name' => $site_name,
+						'separator' => $separator,
+						'content' => $content
+					);
+			}
+			else {
+					$elements = array(
+						'content' => $content
+					);
+			}  
+		} else {
+			$elements = array(
+				'site_name' => $site_name
+			);
+		}
+
+		// Filters should return an array
+		$elements = apply_filters('tutv_doctitle', $elements);
+	
+		// But if they don't, it won't try to implode
+		if(is_array($elements)) {
+			$doctitle = implode(' ', $elements);
+		}
+		else {
+			$doctitle = $elements;
+		}
+		
+		$doctitle = "\t" . "<title>" . $doctitle . "</title>" . "\n\n";
+		
+		echo $doctitle;
+} // end thematic_doctitle
