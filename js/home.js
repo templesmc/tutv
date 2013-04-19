@@ -1,5 +1,5 @@
-jQuery(window).load(function() {
-	jQuery('.flexslider').flexslider({
+jQuery(document).ready(function($) {
+	$('.flexslider').flexslider({
 		animation           : "slide",
 		easing              : "linear",
 		direction           : "vertical",
@@ -8,5 +8,11 @@ jQuery(window).load(function() {
 		controlNav          : true,
 		directionNav        : false
 		//controlsContainer   : ".flexslider-control-nav"
+	});
+
+	// Schedule browser
+	$("#schedule-block .hentry").mouseover( function(){
+		$("#schedule-block .hentry.active").removeClass("active");
+		$(this).addClass("active");
 	});
 });
