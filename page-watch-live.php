@@ -1,5 +1,12 @@
 <?php
 
+
+	function tutv_watch_live_scripts() {
+		wp_enqueue_script('watch-live', get_stylesheet_directory_uri() . '/js/watch-live.js', false);
+	}
+
+	add_action('wp_enqueue_scripts', 'tutv_watch_live_scripts');
+
 	// calling the header.php
 	get_header();
 
