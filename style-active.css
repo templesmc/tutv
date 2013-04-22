@@ -1303,7 +1303,7 @@ http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2
 .home #main #container #content #masthead #masthead-social-media ul.social-media-icons { display: inline; }
 .home #main #container #content #front-featured { height: 290px !important; margin-bottom: 2.2em; /* end .flexslider */ }
 .home #main #container #content #front-featured .flexslider { margin-bottom: 0; background: transparent; border: none; /* end .flex-control-paging */ /* end .description */ /* end h2 */ /* end #subheadline */ /* end #subheadline2 */ }
-.home #main #container #content #front-featured .flexslider .flex-control-nav { width: auto; position: absolute; bottom: -270px; right: 16px; }
+.home #main #container #content #front-featured .flexslider .flex-control-nav { width: auto; position: absolute; z-index: 999; bottom: 0; height: 20px; right: 16px; }
 .home #main #container #content #front-featured .flexslider .flex-control-paging { /* end li */ }
 .home #main #container #content #front-featured .flexslider .flex-control-paging li { /* end a */ }
 .home #main #container #content #front-featured .flexslider .flex-control-paging li a { background: #ffffff; background: rgba(255, 255, 255, 0.9); }

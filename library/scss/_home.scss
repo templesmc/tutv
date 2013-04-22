@@ -90,7 +90,9 @@
 						.flex-control-nav {
 						width: auto;
 						position: absolute;
-						bottom: -270px;
+						z-index: 999;
+						bottom: 0;
+						height: 20px;
 						right: 16px;
 						}
 
