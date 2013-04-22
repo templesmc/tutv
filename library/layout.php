@@ -335,7 +335,7 @@ function tutv_footer() {
 		get_search_form();
 	echo '</div> <!-- end #footer-search -->';
 }
-add_action('thematic_footer', 'tutv_footer', 8);
+//add_action('thematic_footer', 'tutv_footer', 8);
 
 /**
  * Returns list of social media icons.

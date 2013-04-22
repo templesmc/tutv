@@ -1,4 +1,4 @@
-<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>">
+<form role="search" method="get" class="searchform" action="<?php echo home_url( '/' ) ?>">
 	<input type="text" value="<?php get_search_query() ?>" name="s" id="searchbox" placeholder="Search the Site..." />
 	<input type="submit" id="searchbutton" value="Search" />
 </form>

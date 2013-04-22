@@ -1199,7 +1199,7 @@ SEARCH FORMS & SOCIAL ICONS
 
 #searchbox { float: right; }
 
-#searchbutton { margin-right: 10px; }
+#searchbutton { margin-right: 10px; float: right; }
 
 /* HEADER SEARCH */
 div#header-search, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul#header-search { float: right; margin-top: 15px; }
@@ -1271,18 +1271,15 @@ SIDEBARS & ASIDES & WIDGETS
 FOOTER STYLES 
 ********************/
 #footer { background: #FFFFFF; /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #first */ /* end #third */ }
+http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2000px 0; padding: 0 2000px; border-bottom: 1px solid #e0e0e0; /* end #footer-links */ /*  end #siteinfo */ }
 #footer #footer-inner { padding: 2em 0; }
-#footer #footer-social-media { float: left; }
-#footer #siteinfo { font: 11px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 1em 0; clear: both; }
-#footer .aside ul { list-style-type: none; }
-#footer #first a:active, #footer #first a:link, #footer #first a:visited, #footer #first a:hover { color: #5b6d7b; text-decoration: none; }
-#footer #first ul li { margin: -10px 0px 10px 0px; }
-#footer #first ul li ul { width: 100%; }
-#footer #first ul li ul li { float: left; display: inline; width: 25%; }
-#footer #third ul li { float: right; display: inline; }
-#footer #third ul li ul { width: 100%; }
-#footer #third ul li ul li { float: left; display: inline; width: 33.3%; }
+#footer #footer-social-media { float: left; width: 50%; }
+#footer #footer-search { width: 50%; }
+#footer #footer-links { display: inline-block; float: right; clear: both; }
+#footer #footer-links ul { list-style: none; }
+#footer #footer-links ul li { display: inline; padding-left: 1em; }
+#footer #siteinfo { font: 11px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 1em 0; display: inline-block; float: left; width: 50%; }
+#footer #siteinfo p { margin: 0; }
 
 /* end #footer */
 /* Please don't style these top guys here. */

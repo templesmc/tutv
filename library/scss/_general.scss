@@ -522,6 +522,7 @@ SEARCH FORMS & SOCIAL ICONS
 
 		#searchbutton {
 		margin-right: 10px;
+		float: right;
 		}
 
 		/* HEADER SEARCH */
@@ -846,64 +847,39 @@ border-bottom: 1px solid $gray88;
 
 	#footer-social-media {
 	float: left;
+	width: 50%;
 	}
+
+	#footer-search {
+		width: 50%;
+	}
+
+	#footer-links {
+		display: inline-block;
+		float: right;
+		clear: both;
+
+		ul {
+			list-style: none;
+
+			li {
+				display: inline;
+				padding-left: 1em;
+			}
+		}
+	} /* end #footer-links */
 
 	// copyright info
 	#siteinfo {
 	font: 11px $sans-serif;
 	padding: 1em 0;
-	clear: both;
-	}
+	display: inline-block;
+	float: left;
+	width: 50%;
 
-	.aside {
-		ul { list-style-type: none; }
-	}
-
-	// Footer sitemap links
-	#first {
-
-		a {
-			&:active,
-			&:link,
-			&:visited,
-			&:hover {
-			color: #5b6d7b;
-			text-decoration: none;
-			}
+		p {
+			margin: 0;
 		}
+	} /*  end #siteinfo */
 
-		ul {
-
-			li {
-			margin: -10px 0px 10px 0px;
-				
-				ul {
-				width: 100%;
-
-					li {
-					float: left; display: inline; width: 25%;
-					}
-				}
-			}
-		}
-	} /* end #first */
-
-	// Social links and search (widgets)
-	#third {
-
-		ul {
-
-			li {
-			float: right; display: inline;
-			
-				ul {
-				width: 100%;
-				
-					li {
-					float: left; display: inline; width: 33.3%
-					}
-				}
-			}
-		}
-	} /* end #third */
 } /* end #footer */
