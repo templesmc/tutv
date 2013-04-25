@@ -1332,16 +1332,17 @@ http://css-tricks.com/full-browser-width-bars/#comment-94090 */ margin: 2.2em -2
 .home #main #container #content #recent-blog-posts-block .post .read-more { font-weight: 700; font-style: italic; display: inline; margin-left: 0.5em; }
 .home #main #container #content #recent-blog-posts-block .post .read-more a { color: #00b3a0; }
 .home #main #container #content #schedule-meta-block-container { /* FEATURED BUTTONS SECTION */ /* end #featured-buttons-section */ }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section { height: 250px; /* end a.front-featured-button */ }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button { background: #ededed url(images/background-layer2.jpg) repeat center center scroll; height: 90px; display: block; text-decoration: none; /* end h3.front-featured-button-title */ }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title { text-transform: uppercase; line-height: 90px; /* this vertically centers the h3 */ text-align: center; font-weight: 300; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title em { text-transform: lowercase; font-weight: 900; font-style: italic; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#read-the-blog-button-title em { font-weight: 700; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#watch-live-button-title { font-size: 36px; color: #9e1b34; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title, .home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title { font-size: 24px; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#about-tutv-button-title { color: #42abe8; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#submit-a-video-button-title { color: #00b3a0; }
-.home #main #container #content #schedule-meta-block-container #featured-buttons-section a.front-featured-button h3.front-featured-button-title#read-the-blog-button-title { font-size: 20px; color: #666666; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section { height: 250px; /* end .front-featured-button */ }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button { background: #ededed url(images/background-layer2.jpg) repeat center center scroll; height: 90px; text-decoration: none; /* end a */ }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a { display: block; /* end h3.front-featured-button-title */ }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title { text-transform: uppercase; line-height: 90px; /* this vertically centers the h3 */ text-align: center; font-weight: 300; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title em { text-transform: lowercase; font-weight: 900; font-style: italic; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title em { font-weight: 700; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#watch-live-button-title { font-size: 36px; color: #9e1b34; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title { font-size: 24px; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title { color: #42abe8; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title { color: #00b3a0; }
+.home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title { font-size: 20px; color: #666666; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button { margin-bottom: 10px; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button { height: 45px; margin-top: 10px; color: #666666; }
 .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button h3.front-featured-button-title { line-height: 45px; /* this vertically centers the h3 */ }
@@ -1538,7 +1539,7 @@ the editor capability. - montchr */ /* end .post-metadata */ }
 ==STAFF PAGE
 ========================
 */
-table.staff { padding: 0px; margin-bottom: 32px; border: 0px solid #cccccc; font-size: 13.5px; font-family: arial, helvetica, sans-serif; table-layout: fixed; /* end tr */ }
+table.staff { padding: 0px; margin-bottom: 32px; border: 0px solid #cccccc; font-size: 13.5px; font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; table-layout: fixed; /* end tr */ }
 table.staff tr { border: 0px; padding: 0px; margin: 0px; /* end td */ }
 table.staff tr td { vertical-align: top; border: 0px; padding: 4px 8px 8px 8px; margin: 0px; }
 table.staff tr td#section { margin-bottom: 4px 0px 0px 0px; }
