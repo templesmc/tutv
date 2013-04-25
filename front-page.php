@@ -388,22 +388,30 @@ Template Name: Front Page
 				<!-- Featured Buttons Section -->
 				<div id="featured-buttons-section" class="grid_6 alpha omega">
 
-					<!-- Watch Live Section -->	
-					<a href="/watch-live" id="watch-live-button" class="front-featured-button grid_6 alpha omega" title="Watch TUTV Live">
-						<h3 id="watch-live-button-title" class="front-featured-button-title"><em>watch</em> TUTV <em>live</em></h3>
-					</a><!-- end #watch-live-button -->
+					<!-- Watch Live Section -->
+					<div id="watch-live-button" class="front-featured-button grid_6 alpha omega">
+						<a href="/watch-live" title="Watch TUTV Live">
+							<h3 id="watch-live-button-title" class="front-featured-button-title"><em>watch</em> TUTV <em>live</em></h3>
+						</a><!-- end #watch-live-button -->
+					</div>
 
-					<a href="/about" id="about-tutv-button" class="front-featured-button grid_3 alpha" title="About TUTV">
-						<h3 id="about-tutv-button-title" class="front-featured-button-title"><em>about</em> TUTV</h3>
-					</a><!-- end #about-tutv-button -->
+					<div id="about-tutv-button" class="front-featured-button grid_3 alpha">
+						<a href="/about" title="About TUTV">
+							<h3 id="about-tutv-button-title" class="front-featured-button-title"><em>about</em> TUTV</h3>
+						</a><!-- end #about-tutv-button -->
+					</div>
 
-					<a href="/submissions" id="submit-a-video-button" class="front-featured-button grid_3 omega" title="Submit A Video">
-						<h3 id="submit-a-video-button-title" class="front-featured-button-title"><em>submit</em> A VIDEO</h3>
-					</a><!-- end #submit-a-video-button -->
+					<div id="submit-a-video-button" class="front-featured-button grid_3 omega">
+						<a href="/submissions" title="Submit A Video">
+							<h3 id="submit-a-video-button-title" class="front-featured-button-title"><em>submit</em> A VIDEO</h3>
+						</a><!-- end #submit-a-video-button -->
+					</div>
 
-					<a href="/blog" id="read-the-blog-button" class="front-featured-button grid_6 alpha omega" title="Read The Blog">
-						<h3 id="read-the-blog-button-title" class="front-featured-button-title"><em>read</em> the blog</h3>
-					</a><!-- end #read-the-blog-button -->
+					<div id="read-the-blog-button" class="front-featured-button grid_6 alpha omega">
+						<a href="/blog" title="Read The Blog">
+							<h3 id="read-the-blog-button-title" class="front-featured-button-title"><em>read</em> the blog</h3>
+						</a><!-- end #read-the-blog-button -->
+					</div>
 
 				</div><!-- end #featured-buttons-section -->
 
