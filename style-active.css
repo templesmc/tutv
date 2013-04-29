@@ -3488,36 +3488,37 @@ body.slug-schedule {
 ==STAFF PAGE
 ========================
 */
-table.staff {
-  padding: 0px;
-  margin-bottom: 32px;
-  border: 0px solid #cccccc;
-  font-size: 13.5px;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  table-layout: fixed;
-  /* end tr */ }
-  table.staff tr {
-    border: 0px;
+.page.slug-staff {
+  /* end table.staff */ }
+  .page.slug-staff table.staff {
     padding: 0px;
-    margin: 0px;
-    /* end td */ }
-    table.staff tr td {
-      vertical-align: top;
+    margin-bottom: 32px;
+    border: 0px solid #cccccc;
+    font-size: 13.5px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    table-layout: fixed;
+    /* end tr */ }
+    .page.slug-staff table.staff tr {
       border: 0px;
-      padding: 4px 8px 8px 8px;
-      margin: 0px; }
-      table.staff tr td#section {
-        margin-bottom: 4px 0px 0px 0px; }
-      table.staff tr td#title {
-        width: 250px; }
-      table.staff tr td#name {
-        width: 160px; }
-      table.staff tr td#status {
-        font-style: italic;
-        color: #aaa;
-        width: 100px; }
+      padding: 0px;
+      margin: 0px;
+      /* end td */ }
+      .page.slug-staff table.staff tr td {
+        vertical-align: top;
+        border: none;
+        padding: 4px 8px 8px 8px;
+        margin: 0px; }
+        .page.slug-staff table.staff tr td.section {
+          margin-bottom: 4px 0px 0px 0px; }
+        .page.slug-staff table.staff tr td.status {
+          font-style: italic;
+          color: #aaa; }
+      .page.slug-staff table.staff tr.section-title td {
+        padding: 0; }
+        .page.slug-staff table.staff tr.section-title td h2 {
+          padding: 1em 0 0.25em; }
 
-/* end table.staff */
+/* .page.slug-staff */
 /*
 ========================
 ==BLOG

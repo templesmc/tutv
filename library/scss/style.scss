@@ -41,46 +41,50 @@
 	==STAFF PAGE
 	========================
 	*/
-
-	table.staff {
-	padding: 0px;
-	margin-bottom: 32px;
-	border: 0px solid #ccc;
-	font-size: 13.5px;
-	font-family: $sans-serif;
-	table-layout: fixed;
-
-		tr {
-		border: 0px;
+	.page.slug-staff {
+		
+		table.staff {
 		padding: 0px;
-		margin: 0px;
+		margin-bottom: 32px;
+		border: 0px solid #ccc;
+		font-size: 13.5px;
+		font-family: $sans-serif;
+		table-layout: fixed;
 
-			td {
-			vertical-align: top;
+			tr {
 			border: 0px;
-			padding: 4px 8px 8px 8px;
+			padding: 0px;
 			margin: 0px;
 
-				&#section {
-				margin-bottom: 4px 0px 0px 0px;
-				}
+				td {
+				vertical-align: top;
+				border: none;
+				padding: 4px 8px 8px 8px;
+				margin: 0px;
 
-				&#title {
-				width: 250px;
-				}
+					&.section {
+					margin-bottom: 4px 0px 0px 0px;
+					}
 
-				&#name {
-				width: 160px;
-				}
+					&.status {
+					font-style: italic;
+					color: #aaa;
+					}
+				} /* end td */
 
-				&#status {
-				font-style: italic;
-				color: #aaa;
-				width: 100px;
+				&.section-title {
+
+					td {
+						padding: 0;
+
+						h2 {
+							padding: 1em 0 0.25em;
+						}
+					}
 				}
-			} /* end td */
-		} /* end tr */
-	} /* end table.staff */
+			} /* end tr */
+		} /* end table.staff */
+	} /* .page.slug-staff */
 
 
 
