@@ -135,7 +135,7 @@ padding: 0 1em;
 
 				&.current_page_item {
 					font-style: normal;
-					
+
 					& > a, > a:visited { color: $tu-cherry; }
 				}
 			} /* end li */
@@ -165,7 +165,7 @@ HEADER STYLES
 background: #FFFFFF;
 
 /* Full width browser bar hack from CSS Tricks (snippet comment by <timd.mackey>)
-http://css-tricks.com/full-browser-width-bars/#comment-94090 
+http://css-tricks.com/full-browser-width-bars/#comment-94090
 Note that body element must have the attribute overflow-x: hidden; */
 margin: 0 -2000px;
 padding: 0 2000px;
@@ -290,7 +290,6 @@ color: black;
 
 			/* top level menu items */
 			> li {
-				
 
 
 			} /* end > li */
@@ -749,9 +748,6 @@ margin-top: 1.5rem;
 
 			#contact-icon {
 			text-align: center;
-			position: relative;
-			left: 3px;
-			top: 2px;
 			}
 		}
 	} /* end .connect-block */
