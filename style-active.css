@@ -2198,7 +2198,7 @@ h6, .h6 {
   font-size: 12px; }
 
 #page-header {
-  margin-top: 1.5rem;
+  margin-top: 1.5em;
   padding: 0 1em;
   /* end .page-header-menu-container */ }
   #page-header h1.page-title {
@@ -2435,7 +2435,7 @@ POST & CONTENT STYLES
 .block, .archive-navigation a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item, body.search-results .hentry {
   background-color: white;
   border: 1px solid #e0e0e0;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5em; }
   .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header, body.search-results .hentry .block-header {
     background-color: #0176b7;
     color: white; }
@@ -2654,7 +2654,7 @@ SIDEBARS & ASIDES & WIDGETS
 
 /* end #featured-video-sidebar-section */
 .sidebar {
-  margin-top: 1.5rem;
+  margin-top: 1.5em;
   /* end .connect-block */
   /* end .sidebar-featured-buttons-section */
   /* end .featured-video-section */ }
@@ -2773,7 +2773,7 @@ FOOTER STYLES
             background-color: #ededed;
             font-weight: 300;
             text-transform: uppercase;
-            font-size: 1.25rem;
+            font-size: 1.25em;
             /* 20px */
             padding: 0 0.125em;
             cursor: default; }
@@ -2809,7 +2809,7 @@ FOOTER STYLES
               font-weight: 300;
               text-transform: uppercase;
               margin-bottom: .25em;
-              font-size: 1.25rem;
+              font-size: 1.25em;
               /* 20px */
               position: relative;
               top: -0.5em; }
@@ -3237,7 +3237,7 @@ body.slug-schedule {
           color: #787779; }
   body.slug-schedule #schedule-section-container.block, body.slug-schedule .archive-navigation a#schedule-section-container, .archive-navigation body.slug-schedule a#schedule-section-container, body.slug-schedule .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul#schedule-section-container, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes body.slug-schedule ul#schedule-section-container, body.slug-schedule .has-taxonomy-show.singular #content .video-sidebar .video-section #schedule-section-container.video-item, .has-taxonomy-show.singular #content .video-sidebar .video-section body.slug-schedule #schedule-section-container.video-item, body.slug-schedule body.search-results #schedule-section-container.hentry, body.search-results body.slug-schedule #schedule-section-container.hentry {
     border-top: none;
-    padding-top: 1rem;
+    padding-top: 1em;
     padding-bottom: 10em; }
   body.slug-schedule #schedule-section {
     padding-left: 1em;
@@ -3554,7 +3554,7 @@ body.slug-schedule {
       .blog.blog-archive .hentry .entry-content a {
         font-weight: 700; }
   .blog.single.blog-post #content {
-    margin-top: 1.5rem; }
+    margin-top: 1.5em; }
   .blog.single.blog-post .hentry,
   .blog.single.blog-post #nav-below,
   .blog.single.blog-post #comments {
