@@ -1122,15 +1122,15 @@ Stylesheet: Mixins & Constants Stylesheet
 CLEARFIXIN'
 *********************/
 .clearfix, .container_12,
-.container_16, .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header, body.search-results .hentry .block-header, .has-taxonomy-show.singular #content .video-sidebar .video-section, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item {
+.container_16, .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, body.search-results .hentry .block-header {
   zoom: 1; }
   .clearfix:before, .container_12:before,
-  .container_16:before, .block .block-header:before, .archive-navigation a .block-header:before, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:before, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header:before, body.search-results .hentry .block-header:before, .has-taxonomy-show.singular #content .video-sidebar .video-section:before, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item:before, .clearfix:after, .container_12:after,
-  .container_16:after, .block .block-header:after, .archive-navigation a .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header:after, body.search-results .hentry .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .video-section:after, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item:after {
+  .container_16:before, .block .block-header:before, .archive-navigation a .block-header:before, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:before, body.search-results .hentry .block-header:before, .clearfix:after, .container_12:after,
+  .container_16:after, .block .block-header:after, .archive-navigation a .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:after, body.search-results .hentry .block-header:after {
     content: "";
     display: table; }
   .clearfix:after, .container_12:after,
-  .container_16:after, .block .block-header:after, .archive-navigation a .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header:after, body.search-results .hentry .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .video-section:after, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item:after {
+  .container_16:after, .block .block-header:after, .archive-navigation a .block-header:after, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header:after, body.search-results .hentry .block-header:after {
     clear: both; }
 
 /*********************
@@ -1674,7 +1674,6 @@ body {
 ----------------------------------------------------------------------------------------------------*/
 .grid_1,
 .grid_2,
-.has-taxonomy-show.singular #content .video-sidebar .video-section .video-item,
 .grid_3,
 .grid_4,
 .grid_5,
@@ -1729,10 +1728,10 @@ body {
 
 /* `Grid >> Children (Alpha ~ First, Omega ~ Last)
 ----------------------------------------------------------------------------------------------------*/
-.alpha, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item:nth-child(even) {
+.alpha {
   margin-left: 0; }
 
-.omega, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item:nth-child(odd) {
+.omega {
   margin-right: 0; }
 
 /* `Grid >> 12 Columns
@@ -1740,7 +1739,7 @@ body {
 .container_12 .grid_1 {
   width: 60px; }
 
-.container_12 .grid_2, .container_12 .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item, .has-taxonomy-show.singular #content .video-sidebar .video-section .container_12 .video-item {
+.container_12 .grid_2 {
   width: 140px; }
 
 .container_12 .grid_4 {
@@ -1766,7 +1765,7 @@ body {
 .container_16 .grid_1 {
   width: 40px; }
 
-.container_16 .grid_2, .container_16 .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item, .has-taxonomy-show.singular #content .video-sidebar .video-section .container_16 .video-item {
+.container_16 .grid_2 {
   width: 100px; }
 
 .container_16 .grid_3 {
@@ -2432,38 +2431,38 @@ POST & CONTENT STYLES
         background: white; }
 
 /* end #main */
-.block, .archive-navigation a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item, body.search-results .hentry {
+.block, .archive-navigation a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul, body.search-results .hentry {
   background-color: white;
   border: 1px solid #e0e0e0;
   margin-bottom: 1.5em; }
-  .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header, body.search-results .hentry .block-header {
+  .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, body.search-results .hentry .block-header {
     background-color: #0176b7;
     color: white; }
-    .block .block-header a, .archive-navigation a .block-header a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header a, body.search-results .hentry .block-header a {
+    .block .block-header a, .archive-navigation a .block-header a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a, body.search-results .hentry .block-header a {
       color: white;
       text-decoration: none; }
-      .block .block-header a:hover, .archive-navigation a .block-header a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:hover, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header a:hover, body.search-results .hentry .block-header a:hover {
+      .block .block-header a:hover, .archive-navigation a .block-header a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:hover, body.search-results .hentry .block-header a:hover {
         color: white; }
-    .block .block-header h3.section-header, .archive-navigation a .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header h3.section-header, body.search-results .hentry .block-header h3.section-header {
+    .block .block-header h3.section-header, .archive-navigation a .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header h3.section-header, body.search-results .hentry .block-header h3.section-header {
       font-size: 20px;
       font-weight: 300;
       float: left;
       display: inline-block;
       color: white; }
-    .block .block-header p, .archive-navigation a .block-header p, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header p, body.search-results .hentry .block-header p {
+    .block .block-header p, .archive-navigation a .block-header p, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p, body.search-results .hentry .block-header p {
       display: inline-block;
       float: right;
       font-weight: 300;
       font-style: italic;
       margin: 0.625em;
       line-height: 30px; }
-      .block .block-header p a, .archive-navigation a .block-header p a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header p a, body.search-results .hentry .block-header p a {
+      .block .block-header p a, .archive-navigation a .block-header p a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a, body.search-results .hentry .block-header p a {
         text-decoration: none;
         color: white; }
-        .block .block-header p a:hover, .archive-navigation a .block-header p a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:hover, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-header p a:hover, body.search-results .hentry .block-header p a:hover {
+        .block .block-header p a:hover, .archive-navigation a .block-header p a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:hover, body.search-results .hentry .block-header p a:hover {
           text-decoration: none;
           color: white; }
-  .block .block-inner, .archive-navigation a .block-inner, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-inner, .has-taxonomy-show.singular #content .video-sidebar .video-section .video-item .block-inner, body.search-results .hentry .block-inner {
+  .block .block-inner, .archive-navigation a .block-inner, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-inner, body.search-results .hentry .block-inner {
     background-color: white;
     border: 1px solid #e0e0e0; }
 
@@ -2748,6 +2747,13 @@ FOOTER STYLES
       margin: 0; }
 
 /* end #footer */
+/******************************************************************
+Site Name: TUTV
+Author: Chris Montgomery
+
+Stylesheet: Modernizr 
+
+******************************************************************/
 /* Please don't style these top guys here. */
 .home {
   /* end #main */ }
@@ -3235,7 +3241,7 @@ body.slug-schedule {
         border-bottom: 1px solid white; }
         body.slug-schedule #schedule-controls #schedule-nav .active a:hover {
           color: #787779; }
-  body.slug-schedule #schedule-section-container.block, body.slug-schedule .archive-navigation a#schedule-section-container, .archive-navigation body.slug-schedule a#schedule-section-container, body.slug-schedule .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul#schedule-section-container, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes body.slug-schedule ul#schedule-section-container, body.slug-schedule .has-taxonomy-show.singular #content .video-sidebar .video-section #schedule-section-container.video-item, .has-taxonomy-show.singular #content .video-sidebar .video-section body.slug-schedule #schedule-section-container.video-item, body.slug-schedule body.search-results #schedule-section-container.hentry, body.search-results body.slug-schedule #schedule-section-container.hentry {
+  body.slug-schedule #schedule-section-container.block, body.slug-schedule .archive-navigation a#schedule-section-container, .archive-navigation body.slug-schedule a#schedule-section-container, body.slug-schedule .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul#schedule-section-container, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes body.slug-schedule ul#schedule-section-container, body.slug-schedule body.search-results #schedule-section-container.hentry, body.search-results body.slug-schedule #schedule-section-container.hentry {
     border-top: none;
     padding-top: 1em;
     padding-bottom: 10em; }
