@@ -118,14 +118,14 @@ if ( is_singular( 'episodes' ) ) {
 		
 		$args = array(
 			'post_type' => 'clip',
-			'posts_per_page' => '3',
+			'posts_per_page' => '4',
 			'post__in' => $connected_clip_ids
 		);
 		$title = 'Clips from this episode';
 	} elseif ( !empty($term) ) {
 		$args = array(
 			'post_type' => 'clip',
-			'posts_per_page' => '3',
+			'posts_per_page' => '4',
 			'shows' => $term->slug
 		);
 		$title = 'Related clips from ' . $term->name;
