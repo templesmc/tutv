@@ -220,20 +220,16 @@
 				} /* end .upcoming-showtimes */
 
 				.video-section {
-				@extend .clearfix;
 
 					.video-item {
-					@extend .block;
-					@extend .grid_2;
-					@extend .clearfix;
 					width: 140px;
 
 						&:nth-child(odd) {
-						@extend .omega;
+						//@extend .omega;
 						}
 
 						&:nth-child(even) {
-						@extend .alpha;
+						//@extend .alpha;
 						}
 					}
 

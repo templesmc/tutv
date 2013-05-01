@@ -287,11 +287,21 @@ function tutv_video_block( $term, $args, $title = '' ) {
 	$video_block = new WP_Query($args);
 	
 	if( $video_block->have_posts() ) {
-		
-		$content = "<div class='" . $post_type->query_var . "-block video-section'>";
+
+		// set class to alpha/omega depending on position in 2 column layout
+		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+		$style_classes = array('alpha', 'omega');
+		$styles_count = count($style_classes);
+		$style_index = 0;
+
+		$content = "<div class='" . $post_type->query_var . "-block video-section clearfix'>";
 		$content .= "<h3 class='section-header'>$title</h3>";
 		while ($video_block->have_posts()) : $video_block->the_post();
-			$content .=  "<div class='" . $post_type->query_var . "-item video-item'>";
+
+			// this is the second part of the operation that determines first or last class based on column divisions. see above.
+			$k = $style_classes[$style_index++ % $styles_count];
+
+			$content .=  "<div class='" . $post_type->query_var . "-item video-item block grid_2 " . $k . " clearfix'>";
 				$content .=  '<a href="' . get_permalink( get_the_ID() ) . '" rel="bookmark">';
 					$content .= get_video_thumbnail( get_the_ID() ); 
 					$content .=  '<span class="video-title">';
