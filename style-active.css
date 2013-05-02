@@ -1297,8 +1297,8 @@ BUTTON MIXINS
 *********************/
 /* From SASS-Twitter-Bootstrap */
 /* BOOTSTRAP STYLES */
-.btn, .home #main #container #content #front-featured .flexslider #subheadline a,
-.home #main #container #content #front-featured .flexslider #subheadline2 a {
+.btn, #front-featured .flexslider #subheadline a,
+#front-featured .flexslider #subheadline2 a {
   display: inline-block;
   padding: 4px 12px;
   margin-bottom: 0;
@@ -1319,20 +1319,20 @@ BUTTON MIXINS
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .btn:hover, .home #main #container #content #front-featured .flexslider #subheadline a:hover,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:hover, .btn:focus, .home #main #container #content #front-featured .flexslider #subheadline a:focus,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:focus, .btn:active, .home #main #container #content #front-featured .flexslider #subheadline a:active,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:active, .btn.active, .home #main #container #content #front-featured .flexslider #subheadline a.active,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a.active, .btn.disabled, .home #main #container #content #front-featured .flexslider #subheadline a.disabled,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a.disabled, .btn[disabled], .home #main #container #content #front-featured .flexslider #subheadline a[disabled],
-  .home #main #container #content #front-featured .flexslider #subheadline2 a[disabled] {
+  .btn:hover, #front-featured .flexslider #subheadline a:hover,
+  #front-featured .flexslider #subheadline2 a:hover, .btn:focus, #front-featured .flexslider #subheadline a:focus,
+  #front-featured .flexslider #subheadline2 a:focus, .btn:active, #front-featured .flexslider #subheadline a:active,
+  #front-featured .flexslider #subheadline2 a:active, .btn.active, #front-featured .flexslider #subheadline a.active,
+  #front-featured .flexslider #subheadline2 a.active, .btn.disabled, #front-featured .flexslider #subheadline a.disabled,
+  #front-featured .flexslider #subheadline2 a.disabled, .btn[disabled], #front-featured .flexslider #subheadline a[disabled],
+  #front-featured .flexslider #subheadline2 a[disabled] {
     background-color: #e6e6e6; }
-  .btn:first-child, .home #main #container #content #front-featured .flexslider #subheadline a:first-child,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:first-child {
+  .btn:first-child, #front-featured .flexslider #subheadline a:first-child,
+  #front-featured .flexslider #subheadline2 a:first-child {
     *margin-left: 0; }
-  .btn:hover, .home #main #container #content #front-featured .flexslider #subheadline a:hover,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:hover, .btn:focus, .home #main #container #content #front-featured .flexslider #subheadline a:focus,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:focus {
+  .btn:hover, #front-featured .flexslider #subheadline a:hover,
+  #front-featured .flexslider #subheadline2 a:hover, .btn:focus, #front-featured .flexslider #subheadline a:focus,
+  #front-featured .flexslider #subheadline2 a:focus {
     color: #666666;
     text-decoration: none;
     -webkit-transition: background-position 0.1s linear;
@@ -1340,17 +1340,17 @@ BUTTON MIXINS
     -ms-transition: background-position 0.1s linear;
     -transition: background-position 0.1s linear;
     transition: background-position 0.1s linear; }
-  .btn.active, .home #main #container #content #front-featured .flexslider #subheadline a.active,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a.active, .btn:active, .home #main #container #content #front-featured .flexslider #subheadline a:active,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a:active {
+  .btn.active, #front-featured .flexslider #subheadline a.active,
+  #front-featured .flexslider #subheadline2 a.active, .btn:active, #front-featured .flexslider #subheadline a:active,
+  #front-featured .flexslider #subheadline2 a:active {
     background-image: none;
     outline: 0;
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  .btn.disabled, .home #main #container #content #front-featured .flexslider #subheadline a.disabled,
-  .home #main #container #content #front-featured .flexslider #subheadline2 a.disabled, .btn[disabled], .home #main #container #content #front-featured .flexslider #subheadline a[disabled],
-  .home #main #container #content #front-featured .flexslider #subheadline2 a[disabled] {
+  .btn.disabled, #front-featured .flexslider #subheadline a.disabled,
+  #front-featured .flexslider #subheadline2 a.disabled, .btn[disabled], #front-featured .flexslider #subheadline a[disabled],
+  #front-featured .flexslider #subheadline2 a[disabled] {
     cursor: default;
     background-image: none;
     opacity: 0.65;
@@ -1381,34 +1381,34 @@ BUTTON MIXINS
 .btn-small [class*=" icon-"] {
   margin-top: 0; }
 
-.btn-mini [class^="icon-"], .home #main #container #content #front-featured .flexslider #subheadline a [class^="icon-"],
-.home #main #container #content #front-featured .flexslider #subheadline2 a [class^="icon-"],
+.btn-mini [class^="icon-"], #front-featured .flexslider #subheadline a [class^="icon-"],
+#front-featured .flexslider #subheadline2 a [class^="icon-"],
 .btn-mini [class*=" icon-"],
-.home #main #container #content #front-featured .flexslider #subheadline a [class*=" icon-"],
-.home #main #container #content #front-featured .flexslider #subheadline2 a [class*=" icon-"] {
+#front-featured .flexslider #subheadline a [class*=" icon-"],
+#front-featured .flexslider #subheadline2 a [class*=" icon-"] {
   margin-top: -1px; }
 
-.btn-mini, .home #main #container #content #front-featured .flexslider #subheadline a,
-.home #main #container #content #front-featured .flexslider #subheadline2 a {
+.btn-mini, #front-featured .flexslider #subheadline a,
+#front-featured .flexslider #subheadline2 a {
   padding: 0px 6px;
   font-size: 12px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px; }
 
-.btn-primary.active, .home #main #container #content #front-featured .flexslider #subheadline a.active,
+.btn-primary.active, #front-featured .flexslider #subheadline a.active,
 .btn-warning.active,
 .btn-danger.active,
 .btn-success.active,
 .btn-info.active,
-.home #main #container #content #front-featured .flexslider #subheadline2 a.active,
+#front-featured .flexslider #subheadline2 a.active,
 .btn-inverse.active {
   color: rgba(255, 255, 255, 0.75); }
 
-.btn-primary, .home #main #container #content #front-featured .flexslider #subheadline a {
+.btn-primary, #front-featured .flexslider #subheadline a {
   background-color: #0176b7;
   color: black; }
-  .btn-primary:hover, .home #main #container #content #front-featured .flexslider #subheadline a:hover, .btn-primary:focus, .home #main #container #content #front-featured .flexslider #subheadline a:focus, .btn-primary:active, .home #main #container #content #front-featured .flexslider #subheadline a:active, .btn-primary.active, .home #main #container #content #front-featured .flexslider #subheadline a.active, .btn-primary.disabled, .home #main #container #content #front-featured .flexslider #subheadline a.disabled, .btn-primary[disabled], .home #main #container #content #front-featured .flexslider #subheadline a[disabled] {
+  .btn-primary:hover, #front-featured .flexslider #subheadline a:hover, .btn-primary:focus, #front-featured .flexslider #subheadline a:focus, .btn-primary:active, #front-featured .flexslider #subheadline a:active, .btn-primary.active, #front-featured .flexslider #subheadline a.active, .btn-primary.disabled, #front-featured .flexslider #subheadline a.disabled, .btn-primary[disabled], #front-featured .flexslider #subheadline a[disabled] {
     background-color: #0139b7; }
 
 .btn-warning {
@@ -1429,10 +1429,10 @@ BUTTON MIXINS
   .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
     background-color: #51a351; }
 
-.btn-info, .home #main #container #content #front-featured .flexslider #subheadline2 a {
+.btn-info, #front-featured .flexslider #subheadline2 a {
   background-color: #5bc0de;
   color: black; }
-  .btn-info:hover, .home #main #container #content #front-featured .flexslider #subheadline2 a:hover, .btn-info:focus, .home #main #container #content #front-featured .flexslider #subheadline2 a:focus, .btn-info:active, .home #main #container #content #front-featured .flexslider #subheadline2 a:active, .btn-info.active, .home #main #container #content #front-featured .flexslider #subheadline2 a.active, .btn-info.disabled, .home #main #container #content #front-featured .flexslider #subheadline2 a.disabled, .btn-info[disabled], .home #main #container #content #front-featured .flexslider #subheadline2 a[disabled] {
+  .btn-info:hover, #front-featured .flexslider #subheadline2 a:hover, .btn-info:focus, #front-featured .flexslider #subheadline2 a:focus, .btn-info:active, #front-featured .flexslider #subheadline2 a:active, .btn-info.active, #front-featured .flexslider #subheadline2 a.active, .btn-info.disabled, #front-featured .flexslider #subheadline2 a.disabled, .btn-info[disabled], #front-featured .flexslider #subheadline2 a[disabled] {
     background-color: #2f96b4; }
 
 .btn-inverse {
@@ -2804,259 +2804,254 @@ Author: Chris Montgomery
 Stylesheet: Modernizr 
 
 ******************************************************************/
-/* Please don't style these top guys here. */
-.home {
-  /* end #main */ }
-  .home #main {
-    /* end #container */ }
-    .home #main #container {
-      /* end #content */ }
-      .home #main #container #content {
-        /* MASTHEAD */
-        /* end #masthead */
-        /* FEATURED SLIDESHOW */
-        /* end #front-featured */
-        /* end #recent-blog-posts-block */
-        /* end #schedule-meta-block-container */
-        /* FEATURED VIDEO SECTION */
-        /* END #featured-video-section */ }
-        .home #main #container #content #masthead {
-          background: url(images/phillyskyline.png) no-repeat center 26%;
-          height: 175px;
-          /* end #tutv-network-info */
-          /* end #masthead-social-media */ }
-          .home #main #container #content #masthead p {
-            background-color: #ededed;
-            font-weight: 300;
-            text-transform: uppercase;
-            font-size: 1.25em;
-            /* 20px */
-            padding: 0 0.125em;
-            cursor: default; }
-          .home #main #container #content #masthead #tutv-network-info,
-          .home #main #container #content #masthead #masthead-social-media {
-            margin-top: 1.25em; }
-          .home #main #container #content #masthead #tutv-network-info {
-            float: left;
-            /* end p */ }
-            .home #main #container #content #masthead #tutv-network-info p {
-              display: inline-block;
-              float: left;
-              clear: both; }
-              .home #main #container #content #masthead #tutv-network-info p.cable {
-                margin-bottom: .25em; }
-              .home #main #container #content #masthead #tutv-network-info p.location {
-                background-color: transparent;
-                margin-top: .75em;
-                text-transform: lowercase;
-                font-style: italic;
-                font-weight: 400; }
-                .home #main #container #content #masthead #tutv-network-info p.location em {
-                  font-style: normal;
-                  text-transform: uppercase;
-                  font-weight: 700;
-                  color: #9e1b34; }
-          .home #main #container #content #masthead #masthead-social-media {
-            float: right; }
-            .home #main #container #content #masthead #masthead-social-media p {
-              background-color: #ededed;
-              display: inline;
-              margin-right: 1em;
-              font-weight: 300;
-              text-transform: uppercase;
-              margin-bottom: .25em;
-              font-size: 1.25em;
-              /* 20px */
-              position: relative;
-              top: -0.5em; }
-            .home #main #container #content #masthead #masthead-social-media ul.social-media-icons {
-              display: inline; }
-        .home #main #container #content #front-featured {
-          height: 290px !important;
-          margin-bottom: 2.2em;
-          /* end .flexslider */ }
-          .home #main #container #content #front-featured .flexslider {
-            margin-bottom: 0;
-            background: transparent;
-            border: none;
-            /* end .flex-control-paging */
-            /* end .description */
-            /* end h2 */
-            /* end #subheadline */
-            /* end #subheadline2 */ }
-            .home #main #container #content #front-featured .flexslider .flex-control-nav {
-              width: auto;
-              position: absolute;
-              z-index: 999;
-              bottom: 0;
-              height: 20px;
-              right: 16px; }
-            .home #main #container #content #front-featured .flexslider .flex-control-paging {
-              /* end li */ }
-              .home #main #container #content #front-featured .flexslider .flex-control-paging li {
-                /* end a */ }
-                .home #main #container #content #front-featured .flexslider .flex-control-paging li a {
-                  background: #ffffff;
-                  background: rgba(255, 255, 255, 0.9); }
-                  .home #main #container #content #front-featured .flexslider .flex-control-paging li a:hover {
-                    background: #e0e0e0;
-                    background: rgba(255, 255, 255, 0.7); }
-                  .home #main #container #content #front-featured .flexslider .flex-control-paging li a.flex-active {
-                    background: #333;
-                    background: rgba(255, 255, 255, 0.3); }
-            .home #main #container #content #front-featured .flexslider li {
-              height: 290px;
-              overflow: hidden; }
-            .home #main #container #content #front-featured .flexslider .attachment-banner {
-              float: right; }
-            .home #main #container #content #front-featured .flexslider .description {
-              position: absolute;
-              right: 0.75em;
-              padding: 1em;
-              background: black;
-              background: rgba(0, 0, 0, 0.8);
-              color: #fff;
-              z-index: 3;
-              float: right;
-              height: 290px;
-              width: 360px; }
-              .home #main #container #content #front-featured .flexslider .description blockquote {
-                margin: 0; }
-              .home #main #container #content #front-featured .flexslider .description img {
-                display: none; }
-            .home #main #container #content #front-featured .flexslider h2 {
-              font-size: 30px;
-              font-weight: 300;
-              word-wrap: break-word;
-              text-transform: uppercase;
-              line-height: 1.2;
-              padding-bottom: 8px; }
-              .home #main #container #content #front-featured .flexslider h2 a {
-                color: #42abe8; }
-            .home #main #container #content #front-featured .flexslider h3.headline {
-              /* this is not a headline, it's a subheadline. also, it should NOT be an id */
-              font-size: 20px;
-              word-wrap: break-word;
-              line-height: 1.2;
-              padding-bottom: 8px; }
-            .home #main #container #content #front-featured .flexslider p {
-              font-size: 14px;
-              margin-bottom: 1em; }
-            .home #main #container #content #front-featured .flexslider #subheadline {
-              /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
-              float: left;
-              margin-right: 0.5em; }
-            .home #main #container #content #front-featured .flexslider #subheadline2 {
-              /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */ }
-            .home #main #container #content #front-featured .flexslider .wp-caption {
-              display: none; }
-        .home #main #container #content #recent-blog-posts-block {
-          border: none;
-          /* end .post */ }
-          .home #main #container #content #recent-blog-posts-block .block-header {
-            background: #666666;
-            /* Old browsers */
-            background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
-            /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5)));
-            /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
-            /* Opera 11.10+ */
-            background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
-            /* IE10+ */
-            background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
-            /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 );
-            /* IE6-8 */ }
-          .home #main #container #content #recent-blog-posts-block .post {
-            height: 225px;
-            padding: 1.125em; }
-            .home #main #container #content #recent-blog-posts-block .post:first-child {
-              border-bottom: 1px solid #e0e0e0; }
-            .home #main #container #content #recent-blog-posts-block .post:last-child {
-              border-top: 1px solid #e0e0e0; }
-            .home #main #container #content #recent-blog-posts-block .post .featured-image-container {
-              display: inline-block;
-              float: left;
-              padding: 0 1.125em 1.125em 0; }
-            .home #main #container #content #recent-blog-posts-block .post .entry-header {
-              display: inline; }
-              .home #main #container #content #recent-blog-posts-block .post .entry-header h4 {
-                display: inline;
-                padding: 0;
-                font-style: normal;
-                line-height: 1.2; }
-                .home #main #container #content #recent-blog-posts-block .post .entry-header h4 a {
-                  text-decoration: none; }
-            .home #main #container #content #recent-blog-posts-block .post .entry-content {
-              font-size: 14px; }
-              .home #main #container #content #recent-blog-posts-block .post .entry-content p {
-                display: inline; }
-            .home #main #container #content #recent-blog-posts-block .post .read-more {
-              font-weight: 700;
-              font-style: italic;
-              display: inline;
-              margin-left: 0.5em; }
-              .home #main #container #content #recent-blog-posts-block .post .read-more a {
-                color: #00b3a0; }
-        .home #main #container #content #schedule-meta-block-container {
-          /* FEATURED BUTTONS SECTION */
-          /* end #featured-buttons-section */ }
-          .home #main #container #content #schedule-meta-block-container #featured-buttons-section {
-            height: 250px;
-            /* end .front-featured-button */ }
-            .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button {
-              background: #ededed url(images/background-layer2.jpg) repeat center center scroll;
-              height: 90px;
-              text-decoration: none;
-              /* end a */ }
-              .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a {
-                display: block;
-                /* end h3.front-featured-button-title */ }
-                .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title {
-                  text-transform: uppercase;
-                  line-height: 90px;
-                  /* this vertically centers the h3 */
-                  text-align: center;
-                  font-weight: 300; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title em {
-                    text-transform: lowercase;
-                    font-weight: 900;
-                    font-style: italic; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title em, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title em {
-                    font-weight: 700; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#watch-live-button-title {
-                    font-size: 36px;
-                    color: #9e1b34; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title, .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title {
-                    font-size: 24px; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title {
-                    color: #42abe8; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title {
-                    color: #00b3a0; }
-                  .home #main #container #content #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title {
-                    font-size: 20px;
-                    color: #666666; }
-            .home #main #container #content #schedule-meta-block-container #featured-buttons-section #watch-live-button {
-              margin-bottom: 10px; }
-            .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button {
-              height: 45px;
-              margin-top: 10px;
-              color: #666666; }
-              .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button h3.front-featured-button-title {
-                line-height: 45px;
-                /* this vertically centers the h3 */ }
-              .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:hover, .home #main #container #content #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:active {
-                color: inherit; }
-        .home #main #container #content .featured-video-section {
-          /* END .featured-videos */ }
-          .home #main #container #content .featured-video-section .featured-video {
-            height: 220px;
-            padding: 1.5em; }
+/* MASTHEAD */
+#masthead {
+  background: url(images/phillyskyline.png) no-repeat center 26%;
+  height: 175px;
+  /* end #tutv-network-info */
+  /* end #masthead-social-media */ }
+  #masthead p {
+    background-color: #ededed;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    /* 20px */
+    padding: 0 0.125em;
+    cursor: default; }
+  #masthead #tutv-network-info,
+  #masthead #masthead-social-media {
+    margin-top: 1.25em; }
+  #masthead #tutv-network-info {
+    float: left;
+    /* end p */ }
+    #masthead #tutv-network-info p {
+      display: inline-block;
+      float: left;
+      clear: both; }
+      #masthead #tutv-network-info p.cable {
+        margin-bottom: .25em; }
+      #masthead #tutv-network-info p.location {
+        background-color: transparent;
+        margin-top: .75em;
+        text-transform: lowercase;
+        font-style: italic;
+        font-weight: 400; }
+        #masthead #tutv-network-info p.location em {
+          font-style: normal;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #9e1b34; }
+  #masthead #masthead-social-media {
+    float: right; }
+    #masthead #masthead-social-media p {
+      background-color: #ededed;
+      display: inline;
+      margin-right: 1em;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: .25em;
+      font-size: 1.25em;
+      /* 20px */
+      position: relative;
+      top: -0.5em; }
+    #masthead #masthead-social-media ul.social-media-icons {
+      display: inline; }
 
-/* END .home */
+/* end #masthead */
+/* FEATURED SLIDESHOW */
+#front-featured {
+  height: 290px !important;
+  margin-bottom: 2.2em;
+  /* end .flexslider */ }
+  #front-featured .flexslider {
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    /* end .flex-control-paging */
+    /* end .description */
+    /* end h2 */
+    /* end #subheadline */
+    /* end #subheadline2 */ }
+    #front-featured .flexslider .flex-control-nav {
+      width: auto;
+      position: absolute;
+      z-index: 999;
+      bottom: 0;
+      height: 20px;
+      right: 16px; }
+    #front-featured .flexslider .flex-control-paging {
+      /* end li */ }
+      #front-featured .flexslider .flex-control-paging li {
+        /* end a */ }
+        #front-featured .flexslider .flex-control-paging li a {
+          background: #ffffff;
+          background: rgba(255, 255, 255, 0.9); }
+          #front-featured .flexslider .flex-control-paging li a:hover {
+            background: #e0e0e0;
+            background: rgba(255, 255, 255, 0.7); }
+          #front-featured .flexslider .flex-control-paging li a.flex-active {
+            background: #333;
+            background: rgba(255, 255, 255, 0.3); }
+    #front-featured .flexslider li {
+      height: 290px;
+      overflow: hidden; }
+    #front-featured .flexslider .attachment-banner {
+      float: right; }
+    #front-featured .flexslider .description {
+      position: absolute;
+      right: 0.75em;
+      padding: 1em;
+      background: black;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      z-index: 3;
+      float: right;
+      height: 290px;
+      width: 360px; }
+      #front-featured .flexslider .description blockquote {
+        margin: 0; }
+      #front-featured .flexslider .description img {
+        display: none; }
+    #front-featured .flexslider h2 {
+      font-size: 30px;
+      font-weight: 300;
+      word-wrap: break-word;
+      text-transform: uppercase;
+      line-height: 1.2;
+      padding-bottom: 8px; }
+      #front-featured .flexslider h2 a {
+        color: #42abe8; }
+    #front-featured .flexslider h3.headline {
+      /* this is not a headline, it's a subheadline. also, it should NOT be an id */
+      font-size: 20px;
+      word-wrap: break-word;
+      line-height: 1.2;
+      padding-bottom: 8px; }
+    #front-featured .flexslider p {
+      font-size: 14px;
+      margin-bottom: 1em; }
+    #front-featured .flexslider #subheadline {
+      /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
+      float: left;
+      margin-right: 0.5em; }
+    #front-featured .flexslider #subheadline2 {
+      /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */ }
+    #front-featured .flexslider .wp-caption {
+      display: none; }
+
+/* end #front-featured */
+#recent-blog-posts-block {
+  border: none;
+  /* end .post */ }
+  #recent-blog-posts-block .block-header {
+    background: #666666;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #42abe8), color-stop(100%, rgba(66, 171, 232, 0.5)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 );
+    /* IE6-8 */ }
+  #recent-blog-posts-block .post {
+    height: 225px;
+    padding: 1.125em; }
+    #recent-blog-posts-block .post:first-child {
+      border-bottom: 1px solid #e0e0e0; }
+    #recent-blog-posts-block .post:last-child {
+      border-top: 1px solid #e0e0e0; }
+    #recent-blog-posts-block .post .featured-image-container {
+      display: inline-block;
+      float: left;
+      padding: 0 1.125em 1.125em 0; }
+    #recent-blog-posts-block .post .entry-header {
+      display: inline; }
+      #recent-blog-posts-block .post .entry-header h4 {
+        display: inline;
+        padding: 0;
+        font-style: normal;
+        line-height: 1.2; }
+        #recent-blog-posts-block .post .entry-header h4 a {
+          text-decoration: none; }
+    #recent-blog-posts-block .post .entry-content {
+      font-size: 14px; }
+      #recent-blog-posts-block .post .entry-content p {
+        display: inline; }
+    #recent-blog-posts-block .post .read-more {
+      font-weight: 700;
+      font-style: italic;
+      display: inline;
+      margin-left: 0.5em; }
+      #recent-blog-posts-block .post .read-more a {
+        color: #00b3a0; }
+
+/* end #recent-blog-posts-block */
+#schedule-meta-block-container {
+  /* FEATURED BUTTONS SECTION */
+  /* end #featured-buttons-section */ }
+  #schedule-meta-block-container #featured-buttons-section {
+    height: 250px;
+    /* end .front-featured-button */ }
+    #schedule-meta-block-container #featured-buttons-section .front-featured-button {
+      background: #ededed url(images/background-layer2.jpg) repeat center center scroll;
+      height: 90px;
+      text-decoration: none;
+      /* end a */ }
+      #schedule-meta-block-container #featured-buttons-section .front-featured-button a {
+        display: block;
+        /* end h3.front-featured-button-title */ }
+        #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title {
+          text-transform: uppercase;
+          line-height: 90px;
+          /* this vertically centers the h3 */
+          text-align: center;
+          font-weight: 300; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title em {
+            text-transform: lowercase;
+            font-weight: 900;
+            font-style: italic; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title em, #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title em, #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title em {
+            font-weight: 700; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#watch-live-button-title {
+            font-size: 36px;
+            color: #9e1b34; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title, #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title {
+            font-size: 24px; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#about-tutv-button-title {
+            color: #42abe8; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#submit-a-video-button-title {
+            color: #00b3a0; }
+          #schedule-meta-block-container #featured-buttons-section .front-featured-button a h3.front-featured-button-title#read-the-blog-button-title {
+            font-size: 20px;
+            color: #666666; }
+    #schedule-meta-block-container #featured-buttons-section #watch-live-button {
+      margin-bottom: 10px; }
+    #schedule-meta-block-container #featured-buttons-section #read-the-blog-button {
+      height: 45px;
+      margin-top: 10px;
+      color: #666666; }
+      #schedule-meta-block-container #featured-buttons-section #read-the-blog-button h3.front-featured-button-title {
+        line-height: 45px;
+        /* this vertically centers the h3 */ }
+      #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:hover, #schedule-meta-block-container #featured-buttons-section #read-the-blog-button:active {
+        color: inherit; }
+
+/* end #schedule-meta-block-container */
+/* FEATURED VIDEO SECTION */
+.featured-video-section {
+  /* END .featured-videos */ }
+  .featured-video-section .featured-video {
+    height: 220px;
+    padding: 1.5em; }
+
+/* END #featured-video-section */
 /******************************************************************
 Site Name: Temple TV
 Author: Chris Montgomery
@@ -3156,19 +3151,15 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
           .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a {
             text-decoration: none;
             /* override button styles for all genre buttons */ }
-            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all, .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #front-featured .flexslider #subheadline #filtering-nav-container ul li a.all, .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #front-featured .flexslider #subheadline #filtering-nav-container ul li a.all,
-            .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
-            .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
-            .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #front-featured .flexslider #subheadline2 #filtering-nav-container ul li a.all,
-            .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #front-featured .flexslider #subheadline2 #filtering-nav-container ul li a.all, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-production-type {
+            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, #front-featured .flexslider #subheadline .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.all,
+            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
+            #front-featured .flexslider #subheadline2 .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.all, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-production-type {
               -webkit-border-radius: 2px;
               -moz-border-radius: 2px;
               border-radius: 2px; }
-            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all, .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #front-featured .flexslider #subheadline #filtering-nav-container ul li a.all, .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #front-featured .flexslider #subheadline #filtering-nav-container ul li a.all,
-            .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
-            .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
-            .page-template-page-shows-grid-php .home #main #container #content.shows-page-grid #front-featured .flexslider #subheadline2 #filtering-nav-container ul li a.all,
-            .home #main #container .page-template-page-shows-grid-php #content.shows-page-grid #front-featured .flexslider #subheadline2 #filtering-nav-container ul li a.all {
+            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn.all, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline a.all, #front-featured .flexslider #subheadline .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.all,
+            .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li #front-featured .flexslider #subheadline2 a.all,
+            #front-featured .flexslider #subheadline2 .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.all {
               color: white; }
             .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container ul li a.btn-genre {
               color: black;
