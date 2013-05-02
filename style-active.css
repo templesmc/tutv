@@ -1119,6 +1119,91 @@ Stylesheet: Mixins & Constants Stylesheet
 
 ******************************************************************/
 /*********************
+TYPOGRAPHY
+*********************/
+/*
+WEB FONTS
+*/
+.wf-loading a,
+.wf-loading p,
+.wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading .single .hentry h1.entry-title, .single .hentry .wf-loading h1.entry-title,
+.wf-loading h2, .wf-loading .h2, .wf-loading .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name, .has-taxonomy-show #main #content #page-header #show-info-container #show-header .wf-loading h1#show-name,
+.wf-loading h3, .wf-loading .h3, .wf-loading .page .entry-main .hentry .entry-content h2, .page .entry-main .hentry .entry-content .wf-loading h2, .wf-loading body.search-results h1.archive-title, body.search-results .wf-loading h1.archive-title,
+.wf-loading h4, .wf-loading .h4,
+.wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading #content.single-show-page .hentry .entry-header h3.entry-title, #content.single-show-page .hentry .entry-header .wf-loading h3.entry-title,
+.wf-loading h6, .wf-loading .h6 {
+  visibility: hidden; }
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+/*
+LATO
+*/
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-Lig-webfont.eot");
+  src: url("library/fonts/Lato-Lig-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-Lig-webfont.svg#LatoLight") format("svg"), url("library/fonts/Lato-Lig-webfont.woff") format("woff"), url("library/fonts/Lato-Lig-webfont.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-Reg-webfont.eot");
+  src: url("library/fonts/Lato-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-Reg-webfont.svg#LatoRegular") format("svg"), url("library/fonts/Lato-Reg-webfont.woff") format("woff"), url("library/fonts/Lato-Reg-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-RegIta-webfont.eot");
+  src: url("library/fonts/Lato-RegIta-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-RegIta-webfont.svg#LatoItalic") format("svg"), url("library/fonts/Lato-RegIta-webfont.woff") format("woff"), url("library/fonts/Lato-RegIta-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-Bol-webfont.eot");
+  src: url("library/fonts/Lato-Bol-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-Bol-webfont.svg#LatoBold") format("svg"), url("library/fonts/Lato-Bol-webfont.woff") format("woff"), url("library/fonts/Lato-Bol-webfont.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-BolIta-webfont.eot");
+  src: url("library/fonts/Lato-BolIta-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-BolIta-webfont.svg#LatoBoldItalic") format("svg"), url("library/fonts/Lato-BolIta-webfont.woff") format("woff"), url("library/fonts/Lato-BolIta-webfont.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-Bla-webfont.eot");
+  src: url("library/fonts/Lato-Bla-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-Bla-webfont.svg#LatoBlack") format("svg"), url("library/fonts/Lato-Bla-webfont.woff") format("woff"), url("library/fonts/Lato-Bla-webfont.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("library/fonts/Lato-BlaIta-webfont.eot");
+  src: url("library/fonts/Lato-BlaIta-webfont.eot?#iefix") format("embedded-opentype"), url("library/fonts/Lato-BlaIta-webfont.svg#LatoBlackItalic") format("svg"), url("library/fonts/Lato-BlaIta-webfont.woff") format("woff"), url("library/fonts/Lato-BlaIta-webfont.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+/*********************
 CLEARFIXIN'
 *********************/
 .clearfix, .container_12,
@@ -1177,41 +1262,6 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
-/*********************
-TYPOGRAPHY
-*********************/
-/*
-WEB FONTS
-*/
-.wf-loading a,
-.wf-loading p,
-.wf-loading h1, .wf-loading .h1, .wf-loading #page-header h1.page-title, #page-header .wf-loading h1.page-title, .wf-loading .single .hentry h1.entry-title, .single .hentry .wf-loading h1.entry-title,
-.wf-loading h2, .wf-loading .h2, .wf-loading .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name, .has-taxonomy-show #main #content #page-header #show-info-container #show-header .wf-loading h1#show-name,
-.wf-loading h3, .wf-loading .h3, .wf-loading .page .entry-main .hentry .entry-content h2, .page .entry-main .hentry .entry-content .wf-loading h2, .wf-loading body.search-results h1.archive-title, body.search-results .wf-loading h1.archive-title,
-.wf-loading h4, .wf-loading .h4,
-.wf-loading h5, .wf-loading .h5, .wf-loading h6, .wf-loading .h6, .wf-loading .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container h2, .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container .wf-loading h2, .wf-loading #content.single-show-page .hentry .entry-header h3.entry-title, #content.single-show-page .hentry .entry-header .wf-loading h3.entry-title,
-.wf-loading h6, .wf-loading .h6 {
-  visibility: hidden; }
-.wf-loading #blog-title a {
-  visibility: visible; }
-
-/*
-use the best ampersand
-http://simplebits.com/notebook/2008/08/14/ampersands-2/
-*/
-span.amp {
-  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
-  font-style: italic; }
-
-.text-left {
-  text-align: left; }
-
-.text-center {
-  text-align: center; }
-
-.text-right {
-  text-align: right; }
-
 /*********************
 TRANISTION
 *********************/

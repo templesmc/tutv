@@ -21,8 +21,8 @@ function tutv_scripts_and_styles() {
 	if (!is_admin()) {
 
 		// load google web fonts
-		wp_register_style( 'tutv-webfonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic', array(), '', 'all' );
-		wp_enqueue_style( 'tutv-webfonts' );
+		// wp_register_style( 'tutv-webfonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic,900italic', array(), '', 'all' );
+		// wp_enqueue_style( 'tutv-webfonts' );
 
 		// register main stylesheet
 		wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '', 'all' );
