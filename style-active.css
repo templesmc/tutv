@@ -2495,7 +2495,7 @@ POST & CONTENT STYLES
         color: white; }
     .block .block-header h3.section-header, .archive-navigation a .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header h3.section-header, body.search-results .hentry .block-header h3.section-header {
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 400;
       float: left;
       display: inline-block;
       color: white; }
@@ -2940,6 +2940,10 @@ Stylesheet: Modernizr
       display: none; }
 
 /* end #front-featured */
+.block .block-header h3.section-header, .archive-navigation a .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header h3.section-header, body.search-results .hentry .block-header h3.section-header {
+  line-height: 50px;
+  margin: 0 0 0 0.5em; }
+
 #recent-blog-posts-block {
   border: none;
   /* end .post */ }
