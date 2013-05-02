@@ -2583,7 +2583,7 @@ SIDEBARS & ASIDES & WIDGETS
     /* IE10+ */
     background: linear-gradient(to right, #00b3a0 0%, rgba(0, 179, 160, 0.5) 100%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$teal', endColorstr='transparentize($teal, 0.5)',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00B3A0', endColorstr='#8000B3A0',GradientType=1 );
     /* IE6-8 */ }
   #schedule-block .block-inner.accordion {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2962,7 +2962,7 @@ Stylesheet: Modernizr
     /* IE10+ */
     background: linear-gradient(to right, #42abe8 0%, rgba(66, 171, 232, 0.5) 100%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF42ABE8', endColorstr='#8042ABE8',GradientType=1 );
     /* IE6-8 */ }
   #recent-blog-posts-block .post {
     height: 225px;

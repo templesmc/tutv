@@ -567,7 +567,7 @@ margin-bottom: 20px;
 	background: -o-linear-gradient(left,  $teal 0%,transparentize($teal, 0.5) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left,  $teal 0%,transparentize($teal, 0.5) 100%); /* IE10+ */
 	background: linear-gradient(to right,  $teal 0%,transparentize($teal, 0.5) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$teal', endColorstr='transparentize($teal, 0.5)',GradientType=1 ); /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie_hex_str($teal)}', endColorstr='#{ie_hex_str(transparentize($teal, 0.5))}',GradientType=1 ); /* IE6-8 */
 	}
 
 	/* The Schedule Accordion */

@@ -213,7 +213,7 @@ border: none;
 	background: -o-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(left,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* IE10+ */
 	background: linear-gradient(to right,  $light-blue 0%,transparentize($light-blue, 0.5) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-blue', endColorstr='transparentize($light-blue, 0.5)',GradientType=1 ); /* IE6-8 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie_hex_str($light-blue)}', endColorstr='#{ie_hex_str(transparentize($light-blue, 0.5))}',GradientType=1 ); /* IE6-8 */
 	}
 
 	.post {
