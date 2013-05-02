@@ -2524,8 +2524,12 @@ POST & CONTENT STYLES
   display: none; }
 
 /*****************************
-SEARCH FORMS & SOCIAL ICONS
+FORMS & SOCIAL ICONS
 ******************************/
+/************************ GRAVITY FORMS ************************/
+.gform_wrapper .gfield_description {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 /************************ SEARCH FORMS ************************/
 #searchbox,
 #searchbutton {

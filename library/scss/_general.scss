@@ -505,8 +505,14 @@ display: none;
 }
 
 /*****************************
-SEARCH FORMS & SOCIAL ICONS
+FORMS & SOCIAL ICONS
 ******************************/
+
+	/************************ GRAVITY FORMS ************************/
+
+		.gform_wrapper .gfield_description {
+			font-family: $sans-serif;
+		}
 
 	/************************ SEARCH FORMS ************************/
 
