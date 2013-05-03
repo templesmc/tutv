@@ -144,7 +144,7 @@ function  tutv_add_embeds() {
 	} /* foreach */		
 	
 	if( !$has_embed && get_post_type() ==  'episodes' ) {
-		echo the_post_thumbnail( 'large', array( 'class' => 'aligncenter' ) );
+		echo the_post_thumbnail( 'thumb-large', array( 'class' => 'aligncenter' ) );
 	}
 }
 add_filter('thematic_content', 'tutv_add_embeds');
