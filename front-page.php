@@ -171,7 +171,7 @@ Template Name: Front Page
 								<?php setup_postdata($recent_blog_posts); ?>
 								
 								<div class="featured-image-container">
-									<?php the_post_thumbnail('thumbnail'); ?>
+									<?php the_post_thumbnail('thumb'); ?>
 								</div> <!-- end .featured-image-container -->
 
 								<div class="entry-header">
@@ -442,7 +442,7 @@ Template Name: Front Page
 
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
 
-							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumbnail'); ?></div>
+							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumb'); ?></div>
 
 							<?php
 							// if the show is defined, echo it with a colon suffix
