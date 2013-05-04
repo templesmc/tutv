@@ -63,7 +63,7 @@ get_header();
 
 					</div> <!-- end .entry-header -->
 
-					<div class="entry-image">
+					<div class="thumbnail">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
 					</div> <!-- end .entry-image -->
 
@@ -168,7 +168,7 @@ Disabled feature. Post type is still active but not used since 2011.
 
 				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix <?php echo $k ?>">
 
-					<div class="entry-image">
+					<div class="thumbnail">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
 					</div> <!-- end .entry-image -->
 

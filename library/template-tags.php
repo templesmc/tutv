@@ -75,13 +75,12 @@ function get_video_thumbnail( $post_id ) {
 	 if( !isset( $post_id ) )
 	 	return '';
 	 
-	$content = '<span class="thumbnail alignleft">';
 	if( has_post_thumbnail( $post_id ) ) {
 		$content .= get_the_post_thumbnail($post_id, 'thumb'); 
 	} else {
 		$content .= get_posts_show_thumbnail($post_id);
 	}
-	$content .= '</span>';
+
 	return $content;
  }
 
