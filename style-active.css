@@ -2469,8 +2469,8 @@ POST & CONTENT STYLES
         padding-bottom: 4px; }
       #main #container #content h1 span, #main #container #content .page-title span {
         font-style: normal; }
-      #main #container #content .thumbnail {
-        /* background: #d7d7d7 url(images/thumbnail-placeholder.png); // we don't really need this */ }
+      #main #container #content .thumbnail img {
+        max-width: 100%; }
       #main #container #content .item-even {
         background: #ededed; }
       #main #container #content .item-odd {

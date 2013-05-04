@@ -442,7 +442,7 @@ Template Name: Front Page
 
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
 
-							<div class="featured-video-thumbnail"><?php the_post_thumbnail('thumb'); ?></div>
+							<div class="thumbnail"><?php the_post_thumbnail('thumb'); ?></div>
 
 							<?php
 							// if the show is defined, echo it with a colon suffix

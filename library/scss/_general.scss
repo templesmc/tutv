@@ -412,9 +412,10 @@ padding-bottom: 0;
 			}
 
 			.thumbnail {
-			/* background: #d7d7d7 url(images/thumbnail-placeholder.png); // we don't really need this */
-			//height: 100px;
-			//width: 140px;
+				
+				img {
+					max-width: 100%;
+				}
 			}
 
 			.item-even {
