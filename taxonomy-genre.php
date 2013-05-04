@@ -39,7 +39,7 @@
 				<div class="entry-content">
 					<div class="thumbnail alignleft">					
 					<a href="<?php echo get_show_link( $show ) ?>">
-					<?php echo $taxonomy_images_plugin->get_image_html( 'thumbnail', $show->term_taxonomy_id ); ?></a>
+					<?php echo $taxonomy_images_plugin->get_image_html( 'thumb-small', $show->term_taxonomy_id ); ?></a>
 					</div>
 					
  					<h2 class="entry-title">

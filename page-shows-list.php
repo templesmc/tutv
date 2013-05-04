@@ -63,7 +63,7 @@ Template Name: Show Listings Page
 						
 							<div class="thumbnail alignleft">					
 							<a href="<?php echo get_term_link( $term, $tax->query_var ) ?>">
-							<?php echo $taxonomy_images_plugin->get_image_html( 'thumb', $term->term_taxonomy_id ); ?> </a>
+							<?php echo $taxonomy_images_plugin->get_image_html( 'thumb-small', $term->term_taxonomy_id ); ?> </a>
 							</div>
 							
 							<h2 class="entry-title">

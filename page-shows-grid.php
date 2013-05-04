@@ -133,7 +133,7 @@ get_header();
 											
 					<div class="thumbnail alignleft">					
 						<a href="<?php echo $show_link; ?>">
-							<?php echo $taxonomy_images_plugin->get_image_html( 'thumb', $show->term_taxonomy_id ); ?>
+							<?php echo $taxonomy_images_plugin->get_image_html( 'thumb-small', $show->term_taxonomy_id ); ?>
 						</a>
 					</div>
 					

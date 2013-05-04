@@ -76,7 +76,7 @@ function get_video_thumbnail( $post_id ) {
 	 	return '';
 	 
 	if( has_post_thumbnail( $post_id ) ) {
-		$content .= get_the_post_thumbnail($post_id, 'thumb'); 
+		$content .= get_the_post_thumbnail($post_id, 'thumb-small'); 
 	} else {
 		$content .= get_posts_show_thumbnail($post_id);
 	}
@@ -175,7 +175,7 @@ function the_show( $before = '', $after = ': ' ) {
 //
 // If a post doesn't have a featured thumbnail, get the first image attached to the post
 // Takes attributes $post_ID and optionally String $size: A registered image size
-function get_thumb ( $post_ID, $size = 'thumb' ){
+function get_thumb ( $post_ID, $size = 'thumb-small' ){
 	if ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( $post_ID ) ) {
 		return get_the_post_thumbnail( $post_ID, $size );
 	} else {

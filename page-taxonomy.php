@@ -44,7 +44,7 @@ Template Name: Taxonomy Page ('taxonomy' custom field)
 				<div class="entry-content">
 				<div class="thumbnail alignleft">
 				<a href="<?php echo get_term_link( $term, $tax->query_var ) ?>">
-				<?php echo $taxonomy_images_plugin->get_image_html( 'thumb', $term->term_taxonomy_id ); ?>
+				<?php echo $taxonomy_images_plugin->get_image_html( 'thumb-small', $term->term_taxonomy_id ); ?>
 				</a>
 				</div>
 				
