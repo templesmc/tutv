@@ -53,9 +53,9 @@ function get_show_background( $show ) {
 // Return thumbnail image HTML for a given post's show
 function get_posts_show_thumbnail( $post_id, $thumbnail_size = 'thumbnail-square' ) {
 	global $taxonomy_images_plugin;
- 	
+	
 	 if( !isset( $post_id ) ) {
-	 	return '';
+		return '';
 	}
 	
 	$terms = wp_get_object_terms($post_id, 'shows');
@@ -71,9 +71,9 @@ function get_posts_show_thumbnail( $post_id, $thumbnail_size = 'thumbnail-square
 
 // Return video thumbnail from featured image or show image
 function get_video_thumbnail( $post_id ) {
- 	
+	
 	 if( !isset( $post_id ) )
-	 	return '';
+		return '';
 	 
 	if( has_post_thumbnail( $post_id ) ) {
 		$content .= get_the_post_thumbnail($post_id, 'thumb-small'); 
@@ -181,14 +181,14 @@ function get_thumb ( $post_ID, $size = 'thumb-small' ){
 	} else {
 		$thumbargs = array(
 			'post_type' => 'attachment',
-		    'numberposts' => 1,
-		    'post_status' => null,
-		    'post_parent' => $post_ID,
-	    );
-	    $thumb = get_posts( $thumbargs );
-	    if ($thumb) 
-	        return wp_get_attachment_image( $thumb[0]->ID, $size );
-    }
+			'numberposts' => 1,
+			'post_status' => null,
+			'post_parent' => $post_ID,
+		);
+		$thumb = get_posts( $thumbargs );
+		if ($thumb) 
+			return wp_get_attachment_image( $thumb[0]->ID, $size );
+	}
 } 
 
 /**
@@ -207,41 +207,41 @@ function get_thumb ( $post_ID, $size = 'thumb-small' ){
  */
 
 function get_shows_nav( $args = '' ) {		
-    global $wp_query;
-    
-    $current_post_type = get_query_var('post_type');
-        
-    $defaults = array(
-    	'show_notes_page' => ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1,
-    	'clip_page' => ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1,
-    	'episodes_page' => ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1
-    );
-    
-    $args = wp_parse_args($args, $defaults);
-    
-    $post_type_paged = $args[$current_post_type . '_page'];
-    
-    $max_pages = $wp_query->max_num_pages;
+	global $wp_query;
+	
+	$current_post_type = get_query_var('post_type');
+		
+	$defaults = array(
+		'show_notes_page' => ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1,
+		'clip_page' => ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1,
+		'episodes_page' => ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1
+	);
+	
+	$args = wp_parse_args($args, $defaults);
+	
+	$post_type_paged = $args[$current_post_type . '_page'];
+	
+	$max_pages = $wp_query->max_num_pages;
 	
 	echo "<div class='shows_nav archive-navigation navigation' id='$current_post_type" . "_nav'>";
 					
-    if( $post_type_paged <= $max_pages && $post_type_paged != 1 ) {
-    	$next_args = $args;
-    	$next_args[$current_post_type . '_page'] = $post_type_paged - 1;
-    	$next_link = '?' . http_build_query($next_args, '', '&amp;') . '#' . $current_post_type;
-    	
-    	echo "<div class='nav-next nav-item'><a href='$next_link'> &larr; Newer</a></div>";
-    }
-    
-    if( $post_type_paged < $max_pages ) {
-    	$previous_args = $args;
-    	$previous_args[$current_post_type . '_page'] = $post_type_paged + 1;
-    	$previous_link = '?' . http_build_query($previous_args, '', '&amp;') . '#' . $current_post_type;
+	if( $post_type_paged <= $max_pages && $post_type_paged != 1 ) {
+		$next_args = $args;
+		$next_args[$current_post_type . '_page'] = $post_type_paged - 1;
+		$next_link = '?' . http_build_query($next_args, '', '&amp;') . '#' . $current_post_type;
+		
+		echo "<div class='nav-next nav-item'><a href='$next_link'> &larr; Newer</a></div>";
+	}
+	
+	if( $post_type_paged < $max_pages ) {
+		$previous_args = $args;
+		$previous_args[$current_post_type . '_page'] = $post_type_paged + 1;
+		$previous_link = '?' . http_build_query($previous_args, '', '&amp;') . '#' . $current_post_type;
 
-    	echo "<div class='nav-previous nav-item'><a href='$previous_link'>Older &rarr;</a></div>";
-    }
-    
-    echo "</div>";
+		echo "<div class='nav-previous nav-item'><a href='$previous_link'>Older &rarr;</a></div>";
+	}
+	
+	echo "</div>";
 }
 /**
  * Echo get_shows_nav()
@@ -295,4 +295,49 @@ function get_class_odd_or_even( $num ) {
  */
 function class_odd_or_even( $num ) {
 	echo ($num%2) ? ' item-odd' : ' item-even';
+}
+
+/**
+* Is subpage?
+*
+* Checks if the current page is a sub-page and returns true or false.
+* 
+* @author Matt Varone
+* @see http://mattvarone.com/wordpress/wordpress-check-page-parent/
+*
+* @param  $page mixed optional ( post_name or ID ) to check against.
+* @return boolean
+*/
+function tutv_is_subpage( $page = null ) {
+	global $post;
+	// is this even a page?
+	if ( ! is_page() )
+		return false;
+	// does it have a parent?
+	if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+		return false;
+	// is there something to check against?
+	if ( ! isset( $page ) ) {
+		// yup this is a sub-page
+		return true;
+	} else {
+		// if $page is an integer then its a simple check
+		if ( is_int( $page ) ) {
+			// check
+			if ( $post->post_parent == $page )
+				return true;
+		} else if ( is_string( $page ) ) {
+			// get ancestors
+			$parent = get_ancestors( $post->ID, 'page' );
+			// does it have ancestors?
+			if ( empty( $parent ) )
+				return false;
+			// get the first ancestor
+			$parent = get_post( $parent[0] );
+			// compare the post_name
+			if ( $parent->post_name == $page )
+				return true;
+		}
+		return false;
+	}
 }
