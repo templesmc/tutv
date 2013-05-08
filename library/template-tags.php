@@ -341,3 +341,27 @@ function tutv_is_subpage( $page = null ) {
 		return false;
 	}
 }
+
+/**
+* Get page or page parent title
+*
+* If the requested page has a parent, return the title of the parent.
+* Else return the title of the page itself.
+*
+* @param $page int optional ID of page - will use $post->ID by default
+* @return str
+*/
+function tutv_get_parent_title( $page = null ) {
+	global $post;
+
+	if ( ! $page ) {
+		$page = $post->ID;
+	}
+
+
+	if ( empty( $post->post_parent ) ) { // if there is no parent...
+		return get_the_title( $post->ID ); // return the current page's title
+	} else { // if there is a parent...
+		return get_the_title( $post->post_parent ); // return the parent's title
+	}
+}

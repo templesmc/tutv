@@ -18,7 +18,7 @@
 
 			<div id="page-header" class="grid_12 block clearfix">
 		
-				<h1 class="page-title entry-title"><?php the_title(); ?></h1>
+				<h1 class="page-title entry-title"><?php echo tutv_get_parent_title(); ?></h1>
 
 				<?php
 
