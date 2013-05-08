@@ -108,7 +108,7 @@ function tutv_page_submenus( $content ) {
 		$args = array(
 			'title_li' => '',
 			'echo' => 0,
-			'include' =>  $parent . ',' . implode(",", $pageids),
+			'include' =>  implode(",", $pageids),
 			'link_before' => '&raquo;  '
 		);
 		$output .= '<div class="subpage-menu-container page-header-menu-container">';
@@ -268,7 +268,7 @@ function tutv_show_header( $force = false ) {
 				<?php			
 				if ($term->name) {
 				?>
-					<h1 id="show-name">
+					<h1 id="show-name" class="page-title">
 						<a href="<?php echo get_show_link($term) ?>"><?php echo $term->name; ?></a>
 					</h1>
 				<?php

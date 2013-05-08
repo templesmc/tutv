@@ -104,6 +104,7 @@ padding: 0 1em;
 
 	h1.page-title {
 	@extend .h1;
+	float: left;
 	color: $header-color;
 	font-weight: 300;
 	line-height: 70px;
@@ -129,8 +130,10 @@ padding: 0 1em;
 			font-weight: 400;
 			padding-left: 1em;
 
-				&.current_page_item {
+				&.current_page_item,
+				&.current-menu-item {
 					font-style: normal;
+					font-weight: 700;
 
 					& > a, > a:visited { color: $tu-cherry; }
 				}

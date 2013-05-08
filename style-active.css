@@ -2247,6 +2247,7 @@ h6, .h6 {
   padding: 0 1em;
   /* end .page-header-menu-container */ }
   #page-header h1.page-title {
+    float: left;
     color: #00b3a0;
     font-weight: 300;
     line-height: 70px;
@@ -2269,9 +2270,10 @@ h6, .h6 {
         font-style: italic;
         font-weight: 400;
         padding-left: 1em; }
-        #page-header .page-header-menu-container ul li.current_page_item {
-          font-style: normal; }
-          #page-header .page-header-menu-container ul li.current_page_item > a, #page-header .page-header-menu-container ul li.current_page_item > a:visited {
+        #page-header .page-header-menu-container ul li.current_page_item, #page-header .page-header-menu-container ul li.current-menu-item {
+          font-style: normal;
+          font-weight: 700; }
+          #page-header .page-header-menu-container ul li.current_page_item > a, #page-header .page-header-menu-container ul li.current_page_item > a:visited, #page-header .page-header-menu-container ul li.current-menu-item > a, #page-header .page-header-menu-container ul li.current-menu-item > a:visited {
             color: #9e1b34; }
 
 /* end #page-header */
@@ -3428,11 +3430,6 @@ body.slug-schedule {
           margin-left: 9px;
           padding-right: 1em;
           /* end #show-header */ }
-          .has-taxonomy-show #main #content #page-header #show-info-container #show-header h1#show-name {
-            display: inline-block;
-            float: left;
-            padding: 0;
-            color: #00b3a0; }
       .has-taxonomy-show #main #content h3.section-header {
         color: #9e1b34; }
       .has-taxonomy-show #main #content a.read_more {
@@ -3666,6 +3663,8 @@ body.slug-schedule {
 .page {
   /* end .entry-main */
   /* end #page-list */ }
+  .page #page-header .page-header-menu-container {
+    line-height: 70px; }
   .page .entry-main {
     padding: 2em;
     /*  end .hentry */ }
