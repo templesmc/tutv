@@ -369,66 +369,64 @@ POST & CONTENT STYLES
 #main {
 padding-top: 0;
 padding-bottom: 0;
-
 	#container {
-
 		#content {
 		margin-bottom: 2.2em;
-
-			.entry-content {
-			font-family: $sans-serif;
-			}
-
-			.entry-meta {
-			font-family: $sans-serif;
-			color: #888;
-			font-size:14px;
-			margin: 2px 0 4px;
-
-				.meta-prep-author,
-				.author,
-				.meta-sep-entry-date,
-				.meta-prep-entry-date,
-				.entry-date {display: none;}
-
-				abbr {
-				font-size: 12px;
-				}
-			}
-
-			.entry-utility {
-			display: none;
-			}
-
-			h2.entry-title {
-			font-family: $sans-serif;
-			font-weight: 600;
-			font-size: 22px;
-			padding-bottom: 4px;
-			}
-
-			h1 span, .page-title span {
-			font-style: normal;
-			}
-
-			.thumbnail {
-				
-				img {
-					max-width: 100%;
-				}
-			}
-
-			.item-even {
-			background: $row-even;
-			}
-
-			.item-odd {
-			background: $row-odd;
-			}
-
 		} /* end #content */
 	} /* end #container */
 } /* end #main */
+
+.entry-content {
+font-family: $sans-serif;
+}
+
+.entry-meta {
+font-family: $sans-serif;
+color: #888;
+font-size:14px;
+margin: 2px 0 4px;
+
+	.meta-prep-author,
+	.author,
+	.meta-sep-entry-date,
+	.meta-prep-entry-date,
+	.entry-date {display: none;}
+
+	abbr {
+	font-size: 12px;
+	}
+}
+
+.entry-utility {
+display: none;
+}
+
+h2.entry-title {
+font-family: $sans-serif;
+font-weight: 600;
+font-size: 22px;
+padding-bottom: 4px;
+}
+
+h1 span, .page-title span {
+font-style: normal;
+}
+
+.thumbnail {
+	
+	img {
+		width: 140px;
+		height: auto;
+	}
+}
+
+.item-even {
+background: $row-even;
+}
+
+.item-odd {
+background: $row-odd;
+}
 
 .block {
 background-color: white;
