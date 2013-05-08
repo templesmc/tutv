@@ -155,7 +155,9 @@ body.slug-schedule {
 			} /* end .entry-content */
 
 			.thumbnail {
-			margin-bottom: 8px;
+				margin: 0 1em 1em 0;
+				float: left;
+
 			}
 
 			&:hover {

@@ -415,6 +415,7 @@ font-style: normal;
 .thumbnail {
 	
 	img {
+		max-width: 100%;
 		width: 140px;
 		height: auto;
 	}
@@ -638,6 +639,7 @@ margin-bottom: 20px;
 				.thumbnail {
 				margin-left: .5em;
 				margin-right: .5em;
+				float: left;
 
 					img {
 					margin-bottom: .5em;

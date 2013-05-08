@@ -318,7 +318,7 @@ Template Name: Schedule Page
 							<div class="entry-content grid_5 alpha omega">
 
 								<a href="<?php echo get_permalink($scheduled_page->ID); ?>">
-									<?php the_video_thumbnail($scheduled_page->ID); ?>
+									<span class="thumbnail"><?php the_video_thumbnail($scheduled_page->ID); ?></span>
 									<?php if( !empty($excerpt) ) echo $excerpt; ?>
 								</a>
 

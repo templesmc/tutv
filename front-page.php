@@ -170,9 +170,9 @@ Template Name: Front Page
 
 								<?php setup_postdata($recent_blog_posts); ?>
 								
-								<div class="featured-image-container">
-									<?php the_post_thumbnail('thumb'); ?>
-								</div> <!-- end .featured-image-container -->
+								<div class="thumbnail">
+									<?php the_post_thumbnail('thumb-small'); ?>
+								</div> <!-- end .thumbnail -->
 
 								<div class="entry-header">
 									<h4 class="h3"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
@@ -351,9 +351,11 @@ Template Name: Front Page
 
 								$output .= '<div class="entry-content accordion-content">';
 
-									$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
-										$output .= get_video_thumbnail($scheduled_page->ID);
-									$output .= '</a>';
+									$output .= '<div class="thumbnail">';
+										$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
+											$output .= get_video_thumbnail($scheduled_page->ID);
+										$output .= '</a>';
+									$output .= '</div>';
 									$output .= get_the_excerpt();
 								
 								$output .= '</div><!-- .entry-content -->';

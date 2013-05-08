@@ -2445,38 +2445,48 @@ POST & CONTENT STYLES
     /* end #content */ }
     #main #container #content {
       margin-bottom: 2.2em; }
-      #main #container #content .entry-content {
-        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-      #main #container #content .entry-meta {
-        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #888;
-        font-size: 14px;
-        margin: 2px 0 4px; }
-        #main #container #content .entry-meta .meta-prep-author,
-        #main #container #content .entry-meta .author,
-        #main #container #content .entry-meta .meta-sep-entry-date,
-        #main #container #content .entry-meta .meta-prep-entry-date,
-        #main #container #content .entry-meta .entry-date {
-          display: none; }
-        #main #container #content .entry-meta abbr {
-          font-size: 12px; }
-      #main #container #content .entry-utility {
-        display: none; }
-      #main #container #content h2.entry-title {
-        font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        padding-bottom: 4px; }
-      #main #container #content h1 span, #main #container #content .page-title span {
-        font-style: normal; }
-      #main #container #content .thumbnail img {
-        max-width: 100%; }
-      #main #container #content .item-even {
-        background: #ededed; }
-      #main #container #content .item-odd {
-        background: white; }
 
 /* end #main */
+.entry-content {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.entry-meta {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 14px;
+  margin: 2px 0 4px; }
+  .entry-meta .meta-prep-author,
+  .entry-meta .author,
+  .entry-meta .meta-sep-entry-date,
+  .entry-meta .meta-prep-entry-date,
+  .entry-meta .entry-date {
+    display: none; }
+  .entry-meta abbr {
+    font-size: 12px; }
+
+.entry-utility {
+  display: none; }
+
+h2.entry-title {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  padding-bottom: 4px; }
+
+h1 span, .page-title span {
+  font-style: normal; }
+
+.thumbnail img {
+  max-width: 100%;
+  width: 140px;
+  height: auto; }
+
+.item-even {
+  background: #ededed; }
+
+.item-odd {
+  background: white; }
+
 .block, .archive-navigation a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul, body.search-results .hentry {
   background-color: white;
   border: 1px solid #e0e0e0;
@@ -2640,7 +2650,8 @@ SIDEBARS & ASIDES & WIDGETS
         transition: all 0.5s; }
         #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content .thumbnail {
           margin-left: .5em;
-          margin-right: .5em; }
+          margin-right: .5em;
+          float: left; }
           #schedule-block .block-inner.accordion .schedule-item .entry-content.accordion-content .thumbnail img {
             margin-bottom: .5em; }
     #schedule-block .block-inner.accordion:hover .schedule-item .entry-content.accordion-content {
@@ -2971,7 +2982,7 @@ Stylesheet: Modernizr
       border-bottom: 1px solid #e0e0e0; }
     #recent-blog-posts-block .post:last-child {
       border-top: 1px solid #e0e0e0; }
-    #recent-blog-posts-block .post .featured-image-container {
+    #recent-blog-posts-block .post .thumbnail {
       display: inline-block;
       float: left;
       padding: 0 1.125em 1.125em 0; }
@@ -3054,6 +3065,8 @@ Stylesheet: Modernizr
   .featured-video-section .featured-video {
     height: 220px;
     padding: 1.5em; }
+    .featured-video-section .featured-video .thumbnail img {
+      width: 170px; }
 
 /* END #featured-video-section */
 /******************************************************************
@@ -3195,7 +3208,6 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
           .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header h2.entry-title a:hover, .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header h2.entry-title a:active {
             color: #9e1b34; }
       .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .thumbnail {
-        width: 140px;
         margin-right: 1em; }
       .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .description {
         width: 270px;
@@ -3363,7 +3375,8 @@ body.slug-schedule {
             body.slug-schedule #schedule-section .hentry .entry-content p a:hover {
               color: black; }
       body.slug-schedule #schedule-section .hentry .thumbnail {
-        margin-bottom: 8px; }
+        margin: 0 1em 1em 0;
+        float: left; }
       body.slug-schedule #schedule-section .hentry:hover {
         position: relative;
         background: #42abe8 !important;

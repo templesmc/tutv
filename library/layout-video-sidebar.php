@@ -303,7 +303,9 @@ function tutv_video_block( $term, $args, $title = '' ) {
 
 			$content .=  "<div class='" . $post_type->query_var . "-item video-item block grid_2 " . $k . " clearfix'>";
 				$content .=  '<a href="' . get_permalink( get_the_ID() ) . '" rel="bookmark">';
-					$content .= get_video_thumbnail( get_the_ID() ); 
+					$content .= '<span class="thumbnail">';
+						$content .= get_video_thumbnail( get_the_ID() ); 
+					$content .= '</span>';
 					$content .=  '<span class="video-title">';
 						$content .=  get_the_show( get_the_ID() ) . get_the_title(); 
 					$content .= '</span>';

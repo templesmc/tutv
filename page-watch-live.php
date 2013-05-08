@@ -198,9 +198,11 @@
 
 								$output .= '<div class="entry-content accordion-content">';
 
-									$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
-										$output .= get_video_thumbnail($scheduled_page->ID);
-									$output .= '</a>';
+									$output .= '<div class="thumbnail">';
+										$output .= '<a href="' . get_permalink($scheduled_page->ID) . '">';
+											$output .= get_video_thumbnail($scheduled_page->ID);
+										$output .= '</a>';
+									$output .= '</div>';
 									$output .= get_the_excerpt();
 								
 								$output .= '</div><!-- .entry-content -->';

@@ -228,7 +228,7 @@ border: none;
 		border-top: 1px solid $gray88;
 		}
 
-		.featured-image-container {
+		.thumbnail {
 		display: inline-block;
 		float: left;
 		padding: 0 1.125em 1.125em 0;
@@ -359,5 +359,11 @@ border: none;
 	.featured-video {
 	height: 220px;
 	padding: 1.5em;
+
+		.thumbnail {
+			img {
+				width: 170px;
+			}
+		}
 	} /* END .featured-videos */
 } /* END #featured-video-section */
