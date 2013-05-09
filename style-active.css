@@ -2408,6 +2408,8 @@ NAVIGATION STYLES
       /* top level menu items */
       /* end > li */
       /* end .sub-menu */ }
+      #access .menu .sf-menu ul {
+        border: none; }
       #access .menu .sf-menu li,
       #access .menu .sf-menu li li,
       #access .menu .sf-menu li:hover,

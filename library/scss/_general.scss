@@ -227,6 +227,10 @@ color: black;
 		.sf-menu {
 		border-right:none;
 
+			ul {
+				border: none;
+			}
+
 			li,
 			li li,
 			li:hover,
