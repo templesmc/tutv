@@ -267,11 +267,15 @@ function tutv_show_header( $force = false ) {
 
 				<?php			
 				if ($term->name) {
-				?>
-					<h1 id="show-name" class="page-title">
-						<a href="<?php echo get_show_link($term) ?>"><?php echo $term->name; ?></a>
-					</h1>
-				<?php
+					if ( ! is_singular() ) { ?>
+						<h1 id="show-name" class="page-title">
+							<?php echo $term->name; ?>
+						</h1>
+					<?php } else { ?>
+						<h1 id="show-name" class="page-title">
+							<a href="<?php echo get_show_link($term) ?>"><?php echo $term->name; ?></a>
+						</h1>
+					<?php }
 				}
 
 				wp_nav_menu( array(
