@@ -3669,6 +3669,17 @@ body.slug-schedule {
 /* .page.slug-staff */
 /*
 ========================
+==WATCH LIVE PAGE
+========================
+*/
+.page.slug-watch-live {
+  padding: 0; }
+  .page.slug-watch-live .entry-content p {
+    margin: 0; }
+
+/* end watch live page */
+/*
+========================
 ==BLOG
 ========================
 */
