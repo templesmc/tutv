@@ -2174,27 +2174,22 @@ LINK STYLES
 *********************/
 a,
 a:visited,
+a:link,
 .entry-title a {
   -webkit-transition: color 0.3s ease, background 0.3s ease;
   -moz-transition: color 0.3s ease, background 0.3s ease;
   -o-transition: color 0.3s ease, background 0.3s ease;
   transition: color 0.3s ease, background 0.3s ease;
   color: #0176b7;
-  text-decoration: none;
+  text-decoration: none; }
+
+a {
   /* on hover */
   /* mobile tap color */ }
-  a:active, a:hover, a:focus,
-  a:visited:active,
-  a:visited:hover,
-  a:visited:focus,
-  .entry-title a:active,
-  .entry-title a:hover,
-  .entry-title a:focus {
+  a:active, a:hover, a:focus {
     text-decoration: none;
     color: #9e1b34; }
-  a:link,
-  a:visited:link,
-  .entry-title a:link {
+  a:link {
     /*
     this highlights links on iPhones/iPads.
     so it basically works like the :hover selector
@@ -2313,8 +2308,6 @@ HEADER STYLES
         width: 254px;
         display: block;
         height: 72px; }
-        #header #branding #blog-title a:hover {
-          opacity: .7; }
     #header #branding #blog-description {
       /*display none or keep the other styles? */
       display: none; }
@@ -2496,10 +2489,18 @@ h1 span, .page-title span {
   .block .block-header, .archive-navigation a .block-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header, body.search-results .hentry .block-header {
     background-color: #0176b7;
     color: white; }
-    .block .block-header a, .archive-navigation a .block-header a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a, body.search-results .hentry .block-header a {
+    .block .block-header a, .archive-navigation a .block-header a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a, body.search-results .hentry .block-header a,
+    .block .block-header a:visited,
+    .archive-navigation a .block-header a:visited,
+    .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:visited,
+    body.search-results .hentry .block-header a:visited {
       color: white;
       text-decoration: none; }
-      .block .block-header a:hover, .archive-navigation a .block-header a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:hover, body.search-results .hentry .block-header a:hover {
+      .block .block-header a:hover, .archive-navigation a .block-header a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:hover, body.search-results .hentry .block-header a:hover,
+      .block .block-header a:visited:hover,
+      .archive-navigation a .block-header a:visited:hover,
+      .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header a:visited:hover,
+      body.search-results .hentry .block-header a:visited:hover {
         color: white; }
     .block .block-header h3.section-header, .archive-navigation a .block-header h3.section-header, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header h3.section-header, body.search-results .hentry .block-header h3.section-header {
       font-size: 20px;
@@ -2514,10 +2515,18 @@ h1 span, .page-title span {
       font-style: italic;
       margin: 0.625em;
       line-height: 30px; }
-      .block .block-header p a, .archive-navigation a .block-header p a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a, body.search-results .hentry .block-header p a {
+      .block .block-header p a, .archive-navigation a .block-header p a, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a, body.search-results .hentry .block-header p a,
+      .block .block-header p a:visited,
+      .archive-navigation a .block-header p a:visited,
+      .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:visited,
+      body.search-results .hentry .block-header p a:visited {
         text-decoration: none;
         color: white; }
-        .block .block-header p a:hover, .archive-navigation a .block-header p a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:hover, body.search-results .hentry .block-header p a:hover {
+        .block .block-header p a:hover, .archive-navigation a .block-header p a:hover, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:hover, body.search-results .hentry .block-header p a:hover,
+        .block .block-header p a:visited:hover,
+        .archive-navigation a .block-header p a:visited:hover,
+        .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-header p a:visited:hover,
+        body.search-results .hentry .block-header p a:visited:hover {
           text-decoration: none;
           color: white; }
   .block .block-inner, .archive-navigation a .block-inner, .has-taxonomy-show.singular #content .video-sidebar .upcoming-showtimes ul .block-inner, body.search-results .hentry .block-inner {
@@ -2631,9 +2640,11 @@ SIDEBARS & ASIDES & WIDGETS
         font-style: normal;
         font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-left: 1.5em; }
-        #schedule-block .block-inner.accordion .schedule-item .entry-title a {
+        #schedule-block .block-inner.accordion .schedule-item .entry-title a,
+        #schedule-block .block-inner.accordion .schedule-item .entry-title a:visited {
           color: #0176b7; }
-          #schedule-block .block-inner.accordion .schedule-item .entry-title a:hover {
+          #schedule-block .block-inner.accordion .schedule-item .entry-title a:hover,
+          #schedule-block .block-inner.accordion .schedule-item .entry-title a:visited:hover {
             color: #9e1b34; }
         #schedule-block .block-inner.accordion .schedule-item .entry-title .show-name {
           font-weight: 700; }
@@ -2933,7 +2944,7 @@ Stylesheet: Modernizr
       line-height: 1.2;
       padding-bottom: 8px; }
       #front-featured .flexslider h2 a {
-        color: #42abe8; }
+        color: #0176b7; }
     #front-featured .flexslider h3.headline {
       /* this is not a headline, it's a subheadline. also, it should NOT be an id */
       font-size: 20px;

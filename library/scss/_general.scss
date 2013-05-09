@@ -15,6 +15,7 @@ LINK STYLES
 
 a,
 a:visited,
+a:link,
 .entry-title a { // .entry-title a overrides some thematic bullshit
 	-webkit-transition: color .3s ease, background .3s ease;
 	   -moz-transition: color .3s ease, background .3s ease;
@@ -23,7 +24,9 @@ a:visited,
 
 	color: $link-color;
 	text-decoration: none;
+}
 
+a {
 	/* on hover */
 	&:active,
 	&:hover,
@@ -184,10 +187,6 @@ border-bottom: 1px solid $gray88;
 			width: 254px;
 			display: block;
 			height:72px;
-
-				&:hover {
-					opacity: .7;
-				}
 			} /* end a */
 		} /* end #blog-title */
 
@@ -442,7 +441,8 @@ margin-bottom: 1.5em;
 	background-color: $blue;
 	color: white;
 
-		a {
+		a,
+		a:visited {
 		color: white;
 		text-decoration: none;
 
@@ -468,7 +468,8 @@ margin-bottom: 1.5em;
 		line-height: 30px;
 
 
-			a {
+			a,
+			a:visited {
 			text-decoration: none;
 			color: white;
 
@@ -612,7 +613,8 @@ margin-bottom: 20px;
 				font-family: $sans-serif;
 				margin-left: 1.5em;
 
-					a {
+					a,
+					a:visited {
 					color: $link-color;
 
 						&:hover {
