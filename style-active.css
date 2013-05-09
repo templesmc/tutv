@@ -3080,6 +3080,8 @@ Stylesheet: Modernizr
     padding: 1.5em; }
     .featured-video-section .featured-video .thumbnail img {
       width: 170px; }
+    .featured-video-section .featured-video .featured-video-episode-title {
+      font-size: 14px; }
 
 /* END #featured-video-section */
 /******************************************************************
@@ -3502,6 +3504,8 @@ body.slug-schedule {
     width: 100%; }
   #content.single-show-page #show-clips .entry-meta {
     display: none; }
+  #content.single-show-page #show-clips h3.entry-title {
+    font-size: 14px; }
   #content.single-show-page #show-clips .thumbnail {
     margin: 0; }
     #content.single-show-page #show-clips .thumbnail img {
