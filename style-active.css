@@ -2697,7 +2697,8 @@ SIDEBARS & ASIDES & WIDGETS
       #schedule-block .block-inner.accordion .schedule-item:nth-child(even) {
         background-color: #ededed; }
       #schedule-block .block-inner.accordion .schedule-item .entry-info {
-        padding: 0.5em; }
+        padding: 0.5em;
+        font-size: 16px; }
       #schedule-block .block-inner.accordion .schedule-item .scheduled-time {
         display: inline;
         color: black;
@@ -3673,9 +3674,23 @@ body.slug-schedule {
 ========================
 */
 .page.slug-watch-live {
-  padding: 0; }
+  padding: 0;
+  /* end #schedule-block */ }
   .page.slug-watch-live .entry-content p {
     margin: 0; }
+  .page.slug-watch-live #schedule-block {
+    /* end .block-inner.accordion */ }
+    .page.slug-watch-live #schedule-block .block-inner.accordion {
+      /* end .schedule-item */ }
+      .page.slug-watch-live #schedule-block .block-inner.accordion .schedule-item {
+        /* end entry-title */ }
+        .page.slug-watch-live #schedule-block .block-inner.accordion .schedule-item .entry-info {
+          padding: 0.5em;
+          font-size: 14px; }
+        .page.slug-watch-live #schedule-block .block-inner.accordion .schedule-item .scheduled-time {
+          font-size: 14px; }
+        .page.slug-watch-live #schedule-block .block-inner.accordion .schedule-item .entry-title {
+          font-size: 14px; }
 
 /* end watch live page */
 /*

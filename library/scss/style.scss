@@ -104,6 +104,28 @@
 			}
 		}
 
+		#schedule-block {
+
+			.block-inner.accordion {
+
+				.schedule-item {
+
+					.entry-info {
+					padding: 0.5em;
+					font-size: 14px;
+					}
+
+						.scheduled-time {
+							font-size: 14px;
+						}
+
+						.entry-title {
+							font-size: 14px;
+						} /* end entry-title */
+				} /* end .schedule-item */
+			} /* end .block-inner.accordion */
+		} /* end #schedule-block */
+
 	} /* end watch live page */
 
 
