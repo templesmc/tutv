@@ -3017,8 +3017,9 @@ Stylesheet: Modernizr
       text-transform: uppercase;
       line-height: 1.2;
       padding-bottom: 8px; }
-      #front-featured .flexslider h2 a {
-        color: #0176b7; }
+      #front-featured .flexslider h2 a,
+      #front-featured .flexslider h2 a:visited {
+        color: #42abe8; }
     #front-featured .flexslider h3.headline {
       /* this is not a headline, it's a subheadline. also, it should NOT be an id */
       font-size: 20px;

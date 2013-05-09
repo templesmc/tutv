@@ -149,7 +149,10 @@ margin-bottom: 2.2em;
 		line-height: 1.2;
 		padding-bottom: 8px;
 
-			a { color: $link-color; }
+			a,
+			a:visited {
+				color: $light-blue;
+			}
 
 		} /* end h2 */
 

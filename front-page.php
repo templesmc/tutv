@@ -122,6 +122,8 @@ Template Name: Front Page
 					<?php 
 					
 					endwhile; // end the featured post loop
+
+					wp_reset_postdata();
 					
 					?>
 					</ul> <!-- end ul.slides -->
@@ -167,8 +169,6 @@ Template Name: Front Page
 					?>
 
 							<div id="post-<?php the_ID(); ?>" <?php post_class('article clearfix'); ?> role="article">
-
-								<?php setup_postdata($recent_blog_posts); ?>
 								
 								<div class="thumbnail">
 									<?php the_post_thumbnail('thumb-small'); ?>
@@ -192,17 +192,22 @@ Template Name: Front Page
 									hasn't been updated since 2011 (v4.1.1).
 									Be careful of future core WordPress updates. */
 									$args = array(
-										'length'      => 20,
-										'use_words'   => 1,
-										'finish_word' => 1,
-										'read_more'   => 'Read More &rarr;',
-										'add_link'    => 1
+										'length'          => 20,
+										'use_words'       => 1,
+										'finish_word'     => 1,
+										'finish_sentence' => 1,
+										'add_link'        => 0,
+										'ellipsis'        => '',
+										'no_custom'       => 0,
 									);
+
 
 									//the_excerpt();
 									the_advanced_excerpt($args);
+									//the_advanced_excerpt();
+									//the_advanced_excerpt('length=20&use_words=1&finish_word=1&finish_sentence=1&add_link=0&ellipsis=&no_custom=1&allowed_tags=_all');
 									?>
-									<span class="read-more"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">Read&nbsp;More&nbsp;&rarr;</a></span>
+									<span class="read-more"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">More&nbsp;&rarr;</a></span>
 								</div> <!-- end .entry-content -->
 
 							</div><!-- .post -->
