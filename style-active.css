@@ -2815,6 +2815,9 @@ SIDEBARS & ASIDES & WIDGETS
         padding-left: 0.5em; }
       .sidebar .connect-block .social-connection #contact-icon {
         text-align: center; }
+        .sidebar .connect-block .social-connection #contact-icon img {
+          width: 34px;
+          height: 34px; }
   .sidebar .sidebar-featured-buttons-section {
     margin-bottom: 2.5em;
     /* end a.sidebar-featured-button */ }

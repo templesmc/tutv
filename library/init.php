@@ -37,8 +37,8 @@ function tutv_scripts_and_styles() {
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'banner', 960, 330, true ); // Slideshow image size
 add_image_size( 'banner-thumbnail', 75, 50, true ); // Slideshow thumbnail size
-add_image_size( 'thumb-small', 180, 130, true ); // Thumbnail size
-add_image_size( 'thumb-large', 540, 400, true ); // Thumbnail size
+add_image_size( 'thumb-small', 200, 144, true ); // Thumbnail size
+add_image_size( 'thumb-large', 540, 400, true ); // Thumbnail size for episode pages without an embed URL
 add_image_size( 'thumbnail-square', 200, 200, true ); // square thumbnail size for show page headers
 
 add_theme_support('nav-menus');
