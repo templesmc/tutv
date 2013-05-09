@@ -170,6 +170,7 @@ margin-bottom: 2.2em;
 			@extend .btn;
 			//@extend .btn-small;
 			@extend .btn-mini;
+			border: none;
 		}
 
 		#subheadline { /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */

@@ -3027,6 +3027,9 @@ Stylesheet: Modernizr
     #front-featured .flexslider p {
       font-size: 14px;
       margin-bottom: 1em; }
+    #front-featured .flexslider #subheadline a,
+    #front-featured .flexslider #subheadline2 a {
+      border: none; }
     #front-featured .flexslider #subheadline {
       /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
       float: left;
