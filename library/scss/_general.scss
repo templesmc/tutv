@@ -181,6 +181,11 @@ border-bottom: 1px solid $gray88;
 		#blog-title {
 		height:72px;
 
+			&:hover {
+				@extend .animated;
+				@extend .pulse;
+			}
+
 			a {
 			text-indent: -9999em;
 			background: url('images/logo.png') no-repeat;
