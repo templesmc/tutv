@@ -3735,6 +3735,8 @@ body.slug-schedule {
   .single #nav-below,
   .single #comments {
     padding: 1em; }
+  .single #nav-below {
+    margin: 0; }
   .single .hentry h1.entry-title {
     font-weight: 300;
     text-transform: none; }
@@ -3748,6 +3750,13 @@ body.slug-schedule {
     text-transform: none; }
   .single .hentry .entry-meta {
     display: none; }
+  .single #comments h3 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .single #comments #sfw-respond form input[type=text],
+  .single #comments #sfw-respond form textarea {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px; }
   .single .sidebar {
     margin-top: 0; }
 

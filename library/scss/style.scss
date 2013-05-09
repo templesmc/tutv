@@ -203,6 +203,10 @@
 			padding: 1em;
 		}
 
+		#nav-below {
+			margin: 0;
+		}
+
 		.hentry {
 
 			h1.entry-title {
@@ -225,6 +229,19 @@
 			display: none;
 			}
 		} /* end .hentry */
+
+		#comments {
+			h3 {
+				font-family: $sans-serif;
+			}
+
+			#sfw-respond form input[type=text],
+			#sfw-respond form textarea {
+				font-family: $sans-serif;
+				font-weight: 300;
+				font-size: 18px;
+			}
+		}
 
 		.sidebar {
 		margin-top: 0;
