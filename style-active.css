@@ -3494,22 +3494,18 @@ body.slug-schedule {
       font-size: 14px; }
   #content.single-show-page #show-episodes .hentry {
     height: 320px; }
-  #content.single-show-page #show-clips {
-    /* end .entry-image */ }
-    #content.single-show-page #show-clips .hentry {
-      height: 220px; }
-    #content.single-show-page #show-clips .entry-header {
-      float: none; }
-    #content.single-show-page #show-clips .entry-meta {
-      display: none; }
-    #content.single-show-page #show-clips .entry-image {
-      margin: 0 auto;
-      width: 180px;
-      margin: 0 1em 1em 0; }
-      #content.single-show-page #show-clips .entry-image .thumbnail {
-        margin: 0; }
-        #content.single-show-page #show-clips .entry-image .thumbnail img {
-          max-width: 100%; }
+  #content.single-show-page #show-clips .hentry {
+    height: 220px;
+    padding: 1.5em; }
+  #content.single-show-page #show-clips .entry-header {
+    float: none;
+    width: 100%; }
+  #content.single-show-page #show-clips .entry-meta {
+    display: none; }
+  #content.single-show-page #show-clips .thumbnail {
+    margin: 0; }
+    #content.single-show-page #show-clips .thumbnail img {
+      width: 170px; }
 
 /* end #content */
 	/*

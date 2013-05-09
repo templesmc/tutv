@@ -142,9 +142,13 @@
 
 			.hentry {
 				height: 220px;
+				padding: 1.5em;
 			}
 
-			.entry-header { float: none; }
+			.entry-header {
+				float: none;
+				width: 100%;
+			}
 
 			.entry-meta { display: none; }
 
@@ -152,17 +156,13 @@
 
 			}
 
-			.entry-image {
-			margin: 0 auto;
-			width: 180px;
-			margin: 0 1em 1em 0;
+			.thumbnail {
+			margin: 0;
 
-				.thumbnail {
-				margin: 0;
-
-					img { max-width: 100%; }
+				img {
+					width: 170px;
 				}
-			} /* end .entry-image */
+			}
 
 		} /* end #show-clips */
 	} /* end #content */
