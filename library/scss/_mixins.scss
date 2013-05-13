@@ -74,17 +74,18 @@ $gray88:                hsl(0, 0%, 88%);
 $gray93:                hsl(0, 0%, 93%);
 
 /* Pastel Colors */
-$moccasin:              rgb(255, 247, 184);
-$paleTurquoise:         rgb(177, 226, 250);
-$lightCyan:             rgb(200, 255, 249);
-$pink:                  rgb(255, 200, 217);
-$gainsboro:             rgb(216, 216, 216);
-$seaGreen:              rgb(0, 158, 88);
-$darkTurquoise:         rgb(0, 238, 220);
-$darkSeaGreen:          rgb(143, 205, 157);
-$skyBlue:               rgb(127, 222, 217);
-$indianRed:             rgb(188, 53, 94);
-$lightSkyBlue:          rgb(112, 206, 253);
+$lemonChiffon:          rgb(255, 247, 189);
+$paleTurquoise:         rgb(169, 226, 248);
+$dishwasherBlue:        rgb(59, 240, 235);
+$wispyBlue:             rgb(191, 255, 249);
+$paleGoldenrod:         rgb(216, 241, 184);
+$seaGreen:              rgb(53, 206, 120);
+$lightGreen:            rgb(124, 236, 174);
+$darkSeaGreen:          rgb(131, 206, 161);
+$turquoise:             rgb(60, 254, 200);
+$sponge:                rgb(179, 241, 130);
+$lightSkyBlue:          rgb(191, 255, 249);
+
 
 
 /*
@@ -117,35 +118,35 @@ $highlight:				lighten($light-blue, 35%);
 /* The Shows Colors */
 $genreLightenAmount: 5%;
 
-$genreCooking:                         $moccasin;
-$genreCookingHighlight:                lighten($moccasin, $genreLightenAmount);
+$genreCooking:                         $lemonChiffon;
+$genreCookingHighlight:                lighten($lemonChiffon, $genreLightenAmount);
 
 $genreDocumentary:                     $paleTurquoise;
 $genreDocumentaryHighlight:            lighten($paleTurquoise, $genreLightenAmount);
 
-$genreEducational:                     $lightCyan;
-$genreEducationalHighlight:            lighten($lightCyan, $genreLightenAmount);
+$genreEducational:                     $dishwasherBlue;
+$genreEducationalHighlight:            lighten($dishwasherBlue, $genreLightenAmount);
 
-$genreEntertainment:                   $pink;
-$genreEntertainmentHighlight:          lighten($pink, $genreLightenAmount);
+$genreEntertainment:                   $wispyBlue;
+$genreEntertainmentHighlight:          lighten($wispyBlue, $genreLightenAmount);
 
-$genreFitness:                         $gainsboro;
-$genreFitnessHighlight:                lighten($gainsboro, $genreLightenAmount);
+$genreFitness:                         $paleGoldenrod;
+$genreFitnessHighlight:                lighten($paleGoldenrod, $genreLightenAmount);
 
 $genreGardening:                       $seaGreen;
 $genreGardeningHighlight:              lighten($seaGreen, $genreLightenAmount);
 
-$genreInterviews:                      $darkTurquoise;
-$genreInterviewsHighlight:             lighten($darkTurquoise, $genreLightenAmount);
+$genreInterviews:                      $lightGreen;
+$genreInterviewsHighlight:             lighten($lightGreen, $genreLightenAmount);
 
 $genreMusic:                           $darkSeaGreen;
 $genreMusicHighlight:                  lighten($darkSeaGreen, $genreLightenAmount);
 
-$genreNews:                            $skyBlue;
-$genreNewsHighlight:                   lighten($skyBlue, $genreLightenAmount);
+$genreNews:                            $turquoise;
+$genreNewsHighlight:                   lighten($turquoise, $genreLightenAmount);
 
-$genreSpecials:                        $indianRed;
-$genreSpecialsHighlight:               lighten($indianRed, $genreLightenAmount);
+$genreSpecials:                        $sponge;
+$genreSpecialsHighlight:               lighten($sponge, $genreLightenAmount);
 
 $genreSports:                          $lightSkyBlue;
 $genreSportsHighlight:                 lighten($lightSkyBlue, $genreLightenAmount);

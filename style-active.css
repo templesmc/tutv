@@ -3188,60 +3188,60 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
     /* end #filtering-nav-container */
     /* end .hentry.shows-page-item */ }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking {
-      background-color: #fff7b8;
+      background-color: #fff7bd;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-cooking[disabled] {
-        background-color: #fffad2; }
+        background-color: #fffad7; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary {
-      background-color: #b1e2fa;
+      background-color: #a9e2f8;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-documentary[disabled] {
-        background-color: #c9ebfc; }
+        background-color: #c1eafa; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational {
-      background-color: #c8fff9;
+      background-color: #3bf0eb;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-educational[disabled] {
-        background-color: #e1fffc; }
+        background-color: #53f2ed; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment {
-      background-color: #ffc8d9;
+      background-color: #bffff9;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-entertainment[disabled] {
-        background-color: #ffe1eb; }
+        background-color: #d9fffb; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness {
-      background-color: #d8d8d8;
+      background-color: #d8f1b8;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-fitness[disabled] {
-        background-color: #e5e5e5; }
+        background-color: #e4f5cd; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening {
-      background-color: #009e58;
+      background-color: #35ce78;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-gardening[disabled] {
-        background-color: #00b866; }
+        background-color: #4ad386; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews {
-      background-color: #00eedc;
+      background-color: #7cecae;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-interviews[disabled] {
-        background-color: #08ffec; }
+        background-color: #92efbc; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-music {
-      background-color: #8fcd9d;
+      background-color: #83cea1;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-music:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-music:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-music:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-music.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-music.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-music[disabled] {
-        background-color: #a1d5ac; }
+        background-color: #95d5af; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-news {
-      background-color: #7fded9;
+      background-color: #3cfec8;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-news:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-news:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-news:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-news.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-news.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-news[disabled] {
-        background-color: #93e3df; }
+        background-color: #55fecf; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials {
-      background-color: #bc355e;
+      background-color: #b3f182;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-specials[disabled] {
-        background-color: #c9416a; }
+        background-color: #c1f499; }
     .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports {
-      background-color: #70cefd;
+      background-color: #bffff9;
       color: black; }
       .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports:hover, .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports:focus, .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports:active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports.active, .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports.disabled, .page-template-page-shows-grid-php #content.shows-page-grid .genre-sports[disabled] {
-        background-color: #89d7fd; }
+        background-color: #d9fffb; }
     .page-template-page-shows-grid-php #content.shows-page-grid #filtering-nav-container {
       /* end #genre-filters */
       /* end ul */ }
