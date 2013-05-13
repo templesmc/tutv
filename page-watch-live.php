@@ -111,8 +111,8 @@
 						$timestamp = strtotime('2012-04-11 08:00:00');
 						//echo $timestamp;
 
-						//$active_start_time = time(); // this must be active when site is live!
-						$active_start_time = $timestamp; // this will allow easy editing on staging site
+						$active_start_time = time(); // this must be active when site is live!
+						//$active_start_time = $timestamp; // this will allow easy editing on staging site
 						$args = array(
 							'post_type'=>'events',
 							'meta_key' => 'date_value',
@@ -120,7 +120,6 @@
 							'meta_compare' => '>=',
 							//search for shows starting up to 3 hours ago
 							'meta_value' => $active_start_time - 60 * 60 * 3,
-							//'meta_value' => $timestamp,
 							'order' => 'ASC',
 							'posts_per_page' => '10',
 						);
