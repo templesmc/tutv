@@ -3031,11 +3031,17 @@ Stylesheet: Modernizr
       margin-bottom: 1em; }
     #front-featured .flexslider #subheadline a,
     #front-featured .flexslider #subheadline2 a {
-      border: none; }
+      border: none;
+      font-weight: 700; }
+      #front-featured .flexslider #subheadline a:hover,
+      #front-featured .flexslider #subheadline2 a:hover {
+        color: white; }
     #front-featured .flexslider #subheadline {
       /* this is not a subheadline, it's a "read more" or similar button. should NOT be an id. */
       float: left;
       margin-right: 0.5em; }
+      #front-featured .flexslider #subheadline a {
+        color: white; }
     #front-featured .flexslider #subheadline2 {
       /* this is not a subhead, this is a "watch more episodes" type link. should NOT be an id. */ }
     #front-featured .flexslider .wp-caption {
