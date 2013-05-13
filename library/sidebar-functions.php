@@ -22,7 +22,7 @@ function tutv_sidebar_connect_block() {
 			</div>
 			<div class="questions social-connection">
 				<?php tutv_social_media_icons('contact'); ?>
-				<a href="feed://templetv.net/feed" title="Subscribe to our latest updates" class="contact-link social-connection-link">Questions? <em>Contact us</em></a>
+				<a href="<?php home_url(); ?>/contact/" title="Contact Us" class="contact-link social-connection-link">Questions? <em>Contact us</em></a>
 			</div>
 		</div> <!-- end .connect-block -->
 	<?php
