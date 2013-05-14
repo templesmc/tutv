@@ -6,8 +6,8 @@ jQuery(document).ready(function($) {
 		slideshowSpeed      : 10000,
 		pauseOnHover        : true,
 		controlNav          : true,
-		directionNav        : false
-		//controlsContainer   : ".flexslider-control-nav"
+		directionNav        : false,
+		useCSS              : false
 	});
 
 	// Schedule browser
