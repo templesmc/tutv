@@ -9,7 +9,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<!-- Google Chrome Frame for IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title><?php wp_title( '|', true, 'right' ); ?>Temple University Television</title>
+	<title><?php bloginfo('name'); ?></title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -104,4 +104,3 @@ if (apply_filters('thematic_show_bodyclass',TRUE)) {
 		<?php thematic_abovecontainer(); ?>
 
 		<div id="container" class="container_12 clearfix">
-	
