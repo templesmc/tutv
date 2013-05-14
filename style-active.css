@@ -3296,6 +3296,7 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
       margin-left: 5px;
       margin-right: 5px;
       margin-bottom: 0.5em;
+      min-height: 230px;
       /* end .entry-header */
       /* end .shows-page-show */ }
       .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-header {
@@ -3308,9 +3309,12 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
             color: #9e1b34; }
       .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .thumbnail {
         margin-right: 1em; }
-      .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .description {
-        width: 270px;
-        float: right; }
+        .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .thumbnail a {
+          display: inline-block; }
+        .page-template-page-shows-grid-php #content.shows-page-grid .hentry.shows-page-item .entry-content .thumbnail img {
+          display: inline-block;
+          width: auto;
+          margin-bottom: 0; }
 
 /* end .page.slug-shows */
 /**** Isotope filtering ****/
