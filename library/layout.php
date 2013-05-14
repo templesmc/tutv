@@ -137,7 +137,7 @@ function  tutv_add_embeds() {
 		
 		?>
 		<div class="embed">
-			<?php echo wp_oembed_get($embed, 'width=600'); ?><br>
+			<?php echo wp_oembed_get($embed, 'width=586'); ?><br>
 		</div>
 		<?php 
 
@@ -585,3 +585,14 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 	</div><!-- end #schedule-block -->
 <?php
 } // don't remove this bracket!
+
+/**
+ * Automatically add container div to oembed YouTube videos.
+ */
+function tutv_embed_filter( $output, $data, $url ) {
+ 
+	$return = '<div class="video-container">' . $output . '</div>';
+	return $return;
+ 
+}
+add_filter('embed_oembed_html', 'tutv_embed_filter', 90, 3 );
