@@ -595,4 +595,9 @@ function tutv_embed_filter( $output, $data, $url ) {
 	return $return;
  
 }
-add_filter('embed_oembed_html', 'tutv_embed_filter', 90, 3 );
+add_filter('oembed_dataparse', 'tutv_embed_filter', 90, 3 );
+
+/**
+ * Set max oEmbed width.
+ */
+if ( ! isset( $content_width ) ) $content_width = 586;
