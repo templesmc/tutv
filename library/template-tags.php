@@ -78,7 +78,7 @@ function get_video_thumbnail( $post_id ) {
 	if( has_post_thumbnail( $post_id ) ) {
 		$content .= get_the_post_thumbnail($post_id, 'thumb-small'); 
 	} else {
-		$content .= get_posts_show_thumbnail($post_id);
+		$content .= get_posts_show_thumbnail($post_id, 'thumb-small');
 	}
 
 	return $content;
