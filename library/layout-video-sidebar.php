@@ -18,7 +18,7 @@ function tutv_upcoming_showtimes() {
 	if ( !is_singular( array( 'episodes' ) ) ) 
 		return;
 
-	$timestamp = strtotime('2012-04-11 08:00:00');
+	//$timestamp = strtotime('2012-04-11 08:00:00');
 	
 	$args = array(
 		'post_type'=>'events',
@@ -27,8 +27,8 @@ function tutv_upcoming_showtimes() {
 		'meta_query' => array(
 			array(
 				'key' => 'date_value',
-				//'value' => time() - 2 * 60 * 60,
-				'value' => $timestamp - 2 * 60 * 60, // for working on staging site
+				'value' => time() - 2 * 60 * 60,
+				//'value' => $timestamp - 2 * 60 * 60, // for working on staging site
 				'type' => 'numeric',
 				'compare' => '>='
 			)
