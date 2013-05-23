@@ -20,11 +20,9 @@ get_header();
 
 		<?php
 		
-		// create the navigation above the content
-		//thematic_navigation_above();
-		
 		$shows_tax = get_taxonomy('shows');
-		$shows = get_weighted_terms('shows');
+		// $shows = get_weighted_terms('shows'); // for sorting by weighted terms
+		$shows = get_terms('shows'); // to sort alphabetically (default)
 		
 		?>
 
