@@ -169,31 +169,27 @@
 								}
 								$output .= "'>";
 
-								$output .= "<div class='entry-info accordion-header'>";
+								$output .= "<span class='entry-info accordion-header'>";
 
-									$output .= "<div class='scheduled-time'>$formatted_time</div>";
+									$output .= "<span class='entry-info-inner'>";
 
-									$output .= "<h4 class='entry-title'>";
+									$output .= "<span class='scheduled-time'>$formatted_time</span>";
 
 										if( $term ) {
-											$output .= '<span class="show-name">';
-												$output .= "<a href='" . get_show_link($term) . "'>";
+												$output .= "<a href='" . get_show_link($term) . "' class='show-name'>";
 													$output .= get_the_show($scheduled_page->ID);
 												$output .= '</a>';
-											$output .= '</span>';
 										}
-										$output .= '<span class="episode-title">';
-											$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
+											$output .= "<a href='" . get_permalink($scheduled_page->ID) . "' class='episode-title'>";
 												$output .= get_the_title($scheduled_page->ID);
 											$output .= '</a>';
-										$output .= '</span>';
-									
-									$output .= '</h4>';
 
 									$post = get_post($scheduled_page->ID); 
 									setup_postdata($post);
+
+									$output .= '</span><!-- .entry-info-inner -->';
 									
-								$output .= '</div><!-- .entry-info -->';
+								$output .= '</span><!-- .entry-info -->';
 
 								$output .= '<div class="entry-content accordion-content">';
 

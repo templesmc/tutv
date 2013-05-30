@@ -15,3 +15,16 @@ jQuery(document).ready(function($) {
 		$(this).addClass("active");
 	});
 });
+
+function initTextfill() {
+	// TextFill - for schedule block titles
+	jQuery(".schedule-item").textfill({
+		maxFontPixels: 14,
+		debug: true,
+		innerTag: ".entry-info-inner",
+		explicitHeight: 30
+		//explicitWidth: 276
+	});
+}
+
+jQuery(initTextfill);

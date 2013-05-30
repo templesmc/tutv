@@ -605,37 +605,28 @@ margin-bottom: 20px;
 
 			.entry-info {
 			padding: 0.5em;
-			font-size: 16px;
+			font-size: 14px;
+			display: inline-block;
+			height: 43px;
 			}
 
 				.scheduled-time {
-				display: inline;
 				color: black;
-				font-size: 16px;
+				margin-right: 1.5em;
 				}
 
-				.entry-title {
-				display: inline;
-				font-size: 16px;
-				border-bottom: none;
-				font-weight: 400;
-				font-style: normal;
-				font-family: $sans-serif;
-				margin-left: 1.5em;
+				a,
+				a:visited {
+				color: $link-color;
 
-					a,
-					a:visited {
-					color: $link-color;
-
-						&:hover {
-						color: $link-hover;
-						}
+					&:hover {
+					color: $link-hover;
 					}
+				}
 
-					.show-name {
-					font-weight: 700;
-					}
-				} /* end entry-title */
+				.show-name {
+				font-weight: 700;
+				}
 
 			.entry-content.accordion-content {
 			font-size: 14px;

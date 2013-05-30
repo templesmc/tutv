@@ -4,12 +4,13 @@ Template Name: Front Page
 */
 ?>
 <?php
-	add_action('wp_print_scripts', 'tutv_home_scripts');
+	add_action('wp_enqueue_scripts', 'tutv_home_scripts');
 	 
 	function tutv_home_scripts() {
 	
 		wp_enqueue_script('flexslider', get_bloginfo('stylesheet_directory') . '/js/jquery.flexslider-min.js', array('jquery'), '1.0', false);
-		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array('jquery', 'flexslider'), '2.0', false);
+		wp_enqueue_script('textfill', get_bloginfo('stylesheet_directory') . '/js/jquery.textfill.min.js', array('jquery'), '0.3.5', false);
+		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array('jquery', 'flexslider'), '2.0.1', false);
 
 	}
 
@@ -229,7 +230,9 @@ Template Name: Front Page
 
 
 			<!-- Schedule and Featured Buttons Block Container -->
-			<div id="schedule-meta-block-container" class="grid_6">
+			<div id="schedule-meta-block-container" class="grid_6 textfill">
+
+				<span class="textfillThis">text and stuff text and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stuff</span>
 
 
 
@@ -305,9 +308,7 @@ Template Name: Front Page
 							$date_value = get_post_meta(get_the_ID(), 'date_value', true);
 							
 								if( $date_value ) {
-									$formatted_time = "<span class='start'>";
-									$formatted_time .= date('h:i A', $date_value);
-									$formatted_time .= "</span>";
+									$formatted_time = date('h:i A', $date_value);
 								} else {
 									continue;
 								}
@@ -327,31 +328,27 @@ Template Name: Front Page
 								}
 								$output .= "'>";
 
-								$output .= "<div class='entry-info accordion-header'>";
+								$output .= "<span class='entry-info accordion-header'>";
 
-									$output .= "<div class='scheduled-time'>$formatted_time</div>";
+									$output .= "<span class='entry-info-inner'>";
 
-									$output .= "<h4 class='entry-title'>";
+									$output .= "<span class='scheduled-time'>$formatted_time</span>";
 
 										if( $term ) {
-											$output .= '<span class="show-name">';
-												$output .= "<a href='" . get_show_link($term) . "'>";
+												$output .= "<a href='" . get_show_link($term) . "' class='show-name'>";
 													$output .= get_the_show($scheduled_page->ID);
 												$output .= '</a>';
-											$output .= '</span>';
 										}
-										$output .= '<span class="episode-title">';
-											$output .= "<a href='" . get_permalink($scheduled_page->ID) . "'>";
+											$output .= "<a href='" . get_permalink($scheduled_page->ID) . "' class='episode-title'>";
 												$output .= get_the_title($scheduled_page->ID);
 											$output .= '</a>';
-										$output .= '</span>';
-									
-									$output .= '</h4>';
 
 									$post = get_post($scheduled_page->ID); 
 									setup_postdata($post);
+
+									$output .= '</span><!-- .entry-info-inner -->';
 									
-								$output .= '</div><!-- .entry-info -->';
+								$output .= '</span><!-- .entry-info -->';
 
 								$output .= '<div class="entry-content accordion-content">';
 
