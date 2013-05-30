@@ -232,8 +232,6 @@ Template Name: Front Page
 			<!-- Schedule and Featured Buttons Block Container -->
 			<div id="schedule-meta-block-container" class="grid_6 textfill">
 
-				<span class="textfillThis">text and stuff text and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stufftext and stuff</span>
-
 
 
 				<!-- Schedule Block -->
@@ -273,7 +271,7 @@ Template Name: Front Page
 						//echo $timestamp;
 
 						$active_start_time = time(); // this must be active when site is live!
-						//$active_start_time = $timestamp; // this will allow easy editing on staging site
+						$active_start_time = $timestamp; // this will allow easy editing on staging site
 						$args = array(
 							'post_type'=>'events',
 							'meta_key' => 'date_value',

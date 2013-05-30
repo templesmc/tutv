@@ -635,7 +635,8 @@ margin-bottom: 20px;
 			display: none;
 			visibility: hidden;
 			background: $highlight;
-			padding-top: 1em;
+			//padding-top: 1em;
+			padding: 1em 0.5em 0;
 			-webkit-transition: all .5s;
 			-moz-transition: all .5s;
 			-ms-transition: all .5s;
@@ -666,7 +667,7 @@ margin-bottom: 20px;
 				overflow: hidden;
 				background-color: $highlight;
 				//padding: 1em 0.5em 0.5em; // this causes chaos
-				padding: 0;
+				padding-top: 0;
 				-webkit-transition: all .5s;
 				-moz-transition: all .5s;
 				-ms-transition: all .5s;
