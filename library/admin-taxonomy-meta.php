@@ -46,7 +46,7 @@ function tutv_edit_shows_meta( $term, $taxonomy ) {
     <tr class="form-field">
         <th scope="row" valign="top"><label for="weight">Show Weight</label></th>
         <td>
-            <input type="text" name="weight" id="weight" size="4" style="width:auto;" value="<?php echo $active_weight; ?>"></input>
+            <input type="text" name="weight" id="weight" size="4" style="width:auto;" value="<?php echo $active_weight; ?>">
             <p class="description">Weight is used to order shows on the shows page.</p>
         </td>
     </tr>
