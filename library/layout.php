@@ -1,11 +1,11 @@
 <?php
 
 // Add favicon to every page
-function tutv_favicon() { 
+function tutv_favicon() {
 ?>
     <link rel="shortcut icon" href="wp-content/themes/tutv/images/favicon.ico" />
 	<!-- WP-Minify JS -->
-<?php 
+<?php
 }
 add_action('wp_head', 'tutv_favicon');
 add_action('admin_head', 'tutv_favicon');
@@ -17,7 +17,7 @@ function tutv_body_classes( $classes ) {
 		if( !in_array( $taxonomy, $classes ) )
 			$classes[] = "taxonomy " . "taxonomy-".$taxonomy;
 	}
-	
+
 	global $post;
 	if( isset($post->ID) )
 		$shows = wp_get_object_terms( $post->ID, 'shows' );
@@ -27,11 +27,11 @@ function tutv_body_classes( $classes ) {
 		}
 		$classes[] = 'has-taxonomy-show';
 	}
-	
+
 	if( is_singular( array( 'show_notes' ) ) ) {
 		$classes[] = 'show-post';
 	}
-	
+
 	// blog post
 	if( is_singular( array( 'post' ) ) && in_category( 'blog' ) ) {
 		$classes[] = 'blog-post blog';
@@ -52,7 +52,7 @@ function tutv_taxonomy_pagetitle( $content ) {
 	global $post;
 	if ( is_tax() ) {
 		// find taxonomy name lifted from http://justintadlock.com/archives/2009/06/04/using-custom-taxonomies-to-create-a-movie-database
-		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
+		$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 		$tax = get_taxonomy( get_query_var( 'taxonomy' ) );
 		$content = "<h1 class=\"page-title\">$tax->label : <span>$term->name</span></h1>";
 	}
@@ -63,17 +63,18 @@ add_filter('thematic_page_title', 'tutv_taxonomy_pagetitle');
 // Remove default Thematic actions
 function remove_thematic_actions() {
 	remove_action('thematic_header','thematic_access',9);
+	remove_action('thematic_navigation_above', 'thematic_nav_above', 2);
 }
-add_action('init','remove_thematic_actions'); 
+add_action('init','remove_thematic_actions');
 
 // Replace thematic access menu with a wordpress menu area named 'header'
-function tutv_access() { 
+function tutv_access() {
 	?>
     	<div id="access">
     		<div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
             <?php wp_nav_menu('menu=header&sort_column=menu_order&container_class=menu&menu_class=sf-menu') ?>
         </div><!-- #access -->
-	<?php 
+	<?php
 }
 add_action('thematic_header','tutv_access',9);
 
@@ -81,30 +82,30 @@ add_action('thematic_header','tutv_access',9);
 function tutv_page_submenus( $content ) {
 	global $post;
 	$output = '';
-	
-	if( !is_page() ) 
+
+	if( !is_page() )
 		return $content;
-		
+
 	if( $post->post_parent ) {
 		$parent = $post->post_parent;
 	} else {
 		$parent = $post->ID;
 	}
-	
+
 	if ( empty($parent) )
-		return $content; 
+		return $content;
 
 	$pages = get_pages( array(
 		'child_of' => $parent
 	) );
 	if ($pages) {
-	
+
 		$pageids = array();
-		
+
 		foreach ($pages as $page) {
 			$pageids[]= $page->ID;
 		}
-		
+
 		$args = array(
 			'title_li' => '',
 			'echo' => 0,
@@ -126,23 +127,23 @@ function tutv_page_submenus( $content ) {
 function  tutv_add_embeds() {
 	if ( !is_single() )
 		return;
-	
+
 	$has_embed = false;
-		
+
 	foreach( get_post_meta( get_the_ID(), 'embed' ) as $embed ) {
 		if( empty( $embed ) )
 			continue;
-		 
+
 		$has_embed = true;
-		
+
 		?>
 		<div class="embed">
 			<?php echo wp_oembed_get($embed, 'width=586'); ?><br>
 		</div>
-		<?php 
+		<?php
 
-	} /* foreach */		
-	
+	} /* foreach */
+
 	if( !$has_embed && get_post_type() ==  'episodes' ) {
 		echo the_post_thumbnail( 'thumb-large', array( 'class' => 'aligncenter' ) );
 	}
@@ -151,13 +152,13 @@ add_filter('thematic_content', 'tutv_add_embeds');
 
 function tutv_episode_meta($content) {
 	global $post;
-	
+
 	$episode = get_post_meta($post->ID, 'episode', true);
 	if( !$episode )
 		return $content;
 
 	$episode_title = '<span class="meta-prep meta-prep-episode-title">';
-	
+
 	if( $post->post_type == 'episodes' && !is_numeric($episode) ) {
 		$episode_title .= __(' ', 'tutv');
 	} elseif( $post->post_type == 'episodes' ) {
@@ -167,14 +168,14 @@ function tutv_episode_meta($content) {
 	} else {
 		return $content;
 	}
-	
+
 	$episode_title .= '</span>';
     $episode_title .= '<span class="episode-title">';
     $episode_title .= $episode;
     $episode_title .= '</span>';
-    
+
     return $content . $episode_title;
-	
+
 }
 add_filter ('thematic_post_meta_entrydate', 'tutv_episode_meta');
 
@@ -201,9 +202,9 @@ function tutv_add_post_thumbnail( $content ) {
 add_filter('thematic_content', 'tutv_add_post_thumbnail');
 
 // Add a span ('page-title-prefix') to the page header for easy css manipulation
-// 
+//
 // Archives in thematic have a prefix such as 'Category Archives:' that is not always
-// desired. This filter adds a span to these prefixes that allows us the remove them with css. 
+// desired. This filter adds a span to these prefixes that allows us the remove them with css.
 function tutv_page_title($content) {
 	$content = preg_replace('/">/', '"><span class="page-title-prefix">', $content);
 	$content = preg_replace("/<span>/", "</span><span>", $content);
@@ -216,40 +217,40 @@ add_filter('thematic_page_title', 'tutv_page_title');
 function tutv_meta_footer( $content ) {
 	$post_type = get_post_type();
 	if( is_singular( array( 'clip', 'episodes' ) ) && current_user_can( 'editor' ) ) {
-		
+
 		?>
 		<div class="post-metadata">
 			<h2 class="section-header">Metadata (normal users will not see this box)</h2>
 			<?php the_meta(); ?>
 		</div>
-		<?php	
+		<?php
 	}
 	echo $content;
 }
 //add_filter ('thematic_postfooter', 'tutv_meta_footer', 3);
-	
+
 // Output the page title of the 'posts page'
 //
-// The page you select to be your 'posts page' will not display a page title like 
+// The page you select to be your 'posts page' will not display a page title like
 // every other page or post as if it were still the homepage.
 function tutv_posts_page_title() {
 	if( is_home() ){
-		
+
 		$post_obj = get_queried_object();
 		echo "<h1 class='entry-title'>{$post_obj->post_title}</h1>";
 	}
 }
 add_filter('thematic_navigation_above', 'tutv_posts_page_title');
 
-// For show-based content, add a header with the show title and background 
+// For show-based content, add a header with the show title and background
 //
 // string $force: Override to force display
 function tutv_show_header( $force = false ) {
 	global $post;
-	
-	if ( is_singular( array( 'episodes', 'show_notes', 'clip', 'show_page' ) ) || $force ) {		
+
+	if ( is_singular( array( 'episodes', 'show_notes', 'clip', 'show_page' ) ) || $force ) {
 		$term = get_the_show_term( $post->ID );
-		if ( empty( $term ) || has_no_show( $term ) ) 
+		if ( empty( $term ) || has_no_show( $term ) )
 			return;
 		?>
 
@@ -265,7 +266,7 @@ function tutv_show_header( $force = false ) {
 
 			<div id="show-header" class="clearfix">
 
-				<?php			
+				<?php
 				if ($term->name) {
 					if ( ! is_singular() ) { ?>
 						<h1 id="show-name" class="page-title">
@@ -343,7 +344,7 @@ function tutv_footer() {
 
 /**
  * Returns list of social media icons.
- * 
+ *
  * @author Chris Montgomery <mont.chr@gmail.com>
  * @since 2.0.0
  *
@@ -359,7 +360,7 @@ function tutv_social_media_icons(
 	$twitter_url = 'https://twitter.com/templetv',
 	$rss_url = 'feed://templetv.net/feed'
 ) {
-	
+
 	if ( empty($icon) ) { ?>
 		<ul class="social-media-icons">
 			<li id="fb-icon" class="social-media-icon">
@@ -378,7 +379,7 @@ function tutv_social_media_icons(
 				</a>
 			</li>
 		</ul> <!-- end .social-media-icons -->
-	<?php } // endif 
+	<?php } // endif
 
 	$output = '';
 
@@ -481,10 +482,10 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 
 			$final_output = '';
 			$num_items = 0;
-			
+
 			//global $wp_query;
 			p2p_type( 'schedule_event' )->each_connected( $query, array(), 'episode' );
-			
+
 			while ( $query->have_posts() ) : $query->the_post();
 
 				echo 'post';
@@ -493,7 +494,7 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 				$episodes = $post->connected;
 
 				print_r($episodes);
-							
+
 					//if there are connected episodes, set the first one to display
 					if( $episodes ) {
 						$scheduled_page = $episodes[0] ;
@@ -502,7 +503,7 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 					}
 
 				$date_value = get_post_meta(get_the_ID(), 'date_value', true);
-				
+
 					if( $date_value ) {
 						$formatted_time = "<span class='start'>";
 						$formatted_time .= date('h:i A', $date_value);
@@ -516,10 +517,10 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 						continue;
 					}
 
-				
+
 				$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 				$term = $terms[0];
-				
+
 				$output = "<div id='post-" . get_the_ID() . "' class='schedule-item post hentry show-{$term->slug}";
 					if( $date_value < $active_start_time ) {
 						$output .= ' active';
@@ -544,12 +545,12 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 									$output .= get_the_title($scheduled_page->ID);
 								$output .= '</a>';
 							$output .= '</span>';
-						
+
 						$output .= '</h4>';
 
-						$post = get_post($scheduled_page->ID); 
+						$post = get_post($scheduled_page->ID);
 						setup_postdata($post);
-						
+
 					$output .= '</div><!-- .entry-info -->';
 
 					$output .= '<div class="entry-content accordion-content">';
@@ -558,10 +559,10 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 							$output .= get_video_thumbnail($scheduled_page->ID);
 						$output .= '</a>';
 						$output .= get_the_excerpt();
-					
+
 					$output .= '</div><!-- .entry-content -->';
 				$output .= '</div><!-- .post -->';
-				
+
 				// if the selected showtime is in the past, replace all previously queued showtimes
 				// with the most recent showtime
 				if ( $date_value < $active_start_time ) {
@@ -573,9 +574,9 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
 				} else {
 					break;
 				}
-			
+
 			endwhile;
-			
+
 			if ( $final_output ) {
 				echo $final_output;
 			} else { ?>
@@ -590,10 +591,10 @@ function tutv_schedule_block($classes = 'block clearfix', $header_title = 'Airin
  * Automatically add container div to oembed YouTube videos.
  */
 function tutv_embed_filter( $output, $data, $url ) {
- 
+
 	$return = '<div class="video-container">' . $output . '</div>';
 	return $return;
- 
+
 }
 add_filter('oembed_dataparse', 'tutv_embed_filter', 90, 3 );
 
