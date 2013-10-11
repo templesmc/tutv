@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import "thematic/thematic";
 @import "mixins";
 @import "bootstrap/bootstrap";
@@ -44,7 +46,7 @@
 	========================
 	*/
 	.page.slug-staff {
-		
+
 		table.staff {
 		padding: 0px;
 		margin-bottom: 32px;
@@ -240,7 +242,7 @@
 			.meta-prep-author,
 			.entry-meta .author,
 			.entry-meta .author a,
-			.entry-meta abbr, 
+			.entry-meta abbr,
 			.meta-sep-entry-date {
 			display: inline;
 			font-size: inherit;
