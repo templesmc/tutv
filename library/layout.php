@@ -329,9 +329,9 @@ add_filter('thematic_footertext','childtheme_footer');
  *
  */
 function tutv_header_search() {
-	echo '<div id="header-search">';
+	echo '<div class="header-search">';
 		get_search_form();
-	echo '</div> <!-- end #header-search -->';
+	echo '</div> <!-- end .header-search -->';
 }
 add_action('thematic_header', 'tutv_header_search', 8);
 
@@ -345,9 +345,9 @@ function tutv_footer() {
 	echo '<div id="footer-social-media">';
 		tutv_social_media_icons();
 	echo '</div> <!-- end #footer-social-media -->';
-	echo '<div id="footer-search">';
+	echo '<div class="footer-search">';
 		get_search_form();
-	echo '</div> <!-- end #footer-search -->';
+	echo '</div> <!-- end .footer-search -->';
 }
 //add_action('thematic_footer', 'tutv_footer', 8);
 

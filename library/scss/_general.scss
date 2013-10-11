@@ -424,7 +424,7 @@ font-style: normal;
 }
 
 .thumbnail {
-	
+
 	img {
 		max-width: 100%;
 		width: 140px;
@@ -506,7 +506,7 @@ margin-bottom: 1.5em;
 
 
 // is this stuff necessary? removing it is preferable to display: none;
-.episodes .published, 
+.episodes .published,
 .clip .published,
 .episodes .meta-sep-edit,
 .clip .meta-sep-edit {
@@ -525,28 +525,28 @@ FORMS & SOCIAL ICONS
 
 	/************************ SEARCH FORMS ************************/
 
-		#searchbox,
-		#searchbutton {
+		.searchbox,
+		.searchbutton {
 		font: 14px $sans-serif;
 		}
 
-		#searchbox {
+		.searchbox {
 		float: right;
 		}
 
-		#searchbutton {
+		.searchbutton {
 		margin-right: 10px;
 		float: right;
 		}
 
 		/* HEADER SEARCH */
-		div#header-search {
+		.header-search {
 			float: right;
 			margin-top: 15px;
 		} /* end #header-search */
 
 		/* FOOTER SEARCH */
-		div#footer-search {
+		.footer-search {
 			float: right;
 		} /* end #footer-search */
 
@@ -679,7 +679,7 @@ margin-bottom: 20px;
 
 		/* On active, extend the content height */
 		.schedule-item.active {
-		background: $highlight; 
+		background: $highlight;
 
 			.entry-content.accordion-content {
 			display: block;
@@ -840,7 +840,7 @@ margin-top: 1.5em;
 
 
 /*******************
-FOOTER STYLES 
+FOOTER STYLES
 ********************/
 
 #footer {
@@ -861,7 +861,7 @@ border-bottom: 1px solid $gray88;
 	width: 50%;
 	}
 
-	#footer-search {
+	.footer-search {
 		width: 50%;
 	}
 
