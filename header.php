@@ -9,7 +9,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<!-- Google Chrome Frame for IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title><?php wp_title(''); ?></title>
+	<title><?php echo tutv_title(); ?></title>
 
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -65,14 +65,14 @@ wp_head();
 
 </head>
 
-<?php 
+<?php
 
-if (apply_filters('thematic_show_bodyclass',TRUE)) { 
+if (apply_filters('thematic_show_bodyclass',TRUE)) {
 	// Creating the body class
 	?>
 
 <body class="<?php thematic_body_class() ?>">
-	
+
 <?php } ?>
 
 <div id="wrapper" class="hfeed clearfix">
@@ -80,24 +80,24 @@ if (apply_filters('thematic_show_bodyclass',TRUE)) {
 	<div id="header" class="clearfix">
 
 		<div id="header-inner" class="container_12 clearfix">
-	
-			<?php 
-			
+
+			<?php
+
 			// action hook creating the theme header
 			thematic_header();
-			
+
 			?>
 
 		</div> <!-- end #header-inner -->
-		
+
 	</div><!-- #header-->
-	
+
 	<?php
-	
+
 	// action hook for placing content below the theme header
 	thematic_belowheader();
-	
-	?>   
+
+	?>
 
 	<div id="main" class="clearfix">
 

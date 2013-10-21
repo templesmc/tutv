@@ -2,6 +2,7 @@
 
 require_once( dirname( __FILE__ ) . '/library/init.php' );
 require_once( dirname( __FILE__ ) . '/library/types-and-taxonomies.php' );
+require_once( dirname( __FILE__ ) . '/library/titles.php' );
 
 require_once( dirname( __FILE__ ) . '/library/layout.php' );
 require_once( dirname( __FILE__ ) . '/library/layout-video-sidebar.php' );
