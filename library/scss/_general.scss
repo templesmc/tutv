@@ -243,6 +243,9 @@ color: black;
 			}
 
 			li {
+				float: none;
+				position: relative;
+				display: inline-block;
 
 
 				a {
