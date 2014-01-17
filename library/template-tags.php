@@ -72,8 +72,10 @@ function get_posts_show_thumbnail( $post_id, $thumbnail_size = 'thumbnail-square
 // Return video thumbnail from featured image or show image
 function get_video_thumbnail( $post_id ) {
 
-	 if( !isset( $post_id ) )
+	if( !isset( $post_id ) )
 		return '';
+
+	$content = '';
 
 	if( has_post_thumbnail( $post_id ) ) {
 		$content .= get_the_post_thumbnail($post_id, 'thumb-small');
