@@ -364,7 +364,7 @@ function tutv_footer() {
  *
  */
 function tutv_social_media_icons(
-	$icon,
+	$icon = null,
 	$fb_url = 'https://www.facebook.com/TempleTV',
 	$twitter_url = 'https://twitter.com/templetv',
 	$rss_url = 'feed://templetv.net/feed'
@@ -392,7 +392,7 @@ function tutv_social_media_icons(
 
 	$output = '';
 
-	if ( $icon == 'facebook' || in_array('facebook', $icon) ) {
+	if ( $icon == 'facebook' ) {
 		$output .= '<div id="fb-icon" class="social-media-icon">';
 			$output .= '<a href="' . $fb_url . '" title="Like us on Facebook">';
 				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />';
@@ -400,7 +400,7 @@ function tutv_social_media_icons(
 		$output .= '</div>';
 	}
 
-	if ( $icon == 'twitter' || in_array('twitter', $icon) ) {
+	if ( $icon == 'twitter' ) {
 		$output .= '<div id="twitter-icon" class="social-media-icon">';
 			$output .= '<a href="' . $twitter_url . '" title="Follow us on Twitter">';
 				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />';
@@ -408,7 +408,7 @@ function tutv_social_media_icons(
 		$output .= '</div>';
 	}
 
-	if ( $icon == 'rss' || in_array('rss', $icon) ) {
+	if ( $icon == 'rss' ) {
 		$output .= '<div id="rss-icon" class="social-media-icon">';
 			$output .= '<a href="' . $rss_url . '" title="Subscribe to our latest updates">';
 				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />';
@@ -416,7 +416,7 @@ function tutv_social_media_icons(
 		$output .= '</div>';
 	}
 
-	if ( $icon == 'contact' || in_array('contact', $icon) ) {
+	if ( $icon == 'contact' ) {
 		$output .= '<div id="contact-icon" class="social-media-icon">';
 			$output .= '<a href="' . home_url('/contact') . '" title="Questions? Contact us">';
 				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-contact.png" title="Questions? Contact us" alt="Questions? Contact us" />';
