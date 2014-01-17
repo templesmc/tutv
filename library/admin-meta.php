@@ -19,7 +19,7 @@ $meta_boxes = array(
 				'type' => 'checkbox'
 			)
 		)
-	),	
+	),
 	array(
 		'id' => 'featured-video',
 		'title' => 'Featured Video',
@@ -61,7 +61,7 @@ function tutv_show_box($post, $metabox) {
 
 	// Use nonce for verification
 	echo '<input type="hidden" name="tutv_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
-	
+
 	echo '<table class="form-table">';
 
 	foreach ($meta_box['fields'] as $field) {
@@ -70,7 +70,7 @@ function tutv_show_box($post, $metabox) {
 		$meta = $meta[0];
 		$meta = $meta->term_id;
 		if (empty($meta)) $meta = false;
-		
+
 		echo '<tr>',
 				'<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th>',
 				'<td>';
@@ -102,7 +102,7 @@ function tutv_show_box($post, $metabox) {
 		echo 	'<td>',
 			'</tr>';
 	}
-	
+
 	echo '</table>';
 }
 
@@ -112,7 +112,7 @@ function tutv_show_box($post, $metabox) {
  */
 function tutv_save_box_data( $post_id ) {
 	global $meta_boxes;
-	
+
 	// verify nonce
 	$nonce = ( isset( $_POST['tutv_meta_box_nonce'] ) ) ? $_POST['tutv_meta_box_nonce'] : false;
 	if ( !wp_verify_nonce( $nonce, basename(__FILE__) ) ) {
@@ -132,18 +132,18 @@ function tutv_save_box_data( $post_id ) {
 	} elseif (!current_user_can('edit_post', $post_id)) {
 		return $post_id;
 	}
-	
+
 	foreach( $meta_boxes as $meta_box ) {
-	
+
 		// set featured taxonomy value
 		foreach ($meta_box['fields'] as $field) {
 			$old = wp_get_object_terms($post_id, $field['id']);
 			$old = $old[0];
 			$old = $old->term_id;
 			if (empty($old)) $old = false;
-			
+
 			$new = $_POST[$field['id']];
-			
+
 			if ($new && $new != $old) {
 				wp_set_post_terms($post_id, $new, $field['id'], false);
 			} elseif ('' == $new && $old) {

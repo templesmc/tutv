@@ -1,13 +1,13 @@
-<?php 
+<?php
 /*
 Template Name: Front Page
 */
 ?>
 <?php
 	add_action('wp_enqueue_scripts', 'tutv_home_scripts');
-	 
+
 	function tutv_home_scripts() {
-	
+
 		wp_enqueue_script('flexslider', get_bloginfo('stylesheet_directory') . '/js/jquery.flexslider-min.js', array('jquery'), '1.0', false);
 		wp_enqueue_script('textfill', get_bloginfo('stylesheet_directory') . '/js/jquery.textfill.min.js', array('jquery'), '0.3.5', false);
 		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/js/home.js', array('jquery', 'flexslider'), '2.0.1', false);
@@ -33,45 +33,45 @@ Template Name: Front Page
 				<div id="masthead-social-media">
 
 					<p>Follow Us</p>
-					
+
 					<?php tutv_social_media_icons(); ?>
 
 				</div> <!-- end #masthead-social-media -->
-			
+
 			</div> <!-- end #masthead -->
 
 			<div id="front-featured" class="grid_12 flexslider-container clearfix">
 
 				<div class="flexslider">
-				
+
 					<ul class="slides">
 
 					<?php
 
-					query_posts( array( 
+					query_posts( array(
 						'featured' => 'on',
 						'post_type' => 'any',
 						'post_status' => 'publish',
 						'posts_per_page' => 6,
 						'caller_get_posts'=> 1 )
 					);
-					
+
 					$i = 0;
 
 					while (have_posts()) : the_post();
-					
+
 					?>
 
 						<li id="item-<?php $i++; echo $i; ?>" class="item<?php if( !has_post_thumbnail() ) echo ' no-thumbnail'; ?>">
 
-							<a name="item-<?php echo $i; ?>"></a>  
+							<a name="item-<?php echo $i; ?>"></a>
 
 							<?php
 
 							$slides[] = $post->ID;
-							
+
 							the_post_thumbnail('banner');
-							
+
 							?>
 
 							<div class="description">
@@ -87,8 +87,8 @@ Template Name: Front Page
 
 								<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_show(); the_title(); ?></a></h2>
 
-								<?php 
-								
+								<?php
+
 								global $more;    // Declare global $more (before the loop).
 								$more = 0;       // Set (inside the loop) to display content above the more tag.
 								$headline = get_post_meta(get_the_ID(), 'headline', TRUE);
@@ -97,42 +97,42 @@ Template Name: Front Page
 								$subheadline3 = get_post_meta(get_the_ID(), 'subheadline3', TRUE);
 
 								if($headline) {
-									echo "<h3 class='headline'>" . $headline . "</h3>"; 
+									echo "<h3 class='headline'>" . $headline . "</h3>";
 								}
 
 								the_excerpt();
 
 								if($subheadline) {
-									echo "<div id='subheadline'>" . $subheadline . "</div>"; 
+									echo "<div id='subheadline'>" . $subheadline . "</div>";
 								}
 								if($subheadline2) {
-									echo "<div id='subheadline2'>" . $subheadline2 . "</div>"; 
+									echo "<div id='subheadline2'>" . $subheadline2 . "</div>";
 								}
 								/*
 								// Nah, just... don't. There's already too much going on.
 								if($subheadline3) {
-									echo "<div id='subheadline3'>" . $subheadline3 . "</div>"; 
+									echo "<div id='subheadline3'>" . $subheadline3 . "</div>";
 								}
 								*/
-								
+
 								?>
 
 								</div>
 						</li>
-						
-					<?php 
-					
+
+					<?php
+
 					endwhile; // end the featured post loop
 
 					wp_reset_postdata();
-					
+
 					?>
 					</ul> <!-- end ul.slides -->
 
 				</div> <!-- end .flexslider -->
-			
+
 			</div> <!-- #front-featured -->
-			
+
 			<!-- Recent Blog Posts Block -->
 			<div id="recent-blog-posts-block" class="front-block block grid_6">
 
@@ -170,7 +170,7 @@ Template Name: Front Page
 					?>
 
 							<div id="post-<?php the_ID(); ?>" <?php post_class('article clearfix'); ?> role="article">
-								
+
 								<div class="thumbnail">
 									<?php the_post_thumbnail('thumb-small'); ?>
 								</div> <!-- end .thumbnail -->
@@ -215,7 +215,7 @@ Template Name: Front Page
 
 					<?php
 						// Close the loop
-						endwhile; 
+						endwhile;
 					endif;
 
 					wp_reset_postdata();
@@ -226,7 +226,7 @@ Template Name: Front Page
 				</div> <!-- end .block-inner -->
 
 			</div> <!-- end #recent-blog-posts-block -->
-			
+
 
 
 			<!-- Schedule and Featured Buttons Block Container -->
@@ -287,15 +287,15 @@ Template Name: Front Page
 
 						$final_output = '';
 						$num_items = 0;
-						
+
 						//global $wp_query;
 						p2p_type( 'schedule_event' )->each_connected( $query );
-						
+
 						while ( $query->have_posts() ) : $query->the_post();
 
 							//get the episode associated with this schedule item
 							$episodes = $post->connected;
-										
+
 								//if there are connected episodes, set the first one to display
 								if( $episodes ) {
 									$scheduled_page = $episodes[0] ;
@@ -304,7 +304,7 @@ Template Name: Front Page
 								}
 
 							$date_value = get_post_meta(get_the_ID(), 'date_value', true);
-							
+
 								if( $date_value ) {
 									$formatted_time = date('h:i A', $date_value);
 								} else {
@@ -316,10 +316,10 @@ Template Name: Front Page
 									continue;
 								}
 
-							
+
 							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 							$term = $terms[0];
-							
+
 							$output = "<div id='post-" . get_the_ID() . "' class='schedule-item post hentry show-{$term->slug}";
 								if( $date_value < $active_start_time ) {
 									$output .= ' active';
@@ -341,11 +341,11 @@ Template Name: Front Page
 												$output .= get_the_title($scheduled_page->ID);
 											$output .= '</a>';
 
-									$post = get_post($scheduled_page->ID); 
+									$post = get_post($scheduled_page->ID);
 									setup_postdata($post);
 
 									$output .= '</span><!-- .entry-info-inner -->';
-									
+
 								$output .= '</span><!-- .entry-info -->';
 
 								$output .= '<div class="entry-content accordion-content">';
@@ -356,10 +356,10 @@ Template Name: Front Page
 										$output .= '</a>';
 									$output .= '</div>';
 									$output .= get_the_excerpt();
-								
+
 								$output .= '</div><!-- .entry-content -->';
 							$output .= '</div><!-- .post -->';
-							
+
 							// if the selected showtime is in the past, replace all previously queued showtimes
 							// with the most recent showtime
 							if ( $date_value < $active_start_time ) {
@@ -371,9 +371,9 @@ Template Name: Front Page
 							} else {
 								break;
 							}
-						
+
 						endwhile;
-						
+
 						if ( $final_output ) {
 							echo $final_output;
 						} else { ?>
@@ -469,7 +469,7 @@ Template Name: Front Page
 				?>
 			</div><!-- end #featured-video-section -->
 
-			<?php 
+			<?php
 			// calling the widget area 'index-bottom'
 			get_sidebar('index-bottom');
 			?>

@@ -6,26 +6,26 @@
  */
 function tutv_edit_shows_meta( $term, $taxonomy ) {
 	global 	$production_types;
-	
+
 	if ( !function_exists( 'get_term_meta' ) )
 		return;
-		
+
     $active_production_type = get_term_meta( $term->term_id, 'production_type', true);
 
     // Check/Set the default value
     if (!$active_production_type)
         $active_production_type = '';
-        
+
     $active_weight = get_term_meta( $term->term_id, 'weight', true);
 	$active_weight = ($active_weight) ? $active_weight : 0;
-	
+
 	$is_hidden = get_term_meta( $term->term_id, 'is_hidden', true);
-	$is_hidden = ($is_hidden) ? true : false; 
-    
+	$is_hidden = ($is_hidden) ? true : false;
+
     $active_genre = get_term_meta( $term->term_id, 'genre', true);
     if (!$active_genre)
         $active_genre = '';
-	
+
     ?>
     <tr class="form-field">
         <th scope="row" valign="top"><label for="production_type">Show Production Type</label></th>
@@ -37,7 +37,7 @@ function tutv_edit_shows_meta( $term, $taxonomy ) {
                 	if ( $active_production_type == $production_value )
                 		echo 'selected="selected"';
                 	echo ">{$production_info['name']}</option>";
-                } 
+                }
                 ?>
             </select>
             <p class="description">Shows will be organized and promoted based on their production source.</p>
@@ -62,7 +62,7 @@ function tutv_edit_shows_meta( $term, $taxonomy ) {
                 	if ( $genre->slug == $active_genre )
                 		echo 'selected="selected"';
                 	echo ">{$genre->name}</option>";
-                } 
+                }
                 ?>
             </select>
             <p class="description">Default genre to give content with this show. Although content with this show can be given any genre, this show may be grouped by the given genre.</p>
@@ -84,9 +84,9 @@ add_action( 'shows_edit_form_fields', 'tutv_edit_shows_meta', 10, 2);
  *
  */
 function tutv_save_shows_meta($term_id, $tt_id) {
-    if ( !$term_id || !function_exists( 'update_term_meta' ) ) 
+    if ( !$term_id || !function_exists( 'update_term_meta' ) )
     	return;
-    
+
     if ( isset( $_POST['production_type'] ) )
         update_term_meta( $term_id, 'production_type', $_POST['production_type'] );
     if ( isset( $_POST['weight'] ) )

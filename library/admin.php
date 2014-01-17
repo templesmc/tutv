@@ -6,17 +6,17 @@
  *
  */
 function tutv_add_show_specific_menus() {
-	
+
 	$shows = get_terms('shows');
-	
+
 	$menus = array();
-	
+
 	foreach($shows as $show) {
 		$menus[$show->slug] = $show->name . ' Menu';
 	}
-	
+
 	register_nav_menus( $menus );
-	
+
 }
 add_action( 'init', 'tutv_add_show_specific_menus' );
 
@@ -66,7 +66,7 @@ add_filter('manage_edit-events_columns', 'tutv_schedule_columns_register');
  */
 function tutv_show_columns_register( $columns ) {
 		$columns['show'] = 'Show';
-	
+
 		return $columns;
 }
 add_filter('manage_edit-episodes_columns', 'tutv_show_columns_register');
@@ -83,11 +83,11 @@ add_filter('manage_edit-show_page_columns', 'tutv_show_columns_register');
  */
 function tutv_columns_display( $column ) {
 	global $post;
-		
+
 	switch( $column ) {
 
 		case 'showtime' :
- 
+
 			$showtime = get_post_meta($post->ID, 'date_value', true);
 			if ( $showtime ) {
 				echo date('F j, Y', $showtime) . ' at ' . date('h:i A', $showtime);
@@ -95,9 +95,9 @@ function tutv_columns_display( $column ) {
 				echo '<em>undefined</em>';
 			}
 			break;
-			
+
 		case 'episode' :
- 				
+
 			$episodes =  get_posts( array(
 			  'connected_type' => 'schedule_event',
 			  'connected_items' => $post,
@@ -111,9 +111,9 @@ function tutv_columns_display( $column ) {
 			}
 			break;
 
-		
+
 		case 'show' :
- 
+
  		   	$shows = get_the_term_list( $post->ID, 'shows', '', ', ', '' );
  		   	if ( is_string( $shows ) ) {
 				echo $shows;
@@ -122,7 +122,7 @@ function tutv_columns_display( $column ) {
 			}
 			break;
 	}
-}	
+}
 add_action('manage_posts_custom_column', 'tutv_columns_display', 10, 2);
 
 // Register the column as sortable
@@ -130,7 +130,7 @@ function tutv_columns_register_sortable( $columns ) {
 	$columns['showtime'] = 'showtime';
 	// $columns['episode'] = 'episode';
 	$columns['show'] = 'show';
- 
+
 	return $columns;
 }
 add_filter( 'manage_edit-events_sortable_columns', 'tutv_columns_register_sortable' );
@@ -148,7 +148,7 @@ function tutv_columns_column_orderby( $vars ) {
 			'orderby' => 'meta_value_num'
 		) );
 	}
- 
+
 	return $vars;
 }
 add_filter( 'request', 'tutv_columns_column_orderby' );
@@ -157,18 +157,18 @@ add_filter( 'request', 'tutv_columns_column_orderby' );
 function restrict_episodes_by_show() {
     global $typenow;
     global $wp_query;
-    
+
     if( $typenow == 'episodes' ) {
 
         $tutv_shows = get_terms('shows');
-        
+
         ?>
 	   <select name="shows">
-		
+
 		<option value="" disabled>Select a show</option>
-		
+
 		<?php
-	
+
 	    foreach($tutv_shows as $tutv_show) {
 	    	?>
 	    	<option value="<?php echo $tutv_show->slug; ?>" <?php if($tutv_show->slug == $_GET['shows']) echo 'selected'; ?> >
@@ -178,7 +178,7 @@ function restrict_episodes_by_show() {
 	    }
 		?>
 		</select>
-	<?php        
+	<?php
     }
 }
 add_action('restrict_manage_posts','restrict_episodes_by_show');

@@ -13,7 +13,7 @@ header("Expires: 0");
 
 ?>
 "Show","Slug","Genre","Type","Description"
-<?php	
+<?php
 	$myterms = get_terms('shows');
 	if ($myterms) {
 		foreach($myterms as $term) {

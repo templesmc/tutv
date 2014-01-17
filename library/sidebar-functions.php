@@ -66,7 +66,7 @@ function tutv_sidebar_featured_buttons() { ?>
  * @since 2.0.0
  * @version 1.0.0
  *
- * @param string $grid_class 960gs class for block widths 
+ * @param string $grid_class 960gs class for block widths
  */
 function tutv_sidebar_featured_videos($grid_class = 'grid_2') { ?>
 	<div class="featured-video-section">
