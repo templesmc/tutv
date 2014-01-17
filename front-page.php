@@ -49,11 +49,12 @@ Template Name: Front Page
 					<?php
 
 					query_posts( array(
-						'featured' => 'on',
-						'post_type' => 'any',
-						'post_status' => 'publish',
-						'posts_per_page' => 6,
-						'caller_get_posts'=> 1 )
+						'featured'            => 'on',
+						'post_type'           => 'any',
+						'post_status'         => 'publish',
+						'posts_per_page'      => 6,
+						'ignore_sticky_posts' => true
+						)
 					);
 
 					$i = 0;
