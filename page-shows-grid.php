@@ -65,7 +65,7 @@ get_header();
 					<?php
 					$genres = get_terms('genre');
 					foreach( $genres as $genre ) {
-						echo "<li><a href='#genre-{$genre->slug}' data-filter='.genre-{$genre->slug}' class='genre-{$genre->slug} btn-genre btn-small btn'>{$genre->name}</a></li>";
+						echo "<li><a href='#' data-filter='.genre-{$genre->slug}' class='genre-{$genre->slug} btn-genre btn-small btn'>{$genre->name}</a></li>";
 					}
 					?>
 					<li><a href="#" data-filter='*' class="all btn-primary btn-small btn">View All</a></li> <!-- there should only be one "view all" button... somewhere -->
