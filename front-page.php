@@ -272,7 +272,7 @@ Template Name: Front Page
 						//echo $timestamp;
 
 						$active_start_time = time(); // this must be active when site is live!
-						$active_start_time = $timestamp; // this will allow easy editing on staging site
+						//$active_start_time = $timestamp; // this will allow easy editing on staging site
 						$args = array(
 							'post_type'=>'events',
 							'meta_key' => 'date_value',
