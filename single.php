@@ -6,8 +6,8 @@
 ?>
 		<div id="content" class="clearfix">
 
-			<?php
-
+			<?php 
+			
 			the_post();
 
 			if (!is_singular( 'post' )) :
@@ -15,7 +15,7 @@
 			?>
 
 				<div id="page-header" class="grid_12 block clearfix">
-
+				
 					<?php thematic_navigation_above(); ?>
 
 				</div> <!-- end #page-header -->
@@ -35,7 +35,7 @@
 
 				// action hook creating the single post
 				thematic_singlepost();
-
+				
 				// calling the widget area 'single-insert'
 				get_sidebar('single-insert');
 
@@ -59,7 +59,7 @@
 
 				// calling the widget area 'single-bottom'
 				get_sidebar('single-bottom');
-
+				
 				?>
 
 			</div> <!-- end #main-content -->
@@ -87,7 +87,7 @@
 		</div><!-- #content -->
 
 <?php
-
+	
 	// calling footer.php
 	get_footer();
 
