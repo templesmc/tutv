@@ -8,7 +8,7 @@
 		<div id="content" class="clearfix">
 
 			<div id="page-header" class="grid_12 block clearfix">
-		
+
 				<h1 class="page-title entry-title">Blog</h1>
 
 			</div> <!-- end #page-header -->
@@ -23,7 +23,7 @@
 
 							<h1 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 							<p class="entry-meta">
-								<span class="comments-meta"><a href="<?php comments_link(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/comments-blip.png" /><?php comments_number( '0 Comments' ); ?></a></span>
+								<span class="comments-meta"><a href="<?php comments_link(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comments-blip.png" /><?php comments_number( '0 Comments' ); ?></a></span>
 								<span class="posted-date"> / posted <time class="updated" datetime="<?php the_time('Y-m-j'); ?>" pubdate><?php the_time('F j, Y'); ?></time></span>
 							</p> <!-- end .entry-meta -->
 
@@ -37,7 +37,7 @@
 
 				<?php endwhile; ?>
 
-					
+
 
 				<?php else : ?>
 
@@ -51,7 +51,7 @@
 						</div>
 
 				<?php endif; ?>
-			
+
 			</div> <!-- end .entry-main -->
 
 
@@ -70,7 +70,7 @@
 
 					<?php if(function_exists('wp_pagenavi')) { ?>
 						<?php wp_pagenavi(); ?>
-					<?php } else { ?>  
+					<?php } else { ?>
 						<div class="nav-previous"><?php next_posts_link(__('Older  <span class="meta-nav">&rarr;</span>', 'thematic')) ?></div>
 						<div class="nav-next"><?php previous_posts_link(__('<span class="meta-nav">&larr;</span>  Newer', 'thematic')) ?></div>
 					<?php } ?>
@@ -79,11 +79,11 @@
 
 		</div><!-- #content -->
 
-<?php 
+<?php
 
-	// calling the standard sidebar 
+	// calling the standard sidebar
 	//thematic_sidebar();
-	
+
 	// calling footer.php
 	get_footer();
 

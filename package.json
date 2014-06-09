@@ -1,0 +1,26 @@
+{
+  "name": "tutv",
+  "version": "2.0.14",
+  "description": "",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/templesmc/tutv.git"
+  },
+  "author": "Chris Montgomery <chris@montchr.io>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/templesmc/tutv/issues"
+  },
+  "homepage": "https://github.com/templesmc/tutv",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bump": "0.0.14",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-wp-assets": "^0.2.6"
+  }
+}

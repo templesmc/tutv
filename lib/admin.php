@@ -25,7 +25,7 @@ function tutv_login_head() {
 	?>
 	<style>
 	body.login #login h1 a {
-		background: url('<?php bloginfo('stylesheet_directory'); ?>/images/logo-login.png') no-repeat center top;
+		background: url('<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo-login.png') no-repeat center top;
 		height: 72px;
 	}
 	</style>
