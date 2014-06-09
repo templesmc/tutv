@@ -2,7 +2,7 @@
 
 
 	function tutv_watch_live_scripts() {
-		wp_enqueue_script('watch-live', get_stylesheet_directory_uri() . '/js/watch-live.js', false);
+		wp_enqueue_script('watch-live', get_stylesheet_directory_uri() . '/assets/js/watch-live.js', false);
 	}
 
 	add_action('wp_enqueue_scripts', 'tutv_watch_live_scripts');
@@ -15,16 +15,16 @@
 		<div id="content" class="clearfix">
 
 			<?php
-		
+
 			// calling the widget area 'page-top'
 			get_sidebar('page-top');
 
 			the_post();
-		
+
 			?>
 
 			<div id="page-header" class="grid_12 block clearfix">
-		
+
 				<h1 class="page-title entry-title"><?php the_title(); ?></h1>
 
 				<?php
@@ -36,17 +36,17 @@
 			</div> <!-- end #page-header -->
 
 			<div class="entry-main block grid_8 clearfix">
-				
+
 				<div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
-					
+
 						<div class="entry-content clearfix">
 
 							<?php
-							
+
 							the_content();
-							
+
 							wp_link_pages("\t\t\t\t\t<div class='page-link'>".__('Pages: ', 'thematic'), "</div>\n", 'number');
-							
+
 							edit_post_link(__('Edit', 'thematic'),'<span class="edit-link">','</span>') ?>
 
 						</div>
@@ -54,13 +54,13 @@
 				</div><!-- .post -->
 
 				<?php
-				
-				if ( get_post_custom_values('comments') ) 
+
+				if ( get_post_custom_values('comments') )
 					thematic_comments_template(); // Add a key/value of "comments" to enable comments on pages!
-				
+
 				// calling the widget area 'page-bottom'
 				get_sidebar('page-bottom');
-				
+
 				?>
 
 			</div> <!-- end .entry-main -->
@@ -128,15 +128,15 @@
 
 						$final_output = '';
 						$num_items = 0;
-						
+
 						//global $wp_query;
 						p2p_type( 'schedule_event' )->each_connected( $query );
-						
+
 						while ( $query->have_posts() ) : $query->the_post();
 
 							//get the episode associated with this schedule item
 							$episodes = $post->connected;
-										
+
 								//if there are connected episodes, set the first one to display
 								if( $episodes ) {
 									$scheduled_page = $episodes[0] ;
@@ -145,7 +145,7 @@
 								}
 
 							$date_value = get_post_meta(get_the_ID(), 'date_value', true);
-							
+
 								if( $date_value ) {
 									$formatted_time = "<span class='start'>";
 									$formatted_time .= date('h:i A', $date_value);
@@ -159,10 +159,10 @@
 									continue;
 								}
 
-							
+
 							$terms = wp_get_object_terms($scheduled_page->ID, 'shows');
 							$term = $terms[0];
-							
+
 							$output = "<div id='post-" . get_the_ID() . "' class='schedule-item post hentry show-{$term->slug}";
 								if( $date_value < $active_start_time ) {
 									$output .= ' active';
@@ -184,11 +184,11 @@
 												$output .= get_the_title($scheduled_page->ID);
 											$output .= '</a>';
 
-									$post = get_post($scheduled_page->ID); 
+									$post = get_post($scheduled_page->ID);
 									setup_postdata($post);
 
 									$output .= '</span><!-- .entry-info-inner -->';
-									
+
 								$output .= '</span><!-- .entry-info -->';
 
 								$output .= '<div class="entry-content accordion-content">';
@@ -199,10 +199,10 @@
 										$output .= '</a>';
 									$output .= '</div>';
 									$output .= get_the_excerpt();
-								
+
 								$output .= '</div><!-- .entry-content -->';
 							$output .= '</div><!-- .post -->';
-							
+
 							// if the selected showtime is in the past, replace all previously queued showtimes
 							// with the most recent showtime
 							if ( $date_value < $active_start_time ) {
@@ -214,9 +214,9 @@
 							} else {
 								break;
 							}
-						
+
 						endwhile;
-						
+
 						if ( $final_output ) {
 							echo $final_output;
 						} else { ?>
@@ -231,6 +231,6 @@
 
 		</div><!-- #content -->
 
-<?php 
+<?php
 	get_footer();
 ?>

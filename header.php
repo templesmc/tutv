@@ -40,9 +40,9 @@ wp_head();
 
 ?>
 
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/modernizr.custom.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/modernizr.custom.js"></script>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-	  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/selectivizr-min.js"></script>
+	  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr-min.js"></script>
 	  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
 	<![endif]-->
 

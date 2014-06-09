@@ -8,7 +8,7 @@ Template Name: Grid Show Listings
 add_action('wp_enqueue_scripts', 'tutv_shows_scripts');
 
 function tutv_shows_scripts() {
-	wp_enqueue_script('isotope', get_bloginfo('stylesheet_directory') . '/js/jquery.isotope.min.js', array('jquery'));
+	wp_enqueue_script('isotope', get_bloginfo('stylesheet_directory') . '/assets/js/jquery.isotope.min.js', array('jquery'));
 }
 
 // calling the header.php
