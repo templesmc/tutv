@@ -3,7 +3,8 @@
   "version": "2.0.14",
   "homepage": "http://www.templetv.net",
   "authors": [
-    "Chris Montgomery <chris@montchr.io>"
+    "Chris Montgomery <chris@montchr.io>",
+    "Sam Margulies <friend@temple.edu>"
   ],
   "main": "style.css",
   "license": "GPLv3",
