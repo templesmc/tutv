@@ -1,17 +1,17 @@
 <?php
 
-require_once( dirname( __FILE__ ) . '/library/init.php' );
-require_once( dirname( __FILE__ ) . '/library/types-and-taxonomies.php' );
-require_once( dirname( __FILE__ ) . '/library/titles.php' );
+require_once locate_template('/lib/init.php' );
+require_once locate_template('/lib/types-and-taxonomies.php' );
+require_once locate_template('/lib/titles.php' );
 
-require_once( dirname( __FILE__ ) . '/library/layout.php' );
-require_once( dirname( __FILE__ ) . '/library/layout-video-sidebar.php' );
-require_once( dirname( __FILE__ ) . '/library/template-tags.php' );
-require_once( dirname( __FILE__ ) . '/library/sidebar-functions.php' );
+require_once locate_template('/lib/layout.php' );
+require_once locate_template('/lib/layout-video-sidebar.php' );
+require_once locate_template('/lib/template-tags.php' );
+require_once locate_template('/lib/sidebar-functions.php' );
 
-require_once( dirname( __FILE__ ) . '/library/admin.php' );
-require_once( dirname( __FILE__ ) . '/library/admin-meta.php' );
-require_once( dirname( __FILE__ ) . '/library/admin-schedule-meta.php' );
-require_once( dirname( __FILE__ ) . '/library/admin-taxonomy-meta.php' );
-require_once( dirname( __FILE__ ) . '/library/admin-post-defaults.php' );
+require_once locate_template('/lib/admin.php' );
+require_once locate_template('/lib/admin-meta.php' );
+require_once locate_template('/lib/admin-schedule-meta.php' );
+require_once locate_template('/lib/admin-taxonomy-meta.php' );
+require_once locate_template('/lib/admin-post-defaults.php' );
 
