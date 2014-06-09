@@ -25,7 +25,7 @@ function tutv_scripts_and_styles() {
 		// wp_enqueue_style( 'tutv-webfonts' );
 
 		// register main stylesheet
-		wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '2.01', 'all' );
+		wp_register_style( 'tutv-stylesheet', get_stylesheet_directory_uri() . '/style-active.css', array(), '2.0.14', 'all' );
 		wp_enqueue_style( 'tutv-stylesheet' );
 
 	}
