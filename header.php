@@ -15,10 +15,10 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
-	<!-- <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png"> -->
+	<!-- <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/apple-icon-touch.png"> -->
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
 	<!--[if IE]>
-		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
 	<![endif]-->
 <?php
 
@@ -40,9 +40,8 @@ wp_head();
 
 ?>
 
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/modernizr.custom.js"></script>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-	  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr-min.js"></script>
+	  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/vendor/selectivizr.min.js"></script>
 	  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
 	<![endif]-->
 

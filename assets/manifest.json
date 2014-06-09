@@ -1,0 +1,19 @@
+{
+  "dest": "assets/manifest.json",
+  "assets/css/main.min.css": {
+    "path": "assets/css/main.ed1bbbd9.min.css",
+    "hash": "ed1bbbd9"
+  },
+  "assets/js/scripts.min.js": {
+    "path": "assets/js/scripts.6b9ed99c.min.js",
+    "hash": "6b9ed99c"
+  },
+  "assets/js/front-page.min.js": {
+    "path": "assets/js/front-page.c67e80f9.min.js",
+    "hash": "c67e80f9"
+  },
+  "assets/js/shows-page.min.js": {
+    "path": "assets/js/shows-page.3b47a576.min.js",
+    "hash": "3b47a576"
+  }
+}

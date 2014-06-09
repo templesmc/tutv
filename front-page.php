@@ -3,18 +3,6 @@
 Template Name: Front Page
 */
 ?>
-<?php
-	add_action('wp_enqueue_scripts', 'tutv_home_scripts');
-
-	function tutv_home_scripts() {
-
-		wp_enqueue_script('flexslider', get_bloginfo('stylesheet_directory') . '/assets/js/jquery.flexslider-min.js', array('jquery'), '1.0', false);
-		wp_enqueue_script('textfill', get_bloginfo('stylesheet_directory') . '/assets/js/jquery.textfill.min.js', array('jquery'), '0.3.5', false);
-		wp_enqueue_script('home', get_bloginfo('stylesheet_directory') . '/assets/js/home.js', array('jquery', 'flexslider'), '2.0.1', false);
-
-	}
-
-?>
 
 <?php get_header() ?>
 

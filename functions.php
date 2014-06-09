@@ -2,6 +2,7 @@
 
 require_once locate_template('/lib/init.php' );
 require_once locate_template('/lib/types-and-taxonomies.php' );
+require_once locate_template('/lib/scripts.php' );
 require_once locate_template('/lib/titles.php' );
 
 require_once locate_template('/lib/layout.php' );
