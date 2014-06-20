@@ -3,7 +3,7 @@
 // Add favicon to every page
 function tutv_favicon() {
 ?>
-    <link rel="shortcut icon" href="wp-content/themes/tutv/images/favicon.ico" />
+    <link rel="shortcut icon" href="wp-content/themes/tutv/assets/images/favicon.ico" />
 	<!-- WP-Minify JS -->
 <?php
 }
@@ -374,17 +374,17 @@ function tutv_social_media_icons(
 		<ul class="social-media-icons">
 			<li id="fb-icon" class="social-media-icon">
 				<a href="<?php echo $fb_url; ?>" title="Like us on Facebook">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />
 				</a>
 			</li>
 			<li id="twitter-icon" class="social-media-icon">
 				<a href="<?php echo $twitter_url; ?>" title="Follow us on Twitter">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
 				</a>
 			</li>
 			<li id="rss-icon" class="social-media-icon">
 				<a href="<?php echo $rss_url; ?>" title="Subscribe to our latest updates">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />
 				</a>
 			</li>
 		</ul> <!-- end .social-media-icons -->
@@ -395,7 +395,7 @@ function tutv_social_media_icons(
 	if ( $icon == 'facebook' ) {
 		$output .= '<div id="fb-icon" class="social-media-icon">';
 			$output .= '<a href="' . $fb_url . '" title="Like us on Facebook">';
-				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-fb.png" title="Facebook" alt="Facebook" />';
 			$output .= '</a>';
 		$output .= '</div>';
 	}
@@ -403,7 +403,7 @@ function tutv_social_media_icons(
 	if ( $icon == 'twitter' ) {
 		$output .= '<div id="twitter-icon" class="social-media-icon">';
 			$output .= '<a href="' . $twitter_url . '" title="Follow us on Twitter">';
-				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />';
 			$output .= '</a>';
 		$output .= '</div>';
 	}
@@ -411,7 +411,7 @@ function tutv_social_media_icons(
 	if ( $icon == 'rss' ) {
 		$output .= '<div id="rss-icon" class="social-media-icon">';
 			$output .= '<a href="' . $rss_url . '" title="Subscribe to our latest updates">';
-				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-rss.png" title="RSS" alt="RSS" />';
 			$output .= '</a>';
 		$output .= '</div>';
 	}
@@ -419,7 +419,7 @@ function tutv_social_media_icons(
 	if ( $icon == 'contact' ) {
 		$output .= '<div id="contact-icon" class="social-media-icon">';
 			$output .= '<a href="' . home_url('/contact') . '" title="Questions? Contact us">';
-				$output .= '<img src="' . get_stylesheet_directory_uri() . '/images/social-icons/icon-contact.png" title="Questions? Contact us" alt="Questions? Contact us" />';
+				$output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-contact.png" title="Questions? Contact us" alt="Questions? Contact us" />';
 			$output .= '</a>';
 		$output .= '</div>';
 	}

@@ -36,7 +36,7 @@ function get_show_background( $show ) {
 	$filetypes = array('jpg', 'png');
 
 	//naming template of show backgrounds within the theme folder
-	$path = "/images/show-backgrounds/{$show}.";
+	$path = "/assets/images/show-backgrounds/{$show}.";
 
 	$show_background = false;
 

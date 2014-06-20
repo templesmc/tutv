@@ -16,7 +16,7 @@ Thematic is © Ian Stewart http://themeshaper.com/
 Surprise!
 
 All of the styles are actually located in style-active.css ,
-registered and enqueued by the function tutv_styles() in /library/init.php .
+registered and enqueued by the function tutv_styles() in lib/init.php .
 
 This is mainly for the sake of compression and due to CodeKit's
 output style restrictions. In order to leave the above Wordpress
