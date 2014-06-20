@@ -1,12 +1,12 @@
 {
   "dest": "assets/manifest.json",
   "assets/css/main.min.css": {
-    "path": "assets/css/main.ed1bbbd9.min.css",
-    "hash": "ed1bbbd9"
+    "path": "assets/css/main.decda255.min.css",
+    "hash": "decda255"
   },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.6b9ed99c.min.js",
-    "hash": "6b9ed99c"
+    "path": "assets/js/scripts.26ec9c40.min.js",
+    "hash": "26ec9c40"
   },
   "assets/js/front-page.min.js": {
     "path": "assets/js/front-page.c67e80f9.min.js",

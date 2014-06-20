@@ -1,9 +1,16 @@
 <?php
+
+/**
+ * Remove Thematic scripts
+ */
+// Superfish dropdown scripts
+remove_action('wp_head', 'thematic_head_scripts');
+
 /**
  * Enqueue scripts and stylesheets
  *
  * Enqueue stylesheets in the following order:
- * 1. /theme/assets/css/main.ed1bbbd9.min.css
+ * 1. /theme/assets/css/main.decda255.min.css
  *
  * Enqueue scripts in the following order:
  * 1. jquery-1.11.0.min.js via Google CDN
@@ -12,7 +19,7 @@
  * 4. /theme/assets/js/main.js    (in footer)
  */
 function tutv_scripts_and_styles() {
-  wp_enqueue_style('tutv-stylesheet', get_stylesheet_directory_uri() . '/assets/css/main.ed1bbbd9.min.css', false, null);
+  wp_enqueue_style('tutv-stylesheet', get_stylesheet_directory_uri() . '/assets/css/main.decda255.min.css', false, null);
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -36,7 +43,7 @@ function tutv_scripts_and_styles() {
   // Modernizr
   wp_register_script('modernizr', get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr.min.js', array(), null, false);
   // Main scripts
-  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.6b9ed99c.min.js', array('jquery'), null, true);
+  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.26ec9c40.min.js', array('jquery'), null, true);
   // Front page scripts
   wp_register_script('tutv-scripts-front-page', get_stylesheet_directory_uri() . '/assets/js/front-page.c67e80f9.min.js', array('jquery', 'tutv-scripts'), null, true);
   // Shows page scripts

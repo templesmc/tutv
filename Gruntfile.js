@@ -55,6 +55,8 @@ module.exports = function(grunt) {
             'bower_components/selectivizr/selectivizr.js'
           ],
           'assets/js/scripts.min.js': [
+            'bower_components/superfish/dist/js/hoverIntent.js',
+            'bower_components/superfish/dist/js/superfish.min.js',
             'assets/js/plugins/*.js',
             'assets/js/_main.js'
           ],
