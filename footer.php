@@ -2,13 +2,6 @@
 
   </div><!-- #main -->
 
-  <?php
-
-  // action hook for placing content above the footer
-  thematic_abovefooter();
-
-  ?>
-
   <div id="footer">
 
     <div id="footer-inner" class="container_12">
@@ -35,13 +28,6 @@
     </div> <!-- end #footer-inner -->
 
   </div><!-- #footer -->
-
-  <?php
-
-  // actio hook for placing content below the footer
-  //thematic_belowfooter();
-
-  ?>
 
 </div><!-- #wrapper .hfeed -->
 
