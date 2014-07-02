@@ -56,10 +56,15 @@ Template Name: Taxonomy Page ('taxonomy' custom field)
         echo '<strong>Error: please enter a taxonomy custom field (eg. "shows")</strong>';
       }
 
-      // create the navigation below the content
-      thematic_navigation_below();
-
-      ?>
+      // create the navigation below the content ?>
+      <div id="nav-below" class="navigation">
+        <?php if(function_exists('wp_pagenavi')) {
+          wp_pagenavi();
+        } else { ?>
+          <div class="nav-previous"><?php next_posts_link(__('<span class="meta-nav">&laquo;</span> Older posts', 'thematic')) ?></div>
+          <div class="nav-next"><?php previous_posts_link(__('Newer posts <span class="meta-nav">&raquo;</span>', 'thematic')) ?></div>
+        <?php } ?>
+      </div>
 
     </div><!-- #content .hfeed -->
   </div><!-- #container -->

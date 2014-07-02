@@ -40,9 +40,12 @@
         get_sidebar('single-insert');
 
         // create the navigation below the content
-        thematic_navigation_below();
-
-        ?>
+        if (!has_term( '', 'shows' )) : ?>
+        <div id="nav-below" class="navigation">
+          <div class="nav-previous"><?php thematic_previous_post_link() ?></div>
+          <div class="nav-next"><?php thematic_next_post_link() ?></div>
+        </div>
+        <?php endif; ?>
 
         <div id="comments">
 

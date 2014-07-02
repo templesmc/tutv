@@ -140,13 +140,6 @@ get_header();
 
     </div> <!-- end #shows-wall -->
 
-    <?php
-
-    // create the navigation below the content
-    // thematic_navigation_below();
-
-    ?>
-
   </div><!-- #content .hfeed -->
 
 <?php

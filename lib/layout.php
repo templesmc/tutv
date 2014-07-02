@@ -63,15 +63,6 @@ add_filter('thematic_page_title', 'tutv_taxonomy_pagetitle');
 // Remove default Thematic actions
 function remove_thematic_actions() {
   remove_action('thematic_navigation_above', 'thematic_nav_above', 2);
-
-  /**
-   * Remove `#nav-below` from show episode posts.
-   *
-   * Added by Chris Montgomery <@montchr> 2013-10-11 10:52:06
-   */
-  if (has_term( '', 'shows' )) {
-    remove_action('thematic_navigation_below', 'thematic_nav_below', 2);
-  }
 }
 add_action('template_redirect','remove_thematic_actions');
 
