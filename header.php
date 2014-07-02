@@ -20,18 +20,11 @@
   <!--[if IE]>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
   <![endif]-->
-<?php
 
-// Creating the doc title
-//tutv_doctitle();
+  <?php wp_head(); ?>
 
-// Creating the internal RSS links
-thematic_show_rss();
-
-// Calling WordPress' header action hook
-wp_head();
-
-?>
+  <!-- rss link -->
+  <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
 
   <!--[if (gte IE 6)&(lte IE 8)]>
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/vendor/selectivizr.min.js"></script>
