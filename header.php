@@ -50,7 +50,7 @@
 
 </head>
 
-<body class="<?php body_class() ?>">
+<body <?php body_class() ?>>
 
 <div id="wrapper" class="hfeed clearfix">
 
