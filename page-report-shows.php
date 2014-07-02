@@ -13,19 +13,19 @@ header("Expires: 0");
 
 ?>
 "Show","Slug","Genre","Type","Description"
-<?php	
-	$myterms = get_terms('shows');
-	if ($myterms) {
-		foreach($myterms as $term) {
-		$name = $term->name;
-		$slug = $term->slug;
-		$desc = $term->description;
-		$genre = get_term_meta( $term->term_id, 'genre', true );
-		$production_type = get_term_meta( $term->term_id, 'production_type', true );
+<?php
+  $myterms = get_terms('shows');
+  if ($myterms) {
+    foreach($myterms as $term) {
+    $name = $term->name;
+    $slug = $term->slug;
+    $desc = $term->description;
+    $genre = get_term_meta( $term->term_id, 'genre', true );
+    $production_type = get_term_meta( $term->term_id, 'production_type', true );
 
-		echo "\"$name\",\"$slug\",\"$genre\",\"$production_type\",\"$desc\"\n";
-		}
-	}
+    echo "\"$name\",\"$slug\",\"$genre\",\"$production_type\",\"$desc\"\n";
+    }
+  }
 
 
 ?>

@@ -14,153 +14,153 @@ the .shows-page-grid class can be safely changed to .shows-page, despite .shows-
 */
 .page-template-page-shows-grid-php {
 
-	#content.shows-page-grid {
+  #content.shows-page-grid {
 
-		/* genre box colors */
-		.genre-cooking        { @include multiStateBackground( $genreCooking, $genreCookingHighlight ); }
-		.genre-documentary    { @include multiStateBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
-		.genre-educational    { @include multiStateBackground( $genreEducational, $genreEducationalHighlight ); }
-		.genre-entertainment  { @include multiStateBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
-		.genre-fitness        { @include multiStateBackground( $genreFitness, $genreFitnessHighlight ); }
-		.genre-gardening      { @include multiStateBackground( $genreGardening, $genreGardeningHighlight ); }
-		.genre-interviews     { @include multiStateBackground( $genreInterviews, $genreInterviewsHighlight ); }
-		.genre-music          { @include multiStateBackground( $genreMusic, $genreMusicHighlight ); }
-		.genre-news           { @include multiStateBackground( $genreNews, $genreNewsHighlight ); }
-		.genre-specials       { @include multiStateBackground( $genreSpecials, $genreSpecialsHighlight ); }
-		.genre-sports         { @include multiStateBackground( $genreSports, $genreSportsHighlight ); }
+    /* genre box colors */
+    .genre-cooking        { @include multiStateBackground( $genreCooking, $genreCookingHighlight ); }
+    .genre-documentary    { @include multiStateBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
+    .genre-educational    { @include multiStateBackground( $genreEducational, $genreEducationalHighlight ); }
+    .genre-entertainment  { @include multiStateBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
+    .genre-fitness        { @include multiStateBackground( $genreFitness, $genreFitnessHighlight ); }
+    .genre-gardening      { @include multiStateBackground( $genreGardening, $genreGardeningHighlight ); }
+    .genre-interviews     { @include multiStateBackground( $genreInterviews, $genreInterviewsHighlight ); }
+    .genre-music          { @include multiStateBackground( $genreMusic, $genreMusicHighlight ); }
+    .genre-news           { @include multiStateBackground( $genreNews, $genreNewsHighlight ); }
+    .genre-specials       { @include multiStateBackground( $genreSpecials, $genreSpecialsHighlight ); }
+    .genre-sports         { @include multiStateBackground( $genreSports, $genreSportsHighlight ); }
 
-		#filtering-nav-container {
+    #filtering-nav-container {
 
-			#production-type-filters {
-			margin-right: 9px; /* to compensate for the 1px border */
-			}
+      #production-type-filters {
+      margin-right: 9px; /* to compensate for the 1px border */
+      }
 
-			#genre-filters {
-			margin-left: 9px; /* to compensate for the 1px border */
+      #genre-filters {
+      margin-left: 9px; /* to compensate for the 1px border */
 
-			} /* end #genre-filters */
+      } /* end #genre-filters */
 
-			.filtering-nav {
-			padding: 1em;
-			}
+      .filtering-nav {
+      padding: 1em;
+      }
 
-			h2 {
-			@extend .h5;
-			color: $info-color;
-			}
+      h2 {
+      @extend .h5;
+      color: $info-color;
+      }
 
-			ul {
-			list-style: none;
-			margin: 0;
+      ul {
+      list-style: none;
+      margin: 0;
 
-				li {
-				list-style: none;
-				display: inline-block;
-				margin: 0.25em;
+        li {
+        list-style: none;
+        display: inline-block;
+        margin: 0.25em;
 
-					a {
-					text-decoration: none;
-					//color: $info-color;
+          a {
+          text-decoration: none;
+          //color: $info-color;
 
-						/* override button styles for all genre buttons */
-						&.btn-genre,
-						&.btn.all,
-						&.btn-production-type {
-						@include border-radius(2px);
-						}
+            /* override button styles for all genre buttons */
+            &.btn-genre,
+            &.btn.all,
+            &.btn-production-type {
+            @include border-radius(2px);
+            }
 
-						&.btn.all {
-						color: $white;
-						}
+            &.btn.all {
+            color: $white;
+            }
 
-						&.btn-genre {
-						color: $info-color;
-						@include box-shadow(none);
-						border: none;
+            &.btn-genre {
+            color: $info-color;
+            @include box-shadow(none);
+            border: none;
 
-							&.active,
-							&:active {
-								@include box-shadow(none);
-							}
+              &.active,
+              &:active {
+                @include box-shadow(none);
+              }
 
-							&:hover,
-							&:focus {
-								background-position: 0;
-							}
-						}
+              &:hover,
+              &:focus {
+                background-position: 0;
+              }
+            }
 
-						&.btn-production-type {
-						color: $info-color;
-						}
+            &.btn-production-type {
+            color: $info-color;
+            }
 
 
-					} /* end a */
-				} /* end li */
-			} /* end ul */
-		} /* end #filtering-nav-container */
+          } /* end a */
+        } /* end li */
+      } /* end ul */
+    } /* end #filtering-nav-container */
 
-		.hentry.shows-page-item {
-		padding: 1em;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-bottom: 0.5em;
-		min-height: 230px;
+    .hentry.shows-page-item {
+    padding: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0.5em;
+    min-height: 230px;
 
-			.entry-header {
-				h2.entry-title {
+      .entry-header {
+        h2.entry-title {
 
-					a {
-					color: black;
+          a {
+          color: black;
 
-						&:visited {
-						color: black;
-						}
+            &:visited {
+            color: black;
+            }
 
-						&:hover,
-						&:active {
-						color: $link-hover;
-						}
-					}
-				} /* end .entry-title */
-			} /* end .entry-header */
+            &:hover,
+            &:active {
+            color: $link-hover;
+            }
+          }
+        } /* end .entry-title */
+      } /* end .entry-header */
 
-			.entry-content {
+      .entry-content {
 
-				.thumbnail {
-				margin-right: 1em;
+        .thumbnail {
+        margin-right: 1em;
 
-					a {
-						display: inline-block;
-					}
+          a {
+            display: inline-block;
+          }
 
-					img {
-						display: inline-block;
-						width: auto;
-						margin-bottom: 0;
-					}
-				}
+          img {
+            display: inline-block;
+            width: auto;
+            margin-bottom: 0;
+          }
+        }
 
-				.description {
+        .description {
 
-					p {
+          p {
 
-					}
-				}
-			} /* end .shows-page-show */
-		} /* end .hentry.shows-page-item */
-	} /* end .shows-page-grid */
+          }
+        }
+      } /* end .shows-page-show */
+    } /* end .hentry.shows-page-item */
+  } /* end .shows-page-grid */
 } /* end .page.slug-shows */
 
 
 /**** Isotope filtering ****/
 
 .isotope-item {
-	z-index: 2;
+  z-index: 2;
 }
 
 .isotope-hidden.isotope-item {
-	pointer-events: none;
-	z-index: 1;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .isotope,

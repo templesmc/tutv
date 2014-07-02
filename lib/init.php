@@ -21,29 +21,29 @@ add_editor_style();
  * Used with order_production_types(), tutv_edit_shows_meta(), and page-shows.php
  */
 $production_types = array(
-	'' => array(
-		'name' => 'Select a Production Type',
-		'order' => 0,
-		'slug' => ''
-	),
-	'original' => array(
-		'name' => 'Original Productions',
-		'order' => 1,
-		'slug' => 'tutv-original'
-	),
-	'independent' => array(
-		'name' => 'Independent Content',
-		'order' => 2,
-		'slug' => 'independent'
-	),
-	'university' => array(
-		'name' => 'University Events',
-		'order' => 3,
-		'slug' => 'university-events'
-	),
-	'syndicated' => array(
-		'name' => 'Syndicated',
-		'order' => 4,
-		'slug' => 'syndicated'
-	)
+  '' => array(
+    'name' => 'Select a Production Type',
+    'order' => 0,
+    'slug' => ''
+  ),
+  'original' => array(
+    'name' => 'Original Productions',
+    'order' => 1,
+    'slug' => 'tutv-original'
+  ),
+  'independent' => array(
+    'name' => 'Independent Content',
+    'order' => 2,
+    'slug' => 'independent'
+  ),
+  'university' => array(
+    'name' => 'University Events',
+    'order' => 3,
+    'slug' => 'university-events'
+  ),
+  'syndicated' => array(
+    'name' => 'Syndicated',
+    'order' => 4,
+    'slug' => 'syndicated'
+  )
 );

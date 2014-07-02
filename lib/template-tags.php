@@ -6,12 +6,12 @@
  * @param int $post_id
  */
 function get_the_excerpt_here( $post_id ) {
-	global $wpdb;
+  global $wpdb;
 
-	$query = "SELECT post_excerpt FROM wp_posts WHERE ID = {$post_id} LIMIT 1";
-	$result = $wpdb->get_results($query, ARRAY_A);
+  $query = "SELECT post_excerpt FROM wp_posts WHERE ID = {$post_id} LIMIT 1";
+  $result = $wpdb->get_results($query, ARRAY_A);
 
-	return $result[0]['post_excerpt'];
+  return $result[0]['post_excerpt'];
 }
 
 /**
@@ -21,7 +21,7 @@ function get_the_excerpt_here( $post_id ) {
  */
 function get_show_link( $show ) {
 
-	return get_term_link( $show, 'shows' );
+  return get_term_link( $show, 'shows' );
 }
 
 /**
@@ -32,63 +32,63 @@ function get_show_link( $show ) {
  */
 function get_show_background( $show ) {
 
-	//filetypes to search for (in order or importance)
-	$filetypes = array('jpg', 'png');
+  //filetypes to search for (in order or importance)
+  $filetypes = array('jpg', 'png');
 
-	//naming template of show backgrounds within the theme folder
-	$path = "/assets/images/show-backgrounds/{$show}.";
+  //naming template of show backgrounds within the theme folder
+  $path = "/assets/images/show-backgrounds/{$show}.";
 
-	$show_background = false;
+  $show_background = false;
 
-	foreach($filetypes as $filetype) {
-		if( file_exists( get_stylesheet_directory() . $path . $filetype ) ) {
-			$show_background = get_stylesheet_directory_uri() . $path . $filetype;
-			break;
-		}
-	}
+  foreach($filetypes as $filetype) {
+    if( file_exists( get_stylesheet_directory() . $path . $filetype ) ) {
+      $show_background = get_stylesheet_directory_uri() . $path . $filetype;
+      break;
+    }
+  }
 
-	return $show_background;
+  return $show_background;
 }
 
 // Return thumbnail image HTML for a given post's show
 function get_posts_show_thumbnail( $post_id, $thumbnail_size = 'thumbnail-square' ) {
-	global $taxonomy_images_plugin;
+  global $taxonomy_images_plugin;
 
-	 if( !isset( $post_id ) ) {
-		return '';
-	}
+   if( !isset( $post_id ) ) {
+    return '';
+  }
 
-	$terms = wp_get_object_terms($post_id, 'shows');
+  $terms = wp_get_object_terms($post_id, 'shows');
 
-	if( !isset($terms[0]) ) {
-		return '';
-	}
+  if( !isset($terms[0]) ) {
+    return '';
+  }
 
-	$term = $terms[0];
+  $term = $terms[0];
 
-	return $taxonomy_images_plugin->get_image_html( $thumbnail_size, $term->term_taxonomy_id );
+  return $taxonomy_images_plugin->get_image_html( $thumbnail_size, $term->term_taxonomy_id );
 }
 
 // Return video thumbnail from featured image or show image
 function get_video_thumbnail( $post_id ) {
 
-	if( !isset( $post_id ) )
-		return '';
+  if( !isset( $post_id ) )
+    return '';
 
-	$content = '';
+  $content = '';
 
-	if( has_post_thumbnail( $post_id ) ) {
-		$content .= get_the_post_thumbnail($post_id, 'thumb-small');
-	} else {
-		$content .= get_posts_show_thumbnail($post_id, 'thumb-small');
-	}
+  if( has_post_thumbnail( $post_id ) ) {
+    $content .= get_the_post_thumbnail($post_id, 'thumb-small');
+  } else {
+    $content .= get_posts_show_thumbnail($post_id, 'thumb-small');
+  }
 
-	return $content;
+  return $content;
  }
 
 // Display video thumbnail from featured image or show image
 function the_video_thumbnail( $post_id ) {
-	echo get_video_thumbnail( $post_id );
+  echo get_video_thumbnail( $post_id );
 }
 
 /**
@@ -98,11 +98,11 @@ function the_video_thumbnail( $post_id ) {
  * @return boolean
  */
 function has_no_show( $term ) {
-	if( $term && $term->slug == '' ) /* originally 'other'. modified 09-21-2011 PWinnick */ {
-		return true;
-	} else {
-		return false;
-	}
+  if( $term && $term->slug == '' ) /* originally 'other'. modified 09-21-2011 PWinnick */ {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -113,31 +113,31 @@ function has_no_show( $term ) {
  */
 function is_hidden_show( $term = '' ) {
 
-	if( isset( $term->slug ) )
-		$term = $term->slug;
+  if( isset( $term->slug ) )
+    $term = $term->slug;
 
-	$hidden_shows = array('other');
+  $hidden_shows = array('other');
 
-	$shows = get_terms('shows');
-	foreach( $shows as $show ) {
-		if ( get_term_meta( $show->term_id, 'is_hidden', true ) )
-			$hidden_shows[] = $show->slug;
-	}
+  $shows = get_terms('shows');
+  foreach( $shows as $show ) {
+    if ( get_term_meta( $show->term_id, 'is_hidden', true ) )
+      $hidden_shows[] = $show->slug;
+  }
 
-	if( $term && in_array( $term, $hidden_shows ) ) {
-		return true;
-	} else {
-		return false;
-	}
+  if( $term && in_array( $term, $hidden_shows ) ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // for a given post_id, get the first show term object
 function get_the_show_term( $post_id ) {
-	$terms = wp_get_object_terms($post_id, 'shows');
-	if ( !is_wp_error($terms) && isset($terms[0]) ) {
-		return $terms[0];
-	}
-	return false;
+  $terms = wp_get_object_terms($post_id, 'shows');
+  if ( !is_wp_error($terms) && isset($terms[0]) ) {
+    return $terms[0];
+  }
+  return false;
 }
 
 /**
@@ -149,15 +149,15 @@ function get_the_show_term( $post_id ) {
  * @return string The show string
  */
 function get_the_show( $post_id, $before = '', $after = ': ' ) {
-	$output = '';
-	$term = get_the_show_term($post_id);
-	if ( !empty($term) ) {
-		if( !has_no_show( $term ) && !is_hidden_show( $term ) ) {
-			$output = $before . $term->name . $after;
-		}
-	}
+  $output = '';
+  $term = get_the_show_term($post_id);
+  if ( !empty($term) ) {
+    if( !has_no_show( $term ) && !is_hidden_show( $term ) ) {
+      $output = $before . $term->name . $after;
+    }
+  }
 
-	return $output;
+  return $output;
 }
 
 /**
@@ -169,8 +169,8 @@ function get_the_show( $post_id, $before = '', $after = ': ' ) {
  * @param int $after Text to display after the show name.
  */
 function the_show( $before = '', $after = ': ' ) {
-	global $post;
-	echo get_the_show( $post->ID, $before, $after );
+  global $post;
+  echo get_the_show( $post->ID, $before, $after );
 }
 
 // Get a post thumbnail
@@ -178,19 +178,19 @@ function the_show( $before = '', $after = ': ' ) {
 // If a post doesn't have a featured thumbnail, get the first image attached to the post
 // Takes attributes $post_ID and optionally String $size: A registered image size
 function get_thumb ( $post_ID, $size = 'thumb-small' ){
-	if ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( $post_ID ) ) {
-		return get_the_post_thumbnail( $post_ID, $size );
-	} else {
-		$thumbargs = array(
-			'post_type' => 'attachment',
-			'numberposts' => 1,
-			'post_status' => null,
-			'post_parent' => $post_ID,
-		);
-		$thumb = get_posts( $thumbargs );
-		if ($thumb)
-			return wp_get_attachment_image( $thumb[0]->ID, $size );
-	}
+  if ( function_exists( 'has_post_thumbnail' ) && has_post_thumbnail( $post_ID ) ) {
+    return get_the_post_thumbnail( $post_ID, $size );
+  } else {
+    $thumbargs = array(
+      'post_type' => 'attachment',
+      'numberposts' => 1,
+      'post_status' => null,
+      'post_parent' => $post_ID,
+    );
+    $thumb = get_posts( $thumbargs );
+    if ($thumb)
+      return wp_get_attachment_image( $thumb[0]->ID, $size );
+  }
 }
 
 /**
@@ -209,41 +209,41 @@ function get_thumb ( $post_ID, $size = 'thumb-small' ){
  */
 
 function get_shows_nav( $args = '' ) {
-	global $wp_query;
+  global $wp_query;
 
-	$current_post_type = get_query_var('post_type');
+  $current_post_type = get_query_var('post_type');
 
-	$defaults = array(
-		'show_notes_page' => ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1,
-		'clip_page' => ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1,
-		'episodes_page' => ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1
-	);
+  $defaults = array(
+    'show_notes_page' => ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1,
+    'clip_page' => ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1,
+    'episodes_page' => ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1
+  );
 
-	$args = wp_parse_args($args, $defaults);
+  $args = wp_parse_args($args, $defaults);
 
-	$post_type_paged = $args[$current_post_type . '_page'];
+  $post_type_paged = $args[$current_post_type . '_page'];
 
-	$max_pages = $wp_query->max_num_pages;
+  $max_pages = $wp_query->max_num_pages;
 
-	echo "<div class='shows_nav archive-navigation navigation' id='$current_post_type" . "_nav'>";
+  echo "<div class='shows_nav archive-navigation navigation' id='$current_post_type" . "_nav'>";
 
-	if( $post_type_paged <= $max_pages && $post_type_paged != 1 ) {
-		$next_args = $args;
-		$next_args[$current_post_type . '_page'] = $post_type_paged - 1;
-		$next_link = '?' . http_build_query($next_args, '', '&amp;') . '#' . $current_post_type;
+  if( $post_type_paged <= $max_pages && $post_type_paged != 1 ) {
+    $next_args = $args;
+    $next_args[$current_post_type . '_page'] = $post_type_paged - 1;
+    $next_link = '?' . http_build_query($next_args, '', '&amp;') . '#' . $current_post_type;
 
-		echo "<div class='nav-next nav-item'><a href='$next_link'> &larr; Newer</a></div>";
-	}
+    echo "<div class='nav-next nav-item'><a href='$next_link'> &larr; Newer</a></div>";
+  }
 
-	if( $post_type_paged < $max_pages ) {
-		$previous_args = $args;
-		$previous_args[$current_post_type . '_page'] = $post_type_paged + 1;
-		$previous_link = '?' . http_build_query($previous_args, '', '&amp;') . '#' . $current_post_type;
+  if( $post_type_paged < $max_pages ) {
+    $previous_args = $args;
+    $previous_args[$current_post_type . '_page'] = $post_type_paged + 1;
+    $previous_link = '?' . http_build_query($previous_args, '', '&amp;') . '#' . $current_post_type;
 
-		echo "<div class='nav-previous nav-item'><a href='$previous_link'>Older &rarr;</a></div>";
-	}
+    echo "<div class='nav-previous nav-item'><a href='$previous_link'>Older &rarr;</a></div>";
+  }
 
-	echo "</div>";
+  echo "</div>";
 }
 /**
  * Echo get_shows_nav()
@@ -251,18 +251,18 @@ function get_shows_nav( $args = '' ) {
  * $args array Custom post type page number values to use in generating the navigation
  */
 function the_shows_nav( $args = '' ) {
-	echo get_shows_nav( $args );
+  echo get_shows_nav( $args );
 }
 
 // For use with usort(), allows ordering terms by a weight property
 function sort_by_weight( $a, $b ) {
-	if(  $a->weight == $b->weight ){ return 0 ; }
-	return ($a->weight < $b->weight) ? -1 : 1;
+  if(  $a->weight == $b->weight ){ return 0 ; }
+  return ($a->weight < $b->weight) ? -1 : 1;
 }
 
 function order_production_types( $a, $b ) {
-	global $production_types;
-	return ($production_types[$a]['order'] > $production_types[$b]['order']) ? true : false;
+  global $production_types;
+  return ($production_types[$a]['order'] > $production_types[$b]['order']) ? true : false;
 }
 
 // Return get_terms(), adding a weight property and sorting by it
@@ -270,16 +270,16 @@ function order_production_types( $a, $b ) {
 // Used on page-shows-grid.php
 function get_weighted_terms( $taxonomy ) {
 
-	$terms = get_terms( $taxonomy );
-	foreach( $terms as $term ) {
-		$term_weight = (int) get_term_meta( $term->term_id, 'weight', true );
-		$term->weight = ($term_weight) ? $term_weight : 0;
-	}
-	usort($terms, 'sort_by_weight');
+  $terms = get_terms( $taxonomy );
+  foreach( $terms as $term ) {
+    $term_weight = (int) get_term_meta( $term->term_id, 'weight', true );
+    $term->weight = ($term_weight) ? $term_weight : 0;
+  }
+  usort($terms, 'sort_by_weight');
 
-	//$terms = wp_cache_set( $cache_key, $terms, 'weighted_terms', 86400 ); // one day
+  //$terms = wp_cache_set( $cache_key, $terms, 'weighted_terms', 86400 ); // one day
 
-	return $terms;
+  return $terms;
 }
 
 /**
@@ -287,8 +287,8 @@ function get_weighted_terms( $taxonomy ) {
  *
  */
 function get_class_odd_or_even( $num ) {
-	$output = ($num%2) ? ' item-odd' : ' item-even';
-	return $output;
+  $output = ($num%2) ? ' item-odd' : ' item-even';
+  return $output;
 }
 
 /**
@@ -296,7 +296,7 @@ function get_class_odd_or_even( $num ) {
  *
  */
 function class_odd_or_even( $num ) {
-	echo ($num%2) ? ' item-odd' : ' item-even';
+  echo ($num%2) ? ' item-odd' : ' item-even';
 }
 
 /**
@@ -311,37 +311,37 @@ function class_odd_or_even( $num ) {
 * @return boolean
 */
 function tutv_is_subpage( $page = null ) {
-	global $post;
-	// is this even a page?
-	if ( ! is_page() )
-		return false;
-	// does it have a parent?
-	if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
-		return false;
-	// is there something to check against?
-	if ( ! isset( $page ) ) {
-		// yup this is a sub-page
-		return true;
-	} else {
-		// if $page is an integer then its a simple check
-		if ( is_int( $page ) ) {
-			// check
-			if ( $post->post_parent == $page )
-				return true;
-		} else if ( is_string( $page ) ) {
-			// get ancestors
-			$parent = get_ancestors( $post->ID, 'page' );
-			// does it have ancestors?
-			if ( empty( $parent ) )
-				return false;
-			// get the first ancestor
-			$parent = get_post( $parent[0] );
-			// compare the post_name
-			if ( $parent->post_name == $page )
-				return true;
-		}
-		return false;
-	}
+  global $post;
+  // is this even a page?
+  if ( ! is_page() )
+    return false;
+  // does it have a parent?
+  if ( ! isset( $post->post_parent ) OR $post->post_parent <= 0 )
+    return false;
+  // is there something to check against?
+  if ( ! isset( $page ) ) {
+    // yup this is a sub-page
+    return true;
+  } else {
+    // if $page is an integer then its a simple check
+    if ( is_int( $page ) ) {
+      // check
+      if ( $post->post_parent == $page )
+        return true;
+    } else if ( is_string( $page ) ) {
+      // get ancestors
+      $parent = get_ancestors( $post->ID, 'page' );
+      // does it have ancestors?
+      if ( empty( $parent ) )
+        return false;
+      // get the first ancestor
+      $parent = get_post( $parent[0] );
+      // compare the post_name
+      if ( $parent->post_name == $page )
+        return true;
+    }
+    return false;
+  }
 }
 
 /**
@@ -354,16 +354,16 @@ function tutv_is_subpage( $page = null ) {
 * @return str
 */
 function tutv_get_parent_title( $page = null ) {
-	global $post;
+  global $post;
 
-	if ( ! $page ) {
-		$page = $post->ID;
-	}
+  if ( ! $page ) {
+    $page = $post->ID;
+  }
 
 
-	if ( empty( $post->post_parent ) ) { // if there is no parent...
-		return get_the_title( $post->ID ); // return the current page's title
-	} else { // if there is a parent...
-		return get_the_title( $post->post_parent ); // return the parent's title
-	}
+  if ( empty( $post->post_parent ) ) { // if there is no parent...
+    return get_the_title( $post->ID ); // return the current page's title
+  } else { // if there is a parent...
+    return get_the_title( $post->post_parent ); // return the parent's title
+  }
 }
