@@ -265,11 +265,14 @@ Template Name: Schedule Page
 
             $terms = wp_get_object_terms($post->ID, 'shows');
             $term = $terms[0];
+
+            $post_classes = array(
+              class_odd_or_even( $schedule_index++ ),
+              'show' . $term->slug
+            );
             ?>
 
-
-
-            <div id="post-<?php the_ID() ?>" class="<?php thematic_post_class(); class_odd_or_even( $schedule_index++ ); echo ' show-' . $term->slug; ?>">
+            <div id="post-<?php the_ID() ?>" <?php post_class($post_classes); ?>">
 
               <div class="scheduled-time"><?php echo $formatted_time; ?></div>
 

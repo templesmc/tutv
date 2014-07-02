@@ -30,7 +30,7 @@
 
       <div class="entry-main block grid_8 clearfix">
 
-        <div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
+        <div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 
             <div class="entry-content clearfix">
 

@@ -30,7 +30,7 @@ Template Name: Vimeo slideshow
 
       ?>
 
-      <div id="post-<?php the_ID(); ?>" class="<?php thematic_post_class() ?>">
+      <div id="post-<?php the_ID(); ?>" <?php post_class() ?>>
 
         <?php
 

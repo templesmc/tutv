@@ -51,9 +51,16 @@ get_header();
         // this is the second part of the operation that determines first or last class based on column divisions. see above.
         $k = $style_classes[$style_index++ % $styles_count];
 
+        $post_classes = array(
+          'block',
+          'grid_4',
+          'clearfix',
+          $k
+        );
+
         ?>
 
-        <div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix <?php echo $k ?>">
+        <div id="post-<?php the_ID() ?>" <?php post_class($post_classes) ?>>
 
           <div class="entry-header">
 
@@ -164,9 +171,18 @@ Disabled feature. Post type is still active but not used since 2011.
         while ( have_posts() ) : the_post();
 
         // this is the second part of the operation that determines first or last class based on column divisions. see above.
-        $k = $style_classes[$style_index++ % $styles_count]; ?>
+        $k = $style_classes[$style_index++ % $styles_count];
 
-        <div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix <?php echo $k ?>">
+        $post_classes = array(
+          'block',
+          'grid_3',
+          'clearfix',
+          $k
+        );
+
+        ?>
+
+        <div id="post-<?php the_ID() ?>" <?php post_class($post_classes); ?>>
 
           <div class="thumbnail">
             <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
