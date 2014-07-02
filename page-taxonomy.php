@@ -8,9 +8,6 @@ Template Name: Taxonomy Page ('taxonomy' custom field)
   // calling the header.php
   get_header();
 
-  // action hook for placing content above #container
-  thematic_abovecontainer();
-
 ?>
 
   <div id="container">

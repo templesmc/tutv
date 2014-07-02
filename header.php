@@ -77,6 +77,4 @@
 
   <div id="main" class="clearfix">
 
-    <?php thematic_abovecontainer(); ?>
-
     <div id="container" class="container_12 clearfix">
