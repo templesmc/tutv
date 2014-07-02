@@ -50,15 +50,7 @@
 
 </head>
 
-<?php
-
-if (apply_filters('thematic_show_bodyclass',TRUE)) {
-  // Creating the body class
-  ?>
-
 <body class="<?php thematic_body_class() ?>">
-
-<?php } ?>
 
 <div id="wrapper" class="hfeed clearfix">
 
