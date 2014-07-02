@@ -75,13 +75,6 @@
 
   </div><!-- #header-->
 
-  <?php
-
-  // action hook for placing content below the theme header
-  thematic_belowheader();
-
-  ?>
-
   <div id="main" class="clearfix">
 
     <?php thematic_abovecontainer(); ?>
