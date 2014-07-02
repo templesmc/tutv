@@ -58,12 +58,18 @@
 
     <div id="header-inner" class="container_12 clearfix">
 
-      <?php
+      <div id="branding">
+        <div id="blog-title"><span><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></span></div>
+      </div>
 
-      // action hook creating the theme header
-      thematic_header();
+      <div class="header-search">
+        <?php get_search_form(); ?>
+      </div>
 
-      ?>
+      <div id="access">
+        <div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
+        <?php wp_nav_menu('menu=header&sort_column=menu_order&container_class=menu&menu_class=sf-menu') ?>
+      </div><!-- #access -->
 
     </div> <!-- end #header-inner -->
 

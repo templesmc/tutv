@@ -62,7 +62,6 @@ add_filter('thematic_page_title', 'tutv_taxonomy_pagetitle');
 
 // Remove default Thematic actions
 function remove_thematic_actions() {
-  remove_action('thematic_header','thematic_access',9);
   remove_action('thematic_navigation_above', 'thematic_nav_above', 2);
 
   /**
@@ -75,17 +74,6 @@ function remove_thematic_actions() {
   }
 }
 add_action('template_redirect','remove_thematic_actions');
-
-// Replace thematic access menu with a wordpress menu area named 'header'
-function tutv_access() {
-  ?>
-    <div id="access">
-      <div class="skip-link"><a href="#content" title="<?php _e('Skip navigation to the content', 'thematic'); ?>"><?php _e('Skip to content', 'thematic'); ?></a></div>
-      <?php wp_nav_menu('menu=header&sort_column=menu_order&container_class=menu&menu_class=sf-menu') ?>
-    </div><!-- #access -->
-  <?php
-}
-add_action('thematic_header','tutv_access',9);
 
 // Add sub-page navigation to pages
 function tutv_page_submenus( $content ) {
@@ -321,19 +309,6 @@ function childtheme_footer($thm_footertext) {
   return $thm_footertext;
 }
 add_filter('thematic_footertext','childtheme_footer');
-
-/**
- * Add search box to header via thematic_header hook.
- *
- * @author Chris Montgomery <mont.chr@gmail.com>
- *
- */
-function tutv_header_search() {
-  echo '<div class="header-search">';
-    get_search_form();
-  echo '</div> <!-- end .header-search -->';
-}
-add_action('thematic_header', 'tutv_header_search', 8);
 
 /**
  * Add social media icons and search box to footer via thematic_footer hook.
