@@ -23,11 +23,7 @@
 <?php
 
 // Creating the doc title
-//thematic_doctitle();
 //tutv_doctitle();
-
-// Creating the description
-thematic_show_description();
 
 // Loading the stylesheet
 //thematic_create_stylesheet();
