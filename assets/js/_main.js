@@ -65,7 +65,7 @@ var TUTV = {
     }
   },
   // About us page, note the change from about-us to about_us.
-  slug_shows: {
+  shows: {
     init: function() {
       var $wall = $('.wall') ;
 
@@ -78,7 +78,7 @@ var TUTV = {
       });
     }
   },
-  slug_watch_live: {
+  watch_live: {
     init: function() {
 
       $("#schedule-block .hentry").mouseover( function(){

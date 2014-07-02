@@ -43,7 +43,7 @@ function tutv_scripts_and_styles() {
   // Modernizr
   wp_register_script('modernizr', get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr.min.js', array(), null, false);
   // Main scripts
-  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.26ec9c40.min.js', array('jquery'), null, true);
+  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.0f9b7907.min.js', array('jquery'), null, true);
   // Front page scripts
   wp_register_script('tutv-scripts-front-page', get_stylesheet_directory_uri() . '/assets/js/front-page.c67e80f9.min.js', array('jquery', 'tutv-scripts'), null, true);
   // Shows page scripts
