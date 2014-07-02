@@ -465,6 +465,4 @@ Template Name: Front Page
 
     </div><!-- #content -->
 
-<?php //thematic_sidebar(); ?>
-
 <?php get_footer(); ?>

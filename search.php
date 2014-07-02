@@ -52,9 +52,6 @@
 
 <?php
 
-  // calling the standard sidebar
-  //thematic_sidebar();
-
   // calling footer.php
   get_footer();
 

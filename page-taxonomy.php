@@ -73,7 +73,7 @@ Template Name: Taxonomy Page ('taxonomy' custom field)
   thematic_belowcontainer();
 
   // calling the standard sidebar
-  thematic_sidebar();
+  get_sidebar();
 
   // calling footer.php
   get_footer();

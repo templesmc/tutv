@@ -67,8 +67,7 @@
   // action hook for placing content below #container
   thematic_belowcontainer();
 
-  // calling the standard sidebar
-  thematic_sidebar();
+  get_sidebar();
 
   // calling footer.php
   get_footer();
