@@ -25,9 +25,6 @@
 // Creating the doc title
 //tutv_doctitle();
 
-// Loading the stylesheet
-//thematic_create_stylesheet();
-
 // Creating the internal RSS links
 thematic_show_rss();
 
