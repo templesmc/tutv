@@ -1,0 +1,420 @@
+/******************************************************************
+Site Name: Temple TV
+Author: Chris Montgomery
+
+Stylesheet: Mixins & Constants Stylesheet
+
+******************************************************************/
+
+@import "typography";
+
+/*********************
+CLEARFIXIN'
+*********************/
+
+// Contain floats: nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}
+
+/*********************
+TOOLS
+*********************/
+
+// BORDER-BOX ALL THE THINGS! (http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+/* Everyone's favorite red.
+The red of the blood of Temple students. */
+$tu-cherry:     #9e1b34;
+
+/*
+Descriptive Variables
+*/
+$white:       #ffffff;
+$black:       #000000;
+
+/* Accent Colors */
+$blue:                  #0176b7;
+$dark-blue:             #0064cd;
+$light-blue:            #42abe8;
+$teal:                  #00b3a0;
+$green:                 #46a546; // from bootstrap
+$red:                   #9d261d; // from bootstrap
+$yellow:                #ffc40d; // from bootstrap
+$orange:                #f89406; // from bootstrap
+$pink:                  #c3325f; // from bootstrap
+$purple:                #7a43b6; // from bootstrap
+
+/* Grays */
+$gray20:                hsl(0, 0%, 20%);
+$gray40:                hsl(0, 0%, 40%);
+$gray70:                hsl(0, 0%, 70%);
+$gray88:                hsl(0, 0%, 88%);
+$gray93:                hsl(0, 0%, 93%);
+
+/* Pastel Colors */
+$lemonChiffon:          rgb(255, 247, 189);
+$paleTurquoise:         rgb(169, 226, 248);
+$dishwasherBlue:        rgb(59, 240, 235);
+$wispyBlue:             rgb(191, 255, 249);
+$paleGoldenrod:         rgb(216, 241, 184);
+$seaGreen:              rgb(53, 206, 120);
+$lightGreen:            rgb(124, 236, 174);
+$darkSeaGreen:          rgb(131, 206, 161);
+$turquoise:             rgb(60, 254, 200);
+$sponge:                rgb(179, 241, 130);
+$lightSkyBlue:          rgb(191, 255, 249);
+
+
+
+/*
+Functional Variables
+*/
+
+$body-color:    $gray20; /* Used for body content text */
+$info-color:    $black; /* Used for non-content text */
+$header-color:    $teal; /* Used for several types of header elements */
+
+$masthead-text-background: $gray93;
+$border-color: $gray88;
+
+/* Link Colors */
+$link-color:    $blue;
+$link-hover:    $tu-cherry;
+
+/* Buttons */
+$button:        $light-blue;
+$watch-live-button:   $tu-cherry;
+$about-button:      $light-blue;
+$submit-button:     $teal;
+$blog-button:     $gray40;
+
+/* Rows & Highlights */
+$row-even:        $gray93;
+$row-odd:       $white;
+$highlight:       lighten($light-blue, 35%);
+
+/* The Shows Colors */
+$genreLightenAmount: 5%;
+
+$genreCooking:                         $lemonChiffon;
+$genreCookingHighlight:                lighten($lemonChiffon, $genreLightenAmount);
+
+$genreDocumentary:                     $paleTurquoise;
+$genreDocumentaryHighlight:            lighten($paleTurquoise, $genreLightenAmount);
+
+$genreEducational:                     $dishwasherBlue;
+$genreEducationalHighlight:            lighten($dishwasherBlue, $genreLightenAmount);
+
+$genreEntertainment:                   $wispyBlue;
+$genreEntertainmentHighlight:          lighten($wispyBlue, $genreLightenAmount);
+
+$genreFitness:                         $paleGoldenrod;
+$genreFitnessHighlight:                lighten($paleGoldenrod, $genreLightenAmount);
+
+$genreGardening:                       $seaGreen;
+$genreGardeningHighlight:              lighten($seaGreen, $genreLightenAmount);
+
+$genreInterviews:                      $lightGreen;
+$genreInterviewsHighlight:             lighten($lightGreen, $genreLightenAmount);
+
+$genreMusic:                           $darkSeaGreen;
+$genreMusicHighlight:                  lighten($darkSeaGreen, $genreLightenAmount);
+
+$genreNews:                            $turquoise;
+$genreNewsHighlight:                   lighten($turquoise, $genreLightenAmount);
+
+$genreSpecials:                        $sponge;
+$genreSpecialsHighlight:               lighten($sponge, $genreLightenAmount);
+
+$genreSports:                          $lightSkyBlue;
+$genreSportsHighlight:                 lighten($lightSkyBlue, $genreLightenAmount);
+
+/* Even/Odd Child Row Colors
+Must be included for on the element you want to alternate,
+as this uses child selectors to do stuff. */
+@mixin rowColors($odd: $row-odd, $even: $row-even) {
+  &:nth-child(odd) {
+    background-color: $odd;
+  }
+
+  &:nth-child(even) {
+    background-color: $even;
+  }
+}
+
+@mixin multiStateBackground($normalColor, $hoverColor, $textColor: #000) {
+  background-color: $normalColor;
+  color: $textColor;
+
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+      background-color: $hoverColor;
+  }
+}
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          11px 19px !default; // 44px
+$paddingSmall:          2px 10px !default;  // 26px
+$paddingMini:           0px 6px !default;   // 22px
+
+$baseBorderRadius:      4px !default;
+$borderRadiusLarge:     6px !default;
+$borderRadiusSmall:     3px !default;
+
+// IE7 likes to collapse whitespace on either side of the inline-block elements.
+// Ems because we're attempting to match the width of a space character. Left
+// version is for form buttons, which typically come after other elements, and
+// right version is for icons, which come before. Applying both is ok, but it will
+// mean that space between those elements will be .6em (~2 space characters) in IE7,
+// instead of the 1 space in other browsers.
+@mixin ie7-restore-left-whitespace() {
+  *margin-left: .3em;
+
+  &:first-child {
+    *margin-left: 0;
+  }
+}
+
+
+/*********************
+TRANISTION
+*********************/
+
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit", "-moz", "-ms",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+/*******************
+ * ANIMATION
+ *******************/
+
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); } 50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }
+  50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes pulse {
+    0% { -o-transform: scale(1); }
+  50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/*********************
+BOX SHADOW
+*********************/
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+*********************/
+
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+  background-color: $to;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background-image: -webkit-linear-gradient(top, $from, $to);
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/* Gradient Bar from Bootstrap */
+@mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: $textColor;
+  text-shadow: $textShadow;
+  @include gradient-vertical($primaryColor, $secondaryColor);
+  border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
+}
+
+@mixin gradient-horizontal($startColor: #555, $endColor: #333) {
+  background-color: $endColor;
+  background-image: -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to right, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=1); // IE9 and down
+}
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+  background-color: mix($startColor, $endColor, 60%);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+@mixin gradient-directional($startColor: #555, $endColor: #333, $deg: 45deg) {
+  background-color: $endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient($deg, $startColor, $endColor); // Standard, IE10
+}
+@mixin gradient-vertical-three-colors($startColor: #00b3ee, $midColor: #7a43b6, $colorStop: 50%, $endColor: #c3325f) {
+  background-color: mix($midColor, $endColor, 80%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), color-stop($colorStop, $midColor), to($endColor));
+  background-image: -webkit-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: -moz-linear-gradient(top, $startColor, $midColor $colorStop, $endColor);
+  background-image: -o-linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-image: linear-gradient($startColor, $midColor $colorStop, $endColor);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+@mixin gradient-radial($innerColor: #555, $outerColor: #333)  {
+  background-color: $outerColor;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($innerColor), to($outerColor));
+  background-image: -webkit-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: -moz-radial-gradient(circle, $innerColor, $outerColor);
+  background-image: -o-radial-gradient(circle, $innerColor, $outerColor);
+  background-repeat: no-repeat;
+}
+@mixin gradient-striped($color: #555, $angle: 45deg) {
+  background-color: $color;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+}
+
+// Reset filters for IE
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing:    $type;
+  -ms-box-sizing:     $type;
+  box-sizing:         $type;
+}
+
+
+/*********************
+BORDER RADIUS
+*********************/
+
+@mixin border-radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/*********************
+OPACITY
+*********************/
+
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+/*********************
+BUTTON MIXINS
+*********************/
+
+/* From SASS-Twitter-Bootstrap */
+$btnBackground:                     $white !default;
+$btnBackgroundHighlight:            darken($white, 10%) !default;
+$btnBorder:                         $border-color !default;
+
+$btnPrimaryBackground:              $link-color !default;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 20%) !default;
+
+$btnInfoBackground:                 #5bc0de !default;
+$btnInfoBackgroundHighlight:        #2f96b4 !default;
+
+$btnSuccessBackground:              #62c462 !default;
+$btnSuccessBackgroundHighlight:     #51a351 !default;
+
+$btnWarningBackground:              lighten($orange, 15%) !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               #ee5f5b !default;
+$btnDangerBackgroundHighlight:      #bd362f !default;
+
+$btnInverseBackground:              $gray40 !default;
+$btnInverseBackgroundHighlight:     $gray20 !default;

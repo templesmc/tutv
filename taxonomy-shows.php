@@ -1,199 +1,199 @@
 <?php
-	
+
 //add_action('wp_print_scripts', 'tutv_shows_scripts');
- 
+
 function tutv_shows_scripts() {
 
-	// make sure that scripts are enqueuing properly after changing the location of the default stylesheet - montchr
-	wp_enqueue_script('bbq', get_bloginfo('stylesheet_directory') . '/js/jquery.ba-bbq.min.js', array('jquery'), '1.2.1', false);
-	wp_enqueue_script('show-scripts.js', get_bloginfo('stylesheet_directory') . '/js/show-scripts.js', array('jquery', 'bbq'), '1.0', false);
- 
+  // make sure that scripts are enqueuing properly after changing the location of the default stylesheet - montchr
+  wp_enqueue_script('bbq', get_bloginfo('stylesheet_directory') . '/assets/js/jquery.ba-bbq.min.js', array('jquery'), '1.2.1', false);
+  wp_enqueue_script('show-scripts.js', get_bloginfo('stylesheet_directory') . '/assets/js/show-scripts.js', array('jquery', 'bbq'), '1.0', false);
+
 }
 
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 
 // calling the header.php
 get_header();
 
 ?>
 
-	<div id="content" class="single-show-page taxonomy-shows hfeed">
+  <div id="content" class="single-show-page taxonomy-shows hfeed">
 
-		<div id="page-header" class="block grid_12 clearfix">
+    <div id="page-header" class="block grid_12 clearfix">
 
-			<?php tutv_show_header( true ); ?>
+      <?php tutv_show_header( true ); ?>
 
-		</div> <!-- end #page-header -->
+    </div> <!-- end #page-header -->
 
-		<?php 
+    <?php
 
-		// set class to alpha/omega depending on position in 4 column layout
-		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-		$style_classes = array('alpha', '', 'omega');
-		$styles_count = count($style_classes);
-		$style_index = 0;
-		
-		global $query_string;
-		
-		/* EPISODES PAGING */
-		$episodes_paged = ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1;
-		query_posts($query_string . '&post_type=episodes&posts_per_page=9&paged=' . $episodes_paged);
-		
-		if( have_posts() ) { ?>
+    // set class to alpha/omega depending on position in 4 column layout
+    // http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+    $style_classes = array('alpha', '', 'omega');
+    $styles_count = count($style_classes);
+    $style_index = 0;
 
-			<div id="show-episodes" class="show-block grid_12 clearfix">
+    global $query_string;
 
-				<a name="episodes"></a>
-				<?php 
-				
-				while ( have_posts() ) : the_post();
+    /* EPISODES PAGING */
+    $episodes_paged = ( isset( $_GET['episodes_page'] ) ) ? $_GET['episodes_page'] : 1;
+    query_posts($query_string . '&post_type=episodes&posts_per_page=9&paged=' . $episodes_paged);
 
-				// this is the second part of the operation that determines first or last class based on column divisions. see above.
-				$k = $style_classes[$style_index++ % $styles_count];
+    if( have_posts() ) { ?>
 
-				?>
+      <div id="show-episodes" class="show-block grid_12 clearfix">
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix <?php echo $k ?>">
+        <a name="episodes"></a>
+        <?php
 
-					<div class="entry-header">
-						
-						<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+        while ( have_posts() ) : the_post();
 
-						<?php echo thematic_postheader_postmeta(); ?>
+        // this is the second part of the operation that determines first or last class based on column divisions. see above.
+        $k = $style_classes[$style_index++ % $styles_count];
 
-					</div> <!-- end .entry-header -->
+        ?>
 
-					<div class="thumbnail">
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
-					</div> <!-- end .entry-image -->
+        <div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_4 clearfix <?php echo $k ?>">
 
-					<div class="entry-content">
+          <div class="entry-header">
 
-						<?php
+            <h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-						$args = array(
-							'length'          => 10,
-							'use_words'       => 1,
-							'finish_sentence' => 1,
-							'read_more'       => '&rarr;',
-							'add_link'        => 1
-						);
+            <?php echo thematic_postheader_postmeta(); ?>
 
-						the_advanced_excerpt( $args ); ?>
+          </div> <!-- end .entry-header -->
 
-					</div> <!-- end .entry-content -->
+          <div class="thumbnail">
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
+          </div> <!-- end .entry-image -->
 
-				</div><!-- .post -->
+          <div class="entry-content">
 
-				<?php endwhile;
-				
-			the_shows_nav(); ?>
+            <?php
 
-			</div> <!-- end #show-episodes -->
+            $args = array(
+              'length'      => 10,
+              'use_words'     => 1,
+              'finish_sentence' => 1,
+              'read_more'     => '&rarr;',
+              'add_link'    => 1
+            );
 
-		<?php
-		} // endif have_posts()
-		
-		wp_reset_query();
+            the_advanced_excerpt( $args ); ?>
+
+          </div> <!-- end .entry-content -->
+
+        </div><!-- .post -->
+
+        <?php endwhile;
+
+      the_shows_nav(); ?>
+
+      </div> <!-- end #show-episodes -->
+
+    <?php
+    } // endif have_posts()
+
+    wp_reset_query();
 
 /*
 
 Disabled feature. Post type is still active but not used since 2011.
 -montchr, 2013.04.13
 
-/*		/* SHOW NOTES PAGING */
-/*		$show_notes_paged = ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1;
-/*		query_posts($query_string . '&post_type=show_notes&posts_per_page=3&paged=' . $show_notes_paged);
-/*		
-/*		if( have_posts()) { ?>
+/*    /* SHOW NOTES PAGING */
+/*    $show_notes_paged = ( isset( $_GET['show_notes_page'] ) ) ? $_GET['show_notes_page'] : 1;
+/*    query_posts($query_string . '&post_type=show_notes&posts_per_page=3&paged=' . $show_notes_paged);
 /*
-/*			<div id="show-notes" class="show-block">
+/*    if( have_posts()) { ?>
 /*
-/*				<a name="show-notes"></a>
+/*      <div id="show-notes" class="show-block">
 /*
-/*				<h2 class="section-header">
-/*				<?php the_show(); ?> Blog 
-/*				</h2>
-/*			
-/*			<?php
-/*			// action hook creating the archive loop
-/*			thematic_archiveloop();
-/*			
-/*			the_shows_nav();
-/*			?>
-/*			</div> <!-- end .show-notes -->
+/*        <a name="show-notes"></a>
 /*
-/*		<?php
-/*		} // endif have_posts()
-/*		
-/*		// this could be great!!
+/*        <h2 class="section-header">
+/*        <?php the_show(); ?> Blog
+/*        </h2>
 /*
-/*		/* <div class="upcoming-showtimes">
-/*		<h2 class="page-title">Watch <?php echo $term->name; ?> on TV</h2>
-/*		<p>
-/*		<a href="http://tv.sites.templetv.net/schedule/?show=<?php echo $term->slug; ?>">Find showtimes now.</a>
-/*		</p>
-/*		</div> */
-/*		
-/*		wp_reset_query();
+/*      <?php
+/*      // action hook creating the archive loop
+/*      thematic_archiveloop();
+/*
+/*      the_shows_nav();
+/*      ?>
+/*      </div> <!-- end .show-notes -->
+/*
+/*    <?php
+/*    } // endif have_posts()
+/*
+/*    // this could be great!!
+/*
+/*    /* <div class="upcoming-showtimes">
+/*    <h2 class="page-title">Watch <?php echo $term->name; ?> on TV</h2>
+/*    <p>
+/*    <a href="http://tv.sites.templetv.net/schedule/?show=<?php echo $term->slug; ?>">Find showtimes now.</a>
+/*    </p>
+/*    </div> */
+/*
+/*    wp_reset_query();
 
 */
 
 
-		/* CLIPS PAGING */
+    /* CLIPS PAGING */
 
-		// set class to alpha/omega depending on position in 4 column layout
-		// http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
-		$style_classes = array('alpha', '', '', 'omega');
-		$styles_count = count($style_classes);
-		$style_index = 0;
+    // set class to alpha/omega depending on position in 4 column layout
+    // http://wordpress.org/support/topic/adding-different-styling-every-3rd-post
+    $style_classes = array('alpha', '', '', 'omega');
+    $styles_count = count($style_classes);
+    $style_index = 0;
 
-		$clips_paged = ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1;
-		query_posts($query_string . '&post_type=clip&posts_per_page=4&paged=' . $clips_paged);
-		
-		if( have_posts()) { ?>
+    $clips_paged = ( isset( $_GET['clip_page'] ) ) ? $_GET['clip_page'] : 1;
+    query_posts($query_string . '&post_type=clip&posts_per_page=4&paged=' . $clips_paged);
 
-			<div id="show-clips" class="show-block grid_12 clearfix">
+    if( have_posts()) { ?>
 
-				<a name="clip"></a>
+      <div id="show-clips" class="show-block grid_12 clearfix">
 
-				<h3 class="section-header"><?php the_show(); ?> Clips</h3>
-				
-				<?php 
-				
-				while ( have_posts() ) : the_post();
+        <a name="clip"></a>
 
-				// this is the second part of the operation that determines first or last class based on column divisions. see above.
-				$k = $style_classes[$style_index++ % $styles_count]; ?>
+        <h3 class="section-header"><?php the_show(); ?> Clips</h3>
 
-				<div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix <?php echo $k ?>">
+        <?php
 
-					<div class="thumbnail">
-						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
-					</div> <!-- end .entry-image -->
+        while ( have_posts() ) : the_post();
 
-					<div class="entry-header">
-						<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-						<?php echo thematic_postheader_postmeta(); ?>
-					</div> <!-- end .entry-header -->
+        // this is the second part of the operation that determines first or last class based on column divisions. see above.
+        $k = $style_classes[$style_index++ % $styles_count]; ?>
 
-				</div><!-- .post -->
+        <div id="post-<?php the_ID() ?>" class="<?php thematic_post_class() ?> block grid_3 clearfix <?php echo $k ?>">
 
-				<?php endwhile;
-				
-				the_shows_nav(); ?>
+          <div class="thumbnail">
+            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_video_thumbnail( $post->ID ); ?></a>
+          </div> <!-- end .entry-image -->
 
-			</div> <!-- end .show-clips -->
-		<?php
-		} // endif have_posts
-		
-		wp_reset_query();
-		?>
+          <div class="entry-header">
+            <h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+            <?php echo thematic_postheader_postmeta(); ?>
+          </div> <!-- end .entry-header -->
 
-	</div><!-- #content .hfeed -->
+        </div><!-- .post -->
 
-<?php 
+        <?php endwhile;
 
-	get_footer();
+        the_shows_nav(); ?>
+
+      </div> <!-- end .show-clips -->
+    <?php
+    } // endif have_posts
+
+    wp_reset_query();
+    ?>
+
+  </div><!-- #content .hfeed -->
+
+<?php
+
+  get_footer();
 
 ?>

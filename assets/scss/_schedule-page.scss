@@ -1,0 +1,197 @@
+body.slug-schedule {
+
+  #schedule-controls {
+
+    .today {
+    font-weight: bold;
+    }
+
+    #schedule-nav {
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid $border-color;
+
+      h2 {
+      font-family: $sans-serif;
+      font-size: 16px;
+      }
+
+      li {
+      float: left;
+      margin: 0 5px;
+      }
+
+      a {
+      font-size: 16px;
+      font-weight: 300;
+      float: left;
+      padding: 10px;
+      border: 1px solid $border-color;
+      background: white;
+      background: rgba(255, 255, 255, .6);
+      border-bottom: none;
+      text-decoration: none;
+      }
+
+      .active {
+
+        a {
+        color: #000;
+        z-index: 100;
+        font-weight: 500;
+        position: relative;
+        background: white;
+        padding: 11px 13px;
+        margin-top: -5px;
+        font-size: 18px;
+        margin-bottom: -1px;
+        border-color: $border-color;
+        border-bottom: 1px solid white;
+
+          &:hover {
+          color: #787779;
+          }
+        }
+      }
+    } /* end #schedule-nav */
+  }
+
+  #schedule-section-container.block {
+  border-top: none;
+  padding-top: 1em;
+  padding-bottom: 10em;
+  }
+
+  #schedule-section {
+  padding-left: 1em;
+
+    .hentry {
+    clear: both;
+    float: left;
+    padding:10px;
+    margin-right: 10px;
+    position: relative;
+    min-height: 26px;
+    font-size: 14px;
+    width: 100%;
+    -webkit-transition: background .5s ease;
+       -moz-transition: background .5s ease;
+         -o-transition: background .5s ease;
+            transition: background .5s ease;
+
+        a {
+        color: black;
+        text-decoration: none;
+        }
+
+        /* this is part of the multi-day view */
+      h2.schedule-date {
+      margin-bottom: 0;
+      width: 540px;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 24px;
+      padding:15px 10px;
+      color: #333;
+
+        &:first-child {
+        border-top: none;
+        padding-top: 0;
+        }
+      }
+
+      h3.entry-title,
+      .scheduled-time {
+      line-height: 28px;
+      }
+
+      h3.entry-title {
+      font-family: $sans-serif;
+      font-weight: normal;
+      font-size: 14px;
+      padding: 0;
+      color: black;
+      margin-left: 6em;
+
+        .show-name {
+        font-weight: 700;
+        }
+      }
+
+      .scheduled-time {
+      color: $gray40;
+      position: absolute;
+      }
+
+      .entry-content {
+      position: absolute;
+      top:0;
+      right: -390px;
+      padding: 10px;
+      margin-right: 10px;
+      background: $light-blue;
+      visibility: hidden;
+      opacity:0;
+      -webkit-transition: background .5s ease;
+         -moz-transition: background .5s ease;
+           -o-transition: background .5s ease;
+              transition: background .5s ease;
+
+        p {
+        margin-bottom: 0;
+
+          a {
+          color: black;
+          text-decoration: none;
+
+            &:hover {
+            color: black;
+            }
+          }
+        }
+      } /* end .entry-content */
+
+      .thumbnail {
+        margin: 0 1em 1em 0;
+        float: left;
+
+      }
+
+      &:hover {
+      position: relative;
+      background: $light-blue !important;
+      z-index: 99;
+
+        .scheduled-time {
+        color: $gray88;
+        }
+
+        h3.entry-title {
+          a {
+          color: white;
+
+            &:hover {
+            color: black;
+            }
+          }
+        }
+
+        // Works with the above .entry-content to produce the fade effect upon hover.
+        .entry-content {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        }
+      }
+
+      /* Fix for last couple items extending outside of bottom of container by Andrew Gormley <@darkdriving>
+      http://stackoverflow.com/questions/15869480/list-with-right-positioned-flyout-does-not-stay-within-container */
+      &:nth-last-child(1) > .entry-content { bottom: 0; top: inherit; } /* This is last child */
+      &:nth-last-child(2) > .entry-content { bottom: 0; top: inherit; } /* Second to last */
+      &:nth-last-child(3) > .entry-content { bottom: 0; top: inherit; } /* Third to last, etc */
+    } /* end .hentry */
+  } /* end #schedule-section */
+} /* end body.slug-schedule */

@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+@import "thematic/thematic";
+@import "mixins";
+@import "bootstrap/bootstrap";
+@import "flexslider";
+@import "grid";
+
+@import "general";
+
+@import "modernizr";
+
+@import "home";
+@import "shows-page";
+@import "schedule-page";
+@import "shows-episodes-clips";
+
+@import "schedule-block";
+
+  /*
+  ========================
+  ==FAST FACTS
+  ========================
+  */
+
+  .slug-fast-facts-on-tutv {
+    table.facts {
+    margin: 0;
+    padding: 0;
+    border: none;
+    }
+
+    tr.facts {
+    margin: 0;
+    padding: 0;
+    border: none;
+    }
+  } /* end .slug-fast-facts-on-tutv */
+
+
+
+
+  /*
+  ========================
+  ==STAFF PAGE
+  ========================
+  */
+  .page.slug-staff {
+
+    table.staff {
+    padding: 0px;
+    margin-bottom: 32px;
+    border: 0px solid #ccc;
+    font-size: 13.5px;
+    font-family: $sans-serif;
+    table-layout: fixed;
+
+      tr {
+      border: 0px;
+      padding: 0px;
+      margin: 0px;
+
+        td {
+        vertical-align: top;
+        border: none;
+        padding: 4px 8px 8px 8px;
+        margin: 0px;
+
+          &.section {
+          margin-bottom: 4px 0px 0px 0px;
+          }
+
+          &.status {
+          font-style: italic;
+          color: #aaa;
+          }
+        } /* end td */
+
+        &.section-title {
+
+          td {
+            padding: 0;
+
+            h2 {
+              padding: 1em 0 0.25em;
+            }
+          }
+        }
+      } /* end tr */
+    } /* end table.staff */
+  } /* .page.slug-staff */
+
+
+  /*
+  ========================
+  ==WATCH LIVE PAGE
+  ========================
+  */
+
+  .page.slug-watch-live {
+    padding: 0;
+
+    .entry-content {
+      p {
+        margin: 0;
+      }
+    }
+
+    #schedule-block {
+
+      .block-inner.accordion {
+
+        .schedule-item {
+
+          .entry-info {
+          padding: 0.5em;
+          font-size: 14px;
+          }
+
+            .scheduled-time {
+              font-size: 14px;
+            }
+
+            .entry-title {
+              font-size: 14px;
+            } /* end entry-title */
+        } /* end .schedule-item */
+      } /* end .block-inner.accordion */
+    } /* end #schedule-block */
+
+  } /* end watch live page */
+
+
+
+
+
+  /*
+  ========================
+  ==BLOG
+  ========================
+  */
+
+  .blog {
+
+    .sidebar { margin-top: 0; }
+
+    &.blog-archive {
+
+      .hentry {
+        padding: 2em;
+
+        .entry-header {
+          h1 { text-transform: none; }
+        }
+
+        .entry-meta {
+          font-style: normal;
+
+          .comments-meta {
+            img {
+              padding-right: 0.5em;
+              position: relative;
+              top: 3px;
+            }
+          } /* end .comments-meta */
+
+          .posted-date { color: $gray70; }
+
+        } /* end .entry-meta */
+
+        .entry-content {
+
+          img {
+            text-align: center;
+            border: 1px solid $border-color;
+            padding: 0.5em;
+            max-width: 100%;
+          }
+
+          a {
+            font-weight: 700;
+          }
+        } /* end .entry-content */
+      } /* ent .hentry */
+
+    } /* end blog archive */
+
+    &.single.blog-post {
+
+      #content {
+        margin-top: 1.5em;
+      }
+
+      .hentry,
+      #nav-below,
+      #comments {
+        padding: 2em;
+      }
+    } /* end &.single.blog-post */
+
+    .hentry {
+
+      img {
+        &.wp-post-image {
+        display: block;
+        padding-bottom: 22px;
+        float: left;
+        }
+      }
+    }
+  } /* END .blog */
+
+
+
+
+  /*
+  ========================
+  ==SINGLE POST PAGE
+  ========================
+  */
+
+  .single {
+
+    .hentry,
+    #nav-below,
+    #comments {
+      padding: 1em;
+    }
+
+    #nav-below {
+      margin: 0;
+    }
+
+    .hentry {
+
+      h1.entry-title {
+      @extend .h1;
+      font-weight: 300;
+      text-transform: none;
+      }
+
+      .meta-prep-author,
+      .entry-meta .author,
+      .entry-meta .author a,
+      .entry-meta abbr,
+      .meta-sep-entry-date {
+      display: inline;
+      font-size: inherit;
+      text-transform: none;
+      }
+
+      .entry-meta {
+      display: none;
+      }
+    } /* end .hentry */
+
+    #comments {
+      h3 {
+        font-family: $sans-serif;
+      }
+
+      #sfw-respond form input[type=text],
+      #sfw-respond form textarea {
+        font-family: $sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+      }
+    }
+
+    .sidebar {
+    margin-top: 0;
+    }
+  } /* END .single */                        /* single post page */
+
+
+
+
+  /*
+  ========================
+  ==PAGE
+  ========================
+  */
+
+  .page {
+
+    #page-header {
+      .page-header-menu-container {
+        line-height: 70px;
+      }
+    }
+
+    .entry-main {
+      padding: 2em;
+
+      .hentry {
+        .entry-content {
+          padding: 0;
+
+          h2 {
+            @extend .h3;
+            font-weight: 400;
+            color: $gray20;
+          }
+
+          a {
+            font-weight: 700;
+          }
+        } /* end .entry-content */
+      } /*  end .hentry */
+    } /* end .entry-main */
+
+    .entry-content {
+      h2 {
+
+      }
+    }
+
+    .sidebar {
+      margin-top: 0;
+    }
+
+    #page-list {
+    list-style: none;
+    margin-left: 0;
+
+      h1 {
+      font-size: 18px;
+      padding-bottom: 18px;
+
+        a {
+        color: #000;
+        text-decoration: none;
+        }
+      }
+
+      .wp-post-image {
+      float: left;
+      margin-right: 10px;
+      }
+    } /* end #page-list */
+  } /* end .page */
+
+  /*
+  ========================
+  ==SEARCH PAGE
+  ========================
+  */
+
+  body.search-results {
+
+    #page-header {
+    padding: 1em;
+    }
+
+    h1.archive-title {
+    @extend .h3;
+    padding: 0 1em;
+    text-transform: none;
+
+      span.query-string {
+      font-style: italic;
+      }
+    }
+
+    .hentry {
+    @extend .block;
+    padding: 1em;
+    }
+  } /* end body.search-results */
+
+
+
+/*************
+ * OVERRIDES *
+ *************/
+
+//@import "overrides";

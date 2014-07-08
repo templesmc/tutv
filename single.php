@@ -1,94 +1,94 @@
 <?php
 
-	// calling the header.php
-	get_header();
+  // calling the header.php
+  get_header();
 
 ?>
-		<div id="content" class="clearfix">
+    <div id="content" class="clearfix">
 
-			<?php 
-			
-			the_post();
+      <?php
 
-			if (!is_singular( 'post' )) :
+      the_post();
 
-			?>
+      if (!is_singular( 'post' )) :
 
-				<div id="page-header" class="grid_12 block clearfix">
-				
-					<?php thematic_navigation_above(); ?>
+      ?>
 
-				</div> <!-- end #page-header -->
+        <div id="page-header" class="grid_12 block clearfix">
 
-			<?php
+          <?php thematic_navigation_above(); ?>
 
-			endif;
+        </div> <!-- end #page-header -->
 
-			?>
+      <?php
 
-			<div id="main-content" class="grid_8 block clearfix">
+      endif;
 
-				<?php
+      ?>
 
-				// calling the widget area 'single-top'
-				get_sidebar('single-top');
+      <div id="main-content" class="grid_8 block clearfix">
 
-				// action hook creating the single post
-				thematic_singlepost();
-				
-				// calling the widget area 'single-insert'
-				get_sidebar('single-insert');
+        <?php
 
-				// create the navigation below the content
-				thematic_navigation_below();
+        // calling the widget area 'single-top'
+        get_sidebar('single-top');
 
-				?>
+        // action hook creating the single post
+        thematic_singlepost();
 
-				<div id="comments">
+        // calling the widget area 'single-insert'
+        get_sidebar('single-insert');
 
-					<?php
+        // create the navigation below the content
+        thematic_navigation_below();
 
-					// calling the comments template
-					thematic_comments_template();
+        ?>
 
-					?>
+        <div id="comments">
 
-				</div> <!-- end comments -->
+          <?php
 
-				<?php
+          // calling the comments template
+          thematic_comments_template();
 
-				// calling the widget area 'single-bottom'
-				get_sidebar('single-bottom');
-				
-				?>
+          ?>
 
-			</div> <!-- end #main-content -->
+        </div> <!-- end comments -->
 
-			<div id="sidebar" class="sidebar grid_4 clearfix" role="complementary">
+        <?php
 
-				<?php
+        // calling the widget area 'single-bottom'
+        get_sidebar('single-bottom');
 
-				tutv_sidebar_connect_block();
+        ?>
 
-				tutv_video_sidebar();
+      </div> <!-- end #main-content -->
 
-				if (is_singular( 'post' ) && in_category( 'blog' )) :
+      <div id="sidebar" class="sidebar grid_4 clearfix" role="complementary">
 
-					tutv_sidebar_featured_buttons();
+        <?php
 
-					tutv_sidebar_featured_videos();
+        tutv_sidebar_connect_block();
 
-				endif;
+        tutv_video_sidebar();
 
-				?>
+        if (is_singular( 'post' ) && in_category( 'blog' )) :
 
-			</div> <!-- end #sidebar -->
+          tutv_sidebar_featured_buttons();
 
-		</div><!-- #content -->
+          tutv_sidebar_featured_videos();
+
+        endif;
+
+        ?>
+
+      </div> <!-- end #sidebar -->
+
+    </div><!-- #content -->
 
 <?php
-	
-	// calling footer.php
-	get_footer();
+
+  // calling footer.php
+  get_footer();
 
 ?>

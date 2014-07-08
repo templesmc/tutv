@@ -1,0 +1,202 @@
+/******************************************************************
+Site Name: Temple TV
+Author: Chris Montgomery
+
+Stylesheet: Shows Page Stylesheet
+
+******************************************************************/
+
+/*
+the body class targets the shows page, which uses the grid layout set in the page edit screen. consider changing selector to .slug-shows since no other layout will be used.
+
+the .shows-page-grid class can be safely changed to .shows-page, despite .shows-page being used in the old stylesheet. .shows-page doesn't appear anywhere in this template, and from looking at the code it seems pretty clear that it's not useful.
+
+*/
+.page-template-page-shows-grid-php {
+
+  #content.shows-page-grid {
+
+    /* genre box colors */
+    .genre-cooking        { @include multiStateBackground( $genreCooking, $genreCookingHighlight ); }
+    .genre-documentary    { @include multiStateBackground( $genreDocumentary, $genreDocumentaryHighlight ); }
+    .genre-educational    { @include multiStateBackground( $genreEducational, $genreEducationalHighlight ); }
+    .genre-entertainment  { @include multiStateBackground( $genreEntertainment, $genreEntertainmentHighlight ); }
+    .genre-fitness        { @include multiStateBackground( $genreFitness, $genreFitnessHighlight ); }
+    .genre-gardening      { @include multiStateBackground( $genreGardening, $genreGardeningHighlight ); }
+    .genre-interviews     { @include multiStateBackground( $genreInterviews, $genreInterviewsHighlight ); }
+    .genre-music          { @include multiStateBackground( $genreMusic, $genreMusicHighlight ); }
+    .genre-news           { @include multiStateBackground( $genreNews, $genreNewsHighlight ); }
+    .genre-specials       { @include multiStateBackground( $genreSpecials, $genreSpecialsHighlight ); }
+    .genre-sports         { @include multiStateBackground( $genreSports, $genreSportsHighlight ); }
+
+    #filtering-nav-container {
+
+      #production-type-filters {
+      margin-right: 9px; /* to compensate for the 1px border */
+      }
+
+      #genre-filters {
+      margin-left: 9px; /* to compensate for the 1px border */
+
+      } /* end #genre-filters */
+
+      .filtering-nav {
+      padding: 1em;
+      }
+
+      h2 {
+      @extend .h5;
+      color: $info-color;
+      }
+
+      ul {
+      list-style: none;
+      margin: 0;
+
+        li {
+        list-style: none;
+        display: inline-block;
+        margin: 0.25em;
+
+          a {
+          text-decoration: none;
+          //color: $info-color;
+
+            /* override button styles for all genre buttons */
+            &.btn-genre,
+            &.btn.all,
+            &.btn-production-type {
+            @include border-radius(2px);
+            }
+
+            &.btn.all {
+            color: $white;
+            }
+
+            &.btn-genre {
+            color: $info-color;
+            @include box-shadow(none);
+            border: none;
+
+              &.active,
+              &:active {
+                @include box-shadow(none);
+              }
+
+              &:hover,
+              &:focus {
+                background-position: 0;
+              }
+            }
+
+            &.btn-production-type {
+            color: $info-color;
+            }
+
+
+          } /* end a */
+        } /* end li */
+      } /* end ul */
+    } /* end #filtering-nav-container */
+
+    .hentry.shows-page-item {
+    padding: 1em;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0.5em;
+    min-height: 230px;
+
+      .entry-header {
+        h2.entry-title {
+
+          a {
+          color: black;
+
+            &:visited {
+            color: black;
+            }
+
+            &:hover,
+            &:active {
+            color: $link-hover;
+            }
+          }
+        } /* end .entry-title */
+      } /* end .entry-header */
+
+      .entry-content {
+
+        .thumbnail {
+        margin-right: 1em;
+
+          a {
+            display: inline-block;
+          }
+
+          img {
+            display: inline-block;
+            width: auto;
+            margin-bottom: 0;
+          }
+        }
+
+        .description {
+
+          p {
+
+          }
+        }
+      } /* end .shows-page-show */
+    } /* end .hentry.shows-page-item */
+  } /* end .shows-page-grid */
+} /* end .page.slug-shows */
+
+
+/**** Isotope filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
