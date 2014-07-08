@@ -1,19 +1,19 @@
 {
   "dest": "assets/manifest.json",
   "assets/css/main.min.css": {
-    "path": "assets/css/main.decda255.min.css",
-    "hash": "decda255"
+    "path": "assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css",
+    "hash": "decda25557d7ae587e2c603199c8cf35"
   },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.26ec9c40.min.js",
-    "hash": "26ec9c40"
+    "path": "assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js",
+    "hash": "26ec9c40ab5211d06ca4c95efded55a3"
   },
   "assets/js/front-page.min.js": {
-    "path": "assets/js/front-page.c67e80f9.min.js",
-    "hash": "c67e80f9"
+    "path": "assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js",
+    "hash": "c67e80f98481106a16f02075273c32d2"
   },
   "assets/js/shows-page.min.js": {
-    "path": "assets/js/shows-page.3b47a576.min.js",
-    "hash": "3b47a576"
+    "path": "assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js",
+    "hash": "3b47a576090815c27b51ce5397711614"
   }
 }

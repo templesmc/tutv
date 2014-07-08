@@ -77,10 +77,11 @@ module.exports = function(grunt) {
       }
     },
     version: {
-      assets: {
+      default: {
         options: {
           manifest: 'assets/manifest.json',
-          rename: true
+          rename: true,
+          length: 32
         },
         files: {
           'lib/scripts.php': [
