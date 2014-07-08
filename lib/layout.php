@@ -66,8 +66,10 @@ function remove_thematic_actions() {
 }
 add_action('template_redirect','remove_thematic_actions');
 
-// Add sub-page navigation to pages
-function tutv_page_submenus( $content ) {
+/**
+ * Add sub-page navigation to pages
+ */
+function tutv_page_submenus() {
   global $post;
   $output = '';
 
@@ -107,9 +109,8 @@ function tutv_page_submenus( $content ) {
     $output .= '</div> <!-- end .subpage-menu-container -->';
   }
 
-  return $output . $content;
+  return $output;
 }
-//add_action( 'the_content', 'tutv_page_submenus' );
 
 // Place 'embed' custom field values into the post body
 function  tutv_add_embeds() {

@@ -19,7 +19,18 @@ remove_action('wp_head', 'thematic_head_scripts');
  * 4. /theme/assets/js/main.js    (in footer)
  */
 function tutv_scripts_and_styles() {
-  wp_enqueue_style('tutv-stylesheet', get_stylesheet_directory_uri() . '/assets/css/main.decda255.min.css', false, null);
+  $get_assets = file_get_contents(get_stylesheet_directory() . '/assets/manifest.json');
+  $assets     = json_decode($get_assets, true);
+  $assets     = array(
+    'css'       => '/assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css' . '?' . $assets['assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css']['hash'],
+    'js_main'   => '/assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js' . '?' . $assets['assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js']['hash'],
+    'js_front'  => '/assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js' . '?' . $assets['assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js']['hash'],
+    'js_shows'  => '/assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js' . '?' . $assets['assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js']['hash'],
+    'modernizr' => '/assets/js/vendor/modernizr.min.js',
+    'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+  );
+
+  wp_enqueue_style('tutv-stylesheet', get_stylesheet_directory_uri() . $assets['css'], false, null);
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -43,11 +54,11 @@ function tutv_scripts_and_styles() {
   // Modernizr
   wp_register_script('modernizr', get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr.min.js', array(), null, false);
   // Main scripts
-  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.0f9b7907.min.js', array('jquery'), null, true);
+  wp_register_script('tutv-scripts', get_stylesheet_directory_uri() . $assets['js_main'], array('jquery'), null, true);
   // Front page scripts
-  wp_register_script('tutv-scripts-front-page', get_stylesheet_directory_uri() . '/assets/js/front-page.c67e80f9.min.js', array('jquery', 'tutv-scripts'), null, true);
+  wp_register_script('tutv-scripts-front-page', get_stylesheet_directory_uri() . $assets['js_front'], array('jquery', 'tutv-scripts'), null, true);
   // Shows page scripts
-  wp_register_script('tutv-scripts-shows-page', get_stylesheet_directory_uri() . '/assets/js/shows-page.3b47a576.min.js', array('jquery', 'tutv-scripts'), null, true);
+  wp_register_script('tutv-scripts-shows-page', get_stylesheet_directory_uri() . $assets['js_shows'], array('jquery', 'tutv-scripts'), null, true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

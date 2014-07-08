@@ -89,7 +89,9 @@ Template Name: Front Page
                   echo "<h3 class='headline'>" . $headline . "</h3>";
                 }
 
+                echo '<p>';
                 the_excerpt();
+                echo '</p>';
 
                 if($subheadline) {
                   echo "<div id='subheadline'>" . $subheadline . "</div>";
@@ -169,34 +171,7 @@ Template Name: Front Page
                 </div> <!-- end .entry-header -->
 
                 <div class="entry-content">
-                  <?php
-                  /* If the Advanced Excerpt plugin was updated,
-                  maybe it would be possible to control its output
-                  without having to completely ignore the custom excerpt.
-                  But for now, I will make due with adding a read more link
-                  right here in the template. See below.
-
-                  Just keep in mind that this plugin,
-                  as of this writing (2013.04.10),
-                  the Advanced Excerpt plugin
-                  hasn't been updated since 2011 (v4.1.1).
-                  Be careful of future core WordPress updates. */
-                  $args = array(
-                    'length'      => 20,
-                    'use_words'     => 1,
-                    'finish_word'   => 1,
-                    'finish_sentence' => 1,
-                    'add_link'    => 0,
-                    'ellipsis'    => '',
-                    'no_custom'     => 0,
-                  );
-
-
-                  //the_excerpt();
-                  the_advanced_excerpt($args);
-                  //the_advanced_excerpt();
-                  //the_advanced_excerpt('length=20&use_words=1&finish_word=1&finish_sentence=1&add_link=0&ellipsis=&no_custom=1&allowed_tags=_all');
-                  ?>
+                  <p><?php the_excerpt(); ?></p>
                   <span class="read-more"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">More&nbsp;&rarr;</a></span>
                 </div> <!-- end .entry-content -->
 
