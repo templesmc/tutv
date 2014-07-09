@@ -134,11 +134,12 @@ function tutv_page_submenus() {
 }
 
 // Place 'embed' custom field values into the post body
-function  tutv_add_embeds() {
+function tutv_add_embeds() {
   if ( !is_single() )
     return;
 
   $has_embed = false;
+  $oembed_width = array('width' => 586);
 
   foreach( get_post_meta( get_the_ID(), 'embed' ) as $embed ) {
     if( empty( $embed ) )
@@ -148,7 +149,7 @@ function  tutv_add_embeds() {
 
     ?>
     <div class="embed">
-      <?php echo wp_oembed_get($embed, 'width=586'); ?><br>
+      <?php echo wp_oembed_get($embed, $oembed_width); ?><br>
     </div>
     <?php
 
