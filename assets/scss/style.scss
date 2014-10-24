@@ -259,11 +259,14 @@
         font-family: $sans-serif;
       }
 
-      #sfw-respond form input[type=text],
-      #sfw-respond form textarea {
-        font-family: $sans-serif;
-        font-weight: 300;
-        font-size: 18px;
+      #respond,
+      #sfw-respond {
+        form input[type=text],
+        form textarea {
+          font-family: $sans-serif;
+          font-weight: 300;
+          font-size: 18px;
+        }
       }
     }
 
