@@ -9,7 +9,8 @@ module.exports = function(grunt) {
       all: [
         'Gruntfile.js',
         'assets/js/*.js',
-        '!assets/js/*.min.js'
+        '!assets/js/*.min.js',
+        '!assets/js/_show.js'
       ]
     },
     sass: {
