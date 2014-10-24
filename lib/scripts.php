@@ -19,16 +19,31 @@ remove_action('wp_head', 'thematic_head_scripts');
  * 4. /theme/assets/js/main.js    (in footer)
  */
 function tutv_scripts_and_styles() {
-  $get_assets = file_get_contents(get_stylesheet_directory() . '/assets/manifest.json');
-  $assets     = json_decode($get_assets, true);
-  $assets     = array(
-    'css'       => '/assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css' . '?' . $assets['assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css']['hash'],
-    'js_main'   => '/assets/js/scripts.0f9b790745511c9848f542df032a5a96.min.js' . '?' . $assets['assets/js/scripts.0f9b790745511c9848f542df032a5a96.min.js']['hash'],
-    'js_front'  => '/assets/js/front-page.d67028e9d4778218a58397a443756455.min.js' . '?' . $assets['assets/js/front-page.d67028e9d4778218a58397a443756455.min.js']['hash'],
-    'js_shows'  => '/assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js' . '?' . $assets['assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js']['hash'],
-    'modernizr' => '/assets/js/vendor/modernizr.min.js',
-    'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
-  );
+  /**
+   * The build task in Grunt renames production assets with a hash
+   * Read the asset names from assets-manifest.json
+   */
+  if (WP_ENV === 'development') {
+    $assets = array(
+      'css'       => '/assets/css/main.css',
+      'js_main'   => '/assets/js/scripts.js',
+      'js_front'  => '/assets/js/front-page.js',
+      'js_shows'  => '/assets/js/shows-page.js',
+      'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
+    );
+  } else {
+    $get_assets = file_get_contents(get_stylesheet_directory() . '/assets/manifest.json');
+    $assets     = json_decode($get_assets, true);
+    $assets     = array(
+      'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
+      'js_main'   => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
+      'js_front'  => '/assets/js/front-page.min.js' . '?' . $assets['assets/js/front-page.min.js']['hash'],
+      'js_shows'  => '/assets/js/shows-page.min.js' . '?' . $assets['assets/js/shows-page.min.js']['hash'],
+      'modernizr' => '/assets/js/vendor/modernizr.min.js',
+      'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
+    );
+  }
 
   wp_enqueue_style('tutv-stylesheet', get_stylesheet_directory_uri() . $assets['css'], false, null);
 

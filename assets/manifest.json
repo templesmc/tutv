@@ -1,15 +1,24 @@
 {
   "dest": "assets/manifest.json",
+  "querystring": true,
+  "assets/css/main.min.css": {
+    "path": "assets/css/main.min.css",
+    "hash": "4b34dfa9ba242454c80bdcb862602b4e",
+    "handle": "css"
+  },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.0f9b790745511c9848f542df032a5a96.min.js",
-    "hash": "0f9b790745511c9848f542df032a5a96"
+    "path": "assets/js/scripts.min.js",
+    "hash": "0f9b790745511c9848f542df032a5a96",
+    "handle": "js_main"
   },
   "assets/js/front-page.min.js": {
-    "path": "assets/js/front-page.d67028e9d4778218a58397a443756455.min.js",
-    "hash": "d67028e9d4778218a58397a443756455"
+    "path": "assets/js/front-page.min.js",
+    "hash": "d67028e9d4778218a58397a443756455",
+    "handle": "js_main"
   },
   "assets/js/shows-page.min.js": {
-    "path": "assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js",
-    "hash": "68f79ab1ca4e37030f5c534d048cdf84"
+    "path": "assets/js/shows-page.min.js",
+    "hash": "68f79ab1ca4e37030f5c534d048cdf84",
+    "handle": "js_main"
   }
 }

@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'assets/js/*.js',
+        'assets/js/_*.js',
         '!assets/js/*.min.js',
         '!assets/js/_show.js',
         '!assets/js/_vimeo-slideshow.js'
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           sourcemap: true
         },
         files: {
-          'assets/css/main.min.css': [
+          'assets/css/main.css': [
             'assets/scss/style.scss'
           ],
           'editor-style.css': [
@@ -76,14 +76,44 @@ module.exports = function(grunt) {
           // sourceMap: 'assets/js/scripts.min.js.map',
           // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
         }
+      },
+      dev: {
+        files: {
+          'assets/js/vendor/selectivizr.min.js': [
+            'bower_components/selectivizr/selectivizr.js'
+          ],
+          'assets/js/scripts.js': [
+            'bower_components/superfish/dist/js/hoverIntent.js',
+            'bower_components/superfish/dist/js/superfish.min.js',
+            'assets/js/plugins/*.js',
+            'assets/js/_main.js'
+          ],
+          'assets/js/front-page.js': [
+            'bower_components/flexslider/jquery.flexslider.js',
+            'bower_components/jquery-textfill/jquery.textfill.js'
+          ],
+          'assets/js/shows-page.js': [
+            'bower_components/imagesloaded/imagesloaded.pkgd.min.js',
+            'bower_components/isotope/dist/isotope.pkgd.min.js'
+          ]
+        },
+        options: {
+          // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
+          // sourceMap: 'assets/js/scripts.min.js.map',
+          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+        }
       }
     },
     version: {
       default: {
         options: {
+          format: true,
+          length: 32,
           manifest: 'assets/manifest.json',
-          rename: true,
-          length: 32
+          querystring: {
+            style: 'css',
+            script: 'js_main'
+          }
         },
         files: {
           'lib/scripts.php': [
@@ -106,7 +136,7 @@ module.exports = function(grunt) {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'uglify', 'version']
+        tasks: ['jshint', 'uglify:dev', 'version']
       },
       livereload: {
         // Browser live reloading
@@ -136,8 +166,8 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: [
-        'assets/css/main.*.min.css',
-        'assets/js/scripts.*.min.js'
+        'assets/css/*.min.css',
+        'assets/js/*.min.js'
       ]
     }
   });
