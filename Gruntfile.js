@@ -10,7 +10,8 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         'assets/js/*.js',
         '!assets/js/*.min.js',
-        '!assets/js/_show.js'
+        '!assets/js/_show.js',
+        '!assets/js/_vimeo-slideshow.js'
       ]
     },
     sass: {
