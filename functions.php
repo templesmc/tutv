@@ -10,6 +10,7 @@ require_once locate_template('/lib/layout.php');
 require_once locate_template('/lib/layout-video-sidebar.php');
 require_once locate_template('/lib/template-tags.php');
 require_once locate_template('/lib/sidebar-functions.php');
+require_once locate_template('/lib/comments.php');
 
 require_once locate_template('/lib/admin.php');
 require_once locate_template('/lib/admin-meta.php');

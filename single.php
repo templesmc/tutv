@@ -51,8 +51,7 @@
 
           <?php
 
-          // calling the comments template
-          thematic_comments_template();
+          comments_template('/templates/comments.php');
 
           ?>
 
