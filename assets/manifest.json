@@ -1,19 +1,15 @@
 {
   "dest": "assets/manifest.json",
-  "assets/css/main.min.css": {
-    "path": "assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css",
-    "hash": "decda25557d7ae587e2c603199c8cf35"
-  },
   "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js",
-    "hash": "26ec9c40ab5211d06ca4c95efded55a3"
+    "path": "assets/js/scripts.0f9b790745511c9848f542df032a5a96.min.js",
+    "hash": "0f9b790745511c9848f542df032a5a96"
   },
   "assets/js/front-page.min.js": {
-    "path": "assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js",
-    "hash": "c67e80f98481106a16f02075273c32d2"
+    "path": "assets/js/front-page.d67028e9d4778218a58397a443756455.min.js",
+    "hash": "d67028e9d4778218a58397a443756455"
   },
   "assets/js/shows-page.min.js": {
-    "path": "assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js",
-    "hash": "3b47a576090815c27b51ce5397711614"
+    "path": "assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js",
+    "hash": "68f79ab1ca4e37030f5c534d048cdf84"
   }
 }
