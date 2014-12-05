@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         },
         files: {
           'assets/css/main.min.css': [
-            'assets/scss/app.scss'
+            'assets/scss/style.scss'
           ],
           'editor-style.css': [
             'assets/scss/editor-style.scss'
