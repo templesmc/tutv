@@ -40,7 +40,7 @@ var TUTV = {
         animation           : "slide",
         useCSS              : false,
         direction           : "vertical",
-        slideshowSpeed      : 6000,
+        slideshowSpeed      : 8000,
         pauseOnHover        : true,
         controlNav          : true,
         directionNav        : false

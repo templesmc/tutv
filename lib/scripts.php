@@ -23,7 +23,7 @@ function tutv_scripts_and_styles() {
   $assets     = json_decode($get_assets, true);
   $assets     = array(
     'css'       => '/assets/css/main.a677e54ff696c6ff7d13a8fe204887b2.min.css' . '?' . $assets['assets/css/main.a677e54ff696c6ff7d13a8fe204887b2.min.css']['hash'],
-    'js_main'   => '/assets/js/scripts.8b2a54133fc6db5e0c3a08b9b25fea94.min.js' . '?' . $assets['assets/js/scripts.8b2a54133fc6db5e0c3a08b9b25fea94.min.js']['hash'],
+    'js_main'   => '/assets/js/scripts.267c1aa49882ee394759a204ffae437e.min.js' . '?' . $assets['assets/js/scripts.267c1aa49882ee394759a204ffae437e.min.js']['hash'],
     'js_front'  => '/assets/js/front-page.d67028e9d4778218a58397a443756455.min.js' . '?' . $assets['assets/js/front-page.d67028e9d4778218a58397a443756455.min.js']['hash'],
     'js_shows'  => '/assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js' . '?' . $assets['assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js']['hash'],
     'modernizr' => '/assets/js/vendor/modernizr.min.js',
