@@ -20,6 +20,10 @@ function tutv_sidebar_connect_block() {
         <?php tutv_social_media_icons('twitter'); ?>
         <a href="https://twitter.com/templetv" title="Follow us on Twitter" class="social-media-link social-connection-link">Follow <em>@TempleTV</em> on Twitter</a>
       </div>
+      <div class="instagram social-connection">
+        <?php tutv_social_media_icons('instagram'); ?>
+        <a href="http://instagram.com/temple_tv/" title="Follow us on Instagram" class="social-media-link social-connection-link">Follow <em>@Temple_TV</em> on Instagram</a>
+      </div>
       <div class="questions social-connection">
         <?php tutv_social_media_icons('contact'); ?>
         <a href="<?php home_url(); ?>/contact/" title="Contact Us" class="contact-link social-connection-link">Questions? <em>Contact us</em></a>

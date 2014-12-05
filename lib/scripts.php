@@ -22,10 +22,10 @@ function tutv_scripts_and_styles() {
   $get_assets = file_get_contents(get_stylesheet_directory() . '/assets/manifest.json');
   $assets     = json_decode($get_assets, true);
   $assets     = array(
-    'css'       => '/assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css' . '?' . $assets['assets/css/main.decda25557d7ae587e2c603199c8cf35.min.css']['hash'],
+    'css'       => '/assets/css/main.a677e54ff696c6ff7d13a8fe204887b2.min.css' . '?' . $assets['assets/css/main.a677e54ff696c6ff7d13a8fe204887b2.min.css']['hash'],
     'js_main'   => '/assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js' . '?' . $assets['assets/js/scripts.26ec9c40ab5211d06ca4c95efded55a3.min.js']['hash'],
-    'js_front'  => '/assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js' . '?' . $assets['assets/js/front-page.c67e80f98481106a16f02075273c32d2.min.js']['hash'],
-    'js_shows'  => '/assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js' . '?' . $assets['assets/js/shows-page.3b47a576090815c27b51ce5397711614.min.js']['hash'],
+    'js_front'  => '/assets/js/front-page.d67028e9d4778218a58397a443756455.min.js' . '?' . $assets['assets/js/front-page.d67028e9d4778218a58397a443756455.min.js']['hash'],
+    'js_shows'  => '/assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js' . '?' . $assets['assets/js/shows-page.68f79ab1ca4e37030f5c534d048cdf84.min.js']['hash'],
     'modernizr' => '/assets/js/vendor/modernizr.min.js',
     'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
   );

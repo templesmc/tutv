@@ -366,10 +366,11 @@ function tutv_footer() {
  *
  */
 function tutv_social_media_icons(
-  $icon = null,
-  $fb_url = 'https://www.facebook.com/TempleTV',
-  $twitter_url = 'https://twitter.com/templetv',
-  $rss_url = 'feed://templetv.net/feed'
+  $icon          = null,
+  $fb_url        = 'https://www.facebook.com/TempleTV',
+  $twitter_url   = 'https://twitter.com/templetv',
+  $rss_url       = 'feed://templetv.net/feed',
+  $instagram_url = 'http://instagram.com/temple_tv/'
 ) {
 
   if ( empty($icon) ) { ?>
@@ -382,6 +383,11 @@ function tutv_social_media_icons(
       <li id="twitter-icon" class="social-media-icon">
         <a href="<?php echo $twitter_url; ?>" title="Follow us on Twitter">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />
+        </a>
+      </li>
+      <li id="instagram-icon" class="social-media-icon">
+        <a href="<?php echo $instagram_url; ?>" title="Follow us on Instagram">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/icon-instagram.png" title="Instagram" alt="Instagram" />
         </a>
       </li>
       <li id="rss-icon" class="social-media-icon">
@@ -406,6 +412,14 @@ function tutv_social_media_icons(
     $output .= '<div id="twitter-icon" class="social-media-icon">';
       $output .= '<a href="' . $twitter_url . '" title="Follow us on Twitter">';
         $output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-twitter.png" title="Twitter" alt="Twitter" />';
+      $output .= '</a>';
+    $output .= '</div>';
+  }
+
+  if ( $icon == 'instagram' ) {
+    $output .= '<div id="instagram-icon" class="social-media-icon">';
+      $output .= '<a href="' . $instagram_url . '" title="Follow us on Instagram">';
+        $output .= '<img src="' . get_stylesheet_directory_uri() . '/assets/images/social-icons/icon-instagram.png" title="Instagram" alt="Instagram" />';
       $output .= '</a>';
     $output .= '</div>';
   }
