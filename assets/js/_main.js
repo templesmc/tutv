@@ -38,7 +38,7 @@ var TUTV = {
 
       $('.flexslider').flexslider({
         animation           : "slide",
-        easing              : "linear",
+        useCSS              : false,
         direction           : "vertical",
         slideshowSpeed      : 6000,
         pauseOnHover        : true,
