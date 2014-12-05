@@ -37,10 +37,10 @@ Template Name: Front Page
           <?php
 
           query_posts( array(
-            'featured'      => 'on',
-            'post_type'       => 'any',
-            'post_status'     => 'publish',
-            'posts_per_page'    => 6,
+            'featured'            => 'on',
+            'post_type'           => 'any',
+            'post_status'         => 'publish',
+            'posts_per_page'      => 4,
             'ignore_sticky_posts' => true
             )
           );
